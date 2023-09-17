@@ -1,0 +1,868 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import "./../assets/css/style.css";
+
+// images
+import blog1 from "./../assets/images/blog/blog-1.png";
+import blog2 from "./../assets/images/blog/blog-2.png";
+import blog3 from "./../assets/images/blog/blog-3.png";
+import blog4 from "./../assets/images/blog/blog-4.png";
+import blog5 from "./../assets/images/blog/blog-5.png";
+import blog6 from "./../assets/images/blog/blog-6.png";
+import blog7 from "./../assets/images/blog/blog-7.png";
+import blog8 from "./../assets/images/blog/blog-8.png";
+import blog9 from "./../assets/images/blog/blog-9.png";
+import blog10 from "./../assets/images/blog/blog-10.png";
+import blog11 from "./../assets/images/blog/blog-11.png";
+import blog12 from "./../assets/images/blog/blog-12.png";
+import blog13 from "./../assets/images/blog/blog-13.png";
+import blog14 from "./../assets/images/blog/blog-14.png";
+import blog15 from "./../assets/images/blog/blog-15.png";
+import blog16 from "./../assets/images/blog/blog-16.png";
+import blog17 from "./../assets/images/blog/blog-17.png";
+import blog18 from "./../assets/images/blog/blog-18.png";
+import blog19 from "./../assets/images/blog/blog-19.png";
+import blog20 from "./../assets/images/blog/blog-20.png";
+import partner1 from "./../assets/images/brands/partner-1.png";
+import partner2 from "./../assets/images/brands/partner-2.png";
+import partner3 from "./../assets/images/brands/partner-3.png";
+import partner4 from "./../assets/images/brands/partner-4.png";
+import partner5 from "./../assets/images/brands/partner-5.png";
+import partner6 from "./../assets/images/brands/partner-6.png";
+import partner7 from "./../assets/images/brands/partner-7.png";
+import partner8 from "./../assets/images/brands/partner-8.png";
+import partner9 from "./../assets/images/brands/partner-9.png";
+import partner10 from "./../assets/images/brands/partner-10.png";
+import partner11 from "./../assets/images/brands/partner-11.png";
+import partner12 from "./../assets/images/brands/partner-12.png";
+
+import statImg from "./../assets/images/stats-video-placeholder.png";
+---
+
+<Layout title="Welcome to Astro.">
+  <header>
+    <nav class="navbar">
+      <div class="container-wrapper">
+        <div class="nav">
+          <a href="#" class="nav__brand logo">
+            <svg class="icon w-8 text-primary">
+              <use xlink:href="#icon-notebook"></use>
+            </svg>Oliygoh</a>
+          <div class="nav__menu">
+            <a href="#!" class="nav__link">Kurslar</a>
+            <a href="#!" class="nav__link">Blog</a>
+            <a href="#!" class="nav__link">Biz haqimizda</a>
+            <a href="#!" class="nav__link btn btn-primary">kirish</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero-section mt-40 mb-120">
+      <div class="container-wrapper">
+        <div class="row">
+          <div class="col-3">
+            <div class="hero h-full">
+              <h1 class="h1 mb-10">
+                Zamonaviy bilimlarni qulay platforma orqali o‘rganing!
+              </h1>
+              <p class="text-body-2 mb-60">
+                Malakali ustozlar tomonidan tayyorlangan videokurslar sizga
+                aktual bilimlar beradi va zamonaviy kasblarga o'rgatadi.
+              </p>
+              <div class="flex flex-wrap gap-10">
+                <a href="#!" class="hero-chips">Dasturlash</a>
+                <a href="#!" class="hero-chips">Chet tillar</a>
+                <a href="#!" class="hero-chips">Rus tili</a>
+                <a href="#!" class="hero-chips">Fizika</a>
+                <a href="#!" class="hero-chips">Kimyo</a>
+                <a href="#!" class="hero-chips">Adabiyot</a>
+                <a href="#!" class="hero-chips">Dizayn</a>
+                <a href="#!" class="hero-chips">Test</a>
+                <a href="#!" class="hero-chips">Biologiya</a>
+                <a href="#!" class="hero-chips">Tarix</a>
+                <a href="#!" class="hero-chips">Ona tili</a>
+                <a href="#!" class="hero-chips">Geografiya</a>
+                <a href="#!" class="hero-chips">Algebra</a>
+                <a href="#!" class="hero-chips">Geometriya</a>
+                <a href="#!" class="hero-chips">Ingliz tili</a>
+                <a href="#!" class="hero-chips">IQ</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="slides-wrapper overflow-hidden">
+              <div class="slider-controls">
+                <button class="btn btn-circle p-2.5 bg-white">
+                  <svg class="icon fill-primary stroke-0 w-6">
+                    <use xlink:href="#icon-play"></use>
+                  </svg>
+                </button>
+                <div class="progress-wrapper">
+                  <div class="slide-progress"></div>
+                  <div class="slide-progress"></div>
+                  <div class="slide-progress"></div>
+                </div>
+              </div>
+              <div class="slide-stage">
+                <div class="slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1512485694743-9c9538b4e6e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80"
+                    alt=""
+                    class="slide-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="features-section mb-120">
+      <div class="container-wrapper">
+        <div class="flex mb-40 items-center justify-between">
+          <h2 class="h2">
+            Bizning <br />
+            <span class="text-primary">afzalliklarimiz</span>
+          </h2>
+          <div class="features-slider-controls flex gap-x-15">
+            <button class="btn btn-circle p-15 btn-secondary">
+              <svg class="icon w-6">
+                <use xlink:href="#icon-arrow-left"></use>
+              </svg>
+            </button>
+            <button class="btn btn-circle p-15 btn-secondary-black">
+              <svg class="icon w-6">
+                <use xlink:href="#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <div class="feature-card">
+              <svg class="icon w-12 text-primary mb-60">
+                <use xlink:href="#icon-lamp"></use>
+              </svg>
+              <div class="text-body-1 mb-15">Qulay platforma</div>
+              <div class="text-body-2 text-text-gray">
+                Kurslarni o‘zingizga qulay vaqtda va joyda o‘rganish imkoniyat
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="feature-card">
+              <svg class="icon w-12 text-primary mb-60">
+                <use xlink:href="#icon-notebook-2"></use>
+              </svg>
+              <div class="text-body-1 mb-15">Shunchaki kurslar emas</div>
+              <div class="text-body-2 text-text-gray">
+                Kurslarni barcha materiallari va vazifalari aniq reja asosida
+                ishlab chiqilgan
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="feature-card">
+              <svg class="icon w-12 text-primary mb-60">
+                <use xlink:href="#icon-video-slides"></use>
+              </svg>
+              <div class="text-body-1 mb-15">Aktual bilimlar</div>
+              <div class="text-body-2 text-text-gray">
+                Malakali ustozlardan darslar va ularni mustahkamlash uchun
+                topshiriqlar
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="feature-card">
+              <svg class="icon w-12 text-primary mb-60">
+                <use xlink:href="#icon-trophy"></use>
+              </svg>
+              <div class="text-body-1 mb-15">Natija uchun</div>
+              <div class="text-body-2 text-text-gray">
+                Samarali bilim olish uchun natijalarni kuzatish va tahlil qilish
+                juda ham oson
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blog-section mb-120">
+      <div class="container-wrapper">
+        <div class="flex mb-40 items-center justify-between">
+          <h2 class="h2">
+            <span class="text-primary">Kurslarimiz</span><br />bilan tanishing
+          </h2>
+          <div class="features-slider-controls flex gap-x-15">
+            <button class="btn btn-secondary font-medium">
+              BARCHASI
+              <svg class="icon w-6 ml-10">
+                <use xlink:href="#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <div class="card">
+              <img class="card__img" src={blog12.src} />
+              <div class="card__body">
+                <a href="#!" class="card__meta">Disayn</a>
+                <a href="#!" class="text-primary mb-10">Ikrombek Izzatilayev</a>
+                <a href="#!" class="card__title"
+                  >UX/UI dizayning boshalang‘ich ko‘nikmalari kursi</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <img class="card__img" src={blog11.src} />
+              <div class="card__body">
+                <a href="#!" class="card__meta">Tarix</a>
+                <a href="#!" class="text-primary mb-10">Sardor Yusupov</a>
+                <a href="#!" class="card__title"
+                  >Jahon tarix bo‘yicha darslik to‘plami
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <img class="card__img" src={blog10.src} />
+              <div class="card__body">
+                <a href="#!" class="card__meta">Ingliz tili</a>
+                <a href="#!" class="text-primary mb-10">Akbar Ismatullayev</a>
+                <a href="#!" class="card__title"
+                  >Ingliz tilidan IELTS tayyorgalik darslari</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <img class="card__img" src={blog9.src} />
+              <div class="card__body">
+                <a href="#!" class="card__meta">ALGEBRA</a>
+                <a href="#!" class="text-primary mb-10">Anvar Yoqubov</a>
+                <a href="#!" class="card__title"
+                  >Algebra fanidan 11-sinf ko‘nikmalari
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <img class="card__img" src={blog1.src} />
+              <div class="card__body">
+                <a href="#!" class="card__meta">Biologiya</a>
+                <a href="#!" class="text-primary mb-10">Izzatbek Jonabekov</a>
+                <a href="#!" class="card__title"
+                  >Biologiya fanidan 11-sinf dasturi darslari</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <img class="card__img" src={blog2.src} />
+              <div class="card__body">
+                <a href="#!" class="card__meta">DASTURLASH</a>
+                <a href="#!" class="text-primary mb-10">Abbos Fayzullayev</a>
+                <a href="#!" class="card__title"
+                  >HTML va CSS da dasturlashning boshlang‘ich ko‘nikmalari</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <img class="card__img" src={blog3.src} />
+              <div class="card__body">
+                <a href="#!" class="card__meta">RUS TILI</a>
+                <a href="#!" class="text-primary mb-10">Izzat Abdulayev</a>
+                <a href="#!" class="card__title"
+                  >Rus tilidan to‘liq grammatika darslari</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <img class="card__img" src={blog4.src} />
+              <div class="card__body">
+                <a href="#!" class="card__meta">dasturlash</a>
+                <a href="#!" class="text-primary mb-10">Suhrob Qudratov</a>
+                <a href="#!" class="card__title"
+                  >Javascriptga doir darslar to‘plami</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <img class="card__img" src={blog5.src} />
+              <div class="card__body">
+                <a href="#!" class="card__meta">geometriya</a>
+                <a href="#!" class="text-primary mb-10">Shohnur Kudratbekov</a>
+                <a href="#!" class="card__title"
+                  >Geometriya fanidan boshlang‘ich tushuncha</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <img class="card__img" src={blog6.src} />
+              <div class="card__body">
+                <a href="#!" class="card__meta">ona tili</a>
+                <a href="#!" class="text-primary mb-10">G‘ayrat Qobilov</a>
+                <a href="#!" class="card__title"
+                  >Ona tilidan to‘liq qoidalar darslari</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <img class="card__img" src={blog7.src} />
+              <div class="card__body">
+                <a href="#!" class="card__meta">Tarix</a>
+                <a href="#!" class="text-primary mb-10">Izzat Abdulayev</a>
+                <a href="#!" class="card__title"
+                  >IX - XX asrlar oralig‘idagi buyuk shoirlarga doir darslar</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <img class="card__img" src={blog8.src} />
+              <div class="card__body">
+                <a href="#!" class="card__meta">Tarix</a>
+                <a href="#!" class="text-primary mb-10">Anvar Yoqubov</a>
+                <a href="#!" class="card__title"
+                  >AQSH davlatining kelib chiqish va rivojlanishi
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="stats-section mb-120">
+      <div class="container-wrapper">
+        <div class="flex mb-40 items-center">
+          <h2 class="h2">
+            <span class="text-primary">Biz haqimizda</span><br />ma’lumotga ega
+            bo‘ling
+          </h2>
+        </div>
+        <div
+          class="relative bg-center bg-no-repeat bg-cover rounded mb-20"
+          style={{ backgroundImage: "url(" + statImg.src + ")" }}
+        >
+          <div class="flex justify-center py-32">
+            <button class="btn btn-circle p-[1.125rem] bg-white">
+              <svg class="icon fill-primary stroke-0 w-8">
+                <use xlink:href="#icon-play"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <div class="bg-background border border-line rounded p-20">
+              <div class="h2 mb-30">5000+</div>
+              <div class="text-body-3 text-text-gray">
+                Jami tahsil olayotgan o‘quvchilarimizning soni
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="bg-background border border-line rounded p-20">
+              <div class="h2 mb-30">15+</div>
+              <div class="text-body-3 text-text-gray">
+                Uzoq yillik tajribaga ega bo‘lgan o‘qtuvchilar jamoasi
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="bg-background border border-line rounded p-20">
+              <div class="h2 mb-30">50+</div>
+              <div class="text-body-3 text-text-gray">
+                Platformamizda mavjud bo‘lgan darslar soni
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="bg-background border border-line rounded p-20">
+              <div class="h2 mb-30">83%</div>
+              <div class="text-body-3 text-text-gray">
+                O‘quvchilarimiz imtihonlardan muffaqiyatli o‘tgan
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blog-section mb-120">
+      <div class="container-wrapper">
+        <div class="flex mb-40 items-center justify-between">
+          <h2 class="h2">
+            Qiziqarli yangilik va <br /><span class="text-primary"
+              >maqolalar</span
+            >
+          </h2>
+          <div class="features-slider-controls flex gap-x-15">
+            <button class="btn btn-secondary font-medium">
+              BARCHASI
+              <svg class="icon w-6 ml-10">
+                <use xlink:href="#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <div class="card">
+              <div class="card__body">
+                <a href="#!" class="uppercase text-primary mb-10"
+                  >ABITURENTLAR</a
+                >
+                <a href="#!" class="card__title !h-[5.25rem] !line-clamp-3"
+                  >Xalqaro Nordik universiteti haqida nimalar bilishimiz muhim</a
+                >
+              </div>
+              <img class="card__img" src={blog13.src} />
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <div class="card__body">
+                <a href="#!" class="uppercase text-primary mb-10">Darslar</a>
+                <a href="#!" class="card__title !h-[5.25rem] !line-clamp-3"
+                  >O‘zbekistondagi top-5 universitetlar
+                </a>
+              </div>
+              <img class="card__img" src={blog14.src} />
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <div class="card__body">
+                <a href="#!" class="uppercase text-primary mb-10">o‘qituvchi</a>
+                <a href="#!" class="card__title !h-[5.25rem] !line-clamp-3"
+                  >Alegbra fanida yangi darslar boshlandi</a
+                >
+              </div>
+              <img class="card__img" src={blog15.src} />
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <div class="card__body">
+                <a href="#!" class="uppercase text-primary mb-10">o‘qituvchi</a>
+                <a href="#!" class="card__title !h-[5.25rem] !line-clamp-3"
+                  >Tarix fanini 12 yilik tajribaga ega o‘qtuvchidan o‘rganing</a
+                >
+              </div>
+              <img class="card__img" src={blog16.src} />
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <div class="card__body">
+                <a href="#!" class="uppercase text-primary mb-10">o‘qituvchi</a>
+                <a href="#!" class="card__title !h-[5.25rem] !line-clamp-3"
+                  >Qanday hollarda o‘qishni ko‘chirish rad etiladi?</a
+                >
+              </div>
+              <img class="card__img" src={blog17.src} />
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <div class="card__body">
+                <a href="#!" class="uppercase text-primary mb-10">University</a>
+                <a href="#!" class="card__title !h-[5.25rem] !line-clamp-3"
+                  >Uzrli sabab bilan nodavlat oliygohlarda o‘qishi ko‘chirish
+                  mumkinmi</a
+                >
+              </div>
+              <img class="card__img" src={blog18.src} />
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <div class="card__body">
+                <a href="#!" class="uppercase text-primary mb-10">test</a>
+                <a href="#!" class="card__title !h-[5.25rem] !line-clamp-3"
+                  >Turli sabablarga ko‘ra, testga kirmagan abituriyentlarga
+                  qo‘shimcha kun beriladi</a
+                >
+              </div>
+              <img class="card__img" src={blog19.src} />
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <div class="card__body">
+                <a href="#!" class="uppercase text-primary mb-10">ta’lim</a>
+                <a href="#!" class="card__title !h-[5.25rem] !line-clamp-3"
+                  >Masofaviy ta’lim shaklini boshqa ta’lim shakilga o‘zgatirish
+                  mumkinmi
+                </a>
+              </div>
+              <img class="card__img" src={blog20.src} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blog-section mb-120">
+      <div class="container-wrapper">
+        <div class="flex mb-40 items-center">
+          <h2 class="h2">
+            Tez-tez <br />beriladigan<span class="text-primary">savollar</span>
+          </h2>
+        </div>
+
+        <div
+          id="accordion-collapse"
+          data-accordion="collapse"
+          class="flex flex-col gap-10"
+        >
+          <div class="bg-background rounded">
+            <h2 class="flex" id="faq-head-1">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full py-30 px-20"
+                data-accordion-target="#faq-1"
+                aria-expanded="true"
+                aria-controls="faq-1"
+              >
+                <span class="accordion-title"
+                  >Videodarslarni yuklab olsam bo‘ladimi?</span
+                >
+
+                <svg
+                  data-accordion-icon
+                  class="w-3 h-3 shrink-0"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5 5 1 1 5"></path>
+                </svg>
+              </button>
+            </h2>
+            <div id="faq-1" class="hidden" aria-labelledby="faq-head-1">
+              <div class="py-20 mx-20 border-t border-line">
+                <p class="text-text-gray text-body-2">
+                  Barcha materiallar “Oliygoh” intellektual mulki hisoblanadi va
+                  ularni nusxalash va tarqatish qat’iyan man etiladi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-background rounded">
+            <h2 class="flex" id="faq-head-2">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full py-30 px-20"
+                data-accordion-target="#faq-2"
+                aria-expanded="true"
+                aria-controls="faq-2"
+              >
+                <span class="accordion-title"
+                  >Oliygohda qanday turdagi kurslar mavjud?</span
+                >
+
+                <svg
+                  data-accordion-icon
+                  class="w-3 h-3 shrink-0"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5 5 1 1 5"></path>
+                </svg>
+              </button>
+            </h2>
+            <div id="faq-2" class="hidden" aria-labelledby="faq-head-2">
+              <div class="py-20 mx-20 border-t border-line">
+                <p class="text-text-gray text-body-2">
+                  Barcha materiallar “Oliygoh” intellektual mulki hisoblanadi va
+                  ularni nusxalash va tarqatish qat’iyan man etiladi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-background rounded">
+            <h2 class="flex" id="faq-head-3">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full py-30 px-20"
+                data-accordion-target="#faq-3"
+                aria-expanded="true"
+                aria-controls="faq-3"
+              >
+                <span class="accordion-title"
+                  >Bitta profildan necha kishi foydalansa bo‘ladi?</span
+                >
+
+                <svg
+                  data-accordion-icon
+                  class="w-3 h-3 shrink-0"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5 5 1 1 5"></path>
+                </svg>
+              </button>
+            </h2>
+            <div id="faq-3" class="hidden" aria-labelledby="faq-head-3">
+              <div class="py-20 mx-20 border-t border-line">
+                <p class="text-text-gray text-body-2">
+                  Barcha materiallar “Oliygoh” intellektual mulki hisoblanadi va
+                  ularni nusxalash va tarqatish qat’iyan man etiladi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-background rounded">
+            <h2 class="flex" id="faq-head-4">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full py-30 px-20"
+                data-accordion-target="#faq-4"
+                aria-expanded="true"
+                aria-controls="faq-4"
+              >
+                <span class="accordion-title"
+                  >Sertifikatni yuklab olsam bo‘ladimi?</span
+                >
+
+                <svg
+                  data-accordion-icon
+                  class="w-3 h-3 shrink-0"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5 5 1 1 5"></path>
+                </svg>
+              </button>
+            </h2>
+            <div id="faq-4" class="hidden" aria-labelledby="faq-head-4">
+              <div class="py-20 mx-20 border-t border-line">
+                <p class="text-text-gray text-body-2">
+                  Barcha materiallar “Oliygoh” intellektual mulki hisoblanadi va
+                  ularni nusxalash va tarqatish qat’iyan man etiladi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-background rounded">
+            <h2 class="flex" id="faq-head-5">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full py-30 px-20"
+                data-accordion-target="#faq-5"
+                aria-expanded="true"
+                aria-controls="faq-5"
+              >
+                <span class="accordion-title"
+                  >Videodarslar nima uchun xira ko‘rinyapti</span
+                >
+
+                <svg
+                  data-accordion-icon
+                  class="w-3 h-3 shrink-0"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5 5 1 1 5"></path>
+                </svg>
+              </button>
+            </h2>
+            <div id="faq-5" class="hidden" aria-labelledby="faq-head-5">
+              <div class="py-20 mx-20 border-t border-line">
+                <p class="text-text-gray text-body-2">
+                  Barcha materiallar “Oliygoh” intellektual mulki hisoblanadi va
+                  ularni nusxalash va tarqatish qat’iyan man etiladi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blog-section mb-120">
+      <div class="container-wrapper">
+        <div class="flex mb-40 items-center">
+          <h2 class="h2">
+            Bizning <br /><span class="text-primary">hamkorlarimiz</span>
+          </h2>
+        </div>
+        <div class="row grid-cols-6">
+          <div class="col-1">
+            <a href="#!"> <img class="w-full" src={partner1.src} alt="" /></a>
+          </div>
+          <div class="col-1">
+            <a href="#!"> <img class="w-full" src={partner2.src} alt="" /></a>
+          </div>
+          <div class="col-1">
+            <a href="#!"> <img class="w-full" src={partner3.src} alt="" /></a>
+          </div>
+          <div class="col-1">
+            <a href="#!"> <img class="w-full" src={partner4.src} alt="" /></a>
+          </div>
+          <div class="col-1">
+            <a href="#!"> <img class="w-full" src={partner5.src} alt="" /></a>
+          </div>
+          <div class="col-1">
+            <a href="#!"> <img class="w-full" src={partner6.src} alt="" /></a>
+          </div>
+          <div class="col-1">
+            <a href="#!"> <img class="w-full" src={partner7.src} alt="" /></a>
+          </div>
+          <div class="col-1">
+            <a href="#!"> <img class="w-full" src={partner8.src} alt="" /></a>
+          </div>
+          <div class="col-1">
+            <a href="#!"> <img class="w-full" src={partner9.src} alt="" /></a>
+          </div>
+          <div class="col-1">
+            <a href="#!"> <img class="w-full" src={partner10.src} alt="" /></a>
+          </div>
+          <div class="col-1">
+            <a href="#!"> <img class="w-full" src={partner11.src} alt="" /></a>
+          </div>
+          <div class="col-1">
+            <a href="#!"> <img class="w-full" src={partner12.src} alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-us mb-120">
+      <div class="container-wrapper">
+        <div class="contact-form flex justify-end px-60 relative z-10">
+          <div class="p-30 w-[25rem] bg-white rounded border border-line">
+            <div class="text-body-1 font-medium mb-30">Konsultatsiya olish uchun ro‘yxatdan o’ting:</div>
+            <form action="" class="flex flex-col mb-20">
+              <div class="flex border border-line rounded mb-15">
+                <div class="p-10 border-r border-line leading-none">
+                  <svg class="icon w-6">
+                    <use xlink:href="#icon-user-star"></use>
+                  </svg>
+                </div>
+                <input type="text" placeholder="Ismingiz" class="text-body-2 placeholder:text-text-gray-2 !border-0 focus:ring-transparent px-20 py-10 w-full" />
+              </div>
+              <div class="flex border border-line rounded mb-30">
+                <div class="p-10 border-r border-line leading-none">
+                  <svg class="icon w-6">
+                    <use xlink:href="#icon-phone"></use>
+                  </svg>
+                </div>
+                <input type="text" placeholder="Telefon raqamingiz" class="text-body-2 placeholder:text-text-gray-2 !border-0 focus:ring-transparent px-20 py-10 w-full" />
+              </div>
+              <button class="btn btn-primary justify-center">So‘rov Yuborish</button>
+            </form>
+            <p class="text-subtitle">
+              So‘rov yuborish tugmasini bosish <a href="#!" class="text-primary underline hover:text-primary-hover">
+                orqali platformadan foydalanish qoidalariga
+              </a> rozilik bildirasiz.
+            </p>
+
+          </div>
+        </div>
+        <div class="card -mt-[14rem] relative">
+          <div class="card-body p-60">
+            <div class="w-1/2">
+              <h2 class="h2 mb-15">
+                Kurs tanlashga ikkilanyabsizmi yoki <span class="text-primary"
+                  >savollaringiz bormi?</span
+                >
+              </h2>
+              <p class="text-text-gray">
+                Hoziroq kontakt ma’lumotlaringizni qolding. Biz sizga kurs tanlashda va mavjud savollaringizga javob topishda yordam beramiz!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer bg-background border-t border-line">
+      <div class="container-wrapper">
+        <div class="row py-40 border-b border-line">
+          <div class="col-1">
+            <a href="#" class="logo">
+              <svg class="icon w-8 text-primary">
+                <use xlink:href="#icon-notebook"></use>
+              </svg>Oliygoh</a>
+            <p class="text-text-gray mt-15">Abituriyentlarga oliygohgacha 
+              bo‘lgan taʼlim beramiz</p>
+          </div>
+          <div class="col-3">
+            <nav class="nav">
+              <div class="nav__menu ml-auto">
+                <a href="#!" class="nav__link">Kurslar</a>
+                <a href="#!" class="nav__link">Blog</a>
+                <a href="#!" class="nav__link">Biz haqimizda</a>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="row pt-20 pb-40">
+          <div class="col-2">
+            <p class="text-text-gray text-subtitle">©2023 Oliygoh — Barcha huquqlari himoyalangan.</p>
+          </div>
+          <div class="col-2">
+            <div class="flex justify-end gap-40">
+              <a href="#!" class="text-text-gray text-subtitle hover:text-main-black">Maxfiylik siyosati</a>
+              <a href="#!" class="text-text-gray text-subtitle hover:text-main-black">Ommaviy oferta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</Layout>
