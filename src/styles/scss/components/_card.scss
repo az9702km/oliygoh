@@ -1,0 +1,37 @@
+.card {
+  @apply border border-line rounded overflow-hidden bg-background relative flex flex-col;
+
+  &__subtitle {
+    @apply text-primary mb-10;
+  }
+
+  &__text {
+    @apply text-base text-text-gray mt-10 line-clamp-3 h-[4.5rem];
+  }
+}
+
+.card .card__body {
+  @apply p-20 pb-[2.375rem] flex flex-col;
+}
+
+.card .card__title {
+  @apply text-xl h-14 line-clamp-2;
+}
+
+.card .card__meta {
+  @apply py-1 px-2 rounded-sm bg-yellow font-light absolute top-20 left-20 uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.0225rem;
+}
+
+.feature-card {
+  @apply p-20 flex flex-col rounded bg-background border border-line;
+}
+
+.posts-grid .card .card__subtitle {
+  @apply uppercase text-primary mb-10;
+}
+
+.search-results-list .card .card__body {
+  @apply p-20;
+}

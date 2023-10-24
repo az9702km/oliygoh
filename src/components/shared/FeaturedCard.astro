@@ -1,0 +1,15 @@
+---
+const { icon } = Astro.props;
+---
+
+<div class="feature-card">
+  <svg class="icon w-12 text-primary mb-60">
+    <use xlink:href=`#${icon}`></use>
+  </svg>
+  <div class="text-body-1 mb-15">
+    <slot name="title" />
+  </div>
+  <div class="text-body-2 text-text-gray">
+    <slot name="text" />
+  </div>
+</div>

@@ -17,12 +17,12 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <slot />
     <svg width="0" height="0" class="hidden">
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-twitter"
-      >
+        id="icon-twitter">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -44,16 +44,14 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-unchecked"
-      >
+        id="icon-unchecked">
         <circle cx="12.0004" cy="11.9999" r="8.85" stroke="currentColor"
         ></circle>
       </symbol>
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-user-gem"
-      >
+        id="icon-user-gem">
         <path
           d="M11.2982 14.76C8.05781 14.76 5.29395 15.2499 5.29395 17.2109C5.29395 19.1719 8.04204 19.6791 11.2982 19.6791"
           stroke="currentColor"
@@ -78,8 +76,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-user-star"
-      >
+        id="icon-user-star">
         <path
           opacity="0.4"
           fill-rule="evenodd"
@@ -104,8 +101,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-user-verified"
-      >
+        id="icon-user-verified">
         <path
           d="M9.46082 14.0176C6.83459 14.1349 4.77734 14.7074 4.77734 16.3765C4.77734 17.8806 6.43936 18.5043 8.69509 18.7019"
           stroke="currentColor"
@@ -134,8 +130,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-video-lesson"
-      >
+        id="icon-video-lesson">
         <path
           d="M7.06718 3.98999H16.6123C18.7485 3.98999 20.4802 5.72172 20.4802 7.85791V13.0961C20.4802 15.2323 18.7485 16.964 16.6123 16.964H7.06718C4.93194 16.964 3.2002 15.2323 3.2002 13.0961V7.85791C3.2002 5.72172 4.93194 3.98999 7.06718 3.98999Z"
           stroke="currentColor"
@@ -158,8 +153,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-video-slides"
-      >
+        id="icon-video-slides">
         <path
           d="M8.97662 19.741H14.7226C16.3796 19.741 17.7227 18.398 17.7227 16.742V7.25982C17.7227 5.60288 16.3796 4.25977 14.7226 4.25977H8.97662C7.31967 4.25977 5.97656 5.60288 5.97656 7.25982V16.742C5.97656 18.398 7.31967 19.741 8.97662 19.741Z"
           stroke="currentColor"
@@ -188,8 +182,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-wallet"
-      >
+        id="icon-wallet">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -221,8 +214,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-wallet-search"
-      >
+        id="icon-wallet-search">
         <path
           opacity="0.4"
           d="M20.64 14.3097H16.9851C15.6429 14.3097 14.5557 13.2216 14.5557 11.8794C14.5557 10.5381 15.6429 9.44995 16.9851 9.44995H20.64"
@@ -271,8 +263,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-world-time"
-      >
+        id="icon-world-time">
         <path
           opacity="0.4"
           fill-rule="evenodd"
@@ -306,8 +297,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-arrow-bottom-left"
-      >
+        id="icon-arrow-bottom-left">
         <path
           d="M6.97179 17.5532L17.5784 6.94656M6.97179 17.5532L15.5095 17.5352M6.97179 17.5532L6.98961 9.01527"
           stroke="currentColor"
@@ -317,8 +307,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-arrow-left"
-      >
+        id="icon-arrow-left">
         <path
           d="M4.25 11.7266L19.25 11.7266"
           stroke="currentColor"
@@ -333,8 +322,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-arrow-right"
-      >
+        id="icon-arrow-right">
         <path
           d="M19.75 11.7266L4.75 11.7266"
           stroke="currentColor"
@@ -349,8 +337,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-arrow-top-right"
-      >
+        id="icon-arrow-top-right">
         <path
           d="M17.579 6.94635L6.97239 17.553M17.579 6.94635L9.04124 6.96431M17.579 6.94635L17.5612 15.4842"
           stroke="currentColor"
@@ -360,8 +347,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-badge-error"
-      >
+        id="icon-badge-error">
         <path
           opacity="0.4"
           fill-rule="evenodd"
@@ -377,8 +363,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-badge-verified"
-      >
+        id="icon-badge-verified">
         <path
           opacity="0.4"
           fill-rule="evenodd"
@@ -394,8 +379,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-book-search"
-      >
+        id="icon-book-search">
         <path
           d="M4.10156 18.2527V5.84743C4.10156 4.47348 5.21493 3.36011 6.58888 3.36011H17.2359C17.8711 3.36011 18.3866 3.87569 18.3866 4.51083V4.92368"
           stroke="currentColor"
@@ -422,8 +406,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-brain"
-      >
+        id="icon-brain">
         <path
           d="M16.1638 14.5866C16.0711 16.6742 13.5499 17.1113 12.3263 15.9241C11.7479 17.0451 10.5528 17.0398 10.0275 16.8972L8.87922 19.6143C8.86732 19.6424 8.84076 19.6605 8.81144 19.6605H7.19121C7.15026 19.6605 7.11705 19.6257 7.11705 19.5827V17.9286C2.20439 17.6367 2.83469 14.1273 4.03968 13.5111C1.85215 11.4288 3.29815 9.54761 4.03968 8.80163C4.31268 8.0324 4.91099 6.87504 6.22721 6.48584"
           stroke="currentColor"
@@ -477,8 +460,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-calendar"
-      >
+        id="icon-calendar">
         <path
           opacity="0.4"
           d="M4.08398 9.66382H20.1255"
@@ -512,8 +494,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-check"
-      >
+        id="icon-check">
         <path
           d="M19 7.1875L9.375 16.8125L5 12.4375"
           stroke="currentColor"
@@ -523,8 +504,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-checkbox"
-      >
+        id="icon-checkbox">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -536,8 +516,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-checked"
-      >
+        id="icon-checked">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -547,8 +526,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-chevron-down"
-      >
+        id="icon-chevron-down">
         <path
           d="M4.99805 9.50049L11.998 16.5005L18.998 9.50049"
           stroke="currentColor"
@@ -558,8 +536,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-chevron-left"
-      >
+        id="icon-chevron-left">
         <path
           d="M15 18L9 12L15 6"
           stroke="currentColor"
@@ -569,8 +546,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-chevron-right"
-      >
+        id="icon-chevron-right">
         <path
           d="M9 18L15 12L9 6"
           stroke="currentColor"
@@ -580,8 +556,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-chevron-top"
-      >
+        id="icon-chevron-top">
         <path
           d="M5 14.5L12 7.5L19 14.5"
           stroke="currentColor"
@@ -591,8 +566,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-clipboard"
-      >
+        id="icon-clipboard">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -628,10 +602,77 @@ const { title } = Astro.props;
           stroke-linejoin="round"></path>
       </symbol>
       <symbol
+        viewBox="0 0 18 19"
+        fill="none"
+        id="icon-remove-close"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M11.1495 11.648C11.04 11.7575 10.896 11.813 10.752 11.813C10.6073 11.813 10.464 11.7575 10.3538 11.648L8.99925 10.2928L7.6485 11.6435C7.42875 11.8632 7.0725 11.8632 6.85275 11.6435C6.63375 11.4237 6.63375 11.0683 6.85275 10.8485L8.2035 9.49775L6.852 8.1455C6.63225 7.92575 6.63225 7.57025 6.852 7.3505C7.07175 7.13075 7.42725 7.13075 7.647 7.3505L8.9985 8.702L10.35 7.35125C10.5698 7.1315 10.9252 7.1315 11.145 7.35125C11.3647 7.57025 11.3647 7.9265 11.145 8.14625L9.79425 9.49775L11.1495 10.8523C11.3692 11.072 11.3692 11.4283 11.1495 11.648ZM9 2.375C5.0715 2.375 1.875 5.57075 1.875 9.5C1.875 13.4285 5.0715 16.625 9 16.625C12.9285 16.625 16.125 13.4285 16.125 9.5C16.125 5.57075 12.9285 2.375 9 2.375Z"
+          fill="currentColor"></path>
+      </symbol>
+      <symbol
+        viewBox="0 0 96 96"
+        fill="none"
+        id="icon-search-receipt"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M22.4531 81.696C28.2054 81.696 32.8678 77.0332 32.8678 71.2812V38.3324M32.8735 38.3332V21.1038C32.8735 17.819 36.0493 15.6279 38.8047 17.0406L41.416 18.4184C42.9692 19.2318 44.7708 19.2668 46.394 18.5585L53.7768 15.2776C56.7776 13.97 60.0972 13.97 63.098 15.2776L70.4768 18.5585C72.1036 19.2668 73.902 19.2318 75.4584 18.4184L78.07 17.0406C80.8256 15.6279 84.0012 17.784 84.0012 21.1038L83.9664 41.8048"
+          stroke="currentColor"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M22.4518 81.696C19.5563 81.696 16.9466 80.5332 15.0746 78.6612C13.1676 76.754 12 74.1424 12 71.282V42.2912C12 38.9677 15.1797 36.8154 17.9351 38.2282L20.5466 39.6059C22.0995 40.4192 23.9014 40.4544 25.5243 39.746L30.506 37.5238C30.8912 37.3448 31.8798 37.804 32.8722 38.3333"
+          stroke="currentColor"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M45.8044 81.6953H22.4531"
+          stroke="currentColor"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M48.7344 53.1504H54.3008M48.7344 36.6328H67.47"
+          stroke="currentColor"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          opacity="0.4"
+          d="M79.442 78.062L85.01 83.622M70.7688 60C76.7156 60 81.534 64.822 81.534 70.7688C81.534 76.7116 76.7156 81.5336 70.7688 81.5336C64.822 81.5336 60 76.7116 60 70.7688C60 64.822 64.822 60 70.7688 60Z"
+          stroke="currentColor"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </symbol>
+
+      <symbol
+        viewBox="-2 -2 26 26"
+        fill="none"
+        id="icon-search"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M9.80541 17.296C13.9423 17.296 17.2959 13.9424 17.2959 9.8055C17.2959 5.66863 13.9423 2.31503 9.80541 2.31503C5.66854 2.31503 2.31494 5.66863 2.31494 9.8055C2.31494 13.9424 5.66854 17.296 9.80541 17.296Z"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          opacity="0.4"
+          d="M15.0151 15.4043L17.9518 18.3333"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </symbol>
+      <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-close"
-      >
+        id="icon-close">
         <path
           d="M6.74865 5.7309C6.46747 5.44973 6.01159 5.44973 5.73041 5.7309C5.44924 6.01207 5.44924 6.46796 5.73041 6.74913L10.9813 12L5.73041 17.2509C5.44924 17.5321 5.44924 17.9879 5.73041 18.2691C6.01159 18.5503 6.46747 18.5503 6.74865 18.2691L11.9995 13.0183L17.2504 18.2691C17.5316 18.5503 17.9874 18.5503 18.2686 18.2691C18.5498 17.9879 18.5498 17.5321 18.2686 17.2509L13.0178 12L18.2686 6.74913C18.5498 6.46796 18.5498 6.01207 18.2686 5.7309C17.9874 5.44973 17.5316 5.44973 17.2504 5.7309L11.9995 10.9817L6.74865 5.7309Z"
           fill="currentColor"></path>
@@ -639,8 +680,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-computer-code"
-      >
+        id="icon-computer-code">
         <path
           d="M7.22734 3.63379H16.7724C18.9086 3.63379 20.6404 5.36552 20.6404 7.50171V12.7399C20.6404 14.8761 18.9086 16.6078 16.7724 16.6078H7.22734C5.09209 16.6078 3.36035 14.8761 3.36035 12.7399V7.50171C3.36035 5.36552 5.09209 3.63379 7.22734 3.63379Z"
           stroke="currentColor"
@@ -677,8 +717,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-device"
-      >
+        id="icon-device">
         <path
           d="M18.7731 6.91518C18.4397 5.26471 16.9817 4.02148 15.233 4.02148H6.97137C4.97623 4.02148 3.35938 5.63834 3.35938 7.63347V12.5242C3.35938 14.5193 4.97623 16.1362 6.97137 16.1362H10.66"
           stroke="currentColor"
@@ -709,8 +748,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-delete"
-      >
+        id="icon-delete">
         <path
           d="M8.61138 4.40087C8.92842 3.72882 9.60481 3.30005 10.3478 3.30005H13.6534C14.3965 3.30005 15.0729 3.72882 15.3899 4.40086L16.0152 5.72637H17.9465C19.0069 5.72637 19.8665 6.58598 19.8665 7.64637V7.77536C19.8665 8.30555 19.4367 8.73536 18.9065 8.73536H5.09477C4.56458 8.73536 4.13477 8.30555 4.13477 7.77536V7.64637C4.13477 6.58598 4.99438 5.72637 6.05477 5.72637H7.98607L8.61138 4.40087Z"
           stroke="currentColor"
@@ -736,8 +774,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-doc"
-      >
+        id="icon-doc">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -766,8 +803,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-doc-verified"
-      >
+        id="icon-doc-verified">
         <path
           opacity="0.4"
           d="M10.6887 20.0284H8.23669C6.08442 20.0284 4.33984 18.2839 4.33984 16.1316V6.89686C4.33984 4.74459 6.08442 3 8.23669 3H14.9504C17.1027 3 18.8473 4.74459 18.8473 6.89686V10.0805"
@@ -788,8 +824,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-doc-verified-2"
-      >
+        id="icon-doc-verified-2">
         <path
           d="M10.6887 20.0284H8.23669C6.08442 20.0284 4.33984 18.2839 4.33984 16.1316V6.89686C4.33984 4.74459 6.08442 3 8.23669 3H14.9504C17.1027 3 18.8473 4.74459 18.8473 6.89686V10.0805"
           stroke="currentColor"
@@ -811,8 +846,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-done"
-      >
+        id="icon-done">
         <path
           d="M8.44141 12.0928L11.8696 15.5211C12.0456 15.6971 12.3304 15.6971 12.5056 15.5211L19.6808 8.34668"
           stroke="currentColor"
@@ -834,8 +868,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-error"
-      >
+        id="icon-error">
         <path
           opacity="0.4"
           d="M20.6404 12.0001C20.6404 7.22802 16.7724 3.36011 12.0004 3.36011C7.22827 3.36011 3.36035 7.22802 3.36035 12.0001C3.36035 16.7712 7.22827 20.6401 12.0004 20.6401C16.7724 20.6401 20.6404 16.7712 20.6404 12.0001Z"
@@ -851,8 +884,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-download"
-      >
+        id="icon-download">
         <path
           d="M11.9994 15.381V5.28003M16.1645 11.2013L11.998 15.3813L7.83594 11.2013"
           stroke="currentColor"
@@ -868,8 +900,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-facebook"
-      >
+        id="icon-facebook">
         <path
           d="M9.83984 10.2721V7.68011C9.83984 6.53122 10.2947 5.43371 11.1055 4.62108C11.9153 3.8178 13.0138 3.36011 14.1598 3.36011H16.7518V6.81611H14.1598C13.931 6.81611 13.7106 6.91138 13.549 7.06644C13.3865 7.23083 13.2958 7.4466 13.2958 7.68011V10.2721M9.83984 13.7281V20.6401H13.2958V13.7281"
           stroke="currentColor"
@@ -885,8 +916,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-gender"
-      >
+        id="icon-gender">
         <path
           d="M7.12913 11.2898C9.21013 11.2898 10.8969 12.9766 10.8969 15.0576C10.8969 17.1386 9.21013 18.8254 7.12913 18.8254C5.0472 18.8254 3.36035 17.1386 3.36035 15.0576C3.36035 12.9766 5.0472 11.2898 7.12913 11.2898ZM7.12913 11.2898L7.12927 5.1748M9.49598 7.55189L7.12824 5.1748L4.75956 7.55189"
           stroke="currentColor"
@@ -902,8 +932,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-hide"
-      >
+        id="icon-hide">
         <path
           opacity="0.4"
           d="M9.76094 14.3667C9.18594 13.7927 8.83594 13.0127 8.83594 12.1377C8.83594 10.3847 10.2479 8.97168 11.9999 8.97168C12.8669 8.97168 13.6649 9.32268 14.2299 9.89668"
@@ -935,8 +964,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-home"
-      >
+        id="icon-home">
         <path
           d="M14.4006 4.219L19.2505 8.18838C20.3261 9.06891 20.8342 10.4686 20.5727 11.8338L19.4756 17.5595C19.1338 19.3448 17.5716 20.6362 15.7536 20.6362H8.24624C6.42822 20.6362 4.867 19.3448 4.5243 17.5595L3.42808 11.8338C3.16663 10.4686 3.67366 9.06891 4.74934 8.18838L9.59925 4.219C10.9961 3.07609 13.0046 3.07609 14.4006 4.219Z"
           stroke="currentColor"
@@ -952,8 +980,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-image-add"
-      >
+        id="icon-image-add">
         <path
           opacity="0.4"
           fill-rule="evenodd"
@@ -982,8 +1009,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-lamp"
-      >
+        id="icon-lamp">
         <path
           d="M16.7461 20.2917H5.50889M12.6557 4.86942L11.4125 3.62612C10.5932 2.80692 9.25279 2.80692 8.43363 3.62612C8.02073 4.03993 7.82086 4.58078 7.81337 5.11508C7.82086 5.62137 7.99923 6.12765 8.36259 6.51904C8.38409 6.55454 9.67692 7.84827 9.67692 7.84827M14.2049 18.3505H13.3707"
           stroke="currentColor"
@@ -1010,8 +1036,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-lock"
-      >
+        id="icon-lock">
         <path
           opacity="0.4"
           d="M12 14.488V16.5684"
@@ -1033,8 +1058,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-lock-open"
-      >
+        id="icon-lock-open">
         <path
           opacity="0.4"
           d="M9.52148 17.1052H14.478M9.52148 13.9294H14.478"
@@ -1056,8 +1080,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-link"
-      >
+        id="icon-link">
         <path
           d="M10.0547 14.0841C11.6127 16.1669 14.5642 16.5929 16.6471 15.0349C16.8274 14.8994 16.9983 14.7519 17.1571 14.5931L19.3175 12.4327C21.1248 10.5618 21.0725 7.58041 19.2017 5.77306C17.3766 4.01054 14.483 4.01054 12.657 5.77306"
           stroke="currentColor"
@@ -1073,8 +1096,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-lock-sync"
-      >
+        id="icon-lock-sync">
         <path
           opacity="0.4"
           d="M16.2697 10.0003V7.98813C16.2407 5.62941 14.3041 3.74109 11.9462 3.77085C9.63605 3.79965 7.76778 5.66013 7.72852 7.96893V10.0003"
@@ -1112,8 +1134,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-money"
-      >
+        id="icon-money">
         <path
           d="M6.8998 11.4007C7.56204 10.2985 8.27658 9.21416 8.96964 8.1288L7.0754 4.58411C7.0754 4.58411 7.22017 4.45987 7.58165 4.17966C8.66234 3.34276 9.84479 3.12606 11.1235 3.62297C12.3416 4.09653 13.5773 4.45521 14.8999 4.38048C15.2847 4.35806 16.7614 4.16192 16.7614 4.16192L15.0269 8.12226C15.72 9.20669 16.4326 10.2985 17.0949 11.4007C18.1839 13.2128 19.2254 15.2341 18.382 17.3376C17.4003 19.7866 14.5365 20.5992 11.9968 20.6394C9.45814 20.5992 6.59437 19.7866 5.61269 17.3376C4.76925 15.2341 5.8107 13.2128 6.8998 11.4007Z"
           stroke="currentColor"
@@ -1139,8 +1160,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-map"
-      >
+        id="icon-map">
         <path
           opacity="0.4"
           d="M15.4932 5.84253V9.16605"
@@ -1174,8 +1194,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-notebook"
-      >
+        id="icon-notebook">
         <path
           d="M16.6895 7.24664V4.94603C16.6895 3.90921 15.7114 3.15168 14.7073 3.41042L6.32215 5.57466C5.71406 5.73158 5.28906 6.27989 5.28906 6.90758V18.5807C5.28906 19.7175 6.21099 20.6394 7.34775 20.6394H16.653C17.7907 20.6394 18.7117 19.7175 18.7117 18.5807V9.53512C18.7117 8.39742 17.7907 7.4755 16.653 7.4755H5.28906"
           stroke="currentColor"
@@ -1193,8 +1212,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-notebook-2"
-      >
+        id="icon-notebook-2">
         <path
           d="M16.6895 7.24762V4.94701C16.6895 3.91019 15.7114 3.15265 14.7073 3.41139L6.32215 5.57564C5.71406 5.73256 5.28906 6.28086 5.28906 6.90856V18.5816C5.28906 19.7185 6.21099 20.6403 7.34775 20.6403H16.653C17.7907 20.6403 18.7117 19.7185 18.7117 18.5816V9.5361C18.7117 8.3984 17.7907 7.47647 16.653 7.47647H5.28906"
           stroke="currentColor"
@@ -1210,8 +1228,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-notebook-search"
-      >
+        id="icon-notebook-search">
         <path
           d="M16.5605 7.30826V4.94677C16.5605 3.90995 15.5825 3.15241 14.5784 3.41115L6.19324 5.57539C5.58516 5.73231 5.16016 6.28062 5.16016 6.90831V18.5814C5.16016 19.7182 6.08208 20.6401 7.21885 20.6401H10.8131"
           stroke="currentColor"
@@ -1237,8 +1254,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-pencil"
-      >
+        id="icon-pencil">
         <path
           d="M11.002 19.8984L12.8617 19.8125C13.2447 19.7947 13.5996 19.6043 13.8275 19.295L20.2857 10.5073C20.8797 9.69936 20.706 8.5626 19.898 7.96853L18.4428 6.89902C17.6348 6.3059 16.498 6.47963 15.904 7.2876L9.44582 16.0763C9.21884 16.3854 9.14319 16.7805 9.24126 17.1514L9.71389 18.9522C9.86614 19.5314 10.4033 19.9264 11.002 19.8984Z"
           stroke="currentColor"
@@ -1259,8 +1275,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 28 28"
-        id="icon-play"
-      >
+        id="icon-play">
         <path
           d="M24.75 12.701C25.75 13.2783 25.75 14.7217 24.75 15.299L9.75 23.9593C8.75 24.5366 7.5 23.815 7.5 22.6603L7.5 5.33975C7.5 4.18504 8.75 3.46336 9.75 4.04071L24.75 12.701Z"
           stroke="currentColor"></path>
@@ -1268,8 +1283,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-phone"
-      >
+        id="icon-phone">
         <path
           opacity="0.4"
           d="M18.7573 19.2978C21.4044 16.6507 20.2034 16.232 18.1131 14.1426C15.9454 11.9767 14.9332 16.1545 11.5288 12.7509C8.12438 9.34741 12.2995 8.33259 10.1326 6.16484C8.04241 4.0764 7.63078 2.86824 4.97656 5.52245"
@@ -1285,8 +1299,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-play-circle"
-      >
+        id="icon-play-circle">
         <path
           d="M20.6394 12.0004C20.6394 7.2292 16.7714 3.36035 11.9994 3.36035C7.22729 3.36035 3.35938 7.2292 3.35938 12.0004C3.35938 16.7724 7.22729 20.6404 11.9994 20.6404C16.7714 20.6404 20.6394 16.7724 20.6394 12.0004Z"
           stroke="currentColor"
@@ -1304,8 +1317,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-party"
-      >
+        id="icon-party">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1362,8 +1374,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-profile"
-      >
+        id="icon-profile">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1383,8 +1394,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-profile-solid"
-      >
+        id="icon-profile-solid">
         <path
           d="M11.997 15.1758C7.684 15.1758 4 15.8558 4 18.5758C4 21.2968 7.661 22.0008 11.997 22.0008C16.31 22.0008 19.994 21.3218 19.994 18.6008C19.994 15.8798 16.334 15.1758 11.997 15.1758Z"
           fill="currentColor"></path>
@@ -1396,8 +1406,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-profile-light"
-      >
+        id="icon-profile-light">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1417,8 +1426,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-reciept-download"
-      >
+        id="icon-reciept-download">
         <path
           opacity="0.4"
           d="M10.6936 20.6397L8.60611 19.787C8.15217 19.602 7.64125 19.6169 7.19945 19.828L6.45877 20.182C5.68072 20.5547 4.78032 19.9868 4.78125 19.1238L4.79059 7.18403C4.79059 4.8228 6.10384 3.36011 8.4604 3.36011H15.5722C17.9352 3.36011 19.2195 4.8228 19.2195 7.18403V11.3031"
@@ -1439,8 +1447,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-reciept-upload"
-      >
+        id="icon-reciept-upload">
         <path
           opacity="0.4"
           d="M10.6936 20.6397L8.60611 19.787C8.15217 19.602 7.64125 19.6169 7.19945 19.828L6.45877 20.182C5.68072 20.5547 4.78032 19.9868 4.78125 19.1238L4.79059 7.18403C4.79059 4.8228 6.10384 3.36011 8.4604 3.36011H15.5722C17.9352 3.36011 19.2195 4.8228 19.2195 7.18403V11.3031"
@@ -1461,8 +1468,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-telegram"
-      >
+        id="icon-telegram">
         <path
           d="M12.492 15.8035L10.2595 17.7098C9.86251 18.0479 9.24697 17.836 9.14329 17.3251L8.29242 13.1386L4.1675 12.6155C3.22503 12.4959 3.05503 11.2031 3.93399 10.8435L19.4329 4.50026C20.0887 4.23219 20.7743 4.81411 20.6164 5.50439L17.5732 18.826C17.4061 19.5593 16.4963 19.8209 15.9648 19.2893L10.8965 14.2221"
           stroke="currentColor"
@@ -1478,8 +1484,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-rocket"
-      >
+        id="icon-rocket">
         <path
           opacity="0.4"
           d="M8.42441 19.5C8.22103 20.544 8.18583 21.0749 8.32313 21.0238"
@@ -1524,8 +1529,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-signout"
-      >
+        id="icon-signout">
         <path
           d="M15.0165 7.38948V6.45648C15.0165 4.42148 13.3665 2.77148 11.3315 2.77148H6.45646C4.42246 2.77148 2.77246 4.42148 2.77246 6.45648V17.5865C2.77246 19.6215 4.42246 21.2715 6.45646 21.2715H11.3415C13.3705 21.2715 15.0165 19.6265 15.0165 17.5975V16.6545"
           stroke="currentColor"
@@ -1541,8 +1545,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-trophy"
-      >
+        id="icon-trophy">
         <path
           d="M11.9967 14.5317V17.121M8.17454 19.7827L9.02643 17.1205H15.1093L15.9612 19.7827M17.5135 19.7826H6.62197M17.8079 4.21484H6.19141C6.19141 4.21484 6.19794 14.531 12.0025 14.531C17.8079 14.531 17.8079 4.21484 17.8079 4.21484Z"
           stroke="currentColor"
@@ -1572,8 +1575,7 @@ const { title } = Astro.props;
       <symbol
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="icon-tune"
-      >
+        id="icon-tune">
         <path
           d="M10.0508 17.2578H13.9473"
           stroke="currentColor"
@@ -1624,7 +1626,6 @@ const { title } = Astro.props;
           stroke-linejoin="round"></path>
       </symbol>
     </svg>
-    <slot />
     <script
       is:inline
       src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"

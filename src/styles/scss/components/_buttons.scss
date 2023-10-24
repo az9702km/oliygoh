@@ -1,0 +1,17 @@
+.btn {
+  @apply py-3 px-6 uppercase rounded flex items-center transition;
+
+  &.btn-primary {
+    @apply bg-primary text-white hover:bg-primary-hover;
+  }
+
+  &.btn-secondary {
+    @apply bg-background border border-line hover:bg-gray;
+  }
+  &.btn-secondary-black {
+    @apply bg-main-black text-white border border-line hover:bg-main-black-hover;
+  }
+  &.btn-circle {
+    @apply flex items-center justify-center aspect-square rounded-full;
+  }
+}

@@ -1,0 +1,94 @@
+---
+import Footer from "@/layouts/Footer.astro";
+import Layout from "@/layouts/Layout.astro";
+import Navbar from "@components/blocks/Navbar.astro";
+import CoursesBlock from "@components/blocks/Courses.astro";
+import CustomControl from "@components/shared/CustomControl.astro";
+import FAQ from "@components/sections/Home/FAQ.astro";
+import PaginationItem from "@components/shared/PaginationItem.astro";
+import Pagination from "@components/shared/Pagination.astro";
+import ContactUs from "@components/sections/Home/ContactUs.astro";
+---
+
+<Layout title="Courses">
+  <Navbar />
+  <main>
+    <div class="container-wrapper">
+      <h1 class="h2 my-40">Barcha kurslarimiz</h1>
+      <div class="row">
+        <div class="col-3">
+          <div class="flex flex-wrap gap-2 mb-40">
+            <CustomControl type="checkbox" id="some1" name="somename">
+              Dizayn
+            </CustomControl>
+            <CustomControl type="checkbox" id="some2" name="somename">
+              Fizika
+            </CustomControl>
+            <CustomControl type="checkbox" id="some2" name="somename">
+              Kimyo
+            </CustomControl>
+            <CustomControl type="checkbox" id="some3" name="somename">
+              Adabiyot
+            </CustomControl>
+            <CustomControl type="checkbox" id="some4" name="somename">
+              Dizayn
+            </CustomControl>
+            <CustomControl type="checkbox" id="some5" name="somename">
+              Alegbra
+            </CustomControl>
+            <CustomControl type="checkbox" id="some6" name="somename">
+              Ona tili
+            </CustomControl>
+            <CustomControl type="checkbox" id="some7" name="somename">
+              Rus tili
+            </CustomControl>
+            <CustomControl type="checkbox" id="some8" name="somename">
+              IQ
+            </CustomControl>
+            <CustomControl type="checkbox" id="some9" name="somename">
+              Biologiya
+            </CustomControl>
+            <CustomControl type="checkbox" id="some10" name="somename">
+              Geometriya
+            </CustomControl>
+            <CustomControl type="checkbox" id="some11" name="somename">
+              Tarix
+            </CustomControl>
+            <CustomControl type="checkbox" id="some12" name="somename">
+              Geografiya
+            </CustomControl>
+            <CustomControl type="checkbox" id="some13" name="somename">
+              Astronomiya
+            </CustomControl>
+            <CustomControl type="checkbox" id="some14" name="somename">
+              Ingliz tili
+            </CustomControl>
+            <CustomControl type="checkbox" id="some15" name="somename">
+              Dasturlash
+            </CustomControl>
+            <CustomControl type="checkbox" id="some16" name="somename">
+              Boshqa
+            </CustomControl>
+          </div>
+        </div>
+      </div>
+      <div class="mb-120">
+        <CoursesBlock expanded />
+        <div class="flex justify-end mt-40">
+          <Pagination>
+            <PaginationItem type="prev" />
+            <PaginationItem active>01</PaginationItem>
+            <PaginationItem>02</PaginationItem>
+            <PaginationItem>...</PaginationItem>
+            <PaginationItem>05</PaginationItem>
+            <PaginationItem>06</PaginationItem>
+            <PaginationItem type="next" />
+          </Pagination>
+        </div>
+      </div>
+      <FAQ />
+      <ContactUs />
+    </div>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,24 @@
+---
+// images
+import Button from "@components/shared/Button.astro";
+import CoursesBlock from "@components/blocks/Courses.astro";
+---
+
+<section class="courses-section mb-120">
+  <div class="container-wrapper">
+    <div class="flex mb-40 items-center justify-between">
+      <h2 class="h2">
+        <span class="text-primary">Kurslarimiz</span><br />bilan tanishing
+      </h2>
+      <div class="features-slider-controls flex gap-x-15">
+        <Button classes="font-medium" style="secondary">
+          BARCHASI
+          <svg class="icon w-6 ml-10">
+            <use xlink:href="#icon-arrow-right"></use>
+          </svg>
+        </Button>
+      </div>
+    </div>
+    <CoursesBlock />
+  </div>
+</section>

@@ -1,0 +1,11 @@
+.hero {
+  @apply text-white p-40 rounded bg-primary-linear md:p-30;
+}
+
+.hero-chips {
+  @apply text-body-2 flex items-center transition lg:py-10 lg:px-15 border border-white rounded-full text-white hover:text-main-black hover:bg-white md:py-2 md:px-4 md:text-base md:leading-tight;
+}
+
+.hero-chips-wrapper {
+  @apply flex flex-wrap lg:gap-10 md:gap-2;
+}

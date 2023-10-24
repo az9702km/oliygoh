@@ -1,0 +1,45 @@
+---
+import Brand from "@components/shared/Brand.astro";
+---
+
+<header>
+  <nav class="navbar">
+    <div class="container-wrapper">
+      <div class="nav">
+        <Brand />
+        <div class="nav__menu">
+          <a href="/courses.html" class="nav__link">Kurslar</a>
+          <a href="/about.html" class="nav__link">Blog</a>
+          <a href="#!" class="nav__link">Biz haqimizda</a>
+          <a href="#!" class="nav__link btn btn-primary">kirish</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  .navbar {
+    @apply border-b border-b-line py-6;
+  }
+
+  .nav {
+    @apply flex items-center;
+  }
+
+  .nav .nav__menu {
+    @apply ml-auto flex gap-[2.5rem] items-center;
+  }
+
+  .nav .nav__link {
+    font-size: 1.125rem;
+  }
+
+  .nav .nav__link.active {
+    @apply font-semibold;
+  }
+</style>

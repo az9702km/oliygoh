@@ -1,0 +1,11 @@
+@import "components/components";
+@import "blocks/blocks";
+
+@import "layout";
+@import "typography";
+@import "utils";
+
+html {
+  @apply text-main-black;
+  font-size: 16px;
+}

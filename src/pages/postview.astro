@@ -1,0 +1,28 @@
+---
+import Footer from "@/layouts/Footer.astro";
+import Layout from "@/layouts/Layout.astro";
+import Navbar from "@components/blocks/Navbar.astro";
+import Button from "@components/shared/Button.astro";
+import Post from "@components/sections/Post/Post.astro";
+---
+
+<Layout title="Blog">
+  <Navbar />
+  <main>
+    <div class="container-wrapper py-40">
+      <div class="row">
+        <div class="col-1">
+          <Button style="secondary">
+            <svg class="icon !w-6 mr-2">
+              <use xlink:href="#icon-arrow-left"></use>
+            </svg>Barcha maqolalar
+          </Button>
+        </div>
+        <div class="col-2">
+          <Post />
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,11 @@
+.post {
+  &-header {
+    @apply mb-30;
+  }
+  &-meta {
+    @apply text-primary uppercase mb-10;
+  }
+  &-title {
+    @apply h1 font-medium mb-4;
+  }
+}

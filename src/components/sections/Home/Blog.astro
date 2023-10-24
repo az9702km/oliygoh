@@ -1,0 +1,23 @@
+---
+import Posts from "@components/blocks/Posts.astro";
+import Button from "@components/shared/Button.astro";
+---
+
+<section class="blog-section mb-120">
+  <div class="container-wrapper">
+    <div class="flex mb-40 items-center justify-between">
+      <h2 class="h2">
+        Qiziqarli yangilik va <br /><span class="text-primary">maqolalar</span>
+      </h2>
+      <div class="features-slider-controls flex gap-x-15">
+        <Button classes="font-medium" style="secondary">
+          BARCHASI
+          <svg class="icon w-6 ml-10">
+            <use xlink:href="#icon-arrow-right"></use>
+          </svg>
+        </Button>
+      </div>
+    </div>
+    <Posts />
+  </div>
+</section>

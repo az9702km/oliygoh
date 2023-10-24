@@ -1,0 +1,42 @@
+---
+import HeroChip from "@components/shared/HeroChip.astro";
+import HeroSlider from "@components/shared/HeroSlider.astro";
+---
+
+<section class="hero-section mt-40 mb-120">
+  <div class="container-wrapper">
+    <div class="row grid-cols-3">
+      <div class="lg:col-3 md:col-span-2">
+        <div class="hero h-full">
+          <h1 class="h1 mb-10">
+            Zamonaviy bilimlarni qulay platforma orqali o‘rganing!
+          </h1>
+          <p class="text-body-2 lg:mb-60 md:mb-30">
+            Malakali ustozlar tomonidan tayyorlangan videokurslar sizga aktual
+            bilimlar beradi va zamonaviy kasblarga o'rgatadi.
+          </p>
+          <div class="hero-chips-wrapper">
+            <HeroChip>Dasturlar</HeroChip>
+            <HeroChip>Chet tillar</HeroChip>
+            <HeroChip>Rus tili</HeroChip>
+            <HeroChip>Fizika</HeroChip>
+            <HeroChip>Kimyo</HeroChip>
+            <HeroChip>Adabiyot</HeroChip>
+            <HeroChip>Dizayn</HeroChip>
+            <HeroChip>Test</HeroChip>
+            <HeroChip>Biologiya</HeroChip>
+            <HeroChip>Tarix</HeroChip>
+            <HeroChip>Geografiya</HeroChip>
+            <HeroChip>Algebra</HeroChip>
+            <HeroChip>Geometriya</HeroChip>
+            <HeroChip>Ingliz tili</HeroChip>
+            <HeroChip>IQ</HeroChip>
+          </div>
+        </div>
+      </div>
+      <div class="col-1">
+        <HeroSlider />
+      </div>
+    </div>
+  </div>
+</section>

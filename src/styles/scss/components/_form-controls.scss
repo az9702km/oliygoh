@@ -1,0 +1,47 @@
+.custom-control.custom-control--checkbox:has(input:checked) {
+  .check-icon {
+    display: flex !important;
+  }
+}
+
+.input-field {
+  @apply flex border border-line rounded text-body-3 items-center;
+
+  .add-on {
+    @apply p-10 border-line leading-none;
+
+    &.add-on--before {
+      @apply border-r;
+    }
+
+    &.add-on--after {
+      @apply border-l;
+    }
+  }
+
+  &__input {
+    @apply text-body-3 placeholder:text-text-gray-2  focus:ring-transparent px-20 py-10 w-full;
+    line-height: 1.5;
+    border: none !important;
+  }
+
+  &__icon {
+    @apply px-3;
+
+    &.leading-icon {
+      @apply pr-1.5;
+    }
+
+    &.trailing-icon {
+      @apply pl-1.5;
+    }
+  }
+}
+
+.input-field:has(.leading-icon) .input-field__input {
+  @apply pl-1.5;
+}
+
+.input-field:has(.trailing-icon) .input-field__input {
+  @apply pr-1.5;
+}

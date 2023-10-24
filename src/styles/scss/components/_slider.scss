@@ -1,0 +1,20 @@
+.slide-img {
+  aspect-ratio: 7/12;
+  @apply w-full object-cover;
+}
+
+.slides-wrapper {
+  @apply rounded relative;
+}
+
+.slider-controls {
+  @apply bg-main-black-linear absolute top-0 left-0 w-full h-full flex flex-col justify-between items-end p-20;
+}
+
+.progress-wrapper {
+  @apply flex gap-1.5 h-1 w-full;
+}
+
+.slide-progress {
+  @apply w-full rounded-full bg-white/40;
+}

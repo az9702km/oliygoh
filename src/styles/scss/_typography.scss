@@ -1,0 +1,84 @@
+.header {
+  @apply text-3xl font-bold underline;
+}
+
+.h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.h2 {
+  font-size: 1.375rem;
+  line-height: 1.2;
+}
+
+.text-body-1 {
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+.text-body-2 {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.text-body-3 {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+@screen md {
+  .h1 {
+    font-size: 2.125rem;
+  }
+
+  .h2 {
+    font-size: 1.75rem;
+  }
+
+  .text-body-1 {
+    font-size: 1.5rem;
+  }
+
+  .text-body-2 {
+    font-size: 1.25rem;
+  }
+
+  .text-body-3 {
+    font-size: 1.125rem;
+  }
+
+  .subtitle {
+    font-size: 0.875rem;
+  }
+}
+@screen xl {
+  .h1 {
+    font-size: 2.625rem;
+  }
+
+  .h2 {
+    font-size: 2rem;
+  }
+
+  .text-body-1 {
+    font-size: 1.375rem;
+  }
+
+  .text-body-2 {
+    font-size: 1.125rem;
+  }
+
+  .text-body-3 {
+    font-size: 1rem;
+  }
+
+  .subtitle {
+    font-size: 0.875rem;
+  }
+}

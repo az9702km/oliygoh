@@ -1,0 +1,68 @@
+---
+import Footer from "@/layouts/Footer.astro";
+import Layout from "@/layouts/Layout.astro";
+import EmptySearch from "@components/blocks/EmptySearch.astro";
+import Navbar from "@components/blocks/Navbar.astro";
+import CustomControl from "@components/shared/CustomControl.astro";
+import Input from "@components/shared/Input.astro";
+---
+
+<Layout title="Blog search">
+  <Navbar />
+  <main>
+    <div class="container-wrapper">
+      <h1 class="h2 my-40">
+        Barcha <span class="text-primary">maqolalar</span>
+      </h1>
+      <div class="row mb-40">
+        <div class="col-2">
+          <div class="flex flex-wrap gap-2">
+            <CustomControl type="checkbox" id="some1" name="somename">
+              Dizayn
+            </CustomControl>
+            <CustomControl type="checkbox" id="some2" name="somename">
+              O‘qituvchi
+            </CustomControl>
+            <CustomControl type="checkbox" id="some21" name="somename">
+              Abiturient
+            </CustomControl>
+            <CustomControl type="checkbox" id="some3" name="somename">
+              Universitet
+            </CustomControl>
+            <CustomControl type="checkbox" id="some4" name="somename">
+              E‘lonlar
+            </CustomControl>
+            <CustomControl type="checkbox" id="some5" name="somename">
+              Yangiliklar
+            </CustomControl>
+            <CustomControl type="checkbox" id="some6" name="somename">
+              Imtihon
+            </CustomControl>
+            <CustomControl type="checkbox" id="some7" name="somename">
+              Talaba
+            </CustomControl>
+            <CustomControl type="checkbox" id="some8" name="somename">
+              Boshqa
+            </CustomControl>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="flex items-end h-full">
+            <Input
+              name="some"
+              id="someid"
+              type="text"
+              utils="w-full"
+              addonAfter="search"
+              placeholder="1 321 maqolalar"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="my-120 py-2">
+        <EmptySearch />
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>

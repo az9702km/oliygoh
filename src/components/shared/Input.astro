@@ -1,0 +1,59 @@
+---
+const {
+  name,
+  id,
+  type,
+  placeholder,
+  leadingIcon,
+  trailingIcon,
+  addonBefore,
+  addonAfter,
+  utils
+} = Astro.props;
+---
+
+<div class:list={["input-field", utils]}>
+  {
+    addonBefore && (
+      <div class="add-on add-on--before">
+        <svg class="icon !w-6">
+          <use xlink:href={`#icon-${addonBefore}`} />
+        </svg>
+      </div>
+    )
+  }
+  {
+    leadingIcon && (
+      <div class="input-field__icon leading-icon">
+        <svg class="icon !w-20">
+          <use xlink:href={`#icon-${leadingIcon}`} />
+        </svg>
+      </div>
+    )
+  }
+  <input
+    type={type}
+    placeholder={placeholder}
+    id={id}
+    name={name}
+    class="input-field__input"
+  />
+  {
+    trailingIcon && (
+      <div class="input-field__icon trailing-icon">
+        <svg class="icon !w-20">
+          <use xlink:href={`#icon-${trailingIcon}`} />
+        </svg>
+      </div>
+    )
+  }
+  {
+    addonAfter && (
+      <div class="add-on add-on--after">
+        <svg class="icon !w-6">
+          <use xlink:href={`#icon-${addonAfter}`} />
+        </svg>
+      </div>
+    )
+  }
+</div>

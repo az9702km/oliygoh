@@ -1,0 +1,19 @@
+.empty-search-block {
+  @apply flex justify-center;
+}
+
+.empty-result {
+  @apply w-1/3 text-center;
+
+  &__icon {
+    @apply mb-20;
+  }
+
+  &__title {
+    @apply text-body-1 mb-10 font-medium;
+  }
+
+  &__text {
+    @apply text-body-2 text-text-gray;
+  }
+}

@@ -1,0 +1,28 @@
+---
+import Button from "./Button.astro";
+
+---
+
+<div class="slides-wrapper overflow-hidden">
+  <div class="slider-controls">
+    <Button form="btn-circle" classes="p-2.5 bg-white">
+      <svg class="icon fill-primary stroke-0 w-6">
+        <use xlink:href="#icon-play"></use>
+      </svg>
+    </Button>
+    <div class="progress-wrapper">
+      <div class="slide-progress"></div>
+      <div class="slide-progress"></div>
+      <div class="slide-progress"></div>
+    </div>
+  </div>
+  <div class="slide-stage">
+    <div class="slide">
+      <img
+        src="https://images.unsplash.com/photo-1512485694743-9c9538b4e6e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80"
+        alt=""
+        class="slide-img"
+      />
+    </div>
+  </div>
+</div>

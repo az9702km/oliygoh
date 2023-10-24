@@ -1,0 +1,28 @@
+---
+const { imgsrc, hasMeta, bodyUp, titleClass } = Astro.props;
+---
+
+<div class="card">
+  {
+    imgsrc && (
+      <img
+        class:list={["card__img", bodyUp ? "order-last" : ""]}
+        src={imgsrc}
+      />
+    )
+  }
+  <div class="card__body">
+    <a href="#!" class:list={["card__meta", hasMeta ? "" : "hidden"]}>
+      <slot name="meta" />
+    </a>
+    <a href="#!" class="card__subtitle">
+      <slot name="subtitle" />
+    </a>
+    <a href="#!" class:list={["card__title", titleClass ? titleClass : ""]}>
+      <slot name="title" /></a
+    >
+    <p class="card__text">
+      <slot name="text" />
+    </p>
+  </div>
+</div>
