@@ -1,64 +1,62 @@
 ---
 import Button from "@components/shared/Button.astro";
-import FeaturedCard from "@components/shared/FeaturedCard.astro";
+import CardFeature from "@components/shared/Cards/CardFeature.astro";
 ---
 
-<section class="features-section mb-120">
-  <div class="container-wrapper">
-    <div class="flex mb-40 items-center justify-between">
-      <h2 class="h2">
-        Bizning <br />
-        <span class="text-primary">afzalliklarimiz</span>
-      </h2>
-      <div class="features-slider-controls flex gap-x-15">
-        <Button style="secondary" form="btn-circle" classes="p-15">
-          <svg class="icon !w-6">
-            <use xlink:href="#icon-arrow-left"></use>
-          </svg>
-        </Button>
-        <Button style="secondary-black" form="btn-circle" classes="p-15">
-          <svg class="icon !w-6">
-            <use xlink:href="#icon-arrow-right"></use>
-          </svg>
-        </Button>
-      </div>
+<section class="features-section section">
+  <div class="section-header">
+    <h2 class="section-title">
+      Bizning <br />
+      <span class="title-highlight">afzalliklarimiz</span>
+    </h2>
+    <div class="features-slider-controls flex gap-x-15">
+      <Button style="secondary" form="btn-circle" classes="p-15">
+        <svg class="icon !w-6">
+          <use xlink:href="#icon-arrow-left"></use>
+        </svg>
+      </Button>
+      <Button style="secondary-black" form="btn-circle" classes="p-15">
+        <svg class="icon !w-6">
+          <use xlink:href="#icon-arrow-right"></use>
+        </svg>
+      </Button>
     </div>
-    <div class="row">
-      <div class="col-1">
-        <FeaturedCard icon="icon-lamp">
-          <Fragment slot="title">Qulay platforma</Fragment>
-          <Fragment slot="text">
-            Kurslarni o‘zingizga qulay vaqtda va joyda o‘rganish imkoniyat
-          </Fragment>
-        </FeaturedCard>
-      </div>
-      <div class="col-1">
-        <FeaturedCard icon="icon-notebook-2">
-          <Fragment slot="title">Shunchaki kurslar emas</Fragment>
-          <Fragment slot="text">
-            Kurslarni barcha materiallari va vazifalari aniq reja asosida ishlab
-            chiqilgan
-          </Fragment>
-        </FeaturedCard>
-      </div>
-      <div class="col-1">
-        <FeaturedCard icon="icon-video-slides">
-          <Fragment slot="title">Aktual bilimlar</Fragment>
-          <Fragment slot="text">
-            Malakali ustozlardan darslar va ularni mustahkamlash uchun
-            topshiriqlar
-          </Fragment>
-        </FeaturedCard>
-      </div>
-      <div class="col-1">
-        <FeaturedCard icon="icon-trophy">
-          <Fragment slot="title">Natija uchun</Fragment>
-          <Fragment slot="text">
-            Samarali bilim olish uchun natijalarni kuzatish va tahlil qilish
-            juda ham oson
-          </Fragment>
-        </FeaturedCard>
-      </div>
+  </div>
+  <div class="row">
+    <div class="col-1">
+      <CardFeature icon="lamp">
+        <Fragment slot="title">Qulay platforma</Fragment>
+        <Fragment slot="text">
+          Kurslarni o‘zingizga qulay vaqtda va joyda o‘rganish imkoniyat
+        </Fragment>
+      </CardFeature>
+    </div>
+    <div class="col-1">
+      <CardFeature icon="notebook-2">
+        <Fragment slot="title">Shunchaki kurslar emas</Fragment>
+        <Fragment slot="text">
+          Kurslarni barcha materiallari va vazifalari aniq reja asosida ishlab
+          chiqilgan
+        </Fragment>
+      </CardFeature>
+    </div>
+    <div class="col-1">
+      <CardFeature icon="video-slides">
+        <Fragment slot="title">Aktual bilimlar</Fragment>
+        <Fragment slot="text">
+          Malakali ustozlardan darslar va ularni mustahkamlash uchun
+          topshiriqlar
+        </Fragment>
+      </CardFeature>
+    </div>
+    <div class="col-1">
+      <CardFeature icon="trophy">
+        <Fragment slot="title">Natija uchun</Fragment>
+        <Fragment slot="text">
+          Samarali bilim olish uchun natijalarni kuzatish va tahlil qilish juda
+          ham oson
+        </Fragment>
+      </CardFeature>
     </div>
   </div>
 </section>

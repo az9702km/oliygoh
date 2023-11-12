@@ -1,0 +1,34 @@
+.bottom-action-card {
+  @apply grid gap-30;
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: auto auto;
+
+  &::after {
+    @apply block border border-line bg-background rounded;
+    content: "";
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  .left {
+    @apply p-60 pr-0;
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .right {
+    @apply p-60 pl-0 pt-0 self-end;
+    grid-area: 1 / 2 / 3 / 3;
+  }
+
+  .left,
+  .right {
+    @apply relative;
+  }
+}
+
+.bottom-action-card.bottom-action-card--mini {
+  .left {
+    @apply p-40 pr-0;
+  }
+  .right {
+    @apply p-40 pl-0 pt-0;
+  }
+}

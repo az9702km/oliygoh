@@ -1,0 +1,14 @@
+---
+const { mini } = Astro.props;
+---
+
+<div
+  class="bottom-action-card"
+  class:list={[mini && "bottom-action-card--mini"]}>
+  <div class="left">
+    <slot name="left" />
+  </div>
+  <div class="right">
+    <slot name="right" />
+  </div>
+</div>

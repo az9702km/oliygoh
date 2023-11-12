@@ -1,0 +1,14 @@
+---
+const { id, bodyTarget } = Astro.props;
+---
+
+<h2 class="accordion__control" id={id}>
+  <button
+    type="button"
+    class="accordion__control-button"
+    data-accordion-target=`#${bodyTarget}`
+    aria-expanded="true"
+    aria-controls={bodyTarget}>
+    <slot />
+  </button>
+</h2>

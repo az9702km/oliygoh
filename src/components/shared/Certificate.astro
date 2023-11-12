@@ -1,0 +1,15 @@
+---
+const { icon, xClasses } = Astro.props;
+---
+
+<div class="certificate-card" class:list={[xClasses]}>
+  <svg class="icon !w-11 certificate-card__icon">
+    <use xlink:href=`#icon-${icon}`></use>
+  </svg>
+  <p class="certificate-card__title">
+    <slot name="title" />
+  </p>
+  <a href="#!" class="certificate-card__button">
+    <slot name="btn_txt" />
+  </a>
+</div>

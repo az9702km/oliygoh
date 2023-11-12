@@ -1,0 +1,66 @@
+---
+import Button from "@components/shared/Button.astro";
+import IconList from "@components/shared/IconList/IconList.astro";
+import IconListItem from "@components/shared/IconList/IconListItem.astro";
+import TermDesc from "@components/shared/TermDesc.astro";
+import img from "@assets/images/courses/course-2.png";
+---
+
+<div class="course-recap sticky top-7">
+  <button class="block">
+    <div class="relative w-full aspect-video">
+      <div
+        class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+        <div class="btn !p-[.75rem] leading-none btn-circle bg-white">
+          <svg class="icon !w-20 text-primary fill-primary">
+            <use xlink:href="#icon-play-fill"></use>
+          </svg>
+        </div>
+      </div>
+      <img src={img.src} class="w-full h-full object-cover" alt="" />
+    </div>
+  </button>
+  <div class="course-recap__body">
+    <IconList>
+      <IconListItem icon="double-check">
+        <TermDesc>
+          <Fragment slot="term">Davomiyligi</Fragment>
+          <Fragment slot="desc">14 soat 24 daqiqa</Fragment>
+        </TermDesc>
+      </IconListItem>
+      <IconListItem icon="double-check">
+        <TermDesc>
+          <Fragment slot="term">Murakkablik</Fragment>
+          <Fragment slot="desc">Boshlang‘ich</Fragment>
+        </TermDesc>
+      </IconListItem>
+      <IconListItem icon="double-check">
+        <TermDesc>
+          <Fragment slot="term">Darslar soni</Fragment>
+          <Fragment slot="desc">67 ta</Fragment>
+        </TermDesc>
+      </IconListItem>
+      <IconListItem icon="double-check">
+        <TermDesc>
+          <Fragment slot="term">Sertifikat</Fragment>
+          <Fragment slot="desc">Kurs sertifikati mavjud</Fragment>
+        </TermDesc>
+      </IconListItem>
+      <IconListItem icon="double-check">
+        <TermDesc>
+          <Fragment slot="term">Foydalanish muddati</Fragment>
+          <Fragment slot="desc">1 yil foydalanish</Fragment>
+        </TermDesc>
+      </IconListItem>
+    </IconList>
+  </div>
+  <div class="course-recap__body">
+    <div class="total-price mb-20">
+      <div class="total-price__title">BIR MARTALIK TO‘LOV</div>
+      <div class="total-price__amount">9 850 000 SO‘M</div>
+    </div>
+    <Button style="secondary-black" classes="justify-center">
+      kursni SOTIB OLISH
+    </Button>
+  </div>
+</div>

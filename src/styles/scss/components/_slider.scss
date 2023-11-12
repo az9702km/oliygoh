@@ -1,10 +1,9 @@
 .slide-img {
-  aspect-ratio: 7/12;
   @apply w-full object-cover;
 }
 
 .slides-wrapper {
-  @apply rounded relative;
+  @apply rounded relative w-full h-full;
 }
 
 .slider-controls {

@@ -1,6 +1,28 @@
 ---
-
+import Layout from "@/layouts/Layout.astro";
+import Features from "@components/sections/Home/Features.astro";
+import Stats from "@components/sections/Home/Stats.astro";
+import Directions from "@components/sections/About/Directions.astro";
+import Whywe from "@components/sections/About/Whywe.astro";
+import FAQ from "@components/sections/Home/FAQ.astro";
+import Certificates from "@components/sections/About/Certificates.astro";
+import Partners from "@components/sections/Home/Partners.astro";
+import ContactUs from "@components/sections/Home/ContactUs.astro";
+import Hero from "@components/sections/About/Hero.astro";
 ---
-<body>
-  something in your eyes
-</body>
+
+<Layout title="About us">
+  <main>
+    <div class="container-wrapper">
+      <Hero />
+      <Stats />
+      <Features />
+      <Directions />
+      <Whywe />
+      <FAQ />
+      <Certificates />
+      <Partners />
+      <ContactUs />
+    </div>
+  </main>
+</Layout>

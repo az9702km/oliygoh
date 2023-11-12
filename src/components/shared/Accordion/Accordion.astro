@@ -1,0 +1,7 @@
+---
+const { id, name, extraClass } = Astro.props;
+---
+
+<div id={id} data-accordion={name} class="accordion" class:list={[extraClass]}>
+  <slot />
+</div>

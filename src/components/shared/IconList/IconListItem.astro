@@ -1,0 +1,12 @@
+---
+const { icon } = Astro.props;
+---
+
+<li class="icon-list__item">
+  <svg class="icon">
+    <use xlink:href=`#icon-${icon}`></use>
+  </svg>
+  <div class="content">
+    <slot />
+  </div>
+</li>

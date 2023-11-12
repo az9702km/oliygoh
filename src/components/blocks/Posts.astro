@@ -19,231 +19,215 @@ import blog17 from "@assets/images/blog/blog-17.png";
 import blog18 from "@assets/images/blog/blog-18.png";
 import blog19 from "@assets/images/blog/blog-19.png";
 import blog20 from "@assets/images/blog/blog-20.png";
-import Card from "@components/shared/Card.astro";
+import CardPost from "@components/shared/Cards/CardPost.astro";
 
 const { expanded } = Astro.props
 ---
 
 <div class="row posts-grid">
   <div class="col-1">
-    <Card
-      imgsrc={blog1.src}
-      bodyUp
-      titleClass="!h-[5.25rem] !line-clamp-3">
+    <CardPost
+      img={blog1.src}>
       <Fragment slot="title">
         Xalqaro Nordik universiteti haqida nimalar bilishimiz muhim
       </Fragment>
       <Fragment slot="subtitle">ABITURENTLAR</Fragment>
-    </Card>
+    </CardPost>
   </div>
   <div class="col-1">
-    <Card
-      imgsrc={blog2.src}
-      bodyUp
-      titleClass="!h-[5.25rem] !line-clamp-3">
+    <CardPost
+      img={blog2.src}>
       <Fragment slot="title">
         O‘zbekistondagi top-5 universitetlar 
       </Fragment>
       <Fragment slot="subtitle">Darslar</Fragment>
-    </Card>
+    </CardPost>
   </div>
   <div class="col-1">
-    <Card
-      imgsrc={blog3.src}
-      bodyUp
-      titleClass="!h-[5.25rem] !line-clamp-3">
+    <CardPost
+      img={blog3.src}>
       <Fragment slot="title">
         Alegbra fanida yangi darslar boshlandi
       </Fragment>
       <Fragment slot="subtitle">o‘qituvchi</Fragment>
-    </Card>
+    </CardPost>
   </div>
   <div class="col-1">
-    <Card
-      imgsrc={blog4.src}
-      bodyUp
-      titleClass="!h-[5.25rem] !line-clamp-3">
+    <CardPost
+      img={blog4.src}>
       <Fragment slot="title">
         Tarix fanini 12 yilik tajribaga ega o‘qtuvchidan o‘rganing
       </Fragment>
       <Fragment slot="subtitle">o‘qituvchi</Fragment>
-    </Card>
+    </CardPost>
   </div>
   <div class="col-1">
-    <Card
-      imgsrc={blog5.src}
-      bodyUp
-      titleClass="!h-[5.25rem] !line-clamp-3">
+    <CardPost
+      img={blog5.src}>
       <Fragment slot="title">
         Qanday hollarda o‘qishni ko‘chirish rad etiladi?
       </Fragment>
       <Fragment slot="subtitle">o‘qituvchi</Fragment>
-    </Card>
+    </CardPost>
   </div>
   <div class="col-1">
-    <Card
-      imgsrc={blog6.src}
-      bodyUp
-      titleClass="!h-[5.25rem] !line-clamp-3">
+    <CardPost
+      img={blog6.src}>
       <Fragment slot="title">
         Uzrli sabab bilan nodavlat oliygohlarda o‘qishi ko‘chirish mumkinmi
       </Fragment>
       <Fragment slot="subtitle">University</Fragment>
-    </Card>
+    </CardPost>
   </div>
   <div class="col-1">
-    <Card
-      imgsrc={blog7.src}
-      bodyUp
-      titleClass="!h-[5.25rem] !line-clamp-3">
+    <CardPost
+      img={blog7.src}>
       <Fragment slot="title">
         Turli sabablarga ko‘ra, testga kirmagan abituriyentlarga qo‘shimcha kun beriladi
       </Fragment>
       <Fragment slot="subtitle">test</Fragment>
-    </Card>
+    </CardPost>
   </div>
   <div class="col-1">
-    <Card
-      imgsrc={blog8.src}
-      bodyUp
-      titleClass="!h-[5.25rem] !line-clamp-3">
+    <CardPost
+      img={blog8.src}>
       <Fragment slot="title">
         Masofaviy ta’lim shaklini boshqa ta’lim shakilga o‘zgatirish mumkinmi
       </Fragment>
       <Fragment slot="subtitle">ta’lim</Fragment>
-    </Card>
+    </CardPost>
   </div>
   {
     expanded && (
       <div class="col-1">
-        <Card
-          imgsrc={blog9.src}
+        <CardPost
+          img={blog9.src}
           bodyUp
           titleClass="!h-[5.25rem] !line-clamp-3">
           <Fragment slot="title">
             O‘qishga kirishda kirdi chiqdi pechatlar kerakmi?
           </Fragment>
           <Fragment slot="subtitle">talaba</Fragment>
-        </Card>
+        </CardPost>
       </div>
       <div class="col-1">
-        <Card
-          imgsrc={blog10.src}
+        <CardPost
+          img={blog10.src}
           bodyUp
           titleClass="!h-[5.25rem] !line-clamp-3">
           <Fragment slot="title">
             Toshkentda eng ko‘p daromad ko‘rgan OTMlar ro‘yxati 
           </Fragment>
           <Fragment slot="subtitle">university</Fragment>
-        </Card>
+        </CardPost>
       </div>
       <div class="col-1">
-        <Card
-          imgsrc={blog11.src}
+        <CardPost
+          img={blog11.src}
           bodyUp
           titleClass="!h-[5.25rem] !line-clamp-3">
           <Fragment slot="title">
             Bir xil ball to‘plansa, lekin kvota soni kam bo‘lsa nima bo‘ladi
           </Fragment>
           <Fragment slot="subtitle">abituriyet</Fragment>
-        </Card>
+        </CardPost>
       </div>
       <div class="col-1">
-        <Card
-          imgsrc={blog12.src}
+        <CardPost
+          img={blog12.src}
           bodyUp
           titleClass="!h-[5.25rem] !line-clamp-3">
           <Fragment slot="title">
             Uzog‘i 4-5 kun ichida barcha abituriyetlarning ruxsatnomasi shakillantiradi
           </Fragment>
           <Fragment slot="subtitle">o‘qituvchi</Fragment>
-        </Card>
+        </CardPost>
       </div>
       <div class="col-1">
-        <Card
-          imgsrc={blog13.src}
+        <CardPost
+          img={blog13.src}
           bodyUp
           titleClass="!h-[5.25rem] !line-clamp-3">
           <Fragment slot="title">
             Oxirgi natijalarga ko‘ra abituriyetnlat 1 mln lik dovondan osholmadi
           </Fragment>
           <Fragment slot="subtitle">abituriyent</Fragment>
-        </Card>
+        </CardPost>
       </div>
       <div class="col-1">
-        <Card
-          imgsrc={blog14.src}
+        <CardPost
+          img={blog14.src}
           bodyUp
           titleClass="!h-[5.25rem] !line-clamp-3">
           <Fragment slot="title">Garvard universiteti talabalaridan 16 ta g‘ayratlanuvchi ibora</Fragment>
           <Fragment slot="subtitle">university</Fragment>
-        </Card>
+        </CardPost>
       </div>
       <div class="col-1">
-        <Card
-          imgsrc={blog15.src}
+        <CardPost
+          img={blog15.src}
           bodyUp
           titleClass="!h-[5.25rem] !line-clamp-3">
           <Fragment slot="title">
             Talabalarni o‘qishni ko‘chirish bo‘yicha stastikalari
           </Fragment>
           <Fragment slot="subtitle">university</Fragment>
-        </Card>
+        </CardPost>
       </div>
       <div class="col-1">
-        <Card
-          imgsrc={blog16.src}
+        <CardPost
+          img={blog16.src}
           bodyUp
           titleClass="!h-[5.25rem] !line-clamp-3">
           <Fragment slot="title">
             Haydovchilik guvohnomasi bilan testga kirsa bo‘ladimi
           </Fragment>
           <Fragment slot="subtitle">ABITURENTLAR</Fragment>
-        </Card>
+        </CardPost>
       </div>
       <div class="col-1">
-        <Card
-          imgsrc={blog17.src}
+        <CardPost
+          img={blog17.src}
           bodyUp
           titleClass="!h-[5.25rem] !line-clamp-3">
           <Fragment slot="title">
             Abituriyentlar o‘zini test topshiragan binosini ko‘rishligi mumkin bo‘ladi
           </Fragment>
           <Fragment slot="subtitle">ABITURENTLAR</Fragment>
-        </Card>
+        </CardPost>
       </div>
       <div class="col-1">
-        <Card
-          imgsrc={blog18.src}
+        <CardPost
+          img={blog18.src}
           bodyUp
           titleClass="!h-[5.25rem] !line-clamp-3">
           <Fragment slot="title">
             Qashqadaryolik talabalar uchun hokim stipendiyasi joriy etildi
           </Fragment>
           <Fragment slot="subtitle">Talaba</Fragment>
-        </Card>
+        </CardPost>
       </div>
       <div class="col-1">
-        <Card
-          imgsrc={blog19.src}
+        <CardPost
+          img={blog19.src}
           bodyUp
           titleClass="!h-[5.25rem] !line-clamp-3">
           <Fragment slot="title">
             Bir hususiy oliygoh litsenziyasi bekor qilindi
           </Fragment>
           <Fragment slot="subtitle">University</Fragment>
-        </Card>
+        </CardPost>
       </div>
       <div class="col-1">
-        <Card
-          imgsrc={blog20.src}
+        <CardPost
+          img={blog20.src}
           bodyUp
           titleClass="!h-[5.25rem] !line-clamp-3">
           <Fragment slot="title">
             Kollej va texnikumlarda 3 yoshgacha bolalilar masofaviy o‘qishligi mumkin
           </Fragment>
           <Fragment slot="subtitle">talaba</Fragment>
-        </Card>
+        </CardPost>
       </div>
     )
   }

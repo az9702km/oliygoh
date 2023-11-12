@@ -1,0 +1,11 @@
+.icon-list {
+  @apply space-y-20;
+
+  &__item {
+    @apply flex gap-10 items-start;
+
+    .icon {
+      @apply w-6 shrink-0;
+    }
+  }
+}

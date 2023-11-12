@@ -1,0 +1,32 @@
+---
+import BottomAction from "@components/shared/BottomAction.astro";
+import CardDoc from "@components/shared/Cards/CardDoc.astro";
+---
+
+<div class="our-sertificates-section section">
+  <BottomAction>
+    <div class="flex flex-col pr-60" slot="left">
+      <h3 class="h3 mb-15">
+        Bizning <span class="text-primary"> sertifikat va litsenziya</span>
+      </h3>
+      <p class="text-body-2 text-text-gray">
+        Litsenziya O‘zbekiston respublikasi talim vazirligi tomonidan taqdim
+        etilgan.
+      </p>
+    </div>
+    <div class="flex gap-x-20" slot="right">
+      <CardDoc icon="doc" xClasses="w-[18rem]">
+        <Fragment slot="title">
+          Sertifikat — davlat tomonidan tasdiqlangan
+        </Fragment>
+        <button slot="actions" class="text-btn">SERTIFIKATni ko‘rish</button>
+      </CardDoc>
+      <CardDoc icon="doc-verified-2" xClasses="w-[18rem]">
+        <Fragment slot="title">
+          Litsenziya — davlat tomonidan tasdiqlangan
+        </Fragment>
+        <button slot="actions" class="text-btn">Litsenziyani ko‘rish</button>
+      </CardDoc>
+    </div>
+  </BottomAction>
+</div>

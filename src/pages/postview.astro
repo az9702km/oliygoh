@@ -1,28 +1,70 @@
 ---
 import Footer from "@/layouts/Footer.astro";
 import Layout from "@/layouts/Layout.astro";
-import Navbar from "@components/blocks/Navbar.astro";
+import Navbar from "@/layouts/Header.astro";
 import Button from "@components/shared/Button.astro";
 import Post from "@components/sections/Post/Post.astro";
+import ContactUs from "@components/sections/Home/ContactUs.astro";
+import Features from "@components/sections/Home/Features.astro";
 ---
 
 <Layout title="Blog">
-  <Navbar />
   <main>
-    <div class="container-wrapper py-40">
-      <div class="row">
-        <div class="col-1">
-          <Button style="secondary">
-            <svg class="icon !w-6 mr-2">
-              <use xlink:href="#icon-arrow-left"></use>
-            </svg>Barcha maqolalar
-          </Button>
+    <div class="container-wrapper">
+      <section class="section">
+        <div class="row">
+          <div class="col-1">
+            <Button style="secondary">
+              <svg class="icon !w-6 mr-2">
+                <use xlink:href="#icon-arrow-left"></use>
+              </svg>Barcha maqolalar
+            </Button>
+          </div>
+          <div class="col-2">
+            <Post />
+          </div>
+          <div class="col-1">
+            <div class="post-share">
+              <div class="btn-group btn-group--v post-share__btns">
+                <Button
+                  style="secondary"
+                  form="btn-circle"
+                  classes="!p-10 !rounded">
+                  <svg class="icon !w-6">
+                    <use xlink:href="#icon-telegram"></use>
+                  </svg>
+                </Button>
+                <Button
+                  style="secondary"
+                  form="btn-circle"
+                  classes="!p-10 !rounded">
+                  <svg class="icon !w-6">
+                    <use xlink:href="#icon-facebook"></use>
+                  </svg>
+                </Button>
+                <Button
+                  style="secondary"
+                  form="btn-circle"
+                  classes="!p-10 !rounded">
+                  <svg class="icon !w-6">
+                    <use xlink:href="#icon-twitter"></use>
+                  </svg>
+                </Button>
+                <Button
+                  style="secondary"
+                  form="btn-circle"
+                  classes="!p-10 !rounded">
+                  <svg class="icon !w-6">
+                    <use xlink:href="#icon-link"></use>
+                  </svg>
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-2">
-          <Post />
-        </div>
-      </div>
+      </section>
+      <ContactUs />
+      <Features />
     </div>
   </main>
-  <Footer />
 </Layout>

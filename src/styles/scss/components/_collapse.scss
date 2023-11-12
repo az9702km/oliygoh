@@ -1,0 +1,10 @@
+.block-collapse {
+  @apply h-0 overflow-hidden flex flex-col;
+}
+
+.block-collapse.expand {
+  @apply h-auto;
+}
+.collapser {
+  @apply flex flex-col;
+}

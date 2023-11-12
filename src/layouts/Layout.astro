@@ -1,4 +1,8 @@
 ---
+import Header from "@/layouts/Header.astro";
+import Footer from "./Footer.astro";
+import "./../styles/scss/index.scss";
+
 interface Props {
   title: string;
 }
@@ -17,7 +21,10 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <Header />
     <slot />
+
+    <Footer />
     <svg width="0" height="0" class="hidden">
       <symbol
         xmlns="http://www.w3.org/2000/svg"
@@ -510,6 +517,32 @@ const { title } = Astro.props;
           clip-rule="evenodd"
           d="M16.334 2.75024H7.665C2.75 2.75024 2.75 2.75024 2.75 7.91624V16.0842C2.75 21.2502 2.75 21.2502 7.665 21.2502H16.333C21.25 21.2502 21.25 21.2502 21.25 16.0842V7.91624C21.25 2.75024 21.25 2.75024 16.334 2.75024Z"
           stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </symbol>
+      <symbol
+        viewBox="0 0 24 24"
+        fill="none"
+        id="icon-double-check"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M8.43945 12.0928L11.8676 15.5211C12.0437 15.6971 12.3284 15.6971 12.5036 15.5211L19.6789 8.34668"
+          stroke="currentColor"
+          stroke-width="1.44"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          opacity="0.4"
+          d="M15.1848 8.34668L12.1875 11.344"
+          stroke="currentColor"
+          stroke-width="1.44"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          opacity="0.4"
+          d="M4.32031 12.4678L7.37406 15.5215C7.55008 15.6975 7.83404 15.6975 8.01005 15.5215L9.93958 13.5919"
+          stroke="currentColor"
+          stroke-width="1.44"
           stroke-linecap="round"
           stroke-linejoin="round"></path>
       </symbol>
@@ -1282,6 +1315,15 @@ const { title } = Astro.props;
       </symbol>
       <symbol
         xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 28 28"
+        id="icon-play-fill">
+        <path
+          d="M24.75 12.701C25.75 13.2783 25.75 14.7217 24.75 15.299L9.75 23.9593C8.75 24.5366 7.5 23.815 7.5 22.6603L7.5 5.33975C7.5 4.18504 8.75 3.46336 9.75 4.04071L24.75 12.701Z"
+          fill="currentColor"
+          stroke="currentColor"></path>
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         id="icon-phone">
         <path
@@ -1462,6 +1504,64 @@ const { title } = Astro.props;
         <path
           d="M14.023 9.16113H9.25293M12.4324 12.8663H9.25293"
           stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </symbol>
+      <symbol
+        id="icon-graduate"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M11.255 14.2742L4.68657 11.0637C3.28172 10.3771 3.28172 8.3754 4.68564 7.68885L10.9599 4.62225C11.7828 4.21967 12.7449 4.21967 13.5678 4.62225L19.8495 7.69165C21.2544 8.3782 21.2544 10.3809 19.8495 11.0674L13.5706 14.1359C12.7449 14.5394 11.78 14.5394 10.9542 14.1359L6.96573 12.1865"
+          stroke="currentColor"
+          stroke-width="1.44"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M20.9146 9.36719L20.8828 14.5644"
+          stroke="currentColor"
+          stroke-width="1.44"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          opacity="0.4"
+          d="M6.96484 12.1875V16.9598C6.96484 17.7817 7.45244 18.5384 8.21185 18.8522C10.8758 19.9516 13.5287 19.9656 16.1712 18.8587C16.925 18.543 17.4079 17.7882 17.4079 16.971V12.2744"
+          stroke="currentColor"
+          stroke-width="1.44"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </symbol>
+      <symbol
+        viewBox="0 0 24 24"
+        fill="none"
+        id="icon-cup-1"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M11.9976 14.5318V17.1211M8.17545 19.7828L9.02735 17.1206H15.1102L15.9621 19.7828M17.5145 19.7827H6.62288M17.8079 4.21497H6.19141C6.19141 4.21497 6.19794 14.5311 12.0025 14.5311C17.8079 14.5311 17.8079 4.21497 17.8079 4.21497Z"
+          stroke="currentColor"
+          stroke-width="1.44"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          opacity="0.4"
+          d="M12.2696 10.9307V7.15039L11.0664 7.50255"
+          stroke="currentColor"
+          stroke-width="1.44"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          opacity="0.4"
+          d="M6.29131 5.90625H3.3816C3.3816 5.90625 2.97245 9.55297 5.66545 11.3259"
+          stroke="currentColor"
+          stroke-width="1.44"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          opacity="0.4"
+          d="M17.707 5.90625H20.6168C20.6168 5.90625 21.0258 9.55297 18.3329 11.3259"
+          stroke="currentColor"
+          stroke-width="1.44"
           stroke-linecap="round"
           stroke-linejoin="round"></path>
       </symbol>

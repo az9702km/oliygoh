@@ -1,15 +1,30 @@
 ---
-const { icon } = Astro.props;
+const { icon, direction, noSubtitle, mode } = Astro.props;
 ---
 
-<div class="feature-card">
-  <svg class="icon w-12 text-primary mb-60">
-    <use xlink:href=`#${icon}`></use>
-  </svg>
-  <div class="text-body-1 mb-15">
+<div class="feature-card" class:list={[mode && `feature-card--${mode}`]}>
+  {
+    icon && (
+      <svg class="icon text-primary mb-60" class:list={[!mode && "!w-12"]}>
+        <use xlink:href={`#${icon}`} />
+      </svg>
+    )
+  }
+  {
+    direction && (
+      <div class="card__direction">
+        <slot name="direction" />
+      </div>
+    )
+  }
+  <div class="card__title" class:list={[noSubtitle && "!mb-0"]}>
     <slot name="title" />
   </div>
-  <div class="text-body-2 text-text-gray">
-    <slot name="text" />
-  </div>
+  {
+    !noSubtitle && (
+      <div class="card__subtitle">
+        <slot name="text" />
+      </div>
+    )
+  }
 </div>

@@ -1,14 +1,13 @@
 ---
 import Brand from "@components/shared/Brand.astro";
-
 ---
 
-<footer class="footer bg-background border-t border-line">
+<footer class="footer">
   <div class="container-wrapper">
-    <div class="row py-40 border-b border-line">
+    <div class="row footer-upper-row">
       <div class="col-1">
         <Brand />
-        <p class="text-text-gray mt-15">
+        <p class="footer-brand-text">
           Abituriyentlarga oliygohgacha bo‘lgan taʼlim beramiz
         </p>
       </div>
@@ -22,9 +21,9 @@ import Brand from "@components/shared/Brand.astro";
         </nav>
       </div>
     </div>
-    <div class="row pt-20 pb-40">
+    <div class="row footer-lower-row">
       <div class="col-2">
-        <p class="text-text-gray text-subtitle">
+        <p class="footer-text">
           ©2023 Oliygoh — Barcha huquqlari himoyalangan.
         </p>
       </div>
@@ -32,12 +31,12 @@ import Brand from "@components/shared/Brand.astro";
         <div class="flex justify-end gap-40">
           <a
             href="#!"
-            class="text-text-gray text-subtitle hover:text-main-black"
+            class="footer-text hover:text-main-black"
             >Maxfiylik siyosati</a
           >
           <a
             href="#!"
-            class="text-text-gray text-subtitle hover:text-main-black"
+            class="footer-text hover:text-main-black"
             >Ommaviy oferta</a
           >
         </div>

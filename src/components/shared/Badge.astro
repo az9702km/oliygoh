@@ -1,0 +1,7 @@
+---
+const { border } = Astro.props;
+---
+
+<span class="badge" class:list={[border && "badge--border"]}>
+  <slot />
+</span>

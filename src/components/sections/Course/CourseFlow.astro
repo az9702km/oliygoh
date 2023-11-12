@@ -1,0 +1,55 @@
+---
+import CardFeature from "@components/shared/Cards/CardFeature.astro";
+---
+
+<section class="course-section section">
+  <h2 class="section-title">
+    <span class="title-highlight">Ta‘lim jarayoni</span> qanday tartibda
+    o‘tiladi?
+  </h2>
+  <div class="row !grid-cols-3">
+    <div class="col-1">
+      <CardFeature icon="telegram">
+        <Fragment slot="title">Telegram guruh</Fragment>
+        <Fragment slot="text">
+          Yopiq guruhda ustozlar bilan savol-javoblar o‘tqaziladi
+        </Fragment>
+      </CardFeature>
+    </div>
+    <div class="col-1">
+      <CardFeature icon="clipboard">
+        <Fragment slot="title">Sinov vazifalar</Fragment>
+        <Fragment slot="text">
+          Bilimingizni tekshirish uchun mavzular oxirda sinov vazifalar
+          o‘tkaziladi
+        </Fragment>
+      </CardFeature>
+    </div>
+    <div class="col-1">
+      <CardFeature icon="brain">
+        <Fragment slot="title">Amaliyotlar</Fragment>
+        <Fragment slot="text">
+          Amaliy mashqlar orqali bilimlaringizni yaxshilab borasiz
+        </Fragment>
+      </CardFeature>
+    </div>
+    <div class="col-1">
+      <CardFeature icon="user-star">
+        <Fragment slot="title">Ustoz va Mentorlar</Fragment>
+        <Fragment slot="text">
+          Mentorlarimiz muntazam vazifalarni tekshirib, har bir o‘quvchi bilan
+          ishlashadi
+        </Fragment>
+      </CardFeature>
+    </div>
+    <div class="col-1">
+      <CardFeature icon="doc-verified-2">
+        <Fragment slot="title">Sertifikat bilan taqdirlash</Fragment>
+        <Fragment slot="text">
+          Kursni muvaffaqiyatli yakunlanganizni isbotlovchi sertifikatga ega
+          bo‘lasiz
+        </Fragment>
+      </CardFeature>
+    </div>
+  </div>
+</section>

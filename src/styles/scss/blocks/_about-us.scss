@@ -1,0 +1,15 @@
+.about-us-hero {
+  @apply bg-primary-linear p-40 flex rounded;
+
+  .info {
+    @apply text-white;
+  }
+}
+
+.company-stat {
+  @apply relative bg-center bg-no-repeat bg-cover rounded mb-20;
+
+  &__button {
+    @apply flex justify-center py-32;
+  }
+}

@@ -1,0 +1,66 @@
+---
+import CardIcon from "@components/shared/Cards/CardIcon.astro";
+---
+
+<section class="course-hero section">
+  <div class="info">
+    <div class="max-w-lg flex flex-col">
+      <div class="info__category">DIZAYN</div>
+      <h1 class="info__title">UX/UI dizayn foundation kursi</h1>
+      <p class="info__text">
+        Jahon darajasidagi foydalanuvchi interfeysini ishlab chiqish va UX/UI
+        sohasida muvaffaqiyatli karyeraga erishing!
+      </p>
+    </div>
+    <div class="info__features">
+      <div class="row">
+        <div class="col-2">
+          <CardIcon icon="notebook-2">
+            <Fragment slot="title">
+              Kurs aniq reja asosida ishlab chiqilgan videolardan tashkil topgan
+            </Fragment>
+          </CardIcon>
+        </div>
+        <div class="col-2">
+          <CardIcon icon="world-time">
+            <Fragment slot="title">
+              Kursni xohlagan vaqtingizda va joyda o‘rganishingiz mumkin
+            </Fragment>
+          </CardIcon>
+        </div>
+        <div class="col-2">
+          <CardIcon icon="telegram">
+            <Fragment slot="title">
+              Kurs ustozlar bilan birgalikda maxsus telegram yopiq guruh tashkil
+              etilgan
+            </Fragment>
+          </CardIcon>
+        </div>
+        <div class="col-2">
+          <CardIcon icon="pencil">
+            <Fragment slot="title">
+              Dars vazifalari to‘liq ustoz nazorati ostida tekshiriladi va
+              baholanadi
+            </Fragment>
+          </CardIcon>
+        </div>
+      </div>
+    </div>
+    <div class="info__author">
+      <div class="author">
+        <img
+          src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?auto=format&fit=crop&q=80&w=2952&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          class="author__img"
+          alt=""
+        />
+        <div class="flex flex-col">
+          <div class="author__name">Ismoil Safarov</div>
+          <div class="flex">
+            <div class="author__meta">UX/UI DIZAYNER</div>
+            <div class="author__meta">KURS ustozi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

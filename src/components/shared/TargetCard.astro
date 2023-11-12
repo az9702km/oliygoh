@@ -1,0 +1,17 @@
+---
+const { outcome } = Astro.props;
+---
+
+<div class="feature-card" class:list={[outcome && "feature-card--outcome"]}>
+  <div class="card__icon-target">
+    <svg class="icon !w-6">
+      <use xlink:href=`#icon-double-check`></use>
+    </svg>
+  </div>
+  <div class="card__title">
+    <slot name="title" />
+  </div>
+  <div class="card__subtitle">
+    <slot name="text" />
+  </div>
+</div>

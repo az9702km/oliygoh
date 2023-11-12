@@ -1,0 +1,30 @@
+---
+import Brand from "@components/shared/Brand.astro";
+import Button from "@components/shared/Button.astro";
+
+const { admin } = Astro.props;
+---
+
+<header>
+  <nav class="navbar">
+    <div class="container-wrapper">
+      <div class="nav">
+        <Brand />
+        <div class="nav__menu">
+          <a href="/courses.html" class="nav__link">Kurslar</a>
+          <a href="/about.html" class="nav__link">Blog</a>
+          <a href="#!" class="nav__link">Biz haqimizda</a>
+          {
+            !admin ? (
+              <a href="#!" class="nav__link btn btn-primary">
+                kirish
+              </a>
+            ) : (
+              <Button style="primary">Admin</Button>
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

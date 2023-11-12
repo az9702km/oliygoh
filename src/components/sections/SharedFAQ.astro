@@ -1,0 +1,86 @@
+---
+import Accordion from "@components/shared/Accordion/Accordion.astro";
+import AccordionHeader from "@components/shared/Accordion/AccordionHeader.astro";
+import AccordionIcon from "@components/shared/Accordion/AccordionIcon.astro";
+import AccordionItem from "@components/shared/Accordion/AccordionItem.astro";
+import AccordionPane from "@components/shared/Accordion/AccordionPane.astro";
+import AccordionTitle from "@components/shared/Accordion/AccordionTitle.astro";
+---
+
+<section class="faq-section section">
+  <div class="container-wrapper">
+    <div class="flex mb-40 items-center">
+      <slot name="title" />
+    </div>
+    <Accordion name="faq" id="accordion-faq">
+      <AccordionItem>
+        <AccordionHeader slot="header" id="faq-1" bodyTarget="faq-1-body">
+          <AccordionTitle>
+            Videodarslarni yuklab olsam bo‘ladimi?
+          </AccordionTitle>
+          <AccordionIcon />
+        </AccordionHeader>
+        <AccordionPane slot="pane" id="faq-1-body" headerLabel="faq-1">
+          <p class="text-text-gray">
+            Barcha materiallar “Oliygoh” intellektual mulki hisoblanadi va
+            ularni nusxalash va tarqatish qat’iyan man etiladi.
+          </p>
+        </AccordionPane>
+      </AccordionItem>
+      <AccordionItem>
+        <AccordionHeader slot="header" id="faq-2" bodyTarget="faq-2-body">
+          <AccordionTitle>
+            Oliygohda qanday turdagi kurslar mavjud?
+          </AccordionTitle>
+          <AccordionIcon />
+        </AccordionHeader>
+        <AccordionPane slot="pane" id="faq-2-body" headerLabel="faq-2">
+          <p class="text-text-gray">
+            Barcha materiallar “Oliygoh” intellektual mulki hisoblanadi va
+            ularni nusxalash va tarqatish qat’iyan man etiladi.
+          </p>
+        </AccordionPane>
+      </AccordionItem>
+      <AccordionItem>
+        <AccordionHeader slot="header" id="faq-3" bodyTarget="faq-3-body">
+          <AccordionTitle>
+            Bitta profildan necha kishi foydalansa bo‘ladi?
+          </AccordionTitle>
+          <AccordionIcon />
+        </AccordionHeader>
+        <AccordionPane slot="pane" id="faq-3-body" headerLabel="faq-3">
+          <p class="text-text-gray">
+            Barcha materiallar “Oliygoh” intellektual mulki hisoblanadi va
+            ularni nusxalash va tarqatish qat’iyan man etiladi.
+          </p>
+        </AccordionPane>
+      </AccordionItem>
+      <AccordionItem>
+        <AccordionHeader slot="header" id="faq-4" bodyTarget="faq-4-body">
+          <AccordionTitle>Sertifikatni yuklab olsam bo‘ladimi?</AccordionTitle>
+          <AccordionIcon />
+        </AccordionHeader>
+        <AccordionPane slot="pane" id="faq-4-body" headerLabel="faq-4">
+          <p class="text-text-gray">
+            Barcha materiallar “Oliygoh” intellektual mulki hisoblanadi va
+            ularni nusxalash va tarqatish qat’iyan man etiladi.
+          </p>
+        </AccordionPane>
+      </AccordionItem>
+      <AccordionItem>
+        <AccordionHeader slot="header" id="faq-5" bodyTarget="faq-5-body">
+          <AccordionTitle>
+            Videodarslar nima uchun xira ko‘rinyapti
+          </AccordionTitle>
+          <AccordionIcon />
+        </AccordionHeader>
+        <AccordionPane slot="pane" id="faq-5-body" headerLabel="faq-5">
+          <p class="text-text-gray">
+            Ekranni artivoring. Sizga bunda bizning "Screen cleaning kit" maxsus
+            ekran tozalovchi spreyimiz yordam beradi. Ichiga maxsus latta kiradi
+          </p>
+        </AccordionPane>
+      </AccordionItem>
+    </Accordion>
+  </div>
+</section>

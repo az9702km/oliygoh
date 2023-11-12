@@ -1,0 +1,11 @@
+.term-desc {
+  @apply flex flex-col;
+
+  .term {
+    @apply text-body-3 text-text-gray;
+  }
+
+  .desc {
+    @apply text-body-2;
+  }
+}

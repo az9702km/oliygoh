@@ -19,177 +19,177 @@ import course17 from "@assets/images/courses/course-17.png";
 import course18 from "@assets/images/courses/course-18.png";
 import course19 from "@assets/images/courses/course-19.png";
 import course20 from "@assets/images/courses/course-20.png";
-import Card from "@components/shared/Card.astro";
+import CardCourse from "@components/shared/Cards/CardCourse.astro";
 
 const { expanded } = Astro.props;
 ---
 
 <div class="row">
   <div class="col-1">
-    <Card imgsrc={course12.src}>
-      <Fragment slot="meta">Disayn</Fragment>
+    <CardCourse img={course12.src}>
+      <Fragment slot="category">Disayn</Fragment>
       <Fragment slot="subtitle">Ikrombek Izzatilayev</Fragment>
       <Fragment slot="title">
         UX/UI dizayning boshalang‘ich ko‘nikmalari kursi
       </Fragment>
-    </Card>
+    </CardCourse>
   </div>
   <div class="col-1">
-    <Card imgsrc={course11.src}>
-      <Fragment slot="meta">Tarix</Fragment>
+    <CardCourse img={course11.src}>
+      <Fragment slot="category">Tarix</Fragment>
       <Fragment slot="subtitle">Sardor Yusupov</Fragment>
       <Fragment slot="title">Jahon tarix bo‘yicha darslik to‘plami</Fragment>
-    </Card>
+    </CardCourse>
   </div>
   <div class="col-1">
-    <Card imgsrc={course10.src}>
-      <Fragment slot="meta">Ingliz tili</Fragment>
+    <CardCourse img={course10.src}>
+      <Fragment slot="category">Ingliz tili</Fragment>
       <Fragment slot="subtitle">Akbar Ismatullayev</Fragment>
       <Fragment slot="title">
         Ingliz tilidan IELTS tayyorgalik darslari
       </Fragment>
-    </Card>
+    </CardCourse>
   </div>
   <div class="col-1">
-    <Card imgsrc={course9.src}>
-      <Fragment slot="meta">ALGEBRA</Fragment>
+    <CardCourse img={course9.src}>
+      <Fragment slot="category">ALGEBRA</Fragment>
       <Fragment slot="subtitle">Anvar Yoqubov</Fragment>
       <Fragment slot="title">Algebra fanidan 11-sinf ko‘nikmalari</Fragment>
-    </Card>
+    </CardCourse>
   </div>
   <div class="col-1">
-    <Card imgsrc={course1.src}>
-      <Fragment slot="meta">Biologiya</Fragment>
+    <CardCourse img={course1.src}>
+      <Fragment slot="category">Biologiya</Fragment>
       <Fragment slot="subtitle">Izzatbek Jonabekov</Fragment>
       <Fragment slot="title">
         Biologiya fanidan 11-sinf dasturi darslari
       </Fragment>
-    </Card>
+    </CardCourse>
   </div>
   <div class="col-1">
-    <Card imgsrc={course2.src}>
-      <Fragment slot="meta">DASTURLASH</Fragment>
+    <CardCourse img={course2.src}>
+      <Fragment slot="category">DASTURLASH</Fragment>
       <Fragment slot="subtitle">Abbos Fayzullayev</Fragment>
       <Fragment slot="title">
         HTML va CSS da dasturlashning boshlang‘ich ko‘nikmalari
       </Fragment>
-    </Card>
+    </CardCourse>
   </div>
   <div class="col-1">
-    <Card imgsrc={course3.src}>
-      <Fragment slot="meta">RUS TILI</Fragment>
+    <CardCourse img={course3.src}>
+      <Fragment slot="category">RUS TILI</Fragment>
       <Fragment slot="subtitle">Izzat Abdulayev</Fragment>
       <Fragment slot="title">Rus tilidan to‘liq grammatika darslari</Fragment>
-    </Card>
+    </CardCourse>
   </div>
   <div class="col-1">
-    <Card imgsrc={course4.src}>
-      <Fragment slot="meta">dasturlash</Fragment>
+    <CardCourse img={course4.src}>
+      <Fragment slot="category">dasturlash</Fragment>
       <Fragment slot="subtitle">Suhrob Qudratov</Fragment>
       <Fragment slot="title">Javascriptga doir darslar to‘plami</Fragment>
-    </Card>
+    </CardCourse>
   </div>
   <div class="col-1">
-    <Card imgsrc={course5.src}>
-      <Fragment slot="meta">geometriya</Fragment>
+    <CardCourse img={course5.src}>
+      <Fragment slot="category">geometriya</Fragment>
       <Fragment slot="subtitle">Shohnur Kudratbekov</Fragment>
       <Fragment slot="title">
         Geometriya fanidan boshlang‘ich tushuncha
       </Fragment>
-    </Card>
+    </CardCourse>
   </div>
   <div class="col-1">
-    <Card imgsrc={course6.src}>
-      <Fragment slot="meta">ona tili</Fragment>
+    <CardCourse img={course6.src}>
+      <Fragment slot="category">ona tili</Fragment>
       <Fragment slot="subtitle">G‘ayrat Qobilov</Fragment>
       <Fragment slot="title">Ona tilidan to‘liq qoidalar darslari</Fragment>
-    </Card>
+    </CardCourse>
   </div>
   <div class="col-1">
-    <Card imgsrc={course7.src}>
-      <Fragment slot="meta">Tarix</Fragment>
+    <CardCourse img={course7.src}>
+      <Fragment slot="category">Tarix</Fragment>
       <Fragment slot="subtitle">Izzat Abdulayev</Fragment>
       <Fragment slot="title">
         IX - XX asrlar oralig‘idagi buyuk shoirlarga doir darslar
       </Fragment>
-    </Card>
+    </CardCourse>
   </div>
   <div class="col-1">
-    <Card imgsrc={course8.src}>
-      <Fragment slot="meta">Tarix</Fragment>
+    <CardCourse img={course8.src}>
+      <Fragment slot="category">Tarix</Fragment>
       <Fragment slot="subtitle">Anvar Yoqubov</Fragment>
       <Fragment slot="title">
         AQSH davlatining kelib chiqish va rivojlanishi
       </Fragment>
-    </Card>
+    </CardCourse>
   </div>
   {
     expanded && (
       <div class="col-1">
-        <Card imgsrc={course13.src}>
-          <Fragment slot="meta">Biologiya</Fragment>
+        <CardCourse img={course13.src}>
+          <Fragment slot="category">Biologiya</Fragment>
           <Fragment slot="subtitle">Izzatbek Jonabekov</Fragment>
           <Fragment slot="title">
             Biologiya fanidan 11-sinf dasturi darslari
           </Fragment>
-        </Card>
+        </CardCourse>
       </div>
       <div class="col-1">
-        <Card imgsrc={course14.src}>
-          <Fragment slot="meta">DASTURLASH</Fragment>
+        <CardCourse img={course14.src}>
+          <Fragment slot="category">DASTURLASH</Fragment>
           <Fragment slot="subtitle">Abbos Fayzullayev</Fragment>
           <Fragment slot="title">
             HTML va CSS da dasturlashning boshlang‘ich ko‘nikmalari
           </Fragment>
-        </Card>
+        </CardCourse>
       </div>
       <div class="col-1">
-        <Card imgsrc={course15.src}>
-          <Fragment slot="meta">RUS TILI</Fragment>
+        <CardCourse img={course15.src}>
+          <Fragment slot="category">RUS TILI</Fragment>
           <Fragment slot="subtitle">Izzat Abdulayev</Fragment>
           <Fragment slot="title">Rus tilidan to‘liq grammatika darslari</Fragment>
-        </Card>
+        </CardCourse>
       </div>
       <div class="col-1">
-        <Card imgsrc={course16.src}>
-          <Fragment slot="meta">dasturlash</Fragment>
+        <CardCourse img={course16.src}>
+          <Fragment slot="category">dasturlash</Fragment>
           <Fragment slot="subtitle">Suhrob Qudratov</Fragment>
           <Fragment slot="title">Javascriptga doir darslar to‘plami</Fragment>
-        </Card>
+        </CardCourse>
       </div>
       <div class="col-1">
-        <Card imgsrc={course17.src}>
-          <Fragment slot="meta">geometriya</Fragment>
+        <CardCourse img={course17.src}>
+          <Fragment slot="category">geometriya</Fragment>
           <Fragment slot="subtitle">Shohnur Kudratbekov</Fragment>
           <Fragment slot="title">
             Geometriya fanidan boshlang‘ich tushuncha
           </Fragment>
-        </Card>
+        </CardCourse>
       </div>
       <div class="col-1">
-        <Card imgsrc={course18.src}>
-          <Fragment slot="meta">ona tili</Fragment>
+        <CardCourse img={course18.src}>
+          <Fragment slot="category">ona tili</Fragment>
           <Fragment slot="subtitle">G‘ayrat Qobilov</Fragment>
           <Fragment slot="title">Ona tilidan to‘liq qoidalar darslari</Fragment>
-        </Card>
+        </CardCourse>
       </div>
       <div class="col-1">
-        <Card imgsrc={course19.src}>
-          <Fragment slot="meta">Tarix</Fragment>
+        <CardCourse img={course19.src}>
+          <Fragment slot="category">Tarix</Fragment>
           <Fragment slot="subtitle">Izzat Abdulayev</Fragment>
           <Fragment slot="title">
             IX - XX asrlar oralig‘idagi buyuk shoirlarga doir darslar
           </Fragment>
-        </Card>
+        </CardCourse>
       </div>
       <div class="col-1">
-        <Card imgsrc={course20.src}>
-          <Fragment slot="meta">Tarix</Fragment>
+        <CardCourse img={course20.src}>
+          <Fragment slot="category">Tarix</Fragment>
           <Fragment slot="subtitle">Anvar Yoqubov</Fragment>
           <Fragment slot="title">
             AQSH davlatining kelib chiqish va rivojlanishi
           </Fragment>
-        </Card>
+        </CardCourse>
       </div>
     )
   }

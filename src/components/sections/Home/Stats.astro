@@ -1,53 +1,57 @@
 ---
 import statImg from "@assets/images/stats-video-placeholder.png";
 import Button from "@components/shared/Button.astro";
-import StatCard from "@components/shared/StatCard.astro";
+import CardStat from "@components/shared/Cards/CardStat.astro";
 ---
 
-<section class="stats-section mb-120">
-  <div class="container-wrapper">
-    <div class="flex mb-40 items-center">
-      <h2 class="h2">
-        <span class="text-primary">Biz haqimizda</span><br />ma’lumotga ega
-        bo‘ling
-      </h2>
+<section class="stats-section section">
+  <h2 class="section-title">
+    <span class="title-highlight">Biz haqimizda</span><br />ma’lumotga ega
+    bo‘ling
+  </h2>
+  <div
+    class="company-stat"
+    style={{ backgroundImage: "url(" + statImg.src + ")" }}>
+    <div class="company-stat__button">
+      <Button form="btn-circle" classes="p-[1.125rem] bg-white">
+        <svg class="icon text-primary stroke-0 !w-8">
+          <use xlink:href="#icon-play-fill"></use>
+        </svg>
+      </Button>
     </div>
-    <div
-      class="relative bg-center bg-no-repeat bg-cover rounded mb-20"
-      style={{ backgroundImage: "url(" + statImg.src + ")" }}>
-      <div class="flex justify-center py-32">
-        <Button form="btn-circle" classes="p-[1.125rem] bg-white">
-          <svg class="icon fill-primary stroke-0 w-8">
-            <use xlink:href="#icon-play"></use>
-          </svg>
-        </Button>
-      </div>
+  </div>
+  <div class="row">
+    <div class="col-1">
+      <CardStat>
+        <Fragment slot="title">5000+</Fragment>
+        <Fragment slot="text">
+          Jami tahsil olayotgan o‘quvchilarimizning soni
+        </Fragment>
+      </CardStat>
     </div>
-    <div class="row">
-      <div class="col-1">
-        <StatCard>
-          <Fragment slot="title">5000+</Fragment>
-          <Fragment slot="text">Jami tahsil olayotgan o‘quvchilarimizning soni</Fragment>
-        </StatCard>
-      </div>
-      <div class="col-1">
-        <StatCard>
-          <Fragment slot="title">15+</Fragment>
-          <Fragment slot="text">Uzoq yillik tajribaga ega bo‘lgan o‘qtuvchilar jamoasi</Fragment>
-        </StatCard>
-      </div>
-      <div class="col-1">
-        <StatCard>
-          <Fragment slot="title">50+</Fragment>
-          <Fragment slot="text">Platformamizda mavjud bo‘lgan darslar soni</Fragment>
-        </StatCard>
-      </div>
-      <div class="col-1">
-        <StatCard>
-          <Fragment slot="title">83%</Fragment>
-          <Fragment slot="text">O‘quvchilarimiz imtihonlardan muffaqiyatli o‘tgan</Fragment>
-        </StatCard>
-      </div>
+    <div class="col-1">
+      <CardStat>
+        <Fragment slot="title">15+</Fragment>
+        <Fragment slot="text">
+          Uzoq yillik tajribaga ega bo‘lgan o‘qtuvchilar jamoasi
+        </Fragment>
+      </CardStat>
+    </div>
+    <div class="col-1">
+      <CardStat>
+        <Fragment slot="title">50+</Fragment>
+        <Fragment slot="text">
+          Platformamizda mavjud bo‘lgan darslar soni
+        </Fragment>
+      </CardStat>
+    </div>
+    <div class="col-1">
+      <CardStat>
+        <Fragment slot="title">83%</Fragment>
+        <Fragment slot="text">
+          O‘quvchilarimiz imtihonlardan muffaqiyatli o‘tgan
+        </Fragment>
+      </CardStat>
     </div>
   </div>
 </section>

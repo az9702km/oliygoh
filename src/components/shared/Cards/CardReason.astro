@@ -1,0 +1,14 @@
+---
+const { icon } = Astro.props;
+---
+
+<div class="card card--reason">
+  <div class="card__body">
+    <svg class="icon card__icon">
+      <use xlink:href=`#icon-${icon}`></use>
+    </svg>
+    <h4 class="card__title">
+      <slot name="title" />
+    </h4>
+  </div>
+</div>

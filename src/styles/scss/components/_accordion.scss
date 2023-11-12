@@ -1,3 +1,31 @@
 .accordion-title {
-  @apply text-xl font-medium;
+  @apply text-xl font-medium w-full text-start;
+}
+
+.accordion {
+  @apply flex flex-col gap-10;
+
+  &__item {
+    @apply bg-background rounded border border-line;
+  }
+
+  &__control {
+    @apply flex;
+  }
+
+  &__control-button {
+    @apply flex items-center justify-between w-full p-20 gap-x-15;
+  }
+
+  &__icon {
+    @apply shrink-0 transition w-11 h-11 flex items-center justify-center rounded-full border border-line bg-white;
+  }
+
+  &__icon.rotate-180 {
+    @apply bg-primary text-white border-0;
+  }
+
+  &__pane-body {
+    @apply py-20 mx-20 border-t border-line;
+  }
 }

@@ -1,0 +1,51 @@
+---
+import directionsImg from "@assets/images/directions_img.png";
+import CardPath from "@components/shared/Cards/CardPath.astro";
+import Badge from "@components/shared/Badge.astro";
+import Button from "@components/shared/Button.astro";
+---
+
+<section class="directions-section about-section section">
+  <h2 class="section-title">
+    <span class="title-highlight">Qanday yo‘nalishlarda</span> o‘qitamiz?
+  </h2>
+  <div class="grid grid-cols-2 directions gap-20">
+    <div class="directions__img w-full h-full">
+      <img src={directionsImg.src} class="w-full h-full object-cover" alt="" />
+    </div>
+    <div class="directions__content">
+      <div class="row">
+        <div class="col-2">
+          <CardPath>
+            <Badge slot="direction">mAKTAB FANLARI</Badge>
+            <Fragment slot="title">
+              Maktab fanlariga oid videokurslar to‘plami
+            </Fragment>
+          </CardPath>
+        </div>
+        <div class="col-2">
+          <CardPath>
+            <Badge slot="direction">it SOHASI</Badge>
+            <Fragment slot="title">
+              IT sohasiga oid turli xil qiziqarli kurslar
+            </Fragment>
+          </CardPath>
+        </div>
+        <div class="col-2">
+          <CardPath>
+            <Badge slot="direction">dizayn</Badge>
+            <Fragment slot="title">Dizayn sohasi uchun maxsus kurslar</Fragment>
+          </CardPath>
+        </div>
+        <div class="col-2">
+          <CardPath>
+            <Badge slot="direction">Abiturientlar</Badge>
+            <Fragment slot="title">
+              Abiturientlarni oliygohlarga tayyorlash
+            </Fragment>
+          </CardPath>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

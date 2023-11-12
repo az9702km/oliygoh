@@ -1,0 +1,10 @@
+.info {
+  @apply flex flex-col;
+  &__title {
+    @apply h1;
+  }
+
+  &__text {
+    @apply text-body-2;
+  }
+}

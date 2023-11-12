@@ -1,3 +1,23 @@
 .text-highlight {
   @apply bg-primary text-white px-1.5 rounded-md pb-1;
 }
+
+.section-title {
+  @apply h2 font-medium leading-tight mb-40;
+
+  .title-highlight {
+    @apply text-primary;
+  }
+}
+
+.section {
+  @apply mb-120;
+
+  &-header {
+    @apply flex mb-40 items-center justify-between;
+  }
+}
+
+main {
+  @apply pt-40;
+}

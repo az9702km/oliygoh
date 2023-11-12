@@ -1,0 +1,29 @@
+---
+const { collapserXClass, contentXClass, btnXClass, btnIcon } = Astro.props;
+---
+
+<div class="collapser" class:list={[collapserXClass]}>
+  <div class="block-collapse expand" class:list={[contentXClass]}>
+    <slot name="content" />
+  </div>
+
+  <button class="collapse-expander" class:list={[btnXClass]}>
+    <slot name="button" />
+    <svg class="icon !w-20 rotate-90">
+      <use xlink:href=`#icon-${btnIcon}`></use>
+    </svg>
+  </button>
+</div>
+<script>
+  const buttons = document.querySelectorAll("button.collapse-expander");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      let collapseBlock = this.parentElement.querySelector(".block-collapse");
+      let icon = this.querySelector("svg");
+      icon.classList.toggle("-rotate-90");
+      icon.classList.toggle("rotate-90");
+      collapseBlock.classList.toggle("expand");
+    });
+  });
+</script>

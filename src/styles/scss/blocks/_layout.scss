@@ -1,0 +1,39 @@
+.footer {
+  @apply bg-background border-t border-line;
+}
+
+.footer-upper-row {
+  @apply py-40 border-b border-line;
+}
+
+.footer-lower-row {
+  @apply pt-20 pb-40;
+}
+
+.footer-brand-text {
+  @apply text-text-gray mt-15;
+}
+
+.footer-text {
+  @apply text-text-gray subtitle;
+}
+
+.navbar {
+  @apply border-b border-b-line py-6;
+}
+
+.nav {
+  @apply flex items-center;
+}
+
+.nav .nav__menu {
+  @apply ml-auto flex gap-[2.5rem] items-center;
+}
+
+.nav .nav__link {
+  font-size: 1.125rem;
+}
+
+.nav .nav__link.active {
+  @apply font-semibold;
+}

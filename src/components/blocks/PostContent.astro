@@ -1,13 +1,259 @@
 ---
 import postImg from "@assets/images/blog/post/post-img.png";
+import Button from "@components/shared/Button.astro";
+import Carousel from "@components/shared/Carousel.astro";
 ---
 
-<div class="post-content">
-  <figure>
-    <img src={postImg.src} alt="" />
-    <figcaption>
-      Ushbu maqola “Registon stipendiya g‘oliblarini munosib taqdirlashdi”
-      mavzusiga bag‘ishlandi.
-    </figcaption>
-  </figure>
-</div>
+<article class="post-content text-body-2 relative">
+  <section>
+    <figure>
+      <img src={postImg.src} alt="" />
+      <figcaption>
+        Ushbu maqola “Registon stipendiya g‘oliblarini munosib taqdirlashdi”
+        mavzusiga bag‘ishlandi.
+      </figcaption>
+    </figure>
+    <p>
+      Xabaringiz bor, Respublikamizda tahsil olayotgan iqtidorli yoshlarni
+      qoʻllab quvvatlash va moliyaviy ragʻbatlantirish maqsadida Registon taʼlim
+      loyihasi, Oliy taʼlim vazirligi va OLIYGOH.UZ platformasi hamkorligida
+      talabalar uchun “REGISTON STIPENDIYASI“ tanlovi eʼlon qilingan edi.
+      Tanlovda ishtirok etgan nomzodlar 2 oy davomida 3 bosqichdan iborat
+      boʻlgan imtihon tizimida oʻz bilimlarini sinovdan oʻtkazishdi.
+    </p>
+    <ol>
+      <li>
+        Stipendiya tanlovining 1-bosqichi 20-fevral kuni Respublikamizning turli
+        hududlaridan oʻn minglab iqtidorli talabalar ishtirok etib, eng yaxshi
+        natija koʻrsatgan 2211 nafar nomzodlar keyingi bosqichga yoʻllanmani
+        golga kiritishgan edi. (<a href="#!">Natijalarni koʻrish</a>)
+      </li>
+      <li>
+        Birinchi bosqichda ishtirok etgan barcha nomzodlar “Shaxsiy kabinet”
+        orqali tanlovning maxsus sertifikatlarini yuklab olishlari mumkin. (<a
+          href="#!">Sertifikatlarni yuklab olish</a
+        >)
+      </li>
+      <li>
+        27-fevral kuni tanlovning ikkinchi bosqichiga oʻtgan nomzodlar orasida
+        2-bosqich imtihonlari boʻlib oʻtdi hamda ushbu bosqichda eng yuqori
+        natija koʻrsatgan 581 nafar ishtirokchilar final yoʻllanmasini qoʻlga
+        kiritishdi. (<a href="#!">Natijalarni koʻrish</a>)
+      </li>
+      <li>
+        Tanlov yoʻriqnomasi va nizomiga koʻra, 3-bosqich (final) bosqichi eng
+        yaxshi natija koʻrsatgan ishtirokchilar oʻrtasida boʻlib oʻtdi. Uchinchi
+        bosqich Hujjatlar topshirish bosqichi boʻlib, stipendiya tanlovida
+        ishtirok etayotgan nomzodlar tanlov nizomida koʻrsatilgan hujjatlarni
+        belgilangan tartibda platformaning maxsus imtihonlar oynasi orqali
+        taqdim etdilar. Tanlovning maxsus komissiyasi ushbu hujjatlarni 2 ish
+        haftasi davomida tekshiruvdan oʻtkazishdi. (<a href="#!"
+          >Natijalarni koʻrish</a
+        >)
+      </li>
+    </ol>
+  </section>
+  <section>
+    <h2>Registon stipendiyasi tanlovining komissiya tarkibi:</h2>
+    <h3>Rais:</h3>
+    <ul>
+      <li>
+        <b>Tulovov Avazbek</b> - Registon ta'lim loyihasi asoschisi, "REGISTON"
+        o'quv markazi direktori.
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h3>Komissiya azolari:</h3>
+    <ul>
+      <li>
+        <b>Isaxonov atarxon</b> - OLIYGOH.U platformasi asoschilaridan biri,
+        Navoly Davlat stipendiyasi sovrindori, Respublika ilmiy tadqiqotlar
+        stipendianti, ko'plab davlat va xalqaro grantlar finalisti;
+      </li>
+      <li>
+        <b>Tolibjonov Botirjon</b> - Registon ta'lim loyihasi "HR bo'limi"
+        direktori, ijtimoiy loyihalar koordinatori;
+      </li>
+      <li>
+        <b>Haydarov Muhammad</b> - Islom Karimov nomidagi Davlat stipendiyasi
+        sovrindori, Registon ta'lim loyihasi Ona tili fan ustozlari Raisi,
+        Registon fan professori, ko'plab o'quv-qo'llanmalar muallifi;
+      </li>
+      <li>
+        <b>Rashidova Nazira</b> - Registon ta'lim loyihasida 1-darajali ustoz,
+        ko'plab o'quv-gollanmalar muallifi;
+      </li>
+      <li>
+        <b>Inomjonov Akrom</b> - Webster University bitiruvchisi, "REGISTON"
+        o'quv markazida katta o'gituvchi.
+      </li>
+      <li>
+        <b>Hamidjonov Shavkat</b> - OLIGOH.UZ platformasi asoschilaridan biri,
+        xalqaro CDAC, ACTS grantlari sovrindori, ko'plab xalqaro darajada
+        startuplar asoschisi.
+      </li>
+    </ul>
+    <p>
+      Tanlov komissiyasi tomonidan xalgaro toifadagi stipendiya loyihalarini
+      o'rgangan holda nomzodlarni natijalari quidagi talablar asosida <b
+        >90 ballik baholash tizimida</b
+      > baholandi:
+    </p>
+    <ul>
+      <li>
+        O‘joyidan talabaga berilgan Registon stipendiyasi uchun dekanat yoki
+        kafedraning tavsiyanomasi. Tavsiyanomada universitetning rasmiy vakili
+        talaba hagida bergan ma'lumotlari;
+      </li>
+      <li>
+        Motivatsion xat (Nima uchun o'zlarini "Registon stipendiyasi" tanlovida
+        goliblikga loyiq de bilishlari hamda oldilariga go'ygan maqsadlari
+        to'g'risida yozilgan maxsus motivatsion xat. Xatni o'zbek, rus va ingliz
+        tillarining istalgan birida gabul gilib olindi) Xatda nomzodarning
+        mustagil fikrga egaligi, imloviy xatolari, yozilgan fikrlarning
+        izchilligi va ravonligi shuningdek xulosaning o'ziga xosligi alohida
+        e'tibor bilan tekshirildi.
+      </li>
+      <li>
+        Talabaning 2021-2022 o'quv yillarida turli ranlov va loyihalarda
+        erishgan yutuglari, sertifikatlari diplomlari mutaxassilar tomonidan
+        tekshirildi.
+      </li>
+      <li>
+        Talabaning 2021-2022 o'quv yillarida ijtimoiy faolligi shuningdek nashr
+        ettirilgan ilmiy ishlar, patent, ixtirolari o'rganib chiqildi
+      </li>
+      <li>
+        Talaba nafagat ilmiy ish yoki yutuglar, balkim xalqaro darajada olgan
+        imtihon sertifikatlari ham organildi;
+      </li>
+      <li>
+        Shuningdek talabalar jo'natgan hujatlar aslida to'g'riligi, shaxsini
+        tasdiqlovchi hujjat, o'gish joyidan ma'lumotnoma (my.gov.uz orqali
+        tasdiqlangan yoki dekanatdan tasdiqlangan ma'lumotnoma), CV
+        (ma'lumotnoma)lari ham o'rganib chiqildi va komissiya a'zolari
+        natijalarni umumlashtirilgan holda quyidagi nomzodlarni "Registon
+        stipendiyasi" sovrindori deb e'lon qiladi:
+      </li>
+    </ul>
+  </section>
+  <section>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left">Ishtirokchi</th>
+          <th style="text-align: right">Ball</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p><b>Shoyunusov Sarvar</b></p>
+            <p><small>Toshkent pediatriya tibbiyot instituti</small></p>
+          </td>
+          <td style="text-align:right">178</td>
+        </tr>
+        <tr>
+          <td>
+            <p><b>Nemation Rajabov</b></p>
+            <p><small>Buxoro tibbiyot instituti</small></p>
+          </td>
+          <td style="text-align:right">167.25</td>
+        </tr>
+        <tr>
+          <td>
+            <p><b>Gulomion Yuldoshev</b></p>
+            <p><small>Urganch davlat universiteti</small></p>
+          </td>
+          <td style="text-align:right">165</td>
+        </tr>
+        <tr>
+          <td>
+            <p><b>Indira Nabiyeva</b></p>
+            <p><small>Namangan davlat universiteti</small></p>
+          </td>
+          <td style="text-align:right">164.5</td>
+        </tr>
+        <tr>
+          <td>
+            <p><b>Jaloliddin Makhmudov</b></p>
+            <p><small>Namangan muhandislik-qurilish instituti</small></p>
+          </td>
+          <td style="text-align:right">163.75</td>
+        </tr>
+        <tr>
+          <td>
+            <p><b>Iroda Yodgorova</b></p>
+            <p>
+              <small>O'zbekiston davlat iahon tillari universiteti</small>
+            </p>
+          </td>
+          <td style="text-align:right">163.5</td>
+        </tr>
+        <tr>
+          <td>
+            <p><b>Faxriyev Jahongir</b></p>
+            <p><small>Toshkent pediatriya tibbiyot instituti</small></p>
+          </td>
+          <td style="text-align:right">163.25</td>
+        </tr>
+        <tr>
+          <td>
+            <p><b>To'rayev Jahongir</b></p>
+            <p><small>Ozbekiston milliy universiteti</small></p>
+          </td>
+          <td style="text-align:right">162.75</td>
+        </tr>
+        <tr>
+          <td>
+            <p><b>Farida Baxtiyorova</b></p>
+            <p>
+              <small>Jahon igtisodiyoti va diplomatiya universiteti</small>
+            </p>
+          </td>
+          <td style="text-align:right">162</td>
+        </tr>
+        <tr>
+          <td>
+            <p><b>Aziza Diunaidova</b></p>
+            <p><small>Buxoro tropivot Instituti</small></p>
+          </td>
+          <td style="text-align:right">162</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <b>"REGISTON"</b> o‘quv markazi va OLIYGOH.UZ jamoasi tanlovning barcha
+      g'oliblarini yana bir bora tabriklaydi!
+    </p>
+  </section>
+
+  <section class="reminder">
+    <p class="text-xl font-medium">Malumot uchun:</p>
+    <ol class="text-text-secondary-gray">
+      <li>
+        Stipendiya tanloviga respublika bo'ylab turli hududlardan <a
+          href="#!"
+          class="text-primary">80 mingdan ziyod</a
+        > talabalar ro'vxatdan o'tdi;
+      </li>
+      <li>
+        Tanlovning 1-bosqichida <a href="#!" class="text-primary"
+          >24 ming talaba</a
+        > ishtirok etdi;
+      </li>
+      <li>
+        Tanlovning ikkinchi bosqichiga <a href="#!" class="text-primary"
+          >2211 nafar nomzod</a
+        > yo'llanma oldi;
+      </li>
+      <li>
+        Yaxshi natija ko'rsatgan <a href="#!" class="text-primary"
+          >581 nafar nomzod</a
+        > final bosqichiga yo'llanma oldi;
+      </li>
+    </ol>
+  </section>
+  <Carousel />
+</article>

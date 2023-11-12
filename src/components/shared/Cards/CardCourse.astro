@@ -1,0 +1,20 @@
+---
+const { img } = Astro.props;
+---
+
+<div class="card card--course">
+  <img src={img} alt="" class="card__img" />
+  <div class="card__body">
+    <div class="card__course-category">
+      <a href="#!" class="badge">
+        <slot name="category" />
+      </a>
+    </div>
+    <div class="card__subtitle">
+      <slot name="subtitle" />
+    </div>
+    <a href="#!" class="card__title card__link">
+      <slot name="title" />
+    </a>
+  </div>
+</div>

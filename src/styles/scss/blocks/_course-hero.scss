@@ -1,0 +1,25 @@
+.course-hero {
+  @apply bg-background rounded border border-line p-40;
+}
+
+.course-hero .info {
+  &__category {
+    @apply px-2 py-1 bg-yellow self-start uppercase mb-15;
+  }
+
+  &__text {
+    @apply text-text-gray mb-40;
+  }
+
+  &__title {
+    @apply h2 mb-15;
+  }
+
+  &__features {
+    @apply mb-60;
+  }
+
+  &__author {
+    @apply self-start;
+  }
+}

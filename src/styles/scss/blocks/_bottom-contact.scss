@@ -1,0 +1,11 @@
+.contact-form {
+  @apply p-30 w-[25rem] bg-white rounded border border-line;
+
+  &__form {
+    @apply flex flex-col;
+  }
+
+  &__title {
+    @apply text-body-1 font-medium mb-30;
+  }
+}

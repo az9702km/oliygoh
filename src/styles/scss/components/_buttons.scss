@@ -15,3 +15,14 @@
     @apply flex items-center justify-center aspect-square rounded-full;
   }
 }
+
+.text-btn {
+  @apply inline-flex text-primary uppercase underline subtitle;
+}
+
+.btn-group {
+  @apply flex items-start gap-10;
+  &.btn-group--v {
+    @apply flex-col;
+  }
+}

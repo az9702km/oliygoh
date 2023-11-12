@@ -1,0 +1,11 @@
+.course-recap {
+  @apply bg-white rounded border border-line overflow-hidden flex flex-col;
+
+  & > *:not(:last-child) {
+    @apply border-b border-line;
+  }
+
+  &__body {
+    @apply p-20 flex flex-col;
+  }
+}

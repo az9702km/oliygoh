@@ -1,0 +1,16 @@
+---
+const { style, icon } = Astro.props;
+---
+
+<div
+  class="icon-card flex"
+  class:list={[style === "dark" ? "icon-card--dark" : ""]}>
+  <div class="icon-card__icon">
+    <svg class="icon !w-6">
+      <use xlink:href=`#icon-${icon}`></use>
+    </svg>
+  </div>
+  <div class="icon-card__text">
+    <slot />
+  </div>
+</div>

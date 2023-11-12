@@ -1,0 +1,23 @@
+---
+import BottomAction from "@components/shared/BottomAction.astro";
+import CardDoc from "@components/shared/Cards/CardDoc.astro";
+---
+
+<BottomAction mini>
+  <div class="flex flex-col pr-120" slot="left">
+    <h3 class="h3 mb-15">
+      Kursni tugatib <span class="text-primary"> sertifikatga</span> ega
+      bo'lasiz
+    </h3>
+    <p class="text-body-2 text-text-gray">
+      Ushbu kursni muvaffaqiyatli yakunlaganigizni tasdiqlovchi serfikatga ega
+      bo‘lasi .
+    </p>
+  </div>
+  <div class="flex" slot="right">
+    <CardDoc icon="doc-verified-2" xClasses="w-[15rem]">
+      <Fragment slot="title">Kurs sertifikatni namunasini ko‘ring</Fragment>
+      <button slot="actions" class="text-btn">SERTIFIKATni ko‘rish</button>
+    </CardDoc>
+  </div>
+</BottomAction>

@@ -1,0 +1,11 @@
+.lesson {
+  @apply flex gap-10 text-text-gray;
+
+  &.lesson--available {
+    @apply text-primary;
+  }
+
+  &__name {
+    @apply flex-grow;
+  }
+}

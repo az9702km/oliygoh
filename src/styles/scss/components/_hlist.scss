@@ -1,0 +1,11 @@
+.h-list {
+  @apply flex gap-1;
+
+  &__item {
+    @apply flex gap-1;
+  }
+
+  &__item:not(:last-child)::after {
+    content: "•";
+  }
+}

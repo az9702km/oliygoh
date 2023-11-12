@@ -1,0 +1,351 @@
+---
+import Accordion from "@components/shared/Accordion/Accordion.astro";
+import AccordionHeader from "@components/shared/Accordion/AccordionHeader.astro";
+import AccordionItem from "@components/shared/Accordion/AccordionItem.astro";
+import AccordionIcon from "@components/shared/Accordion/AccordionIcon.astro";
+import AccordionTitle from "@components/shared/Accordion/AccordionTitle.astro";
+import AccordionPane from "@components/shared/Accordion/AccordionPane.astro";
+import Collapse from "@components/shared/Collapse.astro";
+---
+
+<Accordion
+  extraClass="course-plan-accordion"
+  name="curriculum"
+  id="accordion-curriculum">
+  <AccordionItem>
+    <AccordionHeader slot="header" id="plan-1" bodyTarget="plan-1-body">
+      <AccordionIcon />
+      <AccordionTitle>01 — Figma tool’lari bilan ishlash</AccordionTitle>
+      <ul class="h-list shrink-0">
+        <li class="h-list__item">3 ta dars</li>
+        <li class="h-list__item">51 soat 40 minut</li>
+      </ul>
+    </AccordionHeader>
+    <AccordionPane slot="pane" id="plan-1-body" headerLabel="plan-1">
+      <ol class="plan-module">
+        <li class="plan-module__item">
+          <a href="#!" class="lesson lesson--available">
+            <svg class="icon !w-6">
+              <use xlink:href=`#icon-play-circle`></use>
+            </svg>
+            <div class="lesson__name">1.1 — Kurs haqida to‘liq tanishtiruv</div>
+            <div class="lesson__duration">00:02:20</div>
+          </a>
+        </li>
+        <li class="plan-module__item">
+          <div class="lesson">
+            <svg class="icon !w-6">
+              <use xlink:href=`#icon-lock`></use>
+            </svg>
+            <div class="lesson__name">
+              1.2 — UI dizaynda tipografik qoidalar
+            </div>
+            <div class="lesson__duration">00:32:36</div>
+          </div>
+        </li>
+        <li class="plan-module__item">
+          <div class="lesson">
+            <svg class="icon !w-6">
+              <use xlink:href=`#icon-lock`></use>
+            </svg>
+            <div class="lesson__name">
+              1.3 — UX/UI darsiga oid testlar uchun ko‘rib chiqish
+            </div>
+            <div class="lesson__duration">00:16:44</div>
+          </div>
+        </li>
+      </ol>
+    </AccordionPane>
+  </AccordionItem>
+  <AccordionItem>
+    <AccordionHeader slot="header" id="plan-2" bodyTarget="plan-2-body">
+      <AccordionIcon />
+      <AccordionTitle>
+        02 — Dizayner qanday muammolarni hal qiladi va qanday qilib qimmat
+        ishchiga aylanishi mumkin?
+      </AccordionTitle>
+      <ul class="h-list shrink-0">
+        <li class="h-list__item">4 ta dars</li>
+        <li class="h-list__item">2 soat 20 minut</li>
+      </ul>
+    </AccordionHeader>
+    <AccordionPane slot="pane" id="plan-2-body" headerLabel="plan-2">
+      <ol class="plan-module">
+        <li class="plan-module__item">
+          <a href="#!" class="lesson lesson--available">
+            <svg class="icon !w-6">
+              <use xlink:href=`#icon-play-circle`></use>
+            </svg>
+            <div class="lesson__name">1.1 — Kurs haqida to‘liq tanishtiruv</div>
+            <div class="lesson__duration">00:02:20</div>
+          </a>
+        </li>
+        <li class="plan-module__item">
+          <div class="lesson">
+            <svg class="icon !w-6">
+              <use xlink:href=`#icon-lock`></use>
+            </svg>
+            <div class="lesson__name">
+              1.2 — UI dizaynda tipografik qoidalar
+            </div>
+            <div class="lesson__duration">00:32:36</div>
+          </div>
+        </li>
+        <li class="plan-module__item">
+          <div class="lesson">
+            <svg class="icon !w-6">
+              <use xlink:href=`#icon-lock`></use>
+            </svg>
+            <div class="lesson__name">
+              1.3 — UX/UI darsiga oid testlar uchun ko‘rib chiqish
+            </div>
+            <div class="lesson__duration">00:16:44</div>
+          </div>
+        </li>
+      </ol>
+    </AccordionPane>
+  </AccordionItem>
+  <AccordionItem>
+    <AccordionHeader slot="header" id="plan-3" bodyTarget="plan-3-body">
+      <AccordionIcon />
+      <AccordionTitle>03 — Loyihani dizayn qilish qoidalari</AccordionTitle>
+      <ul class="h-list shrink-0">
+        <li class="h-list__item">7 ta dars</li>
+        <li class="h-list__item">1 soat 40 minut</li>
+      </ul>
+    </AccordionHeader>
+    <AccordionPane slot="pane" id="plan-3-body" headerLabel="plan-3">
+      <ol class="plan-module">
+        <li class="plan-module__item">
+          <a href="#!" class="lesson lesson--available">
+            <svg class="icon !w-6">
+              <use xlink:href=`#icon-play-circle`></use>
+            </svg>
+            <div class="lesson__name">1.1 — Kurs haqida to‘liq tanishtiruv</div>
+            <div class="lesson__duration">00:02:20</div>
+          </a>
+        </li>
+        <li class="plan-module__item">
+          <div class="lesson">
+            <svg class="icon !w-6">
+              <use xlink:href=`#icon-lock`></use>
+            </svg>
+            <div class="lesson__name">
+              1.2 — UI dizaynda tipografik qoidalar
+            </div>
+            <div class="lesson__duration">00:32:36</div>
+          </div>
+        </li>
+        <li class="plan-module__item">
+          <div class="lesson">
+            <svg class="icon !w-6">
+              <use xlink:href=`#icon-lock`></use>
+            </svg>
+            <div class="lesson__name">
+              1.3 — UX/UI darsiga oid testlar uchun ko‘rib chiqish
+            </div>
+            <div class="lesson__duration">00:16:44</div>
+          </div>
+        </li>
+      </ol>
+    </AccordionPane>
+  </AccordionItem>
+  <AccordionItem>
+    <AccordionHeader slot="header" id="plan-4" bodyTarget="plan-4-body">
+      <AccordionIcon />
+      <AccordionTitle>04 — Loyihani dasturchiga topshirish</AccordionTitle>
+      <ul class="h-list shrink-0">
+        <li class="h-list__item">5 ta dars</li>
+        <li class="h-list__item">30 soat 20 minut</li>
+      </ul>
+    </AccordionHeader>
+    <AccordionPane slot="pane" id="plan-4-body" headerLabel="plan-4">
+      <ol class="plan-module">
+        <li class="plan-module__item">
+          <a href="#!" class="lesson lesson--available">
+            <svg class="icon !w-6">
+              <use xlink:href=`#icon-play-circle`></use>
+            </svg>
+            <div class="lesson__name">1.1 — Kurs haqida to‘liq tanishtiruv</div>
+            <div class="lesson__duration">00:02:20</div>
+          </a>
+        </li>
+        <li class="plan-module__item">
+          <div class="lesson">
+            <svg class="icon !w-6">
+              <use xlink:href=`#icon-lock`></use>
+            </svg>
+            <div class="lesson__name">
+              1.2 — UI dizaynda tipografik qoidalar
+            </div>
+            <div class="lesson__duration">00:32:36</div>
+          </div>
+        </li>
+        <li class="plan-module__item">
+          <div class="lesson">
+            <svg class="icon !w-6">
+              <use xlink:href=`#icon-lock`></use>
+            </svg>
+            <div class="lesson__name">
+              1.3 — UX/UI darsiga oid testlar uchun ko‘rib chiqish
+            </div>
+            <div class="lesson__duration">00:16:44</div>
+          </div>
+        </li>
+      </ol>
+    </AccordionPane>
+  </AccordionItem>
+  <Collapse
+    collapserXClass="gap-10"
+    contentXClass="gap-10"
+    btnXClass="modules-expand-btn"
+    btnIcon="arrow-left">
+    <Fragment slot="content">
+      <AccordionItem>
+        <AccordionHeader slot="header" id="plan-5" bodyTarget="plan-5-body">
+          <AccordionIcon />
+          <AccordionTitle>
+            05 — Dizayner qanday muammolarni hal qiladi va qanday qilib qimmat
+            ishchiga aylanishi mumkin?
+          </AccordionTitle>
+          <ul class="h-list shrink-0">
+            <li class="h-list__item">4 ta dars</li>
+            <li class="h-list__item">2 soat 20 minut</li>
+          </ul>
+        </AccordionHeader>
+        <AccordionPane slot="pane" id="plan-5-body" headerLabel="plan-5">
+          <ol class="plan-module">
+            <li class="plan-module__item">
+              <a href="#!" class="lesson lesson--available">
+                <svg class="icon !w-6">
+                  <use xlink:href=`#icon-play-circle`></use>
+                </svg>
+                <div class="lesson__name">
+                  1.1 — Kurs haqida to‘liq tanishtiruv
+                </div>
+                <div ass="lesson__duration">00:02:20</div>
+              </a>
+            </li>
+            <li class="plan-module__item">
+              <div class="lesson">
+                <svg class="icon !w-6">
+                  <use xlink:href=`#icon-lock`></use>
+                </svg>
+                <div class="lesson__name">
+                  1.2 — UI dizaynda tipografik qoidalar
+                </div>
+                <div class="lesson__duration">00:32:36</div>
+              </div>
+            </li>
+            <li class="plan-module__item">
+              <div class="lesson">
+                <svg class="icon !w-6">
+                  <use xlink:href=`#icon-lock`></use>
+                </svg>
+                <div class="lesson__name">
+                  1.3 — UX/UI darsiga oid testlar uchun ko‘rib chiqish
+                </div>
+                <div class="lesson__duration">00:16:44</div>
+              </div>
+            </li>
+          </ol>
+        </AccordionPane>
+      </AccordionItem>
+      <AccordionItem>
+        <AccordionHeader slot="header" id="plan-6" bodyTarget="plan-6-body">
+          <AccordionIcon />
+          <AccordionTitle>06 — Loyihani dizayn qilish qoidalari</AccordionTitle>
+          <ul class="h-list shrink-0">
+            <li class="h-list__item">7 ta dars</li>
+            <li class="h-list__item">1 soat 40 minut</li>
+          </ul>
+        </AccordionHeader>
+        <AccordionPane slot="pane" id="plan-6-body" headerLabel="plan-6">
+          <ol class="plan-module">
+            <li class="plan-module__item">
+              <a href="#!" class="lesson lesson--available">
+                <svg class="icon !w-6">
+                  <use xlink:href=`#icon-play-circle`></use>
+                </svg>
+                <div class="lesson__name">
+                  1.1 — Kurs haqida to‘liq tanishtiruv
+                </div>
+                <div ass="lesson__duration">00:02:20</div>
+              </a>
+            </li>
+            <li class="plan-module__item">
+              <div class="lesson">
+                <svg class="icon !w-6">
+                  <use xlink:href=`#icon-lock`></use>
+                </svg>
+                <div class="lesson__name">
+                  1.2 — UI dizaynda tipografik qoidalar
+                </div>
+                <div class="lesson__duration">00:32:36</div>
+              </div>
+            </li>
+            <li class="plan-module__item">
+              <div class="lesson">
+                <svg class="icon !w-6">
+                  <use xlink:href=`#icon-lock`></use>
+                </svg>
+                <div class="lesson__name">
+                  1.3 — UX/UI darsiga oid testlar uchun ko‘rib chiqish
+                </div>
+                <div class="lesson__duration">00:16:44</div>
+              </div>
+            </li>
+          </ol>
+        </AccordionPane>
+      </AccordionItem>
+      <AccordionItem>
+        <AccordionHeader slot="header" id="plan-7" bodyTarget="plan-7-body">
+          <AccordionIcon />
+          <AccordionTitle>07 — Loyihani dasturchiga topshirish</AccordionTitle>
+          <ul class="h-list shrink-0">
+            <li class="h-list__item">5 ta dars</li>
+            <li class="h-list__item">30 soat 20 minut</li>
+          </ul>
+        </AccordionHeader>
+        <AccordionPane slot="pane" id="plan-7-body" headerLabel="plan-7">
+          <ol class="plan-module">
+            <li class="plan-module__item">
+              <a href="#!" class="lesson lesson--available">
+                <svg class="icon !w-6">
+                  <use xlink:href=`#icon-play-circle`></use>
+                </svg>
+                <div class="lesson__name">
+                  1.1 — Kurs haqida to‘liq tanishtiruv
+                </div>
+                <div ass="lesson__duration">00:02:20</div>
+              </a>
+            </li>
+            <li class="plan-module__item">
+              <div class="lesson">
+                <svg class="icon !w-6">
+                  <use xlink:href=`#icon-lock`></use>
+                </svg>
+                <div class="lesson__name">
+                  1.2 — UI dizaynda tipografik qoidalar
+                </div>
+                <div class="lesson__duration">00:32:36</div>
+              </div>
+            </li>
+            <li class="plan-module__item">
+              <div class="lesson">
+                <svg class="icon !w-6">
+                  <use xlink:href=`#icon-lock`></use>
+                </svg>
+                <div class="lesson__name">
+                  1.3 — UX/UI darsiga oid testlar uchun ko‘rib chiqish
+                </div>
+                <div class="lesson__duration">00:16:44</div>
+              </div>
+            </li>
+          </ol>
+        </AccordionPane>
+      </AccordionItem>
+    </Fragment>
+    <Fragment slot="button">yana 6 ta mavzu</Fragment>
+  </Collapse>
+</Accordion>

@@ -1,10 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import "./../styles/scss/index.scss";
 
 import Hero from "@components/sections/Home/Hero.astro";
 import Features from "@components/sections/Home/Features.astro";
-import Navbar from "@components/blocks/Navbar.astro";
+import Navbar from "@/layouts/Header.astro";
 import Stats from "@components/sections/Home/Stats.astro";
 import Courses from "@components/sections/Home/Courses.astro";
 import Blog from "@components/sections/Home/Blog.astro";
@@ -15,16 +14,16 @@ import Footer from "@/layouts/Footer.astro";
 ---
 
 <Layout title="Welcome to Oliygoh.">
-  <Navbar />
   <main>
-    <Hero />
-    <Features />
-    <Courses />
-    <Stats />
-    <Blog />
-    <FAQ />
-    <Partners />
-    <ContactUs />
+    <div class="container-wrapper">
+      <Hero />
+      <Features />
+      <Courses />
+      <Stats />
+      <Blog />
+      <FAQ />
+      <Partners />
+      <ContactUs />
+    </div>
   </main>
-  <Footer />
 </Layout>

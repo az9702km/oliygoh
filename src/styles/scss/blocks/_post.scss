@@ -1,11 +1,115 @@
 .post {
   &-header {
-    @apply mb-30;
+    @apply mb-30 subtitle;
   }
   &-meta {
     @apply text-primary uppercase mb-10;
   }
   &-title {
     @apply h1 font-medium mb-4;
+  }
+
+  &-lead {
+    @apply text-body-2 text-text-gray;
+  }
+  &-content {
+    figure {
+      @apply w-full;
+    }
+
+    img {
+      @apply w-full max-h-96 object-contain rounded-md border border-line;
+    }
+
+    figcaption {
+      @apply mt-15;
+      font-size: 1.125rem;
+      color: #8e9399;
+    }
+
+    p,
+    ol,
+    ul,
+    figure,
+    table {
+      @apply mb-4;
+    }
+
+    ol {
+      @apply list-decimal list-outside pl-20 space-y-4;
+    }
+
+    ul {
+      @apply list-disc list-outside pl-20 space-y-4;
+
+      li::marker {
+        @apply text-primary;
+      }
+    }
+
+    section {
+      @apply mb-30;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    h1 {
+      @apply font-medium mb-20;
+    }
+
+    h2 {
+      @apply text-body-1;
+    }
+
+    h3 {
+      @apply text-xl;
+    }
+
+    b,
+    th {
+      @apply font-medium;
+    }
+
+    table {
+      @apply bg-background border border-line rounded w-full;
+      thead tr {
+        @apply border-b border-line;
+      }
+      td p {
+        @apply mb-1.5;
+      }
+      td p:last-child {
+        @apply mb-0;
+      }
+      th,
+      td {
+        @apply p-20;
+      }
+
+      tbody tr {
+        @apply border-b border-line;
+      }
+    }
+    .reminder {
+      @apply p-20 pt-30 border border-line rounded bg-background;
+
+      ol {
+        @apply pl-6;
+      }
+    }
+  }
+}
+.post-share {
+  @apply relative h-full text-secondary-gray;
+
+  &__btns {
+    @apply sticky top-4;
+  }
+
+  &.post-share--absolute {
+    @apply absolute top-0 left-full pl-20;
   }
 }

@@ -1,0 +1,19 @@
+.author {
+  @apply flex items-center gap-x-10;
+
+  &__img {
+    @apply rounded-full w-14 h-14 object-cover;
+  }
+
+  &__name {
+    @apply text-lg font-medium;
+  }
+  &__meta {
+    @apply text-sm text-primary uppercase flex gap-1;
+
+    &:not(:last-child)::after {
+      content: "•";
+      @apply mr-1;
+    }
+  }
+}

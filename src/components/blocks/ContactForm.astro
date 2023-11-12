@@ -1,0 +1,36 @@
+---
+import Button from "@components/shared/Button.astro";
+import Input from "@components/shared/Input.astro";
+---
+
+<div class="contact-form" slot="right">
+  <div class="contact-form__title">
+    Konsultatsiya olish uchun ro‘yxatdan o’ting:
+  </div>
+  <form action="" class="contact-form__form">
+    <Input
+      addonBefore="user-star"
+      type="text"
+      placeholder="Ismingiz"
+      id="name"
+      name="name-field"
+      utils="mb-15"
+    />
+    <Input
+      addonBefore="phone"
+      type="text"
+      placeholder="Telefon raqamingiz"
+      id="phone"
+      name="phone-field"
+      utils="mb-30"
+    />
+    <Button style="primary" classes="justify-center mb-20">So‘rov Yuborish</Button>
+    <p class="text-subtitle">
+      So‘rov yuborish tugmasini bosish <a
+        href="#!"
+        class="text-primary underline hover:text-primary-hover">
+        orqali platformadan foydalanish qoidalariga
+      </a> rozilik bildirasiz.
+    </p>
+  </form>
+</div>
