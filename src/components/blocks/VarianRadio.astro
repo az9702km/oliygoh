@@ -1,0 +1,13 @@
+---
+const { name, id, value } = Astro.props;
+---
+
+<div class="variant-radio">
+  <input id={id} type="radio" value={value} name={name} class="hidden" />
+  <label for={id} class="variant-radio__label">
+    <span class="variant-radio__circle"></span>
+    <span class="variant-radio__text">
+      <slot />
+    </span></label
+  >
+</div>

@@ -1,0 +1,9 @@
+---
+const { sm } = Astro.props;
+---
+
+<svg
+  class="icon lesson-section-icon"
+  class:list={[sm && "lesson-section-icon--sm"]}>
+  <use xlink:href=`#icon-check`></use>
+</svg>

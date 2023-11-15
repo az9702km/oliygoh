@@ -1,0 +1,41 @@
+.lesson-nav {
+  @apply flex flex-col gap-y-10;
+
+  &__back-link {
+    @apply bg-white px-6 py-3 rounded border border-line flex gap-x-15 items-center uppercase text-body-2;
+  }
+}
+
+.section-lessons {
+  @apply flex flex-col;
+
+  &__item {
+    @apply flex gap-x-15;
+
+    &:last-child {
+      .section-lessons__text {
+        @apply pb-0;
+      }
+
+      .line {
+        @apply hidden;
+      }
+    }
+  }
+
+  &__icon {
+    @apply flex flex-col items-center;
+
+    .line {
+      @apply flex-grow w-px my-0.5 bg-primary/20;
+    }
+  }
+
+  &__text {
+    @apply pb-15 text-body-3;
+  }
+}
+
+.current .section-lessons__text {
+  @apply text-primary;
+}

@@ -1,0 +1,27 @@
+.balance {
+  @apply flex bg-white border border-line rounded;
+
+  &__icon {
+    @apply flex items-center justify-center px-8 border-r border-line;
+  }
+
+  &__actions {
+    @apply flex p-30 items-center flex-grow;
+  }
+
+  &__net {
+    @apply flex flex-col flex-grow;
+  }
+
+  &__title {
+    @apply text-primary text-body-2 mb-10 uppercase;
+  }
+
+  &__number {
+    @apply h2 font-medium;
+  }
+
+  &__controls {
+    @apply flex flex-col;
+  }
+}

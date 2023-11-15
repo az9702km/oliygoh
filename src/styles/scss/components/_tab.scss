@@ -1,0 +1,19 @@
+.tab {
+  @apply flex flex-col;
+
+  &__header {
+    @apply mb-30 border-b-2 border-line self-start;
+  }
+
+  &__nav {
+    @apply flex flex-wrap gap-x-30 -mb-0.5 text-body-3 uppercase;
+  }
+
+  button[aria-selected="true"] {
+    @apply text-primary border-b-2 border-primary py-5 px-10;
+  }
+
+  button[aria-selected="false"] {
+    @apply border-b border-line py-5 px-10;
+  }
+}

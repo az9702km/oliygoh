@@ -1,0 +1,43 @@
+---
+import LayoutLesson from "@/layouts/LayoutLesson.astro";
+import CardAdmin from "@components/shared/Cards/CardProfile.astro";
+import LessonNav from "@components/blocks/LessonNav.astro";
+import Button from "@components/shared/Button.astro";
+import AdminEmpty from "@components/blocks/ProfileEmpty.astro";
+import EmptyWIcon from "@components/shared/EmptyWIcon.astro";
+---
+
+<LayoutLesson title="Lesson">
+  <div class="grid gap-20 grid-cols-3">
+    <div class="col-1">
+      <LessonNav />
+    </div>
+    <div class="col-2">
+      <CardAdmin classes="card-min-h">
+        <AdminEmpty>
+          <EmptyWIcon illustration="illusration-complete">
+            <Fragment slot="title">
+              Tabriklaymiz! <br />
+               Siz kursni muvaffiqiyatli yakunlandingiz ;)
+            </Fragment>
+            <Fragment slot="subtitle">
+              Sizni kelajak faoliyatingizga omad va zafarlar tilaymiz!
+            </Fragment>
+            <div slot="other" class="flex flex-col gap-y-15 mt-40">
+              <Button style="secondary">
+                <svg class="icon !w-20">
+                  <use xlink:href=`#icon-replay`></use>
+                </svg>qayta topshirish
+              </Button>
+              <Button style="primary">
+                <svg class="icon !w-20">
+                  <use xlink:href=`#icon-download`></use>
+                </svg>Sertifikatni yuklash
+              </Button>
+            </div>
+          </EmptyWIcon>
+        </AdminEmpty>
+      </CardAdmin>
+    </div>
+  </div>
+</LayoutLesson>

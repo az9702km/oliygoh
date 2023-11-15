@@ -19,6 +19,10 @@
 
   &__icon {
     @apply shrink-0 transition w-11 h-11 flex items-center justify-center rounded-full border border-line bg-white;
+
+    .icon {
+      @apply w-6;
+    }
   }
 
   &__icon.rotate-180 {
@@ -27,5 +31,42 @@
 
   &__pane-body {
     @apply py-20 mx-20 border-t border-line;
+  }
+}
+
+.accordion.accordion--lesson-sections {
+  @apply gap-y-0;
+  .accordion__pane {
+    @apply border-t border-line;
+  }
+  .accordion__control-button {
+    @apply px-20 py-15 items-start;
+  }
+  .accordion__item {
+    @apply bg-white rounded-none;
+  }
+  .accordion__item:not(:last-child) {
+    @apply -mb-px;
+  }
+  .accordion__item:first-child {
+    @apply rounded-t;
+  }
+  .accordion__item:last-child {
+    @apply rounded-b;
+  }
+  .accordion__pane-body {
+    @apply py-15 px-20 mx-0 border-0;
+  }
+
+  .accordion__icon .icon {
+    @apply w-20 my-0.5;
+  }
+
+  .accordion__icon {
+    @apply h-auto w-auto border-0;
+  }
+
+  .accordion__icon.rotate-180 {
+    @apply bg-white text-main-black;
   }
 }

@@ -1,0 +1,20 @@
+---
+import CardAdmin from "@components/shared/Cards/CardProfile.astro";
+import LayoutAdmin from "../../layouts/LayoutAdmin.astro";
+import AdminEmpty from "@components/blocks/ProfileEmpty.astro";
+import EmptyWIcon from "@components/shared/EmptyWIcon.astro";
+---
+
+<LayoutAdmin title="Sertifikatlarim" page="certificates">
+  <CardAdmin classes="card-min-h">
+    <AdminEmpty>
+      <EmptyWIcon icon="doc-verified-3">
+        <Fragment slot="title">Sizda sertifikatlar mavjud emas</Fragment>
+        <Fragment slot="subtitle">
+          Bu yerda kurslaringizni muvaffaqiyatli tamomlaganingiz uchun berilgan
+          sertifikatlarni ko’rishingiz mumkin bo’ladi.
+        </Fragment>
+      </EmptyWIcon>
+    </AdminEmpty>
+  </CardAdmin>
+</LayoutAdmin>

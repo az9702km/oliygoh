@@ -41,6 +41,14 @@
   &__actions {
     @apply flex flex-wrap;
   }
+
+  &__header {
+    @apply p-20 border-b border-line;
+  }
+}
+
+.card.card--test {
+  @apply bg-white;
 }
 
 .card.card--course {
@@ -170,4 +178,30 @@
   .card__title {
     @apply mb-10;
   }
+}
+
+.card.card--profile {
+  @apply bg-white p-40;
+}
+
+.card.card--course-online {
+  @apply h-full;
+  .card__body {
+    @apply flex-grow;
+  }
+  .card__title {
+    @apply mb-30;
+  }
+
+  .card__info {
+    @apply mt-auto;
+  }
+}
+
+.card-min-h {
+  min-height: 65vh;
+}
+
+.card--lesson-nav {
+  @apply p-20 bg-white;
 }

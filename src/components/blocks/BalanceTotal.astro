@@ -1,0 +1,21 @@
+---
+import Button from "@components/shared/Button.astro";
+---
+
+<div class="balance mb-20">
+  <div class="balance__icon">
+    <svg class="icon !w-24">
+      <use xlink:href="#icon-wallet"></use>
+    </svg>
+  </div>
+  <div class="balance__actions">
+    <h2 class="balance__net">
+      <span class="balance__title">umumiy balans</span>
+      <span class="balance__number"> <slot name="amount" /> SO‘M</span>
+    </h2>
+    <div class="balance__controls">
+      <Button style="primary mb-15">balansni to‘ldirish</Button>
+      <Button style="secondary justify-center">vaucher</Button>
+    </div>
+  </div>
+</div>

@@ -37,3 +37,7 @@
 .nav .nav__link.active {
   @apply font-semibold;
 }
+
+.body-full-h {
+  @apply flex flex-col min-h-screen;
+}

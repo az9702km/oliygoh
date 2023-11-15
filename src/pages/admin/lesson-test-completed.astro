@@ -1,0 +1,63 @@
+---
+import LayoutLesson from "@/layouts/LayoutLesson.astro";
+import CardAdmin from "@components/shared/Cards/CardProfile.astro";
+import LessonNav from "@components/blocks/LessonNav.astro";
+import Button from "@components/shared/Button.astro";
+---
+
+<LayoutLesson title="Lesson">
+  <div class="grid gap-20 grid-cols-3">
+    <div class="col-1">
+      <LessonNav />
+    </div>
+    <div class="col-2">
+      <CardAdmin>
+        <div class="lesson-content">
+          <h1 class="lesson-content__title">1.3 - UX/UI darsiga oid testlar</h1>
+          <div class="lesson-test">
+            <h1 class="lesson-test__title">
+              Tesni muvaffiqiyatli yakunladingiz!
+            </h1>
+            <p class="lesson-test__desc">
+              Test natijalarni quydagi jadval orqali bilib olishingiz va kursni
+              davom etirishingiz yoki qaytadan testlarni topshirishingiz mumkin.
+            </p>
+
+            <div class="lesson-icon-card__item mb-40">
+              <div class="lesson-icon-card__icon">
+                <svg class="icon">
+                  <use xlink:href=`#icon-tasks`></use>
+                </svg>
+              </div>
+              <div class="lesson-icon-card__body">
+                <div class="test-results">
+                  <div class="test-score">
+                    <div class="test-score__title">to‘g‘ri javoblar</div>
+                    <div class="test-score__amount">6/10 ta</div>
+                  </div>
+                  <div class="test-score">
+                    <div class="test-score__title">NATIJA</div>
+                    <div class="test-score__amount">60%</div>
+                  </div>
+                  <div class="test-score">
+                    <div class="test-score__title">BALL</div>
+                    <div class="test-score__amount">6</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-content__complete">
+              <Button style="secondary mr-20">
+                <svg class="icon !w-20">
+                  <use xlink:href=`#icon-sync`></use>
+                </svg>qayta topshirish
+              </Button>
+              <Button style="primary">davom etish</Button>
+            </div>
+          </div>
+        </div>
+      </CardAdmin>
+    </div>
+  </div>
+</LayoutLesson>

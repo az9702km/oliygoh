@@ -1,0 +1,160 @@
+---
+import CardAdmin from "@components/shared/Cards/CardProfile.astro";
+import LayoutAdmin from "../../layouts/LayoutAdmin.astro";
+import Button from "@components/shared/Button.astro";
+import Pagination from "@components/shared/Pagination.astro";
+import PaginationItem from "@components/shared/PaginationItem.astro";
+import BalanceTotal from "@components/blocks/BalanceTotal.astro";
+---
+
+<LayoutAdmin title="Sertifikatlarim" page="balance">
+  <BalanceTotal>
+    <Fragment slot="amount">432 000</Fragment>
+  </BalanceTotal>
+  <CardAdmin classes="card-min-h">
+    <table class="table-profile table-profile--balance">
+      <thead class="table-profile__head">
+        <tr>
+          <th></th>
+          <th>To‘lov summasi</th>
+          <th>To‘lov vaqti</th>
+          <th>sabab</th>
+        </tr>
+      </thead>
+      <tbody class="table-profile__body">
+        <tr>
+          <td>
+            <div class="table-profile__icon">
+              <svg class="icon">
+                <use xlink:href="#icon-reciept-download"></use>
+              </svg>
+            </div>
+          </td>
+          <td>
+            <div class="dt uppercase">
+              <div class="term">432 000 SO‘M</div>
+              <div class="desc">kirim</div>
+            </div>
+          </td>
+          <td>
+            <div class="dt">
+              <div class="term">23-07-2023</div>
+              <div class="desc">10:35:32</div>
+            </div>
+          </td>
+          <td>
+            <span class="text">Payme</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="table-profile__icon">
+              <svg class="icon">
+                <use xlink:href="#icon-reciept-download"></use>
+              </svg>
+            </div>
+          </td>
+          <td>
+            <div class="dt uppercase">
+              <div class="term">689 000 SO‘M</div>
+              <div class="desc">chiqim</div>
+            </div>
+          </td>
+          <td>
+            <div class="dt">
+              <div class="term">30-06-2023</div>
+              <div class="desc">18:23:12</div>
+            </div>
+          </td>
+          <td>
+            <span class="text">Algebra fanidan 11-sinf ko‘nikmalari</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="table-profile__icon">
+              <svg class="icon">
+                <use xlink:href="#icon-reciept-download"></use>
+              </svg>
+            </div>
+          </td>
+          <td>
+            <div class="dt uppercase">
+              <div class="term">432 000 SO‘M</div>
+              <div class="desc">kirim</div>
+            </div>
+          </td>
+          <td>
+            <div class="dt">
+              <div class="term">23-07-2023</div>
+              <div class="desc">10:35:32</div>
+            </div>
+          </td>
+          <td>
+            <span class="text">Payme</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="table-profile__icon">
+              <svg class="icon">
+                <use xlink:href="#icon-reciept-download"></use>
+              </svg>
+            </div>
+          </td>
+          <td>
+            <div class="dt uppercase">
+              <div class="term">432 000 SO‘M</div>
+              <div class="desc">kirim</div>
+            </div>
+          </td>
+          <td>
+            <div class="dt">
+              <div class="term">23-07-2023</div>
+              <div class="desc">10:35:32</div>
+            </div>
+          </td>
+          <td>
+            <span class="text">Payme</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="table-profile__icon">
+              <svg class="icon">
+                <use xlink:href="#icon-reciept-download"></use>
+              </svg>
+            </div>
+          </td>
+          <td>
+            <div class="dt uppercase">
+              <div class="term">432 000 SO‘M</div>
+              <div class="desc">kirim</div>
+            </div>
+          </td>
+          <td>
+            <div class="dt">
+              <div class="term">23-07-2023</div>
+              <div class="desc">10:35:32</div>
+            </div>
+          </td>
+          <td>
+            <span class="text">Payme</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </CardAdmin>
+
+  <div class="flex justify-end mt-20">
+    <Pagination>
+      <PaginationItem type="prev" />
+      <PaginationItem active>01</PaginationItem>
+      <PaginationItem>02</PaginationItem>
+      <PaginationItem>...</PaginationItem>
+      <PaginationItem>05</PaginationItem>
+      <PaginationItem>06</PaginationItem>
+      <PaginationItem type="next" />
+    </Pagination>
+  </div>
+</LayoutAdmin>

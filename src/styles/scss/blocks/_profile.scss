@@ -1,0 +1,41 @@
+.profile-section {
+  &__title {
+    @apply text-body-1 font-medium mb-15;
+  }
+  &__subtitle {
+    @apply text-body-3 text-text-gray mb-30;
+  }
+}
+
+.profile-form {
+  .input-field,
+  .input-field__input {
+    background-color: #fefefe;
+  }
+  .input-field__icon {
+    @apply text-text-gray-2;
+  }
+}
+
+.lesson-section-header {
+  @apply mr-60 flex-grow flex gap-x-15 text-left items-start text-body-2 font-medium;
+
+  .icon {
+    @apply w-7 shrink-0 m-0.5 text-white border-2 border-primary/20 rounded-full;
+  }
+}
+
+.icon.lesson-section-icon {
+  @apply w-6 shrink-0 m-0.5 text-white border-2 border-primary/20 rounded-full;
+}
+
+.current .icon.lesson-section-icon {
+  @apply border-primary;
+}
+.completed .icon.lesson-section-icon {
+  @apply border-primary bg-primary;
+}
+
+.lesson-section-icon.lesson-section-icon--sm {
+  @apply w-4;
+}

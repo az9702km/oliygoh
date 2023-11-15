@@ -1,0 +1,15 @@
+---
+const { active, icon, link } = Astro.props;
+---
+
+<a
+  href=`/profile/${link}`
+  class="nav-v__link"
+  class:list={[active === link && "active"]}>
+  <svg class="icon nav-v__icon">
+    <use xlink:href=`#icon-${icon}`></use>
+  </svg>
+  <span>
+    <slot />
+  </span>
+</a>

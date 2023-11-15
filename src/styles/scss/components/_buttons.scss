@@ -1,5 +1,5 @@
 .btn {
-  @apply py-3 px-6 uppercase rounded flex items-center transition;
+  @apply py-10 px-6 uppercase rounded flex items-center transition cursor-pointer gap-x-10;
 
   &.btn-primary {
     @apply bg-primary text-white hover:bg-primary-hover;
@@ -14,6 +14,13 @@
   &.btn-circle {
     @apply flex items-center justify-center aspect-square rounded-full;
   }
+  .icon {
+    @apply w-20;
+  }
+
+  &.btn-interactive {
+    @apply bg-white hover:bg-primary hover:text-white border border-line;
+  }
 }
 
 .text-btn {
@@ -25,4 +32,12 @@
   &.btn-group--v {
     @apply flex-col;
   }
+}
+
+.btn:disabled {
+  @apply border border-line bg-background text-text-gray hover:bg-background;
+}
+
+select {
+  @apply cursor-pointer;
 }

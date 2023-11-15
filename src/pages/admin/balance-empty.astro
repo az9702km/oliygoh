@@ -1,0 +1,24 @@
+---
+import CardAdmin from "@components/shared/Cards/CardProfile.astro";
+import LayoutAdmin from "../../layouts/LayoutAdmin.astro";
+import AdminEmpty from "@components/blocks/ProfileEmpty.astro";
+import EmptyWIcon from "@components/shared/EmptyWIcon.astro";
+import Button from "@components/shared/Button.astro";
+import BalanceTotal from "@components/blocks/BalanceTotal.astro";
+---
+
+<LayoutAdmin title="Sertifikatlarim" page="balance">
+  <BalanceTotal>
+    <Fragment slot="amount">1 000 000</Fragment>
+  </BalanceTotal>
+  <CardAdmin classes="card-min-h">
+    <AdminEmpty>
+      <EmptyWIcon icon="wallet-search">
+        <Fragment slot="title">Sizda harajat mavjud emas</Fragment>
+        <Fragment slot="subtitle">
+          Balans to‘ldirish yoki promo-kod orqali hisobnigizi to‘ldiring!
+        </Fragment>
+      </EmptyWIcon>
+    </AdminEmpty>
+  </CardAdmin>
+</LayoutAdmin>

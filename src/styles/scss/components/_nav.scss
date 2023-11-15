@@ -1,0 +1,16 @@
+.nav-v {
+  @apply divide-y divide-line flex flex-col rounded border border-line bg-white;
+
+  &__link {
+    @apply px-20 py-3 flex items-center gap-10 text-body-2;
+
+    &.active {
+      @apply ring-primary text-primary;
+      box-shadow: inset 2px 0 0 var(--tw-ring-color);
+    }
+  }
+
+  &__icon {
+    @apply w-6;
+  }
+}

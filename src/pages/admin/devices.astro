@@ -1,0 +1,100 @@
+---
+import CardAdmin from "@components/shared/Cards/CardProfile.astro";
+import LayoutAdmin from "../../layouts/LayoutAdmin.astro";
+import Button from "@components/shared/Button.astro";
+import Pagination from "@components/shared/Pagination.astro";
+import PaginationItem from "@components/shared/PaginationItem.astro";
+---
+
+<LayoutAdmin title="Sertifikatlarim" page="devices">
+  <CardAdmin classes="card-min-h">
+    <table class="table-profile">
+      <thead class="table-profile__head">
+        <tr>
+          <th></th>
+          <th>QURILMA NOMI</th>
+          <th class="table-profile__date">QO‘SHILGAN VAQT</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody class="table-profile__body">
+        <tr>
+          <td>
+            <div class="table-profile__icon">
+              <svg class="icon">
+                <use xlink:href="#icon-device"></use>
+              </svg>
+            </div>
+          </td>
+          <td>
+            <div class="dt">
+              <div class="term">MacOS 10.15.7 Chrome 114.0.0.0 - desktop</div>
+              <div class="desc uppercase">Mazkur qurilma</div>
+            </div>
+          </td>
+          <td>
+            <div class="date-n-time table-profile__date">
+              <div class="date">19-06-2023</div>
+              <div class="time">10:35:32</div>
+            </div>
+          </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="table-profile__icon">
+              <svg class="icon">
+                <use xlink:href="#icon-device"></use>
+              </svg>
+            </div>
+          </td>
+          <td>
+            <div class="dt">
+              <div class="term">Poco X3 NFC, Mi Browser</div>
+            </div>
+          </td>
+          <td>
+            <div class="date-n-time table-profile__date">
+              <div class="date">24-04-2023</div>
+              <div class="time">10:35:32</div>
+            </div>
+          </td>
+          <td>
+            <Button style="interactive" classes="p-3 ml-60" form="btn-circle">
+              <svg class="icon !w-20">
+                <use xlink:href="#icon-delete"></use>
+              </svg>
+            </Button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="table-profile__icon">
+              <svg class="icon">
+                <use xlink:href="#icon-device"></use>
+              </svg>
+            </div>
+          </td>
+          <td>
+            <div class="dt">
+              <div class="term">Ipad pro M2, Safari</div>
+            </div>
+          </td>
+          <td>
+            <div class="date-n-time table-profile__date">
+              <div class="date">12-02-2023</div>
+              <div class="time">10:35:32</div>
+            </div>
+          </td>
+          <td>
+            <Button style="interactive" classes="p-3 ml-60" form="btn-circle">
+              <svg class="icon !w-20">
+                <use xlink:href="#icon-delete"></use>
+              </svg>
+            </Button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </CardAdmin>
+</LayoutAdmin>

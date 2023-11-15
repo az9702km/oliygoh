@@ -1,0 +1,16 @@
+---
+const { id, target } = Astro.props;
+---
+
+<li role="presentation">
+  <button
+    id={id}
+    data-tabs-target=`#${target}`
+    type="button"
+    role="tab"
+    aria-selected="border-b-2 border-primary text-primary"
+    aria-controls={target}
+    aria-selected="false">
+    <slot />
+  </button>
+</li>

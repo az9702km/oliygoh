@@ -1,0 +1,38 @@
+---
+import Header from "@/layouts/Header.astro";
+import VerticalNav from "@components/shared/VerticalNav/VerticalNav.astro";
+import VerticalNavItem from "@components/shared/VerticalNav/VerticalNavItem.astro";
+import "./../styles/scss/index.scss";
+import Icons from "@components/blocks/Icons.astro";
+
+const { title, page } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="body-full-h">
+    <Header profile />
+    <div class="profile-wrapper bg-background flex-grow">
+      <div class="container-wrapper py-40">
+        <slot />
+      </div>
+    </div>
+    <Icons />
+    <script
+      is:inline
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"
+    ></script>
+    <script
+      is:inline
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/datepicker.min.js"
+    ></script>
+  </body>
+</html>

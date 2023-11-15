@@ -1,0 +1,9 @@
+.course-progress {
+  @apply flex w-full gap-x-20 items-center;
+  &__progress {
+    @apply flex-grow;
+  }
+  &__value {
+    @apply subtitle;
+  }
+}

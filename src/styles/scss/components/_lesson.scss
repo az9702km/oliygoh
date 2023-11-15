@@ -9,3 +9,84 @@
     @apply flex-grow;
   }
 }
+
+.lesson-icon-card {
+  @apply flex flex-col gap-y-10;
+
+  &__item {
+    @apply flex rounded border border-line bg-background;
+  }
+
+  &__icon {
+    @apply p-15 border-r border-line;
+
+    .icon {
+      @apply w-11;
+    }
+  }
+
+  &__body {
+    @apply pl-40 py-15 pr-20 flex flex-grow items-center;
+
+    .title {
+      @apply flex-grow ml-20 text-body-2 font-medium;
+    }
+  }
+}
+
+.lesson-content {
+  &__title {
+    @apply text-body-1 mb-20;
+  }
+
+  &__video {
+    @apply w-full mb-20;
+  }
+
+  &__nav {
+    @apply flex justify-end gap-x-10 mb-40;
+  }
+
+  &__complete {
+    @apply flex justify-end mt-30;
+  }
+}
+
+.lesson-content:not(:has(.lesson-content__video)) {
+  .lesson-content__title {
+    @apply pb-40 mb-40 border-b border-line;
+  }
+}
+.lesson-content .lesson-content__text-view {
+  @apply text-body-2;
+  // h1 {
+  //   @apply h1;
+  // }
+  // h2 {
+  //   @apply h2;
+  // }
+  // h3 {
+  //   @apply h3;
+  // }
+  h1,
+  h2,
+  h3 {
+    @apply text-body-2 font-bold mb-10;
+  }
+  p:not(:last-child) {
+    @apply mb-20;
+  }
+}
+
+.lesson-test {
+  &__title {
+    @apply text-body-2 font-bold mb-15;
+  }
+  &__desc {
+    @apply text-body-2 mb-15;
+
+    &:last-child {
+      @apply mb-0;
+    }
+  }
+}

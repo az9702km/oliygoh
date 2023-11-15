@@ -1,0 +1,9 @@
+---
+const { id, contentId } = Astro.props;
+---
+
+<div class="tab__header">
+  <ul class="tab__nav" id={id} data-tabs-toggle=`#${contentId}` role="tablist">
+    <slot />
+  </ul>
+</div>

@@ -1,0 +1,10 @@
+.progress {
+  @apply h-1 w-full rounded-sm;
+  &::-webkit-progress-bar {
+    @apply bg-black/10;
+  }
+  &::-webkit-progress-value {
+    @apply bg-black rounded-sm;
+    min-width: 4px;
+  }
+}

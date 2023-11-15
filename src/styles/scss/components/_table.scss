@@ -1,0 +1,77 @@
+.table-profile {
+  @apply border-separate border-spacing-y-10 table-auto -my-10;
+
+  &__head {
+    tr th {
+      @apply text-primary subtitle uppercase font-medium text-start pl-15 pb-5;
+      &:first-child,
+      &:last-child {
+        @apply w-[4.75rem];
+      }
+      &:nth-child(2) {
+        @apply pl-40;
+      }
+    }
+
+    .table-profile__date {
+      @apply text-end;
+    }
+  }
+
+  &__body {
+    tr td {
+      @apply bg-background border-y border-line pl-15 last:rounded-e last:border-r last:pr-20;
+      &:nth-child(2) {
+        @apply pl-40;
+      }
+
+      &:first-child {
+        @apply border rounded-s p-4 w-min;
+      }
+    }
+  }
+
+  &__icon {
+    @apply flex w-min;
+
+    .icon {
+      @apply w-[2.625rem];
+    }
+  }
+
+  .text {
+    @apply text-body-2;
+  }
+
+  &__date {
+    @apply text-end;
+  }
+}
+
+.dt {
+  @apply flex flex-col;
+  .term {
+    @apply text-body-2;
+  }
+  .desc {
+    @apply subtitle text-text-gray;
+  }
+}
+
+.table-profile.table-profile--balance {
+  .table-profile__head {
+    tr th {
+      &:last-child {
+        @apply w-1/3;
+      }
+    }
+  }
+
+  .table-profile__body {
+    tr td {
+      &:last-child {
+        @apply w-1/3;
+      }
+    }
+  }
+}

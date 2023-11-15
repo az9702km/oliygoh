@@ -1,0 +1,9 @@
+---
+import Progress from "@components/shared/Progress.astro";
+const { value } = Astro.props;
+---
+
+<div class="course-progress">
+  <Progress value={value} xClasses="course-progress__progress" />
+  <span class="course-progress__value">{value}%</span>
+</div>

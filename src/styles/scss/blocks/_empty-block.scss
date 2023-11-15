@@ -1,0 +1,19 @@
+.profile-card--empty {
+  @apply flex-grow flex px-36;
+}
+
+.empty-block {
+  @apply flex flex-col flex-grow items-center justify-center text-center;
+
+  &__icon {
+    @apply w-24 text-primary mb-20;
+  }
+
+  &__title {
+    @apply text-body-1 font-medium mb-10;
+  }
+
+  &__subtitle {
+    @apply text-body-2 text-text-gray;
+  }
+}

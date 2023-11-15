@@ -1,7 +1,14 @@
 ---
-const { border } = Astro.props;
+const { border, xcls, sm, disabled } = Astro.props;
 ---
 
-<span class="badge" class:list={[border && "badge--border"]}>
+<span
+  class="badge"
+  class:list={[
+    border && "badge--border",
+    sm && "badge--sm",
+    disabled && "disabled",
+    xcls,
+  ]}>
   <slot />
 </span>

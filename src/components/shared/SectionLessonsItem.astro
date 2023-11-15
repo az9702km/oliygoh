@@ -1,0 +1,14 @@
+---
+import LessonIcon from "./LessonIcon.astro";
+const { state } = Astro.props;
+---
+
+<div class="section-lessons__item" class:list={[state]}>
+  <div class="section-lessons__icon">
+    <LessonIcon sm />
+    <div class="line"></div>
+  </div>
+  <a href="#!" class="section-lessons__text">
+    <slot />
+  </a>
+</div>

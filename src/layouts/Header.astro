@@ -2,7 +2,7 @@
 import Brand from "@components/shared/Brand.astro";
 import Button from "@components/shared/Button.astro";
 
-const { admin } = Astro.props;
+const { profile } = Astro.props;
 ---
 
 <header>
@@ -15,7 +15,7 @@ const { admin } = Astro.props;
           <a href="/about.html" class="nav__link">Blog</a>
           <a href="#!" class="nav__link">Biz haqimizda</a>
           {
-            !admin ? (
+            !profile ? (
               <a href="#!" class="nav__link btn btn-primary">
                 kirish
               </a>

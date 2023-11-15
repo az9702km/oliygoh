@@ -1,0 +1,7 @@
+---
+const { value, xClasses } = Astro.props;
+---
+
+<progress class="progress" class:list={[xClasses]} max="100" value={value}
+  >{value}%</progress
+>

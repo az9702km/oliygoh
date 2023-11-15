@@ -1,5 +1,23 @@
 ---
+import CardAdmin from "@components/shared/Cards/CardProfile.astro";
 import LayoutAdmin from "../../layouts/LayoutAdmin.astro";
+import CourseProgress from "@components/blocks/CourseProgress.astro";
+import CardCourseOnline from "@components/shared/Cards/CardCourseOnline.astro";
 ---
 
-<LayoutAdmin title="Shaxsiy kabinet" page="index">Salyom</LayoutAdmin>
+<LayoutAdmin title="Shaxsiy kabinet" page="">
+  <CardAdmin classes="card-min-h">
+    <div class="row">
+      <div class="col-2">
+        <CardCourseOnline>
+          <Fragment slot="subtitle">Ikrombek Izzatilayev</Fragment>
+          <Fragment slot="title">
+            UX/UI dizayning boshalang‘ich ko‘nikmalari kursi
+          </Fragment>
+
+          <CourseProgress slot="info" value="0" />
+        </CardCourseOnline>
+      </div>
+    </div>
+  </CardAdmin>
+</LayoutAdmin>

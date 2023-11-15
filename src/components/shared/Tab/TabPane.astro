@@ -1,0 +1,7 @@
+---
+const { id, target } = Astro.props;
+---
+
+<div class="hidden" id={id} role="tabpanel" aria-labelledby={target}>
+  <slot />
+</div>

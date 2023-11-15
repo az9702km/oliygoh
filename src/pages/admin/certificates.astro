@@ -1,0 +1,186 @@
+---
+import CardAdmin from "@components/shared/Cards/CardProfile.astro";
+import LayoutAdmin from "../../layouts/LayoutAdmin.astro";
+import Button from "@components/shared/Button.astro";
+import Pagination from "@components/shared/Pagination.astro";
+import PaginationItem from "@components/shared/PaginationItem.astro";
+---
+
+<LayoutAdmin title="Sertifikatlarim" page="certificates">
+  <CardAdmin classes="card-min-h">
+    <table class="table-profile">
+      <thead class="table-profile__head">
+        <tr>
+          <th></th>
+          <th>Kurs nomi</th>
+          <th class="table-profile__date">Sertifikat sanasi</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody class="table-profile__body">
+        <tr>
+          <td>
+            <div class="table-profile__icon">
+              <svg class="icon">
+                <use xlink:href="#icon-doc-verified"></use>
+              </svg>
+            </div>
+          </td>
+          <td>
+            <span class="text"> Algebra fanidan 11-sinf ko‘nikmalari</span>
+          </td>
+          <td>
+            <div class="date-n-time table-profile__date">
+              <div class="date">23-07-2023</div>
+              <div class="time">10:35:32</div>
+            </div>
+          </td>
+          <td>
+            <Button style="interactive" classes="p-3 ml-60" form="btn-circle">
+              <svg class="icon !w-20">
+                <use xlink:href="#icon-download"></use>
+              </svg>
+            </Button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="table-profile__icon">
+              <svg class="icon">
+                <use xlink:href="#icon-doc-verified"></use>
+              </svg>
+            </div>
+          </td>
+          <td>
+            <span class="text"> Algebra fanidan 11-sinf ko‘nikmalari</span>
+          </td>
+          <td>
+            <div class="date-n-time table-profile__date">
+              <div class="date">23-07-2023</div>
+              <div class="time">10:35:32</div>
+            </div>
+          </td>
+          <td>
+            <Button style="interactive" classes="p-3 ml-60" form="btn-circle">
+              <svg class="icon !w-20">
+                <use xlink:href="#icon-download"></use>
+              </svg>
+            </Button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="table-profile__icon">
+              <svg class="icon">
+                <use xlink:href="#icon-doc-verified"></use>
+              </svg>
+            </div>
+          </td>
+          <td>
+            <span class="text"> Algebra fanidan 11-sinf ko‘nikmalari</span>
+          </td>
+          <td>
+            <div class="date-n-time table-profile__date">
+              <div class="date">23-07-2023</div>
+              <div class="time">10:35:32</div>
+            </div>
+          </td>
+          <td>
+            <Button style="interactive" classes="p-3 ml-60" form="btn-circle">
+              <svg class="icon !w-20">
+                <use xlink:href="#icon-download"></use>
+              </svg>
+            </Button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="table-profile__icon">
+              <svg class="icon">
+                <use xlink:href="#icon-doc-verified"></use>
+              </svg>
+            </div>
+          </td>
+          <td>
+            <span class="text"> Algebra fanidan 11-sinf ko‘nikmalari</span>
+          </td>
+          <td>
+            <div class="date-n-time table-profile__date">
+              <div class="date">23-07-2023</div>
+              <div class="time">10:35:32</div>
+            </div>
+          </td>
+          <td>
+            <Button style="interactive" classes="p-3 ml-60" form="btn-circle">
+              <svg class="icon !w-20">
+                <use xlink:href="#icon-download"></use>
+              </svg>
+            </Button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="table-profile__icon">
+              <svg class="icon">
+                <use xlink:href="#icon-doc-verified"></use>
+              </svg>
+            </div>
+          </td>
+          <td>
+            <span class="text"> Algebra fanidan 11-sinf ko‘nikmalari</span>
+          </td>
+          <td>
+            <div class="date-n-time table-profile__date">
+              <div class="date">23-07-2023</div>
+              <div class="time">10:35:32</div>
+            </div>
+          </td>
+          <td>
+            <Button style="interactive" classes="p-3 ml-60" form="btn-circle">
+              <svg class="icon !w-20">
+                <use xlink:href="#icon-download"></use>
+              </svg>
+            </Button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="table-profile__icon">
+              <svg class="icon">
+                <use xlink:href="#icon-doc-verified"></use>
+              </svg>
+            </div>
+          </td>
+          <td>
+            <span class="text"> Algebra fanidan 11-sinf ko‘nikmalari</span>
+          </td>
+          <td>
+            <div class="date-n-time table-profile__date">
+              <div class="date">23-07-2023</div>
+              <div class="time">10:35:32</div>
+            </div>
+          </td>
+          <td>
+            <Button style="interactive" classes="p-3 ml-60" form="btn-circle">
+              <svg class="icon !w-20">
+                <use xlink:href="#icon-download"></use>
+              </svg>
+            </Button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </CardAdmin>
+
+  <div class="flex justify-end mt-20">
+    <Pagination>
+      <PaginationItem type="prev" />
+      <PaginationItem active>01</PaginationItem>
+      <PaginationItem>02</PaginationItem>
+      <PaginationItem>...</PaginationItem>
+      <PaginationItem>05</PaginationItem>
+      <PaginationItem>06</PaginationItem>
+      <PaginationItem type="next" />
+    </Pagination>
+  </div>
+</LayoutAdmin>

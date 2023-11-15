@@ -1,0 +1,139 @@
+---
+import LayoutLesson from "@/layouts/LayoutLesson.astro";
+import CardAdmin from "@components/shared/Cards/CardProfile.astro";
+import LessonNav from "@components/blocks/LessonNav.astro";
+import Button from "@components/shared/Button.astro";
+import Tab from "@components/shared/Tab/Tab.astro";
+import TabHeader from "@components/shared/Tab/TabHeader.astro";
+import TabButton from "@components/shared/Tab/TabButton.astro";
+import TabContent from "@components/shared/Tab/TabContent.astro";
+import TabPane from "@components/shared/Tab/TabPane.astro";
+---
+
+<LayoutLesson title="Lesson">
+  <div class="grid gap-20 grid-cols-3">
+    <div class="col-1">
+      <LessonNav />
+    </div>
+    <div class="col-2">
+      <CardAdmin>
+        <div class="lesson-content">
+          <h1 class="lesson-content__title">
+            1.1 - Kurs haqida to‘liq tanishtiruv
+          </h1>
+          <iframe
+            width="560"
+            height="315"
+            class="lesson-content__video"
+            src="https://www.youtube.com/embed/oUIkswy_sXo?si=TJvdPqUTIU_FaSIo"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <div class="lesson-content__nav">
+            <Button style="secondary">
+              <svg class="icon">
+                <use xlink:href=`#icon-arrow-left`></use>
+              </svg>
+               AVVALGI
+            </Button>
+            <Button style="secondary">
+              KEYINGI<svg class="icon">
+                <use xlink:href=`#icon-arrow-right`></use>
+              </svg>
+            </Button>
+          </div>
+          <Tab>
+            <TabHeader
+              slot="header"
+              id="lesson-tab"
+              contentId="lessonTabContent">
+              <TabButton
+                id="lesson-tab-description"
+                target="lesson-description">
+                MA’LUMOTLAR
+              </TabButton>
+              <TabButton id="lesson-tab-resources" target="lesson-resources">
+                MA’LUMOTLAR
+              </TabButton>
+            </TabHeader>
+            <TabContent slot="content" id="lessonTabContent">
+              <TabPane id="lesson-description" target="lesson-tab-description">
+                <div class="block text-body-2">
+                  <p class="mb-20">
+                    UX - bu mahsulot qanday his qilishiga bog'liq. UI - bu
+                    mahsulot qanday ko'rinishi bilan bog'liq. UI dizayni
+                    foydalanuvchi interfeysi dizaynini anglatadi, UX dizayni esa
+                    foydalanuvchi tajribasi dizaynini anglatadi. UI - bu
+                    qandaydir ko'rinish va u bilan qanday munosabatda
+                    bo'lishingiz.
+                  </p>
+                  <p>
+                    Foydalanuvchi tajribasi (UX) dizayni - bu dizayn guruhlari
+                    foydalanuvchilarga mazmunli va tegishli tajribalarni taqdim
+                    etadigan mahsulotlarni yaratish uchun foydalanadigan
+                    jarayondir. UX dizayni mahsulotni sotib olish va
+                    integratsiyalashning butun jarayonini loyihalashni o'z
+                    ichiga oladi, shu jumladan brending, dizayn, foydalanish
+                    qulayligi va funksiyasi.
+                  </p>
+                </div>
+              </TabPane>
+              <TabPane id="lesson-resources" target="lesson-tab-resources">
+                <div class="lesson-icon-card">
+                  <div class="lesson-icon-card__item">
+                    <div class="lesson-icon-card__icon">
+                      <svg class="icon">
+                        <use xlink:href=`#icon-note-pin`></use>
+                      </svg>
+                    </div>
+                    <div class="lesson-icon-card__body">
+                      <span class="title">
+                        Darslarda ishlatilgan resruslarni yuklab oling!
+                      </span>
+                      <Button
+                        style="interactive"
+                        form="btn-circle"
+                        classes="!p-10">
+                        <svg class="icon !w-6">
+                          <use xlink:href=`#icon-download`></use>
+                        </svg>
+                      </Button>
+                    </div>
+                  </div>
+                  <div class="lesson-icon-card__item">
+                    <div class="lesson-icon-card__icon">
+                      <svg class="icon">
+                        <use xlink:href=`#icon-telegram`></use>
+                      </svg>
+                    </div>
+                    <div class="lesson-icon-card__body">
+                      <span class="title">
+                        Kursning maxsus Telegram guruhga qo‘shiling!
+                      </span>
+                      <Button
+                        style="interactive"
+                        form="btn-circle"
+                        classes="!p-10">
+                        <svg class="icon !w-6">
+                          <use xlink:href=`#icon-link`></use>
+                        </svg>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </TabPane>
+            </TabContent>
+          </Tab>
+        </div>
+        <div class="lesson-content__complete">
+          <Button style="primary">
+            <svg class="icon !w-20">
+              <use xlink:href=`#icon-circle-check`></use>
+            </svg>mavzuni o‘zlashtirdim
+          </Button>
+        </div>
+      </CardAdmin>
+    </div>
+  </div>
+</LayoutLesson>

@@ -1,0 +1,24 @@
+---
+import CardAdmin from "@components/shared/Cards/CardProfile.astro";
+import LayoutAdmin from "../../layouts/LayoutAdmin.astro";
+import Button from "@components/shared/Button.astro";
+import AdminEmpty from "@components/blocks/ProfileEmpty.astro";
+import EmptyWIcon from "@components/shared/EmptyWIcon.astro";
+---
+
+<LayoutAdmin title="Shaxsiy kabinet" page="">
+  <CardAdmin classes="card-min-h">
+    <AdminEmpty>
+      <EmptyWIcon icon="notebook">
+        <Fragment slot="title">Sizda hali kurs mavjud emas</Fragment>
+        <Fragment slot="subtitle">
+          Kurslar bo’limidan o’zingiz uchun munosib kursni tanlang!
+        </Fragment>
+
+        <Button slot="other" style="secondary-black" classes="mt-40">
+          barcha kurslar
+        </Button>
+      </EmptyWIcon>
+    </AdminEmpty>
+  </CardAdmin>
+</LayoutAdmin>

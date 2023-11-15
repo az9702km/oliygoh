@@ -1,0 +1,74 @@
+.test {
+  .test__question {
+  }
+}
+
+.question {
+  @apply flex flex-col gap-y-15;
+  &__title {
+    @apply text-body-2 font-medium;
+  }
+  &__table {
+    @apply bg-background border border-line border-collapse;
+
+    td,
+    th {
+      @apply px-15 py-3 border border-line;
+    }
+  }
+
+  &__text {
+    @apply text-body-3;
+  }
+
+  &__img {
+    @apply max-h-72 object-cover;
+  }
+}
+
+.radio-icon {
+  .stroke {
+    @apply stroke-primary stroke-1;
+  }
+}
+
+.variant-radio {
+  @apply flex flex-col;
+
+  .variant-radio__circle {
+    @apply rounded-full w-[.875rem] h-[.875rem] m-[3px] ring-1 ring-primary;
+  }
+
+  .variant-radio__label {
+    @apply px-20 py-3 flex gap-x-15 cursor-pointer border border-line rounded items-center;
+  }
+
+  // label + input[]
+
+  input:checked ~ label {
+    @apply bg-background;
+    .variant-radio__circle {
+      @apply bg-primary border-2 border-white;
+    }
+  }
+}
+
+.variants {
+  @apply flex flex-col gap-y-10 font-medium;
+}
+
+.test-results {
+  @apply flex gap-x-20  flex-grow;
+}
+
+.test-score {
+  @apply flex-grow flex flex-col;
+
+  &__title {
+    @apply subtitle uppercase text-text-gray;
+  }
+
+  &__amount {
+    @apply text-body-2;
+  }
+}

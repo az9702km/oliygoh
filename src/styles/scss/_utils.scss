@@ -20,4 +20,8 @@
 
 main {
   @apply pt-40;
+
+  &.profile-content {
+    @apply p-0;
+  }
 }

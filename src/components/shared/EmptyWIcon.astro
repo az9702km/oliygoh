@@ -1,0 +1,27 @@
+---
+const { icon, illustration } = Astro.props;
+---
+
+<div class="empty-block">
+  {
+    icon && (
+      <svg class="icon empty-block__icon">
+        <use xlink:href={`#icon-${icon}`} />
+      </svg>
+    )
+  }
+  {
+    illustration && (
+      <svg class="text-primary mb-20 h-28">
+        <use xlink:href={`#${illustration}`} />
+      </svg>
+    )
+  }
+  <h2 class="empty-block__title">
+    <slot name="title" />
+  </h2>
+  <p class="empty-block__subtitle">
+    <slot name="subtitle" />
+  </p>
+  <slot name="other" />
+</div>
