@@ -1,0 +1,87 @@
+.base-timer {
+  @apply w-[2.625rem] h-[2.625rem] relative;
+}
+
+.base-timer__svg {
+  @apply -scale-x-100;
+}
+
+.base-timer__circle {
+  @apply stroke-none fill-none;
+}
+
+.base-timer__path-elapsed {
+  @apply stroke-primary/20 stroke-[.375rem];
+}
+
+.base-timer__path-remaining {
+  @apply text-primary transition-all duration-1000 ease-linear stroke-[.375rem] rotate-90 origin-center;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  @apply absolute w-full h-full top-0 flex items-center justify-center text-body-3;
+}
+
+.block-card {
+  @apply p-30 rounded border border-line bg-white;
+}
+
+.login-form {
+  @apply flex flex-col gap-y-20;
+
+  &__header {
+    @apply flex gap-x-20;
+  }
+
+  &__title {
+    @apply text-body-1 font-medium;
+  }
+
+  &__subtitle {
+    @apply text-text-gray;
+  }
+
+  &__form {
+    @apply flex flex-col gap-y-15;
+  }
+}
+
+.login-wrapper {
+  @apply flex-grow flex relative bg-background;
+
+  &__container {
+    @apply py-40 flex-grow flex-shrink-0;
+  }
+
+  &__bg {
+    @apply absolute bg-primary h-full left-1/2 top-0 right-0;
+  }
+
+  &__img {
+    @apply w-full h-full object-cover;
+  }
+}
+
+.login-form-wrapper {
+  @apply flex flex-col h-full;
+
+  &__inner {
+    @apply flex-grow flex flex-col justify-center items-start;
+  }
+
+  &__block {
+    @apply mt-40 w-[25rem] flex flex-col gap-y-30;
+  }
+}

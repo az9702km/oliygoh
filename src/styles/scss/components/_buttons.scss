@@ -1,6 +1,14 @@
 .btn {
   @apply py-10 px-6 uppercase rounded flex items-center transition cursor-pointer gap-x-10;
 
+  &.btn-center {
+    @apply justify-center;
+  }
+
+  &.btn-end {
+    @apply justify-center;
+  }
+
   &.btn-primary {
     @apply bg-primary text-white hover:bg-primary-hover;
   }
@@ -34,8 +42,9 @@
   }
 }
 
-.btn:disabled {
-  @apply border border-line bg-background text-text-gray hover:bg-background;
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  @apply border border-line bg-background text-text-gray hover:bg-background  pointer-events-none;
 }
 
 select {

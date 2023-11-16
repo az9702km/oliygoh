@@ -15,20 +15,10 @@ import InputCheck from "@components/shared/InputCheck.astro";
           <div class="login-form">
             <div class="login-form__header">
               <h1 class="login-form__title">
-                Ro‘yxatdan o‘tish —ma’lumotlaringizni kiriting:
+                Tizmiga kirish — ma’lumotlaringizni kiriting:
               </h1>
             </div>
             <form class="login-form__form">
-              <Input
-                placeholder="Familiyangiz"
-                type="text"
-                addonBefore="user-star"
-              />
-              <Input
-                placeholder="Ismingiz"
-                type="text"
-                addonBefore="user-gem"
-              />
               <Input
                 placeholder="Telefon raqamingiz"
                 type="text"
@@ -40,30 +30,28 @@ import InputCheck from "@components/shared/InputCheck.astro";
                 addonBefore="lock"
                 trailingIcon="hide"
               />
-              <Input
-                placeholder="Parolni takrorlang"
-                type="password"
-                addonBefore="lock-sync"
-                trailingIcon="show"
-              />
             </form>
-            <InputCheck type="checkbox" id="terms" utils="mb-10">
-              Saytdan foydalanish <a href="#!" class="text-primary underline"
-                >shartlariga</a
-              > roziman
-            </InputCheck>
+            <span class="mb-10">
+              Parolni unutdingizmi? <a
+                href="/login/"
+                class="text-primary underline">Parolni tiklash</a
+              >
+            </span>
             <a
               role="link"
               aria-disabled="true"
               href="#!"
-              class="btn btn-primary btn-center">Ro‘yxatdan o‘tish</a
+              class="btn btn-primary btn-center">KIRISH</a
             >
           </div>
         </div>
         <div class="text-center">
-          Akkountingiz bormi? <a
-            href="/login/login"
-            class="text-primary underline">Kirish</a
+          Akkountingiz yo‘qmi? <a href="/login/" class="text-primary underline"
+            >Ro‘yxatdan o‘tish</a
+          >
+          <br />
+          <a href="/login/reset-password" class="text-primary underline"
+            >Parolni unutdim</a
           >
         </div>
       </div>

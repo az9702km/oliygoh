@@ -1,0 +1,15 @@
+---
+const { id, type, name, utils } = Astro.props;
+---
+
+<div class="flex items-center" class:list={[utils]}>
+  <input
+    id={id}
+    type={type}
+    name={name}
+    value=""
+    class="w-20 h-20 text-primary border bg-backgroun border-line bg-background rounded focus:border-main-black focus:ring-primary focus:ring-1"
+    class:list={[type === "radio" && "rounded-full w-4 h-4"]}
+  />
+  <label for={id} class="ms-5 text-body-3"> <slot /></label>
+</div>
