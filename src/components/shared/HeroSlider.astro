@@ -3,25 +3,64 @@ import Button from "./Button.astro";
 ---
 
 <div class="slides-wrapper overflow-hidden">
-  <div class="slider-controls">
-    <Button form="btn-circle" classes="p-2.5 bg-white">
-      <svg class="icon text-primary stroke-0 !w-6">
-        <use xlink:href="#icon-play-fill"></use>
-      </svg>
-    </Button>
-    <div class="progress-wrapper">
-      <div class="slide-progress"></div>
-      <div class="slide-progress"></div>
-      <div class="slide-progress"></div>
-    </div>
-  </div>
-  <div class="slide-stage">
-    <div class="slide">
+  
+  <div class="slide-stage swiper-wrapper h-full">
+    <div class="slide swiper-slide h-full relative">
       <img
         src="https://images.unsplash.com/photo-1512485694743-9c9538b4e6e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80"
         alt=""
-        class="slide-img"
+        class="slide-img h-full"
       />
+      <div
+        class="slide-overlay absolute top-0 left-0 h-full w-full bg-main-black-linear p-20 pb-40 flex flex-col justify-between">
+        <Button form="btn-circle" classes="p-2.5 bg-white self-start">
+          <svg class="icon text-primary stroke-0 !w-6">
+            <use xlink:href="#icon-play-fill"></use>
+          </svg>
+        </Button>
+        <div class="slide-caption text-white">
+          <div class="slide-caption__title text-body-2">Akbar Yusupov</div>
+          <div class="slide-caption__content text-body-3">
+            Saytdagi darslar haqida o‘z fikrini va boshqalarga tavsiyasini
+            qoldirdi
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide swiper-slide h-full relative">
+      <img
+        src="https://images.unsplash.com/photo-1512485694743-9c9538b4e6e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80"
+        alt=""
+        class="slide-img h-full"
+      />
+      <div
+        class="slide-overlay absolute top-0 left-0 h-full w-full bg-main-black-linear p-20 pb-40 flex flex-col justify-between">
+        <Button form="btn-circle" classes="p-2.5 bg-white self-start">
+          <svg class="icon text-primary stroke-0 !w-6">
+            <use xlink:href="#icon-play-fill"></use>
+          </svg>
+        </Button>
+        <div class="slide-caption text-white">
+          <div class="slide-caption__title text-body-2">Akbar Yusupov</div>
+          <div class="slide-caption__content text-body-3">
+            Saytdagi darslar haqida o‘z fikrini va boshqalarga tavsiyasini
+            qoldirdi
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <div class="slidee-pagination z-10 top-unset bottom-10 !left-20 !right-20 bg-white/40"></div>
 </div>
+<script>
+  var swiper = new Swiper(".slides-wrapper", {
+    pagination: {
+      el: ".slidee-pagination",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>

@@ -12,11 +12,45 @@ import Brand from "@components/shared/Brand.astro";
         </p>
       </div>
       <div class="col-3">
-        <nav class="nav">
-          <div class="nav__menu ml-auto">
-            <a href="#!" class="nav__link">Kurslar</a>
-            <a href="#!" class="nav__link">Blog</a>
-            <a href="#!" class="nav__link">Biz haqimizda</a>
+        <nav class="nav pl-40 items-start">
+          <div class="nav__menu mr-40 !ml-0 flex-col !items-start !gap-y-10">
+            <a href="/courses" class="nav__link">Kurslar</a>
+            <a href="/course" class="nav__link">Kurs</a>
+            <a href="/about" class="nav__link">Biz haqimizda</a>
+          </div>
+          <div class="nav__menu mr-40 !ml-0 flex-col !items-start !gap-y-10">
+            <a href="/blog" class="nav__link">Blog</a>
+            <a href="/blog-search" class="nav__link">Blog Qidiruv</a>
+            <a href="/blog-search-empty" class="nav__link">Blog Qidiruv Empty</a
+            >
+            <a href="/postview" class="nav__link">Post page</a>
+          </div>
+          <div class="nav__menu mr-40 !ml-0 flex-col !items-start !gap-y-10">
+            <a href="/profile/" class="nav__link">Profil</a>
+            <a href="/profile/balance" class="nav__link">Profil Balans</a>
+            <a href="/profile/certificates" class="nav__link"
+              >Profile Sertifikatlar</a
+            >
+            <a href="/profile/devices" class="nav__link">Profile Qurilmalar</a>
+            <a href="/profile/settings" class="nav__link">Profile Settings</a>
+          </div>
+          <div class="nav__menu mr-40 !ml-0 flex-col !items-start !gap-y-10">
+            <a href="/profile/lesson" class="nav__link">Lesson</a>
+            <a href="/profile/lesson-test" class="nav__link">Lesson test</a>
+            <a href="/profile/lesson-test-completed" class="nav__link"
+              >Lesson test end</a
+            >
+            <a href="/profile/lesson-lesson-completed" class="nav__link"
+              >Lesson end</a
+            >
+          </div>
+          <div class="nav__menu mr-40 !ml-0 flex-col !items-start !gap-y-10">
+            <a href="/login/login" class="nav__link">Login</a>
+            <a href="/login/" class="nav__link">Sign up</a>
+            <a href="/login/signup-otp" class="nav__link">Sign up sms</a>
+            <a href="/login/forget-password" class="nav__link"
+              >Forget password</a
+            >
           </div>
         </nav>
       </div>
@@ -29,14 +63,10 @@ import Brand from "@components/shared/Brand.astro";
       </div>
       <div class="col-2">
         <div class="flex justify-end gap-40">
-          <a
-            href="#!"
-            class="footer-text hover:text-main-black"
+          <a href="#!" class="footer-text hover:text-main-black"
             >Maxfiylik siyosati</a
           >
-          <a
-            href="#!"
-            class="footer-text hover:text-main-black"
+          <a href="#!" class="footer-text hover:text-main-black"
             >Ommaviy oferta</a
           >
         </div>

@@ -22,41 +22,62 @@ import CardFeature from "@components/shared/Cards/CardFeature.astro";
       </Button>
     </div>
   </div>
-  <div class="row">
-    <div class="col-1">
-      <CardFeature icon="lamp">
-        <Fragment slot="title">Qulay platforma</Fragment>
-        <Fragment slot="text">
-          Kurslarni o‘zingizga qulay vaqtda va joyda o‘rganish imkoniyat
-        </Fragment>
-      </CardFeature>
-    </div>
-    <div class="col-1">
-      <CardFeature icon="notebook-2">
-        <Fragment slot="title">Shunchaki kurslar emas</Fragment>
-        <Fragment slot="text">
-          Kurslarni barcha materiallari va vazifalari aniq reja asosida ishlab
-          chiqilgan
-        </Fragment>
-      </CardFeature>
-    </div>
-    <div class="col-1">
-      <CardFeature icon="video-slides">
-        <Fragment slot="title">Aktual bilimlar</Fragment>
-        <Fragment slot="text">
-          Malakali ustozlardan darslar va ularni mustahkamlash uchun
-          topshiriqlar
-        </Fragment>
-      </CardFeature>
-    </div>
-    <div class="col-1">
-      <CardFeature icon="trophy">
-        <Fragment slot="title">Natija uchun</Fragment>
-        <Fragment slot="text">
-          Samarali bilim olish uchun natijalarni kuzatish va tahlil qilish juda
-          ham oson
-        </Fragment>
-      </CardFeature>
+  <div class="feature-slider overflow-hidden">
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <CardFeature icon="lamp">
+          <Fragment slot="title">Qulay platforma</Fragment>
+          <Fragment slot="text">
+            Kurslarni o‘zingizga qulay vaqtda va joyda o‘rganish imkoniyat
+          </Fragment>
+        </CardFeature>
+      </div>
+      <div class="swiper-slide">
+        <CardFeature icon="notebook-2">
+          <Fragment slot="title">Shunchaki kurslar emas</Fragment>
+          <Fragment slot="text">
+            Kurslarni barcha materiallari va vazifalari aniq reja asosida ishlab
+            chiqilgan
+          </Fragment>
+        </CardFeature>
+      </div>
+      <div class="swiper-slide">
+        <CardFeature icon="video-slides">
+          <Fragment slot="title">Aktual bilimlar</Fragment>
+          <Fragment slot="text">
+            Malakali ustozlardan darslar va ularni mustahkamlash uchun
+            topshiriqlar
+          </Fragment>
+        </CardFeature>
+      </div>
+      <div class="swiper-slide">
+        <CardFeature icon="trophy">
+          <Fragment slot="title">Natija uchun</Fragment>
+          <Fragment slot="text">
+            Samarali bilim olish uchun natijalarni kuzatish va tahlil qilish
+            juda ham oson
+          </Fragment>
+        </CardFeature>
+      </div>
+      <div class="swiper-slide">
+        <CardFeature icon="video-slides">
+          <Fragment slot="title">Aktual bilimlar</Fragment>
+          <Fragment slot="text">
+            Malakali ustozlardan darslar va ularni mustahkamlash uchun
+            topshiriqlar
+          </Fragment>
+        </CardFeature>
+      </div>
+      <div class="swiper-slide">
+        <CardFeature icon="trophy">
+          <Fragment slot="title">Natija uchun</Fragment>
+          <Fragment slot="text">
+            Samarali bilim olish uchun natijalarni kuzatish va tahlil qilish
+            juda ham oson
+          </Fragment>
+        </CardFeature>
+      </div>
     </div>
   </div>
 </section>
