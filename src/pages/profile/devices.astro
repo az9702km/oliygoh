@@ -4,6 +4,7 @@ import LayoutAdmin from "../../layouts/LayoutAdmin.astro";
 import Button from "@components/shared/Button.astro";
 import Pagination from "@components/shared/Pagination.astro";
 import PaginationItem from "@components/shared/PaginationItem.astro";
+import Popup from "@components/shared/Popup.astro";
 ---
 
 <LayoutAdmin title="Sertifikatlarim" page="devices">
@@ -60,7 +61,14 @@ import PaginationItem from "@components/shared/PaginationItem.astro";
             </div>
           </td>
           <td>
-            <Button style="interactive" classes="p-3 ml-60" form="btn-circle">
+            <Button
+              attrs={{
+                "data-modal-target": "terminate-dialog",
+                "data-modal-toggle": "terminate-dialog",
+              }}
+              style="interactive"
+              classes="p-3 ml-60"
+              form="btn-circle">
               <svg class="icon !w-20">
                 <use xlink:href="#icon-delete"></use>
               </svg>
@@ -87,7 +95,14 @@ import PaginationItem from "@components/shared/PaginationItem.astro";
             </div>
           </td>
           <td>
-            <Button style="interactive" classes="p-3 ml-60" form="btn-circle">
+            <Button
+              attrs={{
+                "data-modal-target": "terminate-dialog",
+                "data-modal-toggle": "terminate-dialog",
+              }}
+              style="interactive"
+              classes="p-3 ml-60"
+              form="btn-circle">
               <svg class="icon !w-20">
                 <use xlink:href="#icon-delete"></use>
               </svg>
@@ -97,4 +112,15 @@ import PaginationItem from "@components/shared/PaginationItem.astro";
       </tbody>
     </table>
   </CardAdmin>
+  <Popup type="modal" id="terminate-dialog">
+    <div class="terminate-dialog p-30 bg-white w-96">
+      <div class="terminate-dialog__title text-body-1 mb-30">
+        Qurilmani o‘chirmoqchimisiz?
+      </div>
+      <div class="terminate-dialog__actions flex flex-col gap-y-15">
+        <Button style="danger" justify="center">O‘CHIRISH</Button>
+        <Button style="secondary" justify="center">BEKOR QILISH</Button>
+      </div>
+    </div>
+  </Popup>
 </LayoutAdmin>

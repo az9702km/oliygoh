@@ -65,7 +65,7 @@
   @apply flex-grow flex flex-col;
 
   &__title {
-    @apply subtitle uppercase text-text-gray;
+    @apply text-subtitle uppercase text-text-gray;
   }
 
   &__amount {

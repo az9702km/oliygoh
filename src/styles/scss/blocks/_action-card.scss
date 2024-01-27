@@ -1,21 +1,11 @@
 .bottom-action-card {
-  @apply grid gap-30;
-  grid-template-columns: 1fr min-content;
+  @apply grid gap-30 border border-line bg-background rounded p-30 px-40;
+  grid-template-columns: 1fr;
   grid-template-rows: auto auto;
 
   &::after {
-    @apply block border border-line bg-background rounded;
+    @apply hidden border border-line bg-background rounded;
     content: "";
-    grid-area: 2 / 1 / 3 / 3;
-  }
-
-  .left {
-    @apply p-60 pr-0;
-    grid-area: 2 / 1 / 3 / 2;
-  }
-  .right {
-    @apply p-60 pl-0 pt-0 self-end;
-    grid-area: 1 / 2 / 3 / 3;
   }
 
   .left,
@@ -24,11 +14,55 @@
   }
 }
 
-.bottom-action-card.bottom-action-card--mini {
-  .left {
-    @apply p-40 pr-0;
+.bottom-action-card__content {
+  @apply flex lg:pr-120 flex-col mb-40 xl:mb-0;
+
+  .title {
+    @apply text-body-1 font-medium mb-15;
   }
-  .right {
-    @apply p-40 pl-0 pt-0;
+
+  .subtitle {
+    @apply text-text-gray text-subtitle;
+  }
+}
+
+@screen md {
+  .bottom-action-card.bottom-action-card--mini {
+    .left {
+      @apply lg:p-40 p-30 pr-0;
+    }
+    .right {
+      @apply lg:p-40 p-30 pl-0 pt-0;
+    }
+  }
+  .bottom-action-card {
+    @apply p-0 bg-transparent border-none;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: auto auto;
+
+    &::after {
+      @apply block;
+      grid-area: 2 / 1 / 3 / 3;
+    }
+
+    .left {
+      @apply lg:p-60 p-30 lg:pr-0;
+      grid-area: 2 / 1 / 3 / 2;
+    }
+    .right {
+      @apply lg:p-60 p-30 pl-0 pt-0 self-end;
+      grid-area: 1 / 2 / 3 / 3;
+    }
+  }
+}
+
+@screen xl {
+  .bottom-action-card__content {
+    .title {
+      @apply h2;
+    }
+    .subtitle {
+      @apply text-body-2;
+    }
   }
 }

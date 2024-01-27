@@ -2,14 +2,110 @@
   @apply bg-primary-linear p-40 flex rounded;
 
   .info {
-    @apply text-white;
+    @apply text-white mr-60 lg:mr-0;
   }
 }
 
 .company-stat {
-  @apply relative bg-center bg-no-repeat bg-cover rounded mb-20;
+  @apply relative bg-center bg-no-repeat bg-cover rounded mb-15 lg:mb-20;
 
   &__button {
-    @apply flex justify-center py-32;
+    @apply flex justify-center py-16 lg:py-32;
+  }
+}
+
+.about-us {
+  &__carousel {
+    @apply lg:w-[20rem] lg:h-[26.25rem] w-[16.25rem] h-[21.25rem] flex-shrink-0;
+
+    .about-hero-slider {
+      @apply lg:w-[18.75rem] lg:h-[25rem] w-[15rem] h-[20rem] absolute;
+    }
+    .animating-cards {
+      @apply h-full;
+    }
+  }
+}
+
+.animating-cards {
+  @apply relative;
+  &::after,
+  &::before {
+    @apply lg:w-[18.75rem] lg:h-[25rem] w-[15rem] h-[20rem] absolute rounded;
+    background: linear-gradient(
+      166deg,
+      rgba(147, 75, 246, 0.4) 4.36%,
+      rgba(255, 255, 255, 0.2) 93.25%
+    );
+    border: 1px solid rgba(234, 238, 241, 0.4);
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    content: "";
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+  }
+
+  &::after {
+    @apply top-10 left-10;
+  }
+
+  &::before {
+    @apply top-20 left-20;
+  }
+
+  .about-hero-slider {
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+  }
+}
+
+.animating-cards.animate {
+  &::after {
+    animation-delay: 80ms;
+    animation-name: card-move-first;
+  }
+  &::before {
+    animation-delay: 160ms;
+    animation-name: card-move-second;
+  }
+
+  .about-hero-slider {
+    animation-name: card-move-main;
+  }
+}
+
+@keyframes card-move-main {
+  0% {
+    @apply top-0 left-0;
+  }
+  50% {
+    @apply top-10 left-10;
+  }
+  100% {
+    @apply top-0 left-0;
+  }
+}
+
+@keyframes card-move-first {
+  0% {
+    @apply top-10 left-10;
+  }
+  50% {
+    @apply top-20 left-20;
+  }
+  100% {
+    @apply top-10 left-10;
+  }
+}
+
+@keyframes card-move-second {
+  0% {
+    @apply top-20 left-20;
+  }
+  50% {
+    @apply top-30 left-30;
+  }
+  100% {
+    @apply top-20 left-20;
   }
 }

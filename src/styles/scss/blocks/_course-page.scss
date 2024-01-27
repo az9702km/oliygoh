@@ -16,3 +16,52 @@
     @apply p-3 text-center bg-background border border-line uppercase flex items-center justify-center gap-10;
   }
 }
+
+.receipt {
+  @apply divide-y divide-line bg-background border border-line rounded;
+
+  &__block {
+    @apply p-20;
+  }
+
+  .balance {
+    @apply p-20 bg-transparent border-0;
+  }
+}
+
+.checkout {
+  @apply overflow-auto flex-grow;
+
+  &__title {
+    @apply text-body-1 mb-15;
+  }
+
+  &__subtitle {
+    @apply text-body-3 text-text-gray;
+  }
+
+  &__divider {
+    @apply my-30 border-line;
+  }
+}
+
+.course-checkout-form {
+  .form-legend {
+    @apply mb-15 text-body-3;
+  }
+
+  .form-payment {
+    @apply flex flex-col space-y-10;
+  }
+}
+
+.checkout-check {
+  @apply mb-30;
+  &__balance {
+    @apply mb-10;
+  }
+
+  &__receipt {
+    @apply mb-20;
+  }
+}

@@ -1,6 +1,6 @@
 .total-price {
   &__title {
-    @apply text-primary uppercase subtitle leading-tight mb-1;
+    @apply text-primary uppercase text-subtitle leading-tight mb-1;
   }
 
   &__amount {

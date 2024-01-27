@@ -1,5 +1,8 @@
 ---
 import Button from "@components/shared/Button.astro";
+import CheckoutControl from "@components/shared/CheckoutControl.astro";
+import Input from "@components/shared/Input.astro";
+import Popup from "@components/shared/Popup.astro";
 ---
 
 <div class="balance mb-20">
@@ -14,8 +17,111 @@ import Button from "@components/shared/Button.astro";
       <span class="balance__number"> <slot name="amount" /> SO‘M</span>
     </h2>
     <div class="balance__controls">
-      <Button style="primary mb-15">balansni to‘ldirish</Button>
-      <Button style="secondary justify-center">vaucher</Button>
+      <Button
+        attrs={{
+          "data-modal-target": "update-balance-dialog",
+          "data-modal-toggle": "update-balance-dialog",
+        }}
+        style="primary mb-15">
+        balansni to‘ldirish
+      </Button>
+      <Button
+        attrs={{
+          "data-modal-target": "voucher-dialog",
+          "data-modal-toggle": "voucher-dialog",
+        }}
+        style="secondary justify-center">
+        vaucher
+      </Button>
     </div>
   </div>
 </div>
+
+<Popup type="drawer" id="update-balance-dialog">
+  <div class="checkout">
+    <div class="checkout__header">
+      <h1 class="checkout__title">Balansni to‘ldirish</h1>
+      <p class="checkout__subtitle">
+        Quyidagi to‘lov turlarida bittasini tanlab, to‘lov summasini yozing!
+      </p>
+    </div>
+    <hr class="checkout__divider" />
+    <div class="checkout__body">
+      <form class="course-checkout-form mb-30">
+        <fieldset>
+          <legend class="form-legend">To‘lov turini tanlang!</legend>
+          <div class="form-payment">
+            <CheckoutControl
+              type="radio"
+              name="payment"
+              id="payme"
+              icon="payme">
+              Payme orqali
+            </CheckoutControl>
+            <CheckoutControl
+              type="radio"
+              name="payment"
+              id="click"
+              icon="click">
+              Click orqali
+            </CheckoutControl>
+            <CheckoutControl type="radio" name="payment" id="uzum" icon="uzum">
+              Uzum orqali
+            </CheckoutControl>
+            <CheckoutControl
+              type="radio"
+              name="payment"
+              id="checkout-wallet"
+              icon="checkout-wallet">
+              Balansdan
+            </CheckoutControl>
+          </div>
+        </fieldset>
+      </form>
+      <form class="course-checkout-form mb-30">
+        <fieldset>
+          <legend class="form-legend">To‘lov turini tanlang!</legend>
+          <Input
+            addonBefore="card"
+            id="amount"
+            name="amount"
+            type="text"
+            placeholder="To‘lov summasi"
+          />
+        </fieldset>
+      </form>
+
+      <Button style="primary" classes="w-full" justify="center">
+        kursni sotib olish
+      </Button>
+    </div>
+  </div>
+</Popup>
+
+<Popup type="drawer" id="voucher-dialog">
+  <div class="checkout">
+    <div class="checkout__header mb-30">
+      <h1 class="checkout__title">Vaucherni kiritish</h1>
+      <p class="checkout__subtitle">
+        Vaucherni kiritish orqali siz bonuslarga ega bo‘lasiz!
+      </p>
+    </div>
+    <div class="checkout__body">
+      <form class="course-checkout-form mb-30">
+        <fieldset>
+          <Input
+            addonBefore="voucher"
+            id="amount"
+            name="amount"
+            type="text"
+            placeholder="Vauncher kodini kiriting"
+          />
+        </fieldset>
+      </form>
+
+      <Button style="primary" classes="w-full" justify="center">
+        kursni sotib olish
+      </Button>
+    </div>
+  </div>
+</Popup>

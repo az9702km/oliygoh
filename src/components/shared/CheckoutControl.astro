@@ -1,0 +1,17 @@
+---
+const { type, name, id, icon } = Astro.props;
+---
+
+<div class="checkout-control">
+  <input type={type} class="hidden peer" name={name} id={id} />
+  <label for={id} class="checkout-control__label">
+    <div class="checkout-control__icon">
+      <svg class="icon !w-60 h-7">
+        <use xlink:href=`#icon-${icon}`></use>
+      </svg>
+    </div>
+    <div class="checkout-control__text">
+      <slot />
+    </div>
+  </label>
+</div>

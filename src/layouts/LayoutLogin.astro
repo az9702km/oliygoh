@@ -3,6 +3,7 @@ const { title } = Astro.props;
 import "./../styles/scss/index.scss";
 import Icons from "@components/blocks/Icons.astro";
 import loginImg from "@assets/images/login.png";
+import Scripts from "@components/blocks/Scripts.astro";
 ---
 
 <!doctype html>
@@ -23,10 +24,10 @@ import loginImg from "@assets/images/login.png";
     <div class="login-wrapper">
       <div class="container-wrapper login-wrapper__container">
         <div class="row h-full">
-          <div class="col-2">
+          <div class="col-md-6">
             <slot />
           </div>
-          <div class="col-2">
+          <div class="col-md-6">
             <div class="login-wrapper__bg">
               <img src={loginImg.src} class="login-wrapper__img" alt="" />
             </div>
@@ -35,14 +36,6 @@ import loginImg from "@assets/images/login.png";
       </div>
     </div>
     <Icons />
-    <script
-      is:inline
-      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"
-    ></script>
-    <script
-      is:inline
-      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/datepicker.min.js"
-    ></script>
-    <script src="@assets/js/main.js"></script>
+    <Scripts />
   </body>
 </html>

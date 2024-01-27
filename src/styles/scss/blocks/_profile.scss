@@ -18,10 +18,21 @@
 }
 
 .lesson-section-header {
-  @apply mr-60 flex-grow flex gap-x-15 text-left items-start text-body-2 font-medium;
+  @apply xl:mr-60 flex-grow flex gap-x-15 text-left items-start text-body-3 font-medium;
 
   .icon {
     @apply w-7 shrink-0 m-0.5 text-white border-2 border-primary/20 rounded-full;
+  }
+}
+@screen md {
+  .lesson-section-header {
+    @apply text-subtitle-sm;
+  }
+}
+
+@screen lg {
+  .lesson-section-header {
+    @apply text-body-2;
   }
 }
 

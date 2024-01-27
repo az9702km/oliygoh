@@ -1,0 +1,82 @@
+---
+import Button from "@components/shared/Button.astro";
+import CardPost from "@components/shared/Cards/CardPost.astro";
+import blog1 from "@assets/images/blog/blog-1.png";
+import blog2 from "@assets/images/blog/blog-2.png";
+import blog3 from "@assets/images/blog/blog-3.png";
+import blog4 from "@assets/images/blog/blog-4.png";
+import blog5 from "@assets/images/blog/blog-5.png";
+import blog6 from "@assets/images/blog/blog-6.png";
+---
+
+<section class="features-section section">
+  <div class="section-header">
+    <h2 class="section-title">
+      O‘xshash <br />
+      <span class="title-highlight">maqolalarni</span> o‘qing
+    </h2>
+    <div class="features-slider-controls flex gap-x-15">
+      <Button style="secondary" form="btn-circle" classes="p-15">
+        <svg class="icon !w-6">
+          <use xlink:href="#icon-arrow-left"></use>
+        </svg>
+      </Button>
+      <Button style="secondary-black" form="btn-circle" classes="p-15">
+        <svg class="icon !w-6">
+          <use xlink:href="#icon-arrow-right"></use>
+        </svg>
+      </Button>
+    </div>
+  </div>
+  <div class="feature-slider responsive-slider">
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <CardPost img={blog1.src}>
+          <Fragment slot="title">
+            Xalqaro Nordik universiteti haqida nimalar bilishimiz muhim
+          </Fragment>
+          <Fragment slot="subtitle">ABITURENTLAR</Fragment>
+        </CardPost>
+      </div>
+      <div class="swiper-slide">
+        <CardPost img={blog2.src}>
+          <Fragment slot="title">O‘zbekistondagi top-5 universitetlar</Fragment>
+          <Fragment slot="subtitle">Darslar</Fragment>
+        </CardPost>
+      </div>
+      <div class="swiper-slide">
+        <CardPost img={blog3.src}>
+          <Fragment slot="title">
+            Alegbra fanida yangi darslar boshlandi
+          </Fragment>
+          <Fragment slot="subtitle">o‘qituvchi</Fragment>
+        </CardPost>
+      </div>
+      <div class="swiper-slide">
+        <CardPost img={blog4.src}>
+          <Fragment slot="title">
+            Tarix fanini 12 yilik tajribaga ega o‘qtuvchidan o‘rganing
+          </Fragment>
+          <Fragment slot="subtitle">o‘qituvchi</Fragment>
+        </CardPost>
+      </div>
+      <div class="swiper-slide">
+        <CardPost img={blog5.src}>
+          <Fragment slot="title">
+            Qanday hollarda o‘qishni ko‘chirish rad etiladi?
+          </Fragment>
+          <Fragment slot="subtitle">o‘qituvchi</Fragment>
+        </CardPost>
+      </div>
+      <div class="swiper-slide">
+        <CardPost img={blog6.src}>
+          <Fragment slot="title">
+            Uzrli sabab bilan nodavlat oliygohlarda o‘qishi ko‘chirish mumkinmi
+          </Fragment>
+          <Fragment slot="subtitle">University</Fragment>
+        </CardPost>
+      </div>
+    </div>
+  </div>
+</section>

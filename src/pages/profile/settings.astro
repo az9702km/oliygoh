@@ -11,25 +11,37 @@ import Datepicker from "@components/shared/Datepicker.astro";
 ---
 
 <LayoutAdmin title="Sertifikatlarim" page="settings">
-  <div class="row !grid-cols-3">
-    <div class="col-1">
+  <div class="row">
+    <div class="col-md-4">
       <div class="h-full pb-16">
         <div
-          class="profile-main flex flex-col rounded border border-line divide-y divide-line h-full">
+          class="profile-main flex flex-col rounded border border-line divide-y divide-line h-full overflow-hidden">
           <div class="aspect-square relative">
             <figure
-              class="w-ful h-full flex items-center justify-center bg-gray">
+              class="w-ful h-full flex items-center justify-center bg-gray relative">
               <svg class="icon !w-32 !text-secondary-gray">
                 <use xlink:href="#icon-profile"></use>
               </svg>
+              <img
+                id="profilePic"
+                class="profile-pic absolute top-0 left-0 w-full h-full object-cover"
+                src="https://www.truetrophies.com/imgs/067779/joel-the-last-of-us.jpg"
+                alt="Uploaded Image"
+              />
             </figure>
             <label
-              for="ava"
-              class="btn btn-secondary absolute p-10 bottom-15 right-15 cursor-pointer">
-              <svg class="icon !w-4">
+              for="uploadImage"
+              id="fileLabel"
+              class="btn btn-secondary absolute p-10 bottom-15 right-15 cursor-pointer hover:!bg-primary hover:text-white hover:border-transparent">
+              <svg class="icon !w-4 upload">
                 <use xlink:href="#icon-image-add"></use>
               </svg>
+              <svg class="icon !w-4 delete hidden">
+                <use xlink:href="#icon-delete"></use>
+              </svg>
             </label>
+            <input type="file" id="uploadImage" class="profile-pic hidden" />
+            <button type="button" id="deleteImage" class="hidden"></button>
           </div>
           <div class="bg-white p-20 flex-grow">
             <div class="flex flex-col">
@@ -51,7 +63,7 @@ import Datepicker from "@components/shared/Datepicker.astro";
         </div>
       </div>
     </div>
-    <div class="col-2">
+    <div class="col-md-8">
       <CardAdmin>
         <section class="profile-section">
           <div class="profile-section__title">Profil ma‘lumotlari</div>
@@ -60,7 +72,7 @@ import Datepicker from "@components/shared/Datepicker.astro";
           </div>
           <form class="profile-form">
             <div class="row">
-              <div class="col-2">
+              <div class="col-md-6">
                 <Input
                   name="name"
                   id="name"
@@ -69,7 +81,7 @@ import Datepicker from "@components/shared/Datepicker.astro";
                   addonBefore="user-star"
                 />
               </div>
-              <div class="col-2">
+              <div class="col-md-6">
                 <Input
                   name="surname"
                   id="surname"
@@ -78,7 +90,7 @@ import Datepicker from "@components/shared/Datepicker.astro";
                   addonBefore="user-star"
                 />
               </div>
-              <div class="col-2">
+              <div class="col-md-6">
                 <Input
                   name="phone"
                   id="phone"
@@ -87,7 +99,7 @@ import Datepicker from "@components/shared/Datepicker.astro";
                   addonBefore="phone"
                 />
               </div>
-              <div class="col-2">
+              <div class="col-md-6">
                 <Select id="region" name="region" addonBefore="map">
                   <option>Hududingiz</option>
                   <option>Namangan</option>
@@ -95,14 +107,14 @@ import Datepicker from "@components/shared/Datepicker.astro";
                   <option>Toshkent</option>
                 </Select>
               </div>
-              <div class="col-2">
+              <div class="col-md-6">
                 <Select id="sex" name="sex" addonBefore="gender">
                   <option>Jinsingiz</option>
                   <option>Ayol</option>
                   <option>Erkak</option>
                 </Select>
               </div>
-              <div class="col-2">
+              <div class="col-md-6">
                 <Datepicker
                   name="birthday"
                   id="birthday"
@@ -116,7 +128,7 @@ import Datepicker from "@components/shared/Datepicker.astro";
         </section>
       </CardAdmin>
       <div class="flex justify-end mt-20 mb-30">
-        <Button disabled style="primary">O‘zgarishlarni saqlash</Button>
+        <Button style="primary">O‘zgarishlarni saqlash</Button>
       </div>
       <CardAdmin>
         <section class="profile-section">
@@ -126,7 +138,7 @@ import Datepicker from "@components/shared/Datepicker.astro";
           </div>
           <form class="profile-form">
             <div class="row">
-              <div class="col-2">
+              <div class="col-md-6">
                 <Input
                   name="password"
                   id="password"
@@ -136,7 +148,7 @@ import Datepicker from "@components/shared/Datepicker.astro";
                   trailingIcon="hide"
                 />
               </div>
-              <div class="col-2">
+              <div class="col-md-6">
                 <Input
                   name="passwordconfirm"
                   id="passwordconfirm"

@@ -1,43 +1,52 @@
 ---
-import IconCard from "@components/shared/IconCard.astro";
+import AboutHeroSlider from "@components/shared/AboutHeroSlider.astro";
 import CardIcon from "@components/shared/Cards/CardIcon.astro";
+import HeroSlider from "@components/shared/HeroSlider.astro";
+import IconCard from "@components/shared/IconCard.astro";
 ---
 
 <section class="about-us-hero section">
-  <div class="about-us-hero__text mr-28">
-    <div class="info mb-40">
-      <h1 class="info__title">
-        Oliygoh — zamonaviy onlayn kurslar platformasi
-      </h1>
-      <p class="info__text">
-        Abituriyentlar, talablar va IT sohasiga qiziqshi bor yoshlar uchun
-        professional ustozlardan onlayn kurslarni taqdim etuvchi taʼlim
-        platformasi
-      </p>
+  <div class="about-us-hero__text lg:mr-28 mr-0">
+    <div class="flex mb-30 lg:mb-0">
+      <div class="info mb-40">
+        <h1 class="info__title">
+          Oliygoh — zamonaviy onlayn kurslar platformasi
+        </h1>
+        <p class="info__text">
+          Abituriyentlar, talablar va IT sohasiga qiziqshi bor yoshlar uchun
+          professional ustozlardan onlayn kurslarni taqdim etuvchi taʼlim
+          platformasi
+        </p>
+      </div>
+      <div class="about-us__carousel">
+        <div class="animating-cards">
+          <AboutHeroSlider />
+        </div>
+      </div>
     </div>
     <div class="row">
-      <div class="col-2">
+      <div class="col-md-6">
         <CardIcon dark icon="graduate">
           <Fragment slot="title">
             83% o‘quvchilarimiz imtihonlardan muffaqiyatli o‘tgan
           </Fragment>
         </CardIcon>
       </div>
-      <div class="col-2">
+      <div class="col-md-6">
         <CardIcon dark icon="notebook-2">
           <Fragment slot="title">
             50+ platformamizda mavjud bo‘lgan kurslar soni
           </Fragment>
         </CardIcon>
       </div>
-      <div class="col-2">
+      <div class="col-md-6">
         <CardIcon dark icon="doc">
           <Fragment slot="title">
             Platformamiz Davlat Ta’lim Vazirligi litsenziyasiga ega
           </Fragment>
         </CardIcon>
       </div>
-      <div class="col-2">
+      <div class="col-md-6">
         <CardIcon dark icon="cup-1">
           <Fragment slot="title">
             Uzoq yillik tajribaga ega 20+ mutaxassis o‘qituvchilarimiz
@@ -46,26 +55,9 @@ import CardIcon from "@components/shared/Cards/CardIcon.astro";
       </div>
     </div>
   </div>
-  <div class="about-us__caousel">
-    <div class="folding-carousel w-[20rem]">
-      <div class="slides-wrapper overflow-hidden">
-        <div class="slider-controls !justify-end">
-          <div class="progress-wrapper">
-            <div class="slide-progress"></div>
-            <div class="slide-progress"></div>
-            <div class="slide-progress"></div>
-          </div>
-        </div>
-        <div class="slide-stage">
-          <div class="slide">
-            <img
-              src="https://images.unsplash.com/photo-1512485694743-9c9538b4e6e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80"
-              alt=""
-              class="slide-img !h-[25rem]"
-            />
-          </div>
-        </div>
-      </div>
+  <!-- <div class="about-us__carousel">
+    <div class="animating-cards">
+      <AboutHeroSlider />
     </div>
-  </div>
+  </div> -->
 </section>

@@ -1,0 +1,158 @@
+---
+import CardAdmin from "@components/shared/Cards/CardProfile.astro";
+import LayoutAdmin from "../../layouts/LayoutAdmin.astro";
+import Button from "@components/shared/Button.astro";
+import Pagination from "@components/shared/Pagination.astro";
+import PaginationItem from "@components/shared/PaginationItem.astro";
+import Badge from "@components/shared/Badge.astro";
+import Input from "@components/shared/Input.astro";
+import Select from "@components/shared/Select.astro";
+import Datepicker from "@components/shared/Datepicker.astro";
+---
+
+<LayoutAdmin title="Sertifikatlarim" page="settings">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="h-full pb-16">
+        <div
+          class="profile-main flex flex-col rounded border border-line divide-y divide-line h-full">
+          <div class="aspect-square relative">
+            <figure
+              class="w-ful h-full flex items-center justify-center bg-gray">
+              <svg class="icon !w-32 !text-secondary-gray">
+                <use xlink:href="#icon-profile"></use>
+              </svg>
+            </figure>
+            <label
+              for="ava"
+              class="btn btn-secondary absolute p-10 bottom-15 right-15 cursor-pointer">
+              <svg class="icon !w-4">
+                <use xlink:href="#icon-image-add"></use>
+              </svg>
+            </label>
+          </div>
+          <div class="bg-white p-20 flex-grow">
+            <div class="flex flex-col">
+              <h3 class="text-body-2 mb-20 font-medium">Ma’lumotlaringiz</h3>
+              <div class="flex flex-wrap gap-10">
+                <Badge border sm xcls="bg-background">Ahmad</Badge>
+                <Badge border sm xcls="bg-background">Nazirov</Badge>
+                <Badge border sm xcls="bg-background">+998 91 001 16 04</Badge>
+                <Badge border sm disabled xcls="bg-background">Jinsingiz</Badge>
+                <Badge border sm disabled xcls="bg-background">
+                  DD-MM-YYYY
+                </Badge>
+                <Badge border sm disabled xcls="bg-background">
+                  Hududingiz
+                </Badge>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <CardAdmin>
+        <section class="profile-section">
+          <div class="profile-section__title">Profil ma‘lumotlari</div>
+          <div class="profile-section__subtitle">
+            Shaxsiy ma'lumotlaringizni to‘ldiring:
+          </div>
+          <form class="profile-form">
+            <div class="row">
+              <div class="col-md-6">
+                <Input
+                  name="name"
+                  id="name"
+                  type="text"
+                  placeholder="Ismingiz"
+                  addonBefore="user-star"
+                />
+              </div>
+              <div class="col-md-6">
+                <Input
+                  name="surname"
+                  id="surname"
+                  type="text"
+                  placeholder="Familiyangiz"
+                  addonBefore="user-star"
+                />
+              </div>
+              <div class="col-md-6">
+                <Input
+                  name="phone"
+                  id="phone"
+                  type="text"
+                  placeholder="Tel."
+                  addonBefore="phone"
+                />
+              </div>
+              <div class="col-md-6">
+                <Select id="region" name="region" addonBefore="map">
+                  <option>Hududingiz</option>
+                  <option>Namangan</option>
+                  <option>Buxoro</option>
+                  <option>Toshkent</option>
+                </Select>
+              </div>
+              <div class="col-md-6">
+                <Select id="sex" name="sex" addonBefore="gender">
+                  <option>Jinsingiz</option>
+                  <option>Ayol</option>
+                  <option>Erkak</option>
+                </Select>
+              </div>
+              <div class="col-md-6">
+                <Datepicker
+                  name="birthday"
+                  id="birthday"
+                  type="text"
+                  placeholder="Tug'ilgan kuningiz"
+                  addonBefore="calendar"
+                />
+              </div>
+            </div>
+          </form>
+        </section>
+      </CardAdmin>
+      <div class="flex justify-end mt-20 mb-30">
+        <Button disabled style="primary">O‘zgarishlarni saqlash</Button>
+      </div>
+      <CardAdmin>
+        <section class="profile-section">
+          <div class="profile-section__title">Parolni o‘zgatirish</div>
+          <div class="profile-section__subtitle">
+            Yangi parolingiz avvalgisidan farq qilishi kerak!
+          </div>
+          <form class="profile-form">
+            <div class="row">
+              <div class="col-md-6">
+                <Input
+                  name="password"
+                  id="password"
+                  type="password"
+                  placeholder="Yangi parolingiz"
+                  addonBefore="lock"
+                  trailingIcon="hide"
+                />
+              </div>
+              <div class="col-md-6">
+                <Input
+                  name="passwordconfirm"
+                  id="passwordconfirm"
+                  type="password"
+                  placeholder="Parolni takrorlang"
+                  addonBefore="lock-sync"
+                  trailingIcon="hide"
+                />
+              </div>
+            </div>
+          </form>
+        </section>
+      </CardAdmin>
+      <div class="flex justify-end mt-20">
+        <Button disabled style="primary">O‘zgarishlarni saqlash</Button>
+      </div>
+    </div>
+  </div>
+</LayoutAdmin>

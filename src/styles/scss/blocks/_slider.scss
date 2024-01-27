@@ -1,0 +1,19 @@
+.responsive-slider {
+  @apply -mx-40 px-40 md:-mx-30 md:px-30 lg:mx-0 lg:px-0 overflow-hidden;
+}
+
+.feature-slider.responsive-slider {
+  @apply lg:-mr-80 lg:pr-80;
+}
+
+.partners-slider {
+  @apply md:h-48 h-[5.25rem];
+}
+
+.partners-slider .slide-img {
+  @apply flex w-full h-full border border-line bg-background items-center justify-center rounded;
+
+  img {
+    @apply h-9 w-120 object-contain;
+  }
+}

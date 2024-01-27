@@ -1,9 +1,7 @@
 ---
-import Footer from "@/layouts/Footer.astro";
 import Layout from "@/layouts/Layout.astro";
 import CourseHero from "@components/blocks/CourseHero.astro";
 import CourseTarget from "@components/sections/Course/CourseTarget.astro";
-import Navbar from "@/layouts/Header.astro";
 import CourseFlow from "@components/sections/Course/CourseFlow.astro";
 import CourseCurriculum from "@components/sections/Course/CourseCurriculum.astro";
 import CourseOutcome from "@components/sections/Course/CourseOutcome.astro";
@@ -17,7 +15,7 @@ import ContactUs from "@components/sections/Home/ContactUs.astro";
   <main>
     <div class="container-wrapper">
       <div class="row mb-120">
-        <div class="col-3">
+        <div class="col-md-9">
           <CourseHero />
           <CourseTarget />
           <CourseFlow />
@@ -25,7 +23,7 @@ import ContactUs from "@components/sections/Home/ContactUs.astro";
           <CourseOutcome />
           <CourseCertificates />
         </div>
-        <div class="col-1">
+        <div class="col-md-3">
           <CourseRecap />
         </div>
       </div>

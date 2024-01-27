@@ -1,8 +1,20 @@
 .lesson-nav {
   @apply flex flex-col gap-y-10;
 
-  &__back-link {
-    @apply bg-white px-6 py-3 rounded border border-line flex gap-x-15 items-center uppercase text-body-2;
+  &__control {
+    @apply bg-white lg:px-6 py-3 rounded border border-line flex gap-x-15 items-center uppercase text-base px-4;
+  }
+
+  // .icon {
+  //   @apply w-6;
+  // }
+
+  .back-link {
+    @apply hidden md:flex;
+  }
+
+  .sections-drawer {
+    @apply md:hidden;
   }
 }
 
@@ -38,4 +50,20 @@
 
 .current .section-lessons__text {
   @apply text-primary;
+}
+
+@screen md {
+  .section-lessons {
+    &__text {
+      @apply text-subtitle-sm;
+    }
+  }
+}
+
+@screen lg {
+  .section-lessons {
+    &__text {
+      @apply text-body-3;
+    }
+  }
 }

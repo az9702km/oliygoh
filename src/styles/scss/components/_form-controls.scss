@@ -45,3 +45,46 @@
 .input-field:has(.trailing-icon) .input-field__input {
   @apply pr-1.5;
 }
+
+.validated {
+  @apply ring-2;
+  &.validated--success {
+    @apply border-green ring-green-200;
+    + .helper-text {
+      @apply text-green;
+    }
+  }
+  &.validated.validated--error {
+    @apply border-red ring-red-2;
+    + .helper-text {
+      @apply text-red;
+    }
+  }
+}
+
+.validated + .helper-text {
+  @apply text-subtitle mt-2;
+}
+
+.checkout-control {
+  &:has(input:checked) {
+    .checkout-control__label {
+      @apply border-primary;
+    }
+
+    .checkout-control__icon {
+      @apply border-primary;
+    }
+  }
+  &__label {
+    @apply peer-checked:text-primary flex rounded border border-line bg-background cursor-pointer;
+  }
+
+  &__icon {
+    @apply px-3 py-2 border-r border-line;
+  }
+
+  &__text {
+    @apply self-center pl-15 text-body-3;
+  }
+}

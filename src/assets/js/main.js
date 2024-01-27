@@ -1,28 +1,12 @@
-// Credit: Mateusz Rybczonec
+import PhotoSwipeLightbox from "photoswipe/lightbox";
+/////////////////////////////////////
+// Circle countdown
 
 const FULL_DASH_ARRAY = 283;
-const WARNING_THRESHOLD = 10;
-const ALERT_THRESHOLD = 5;
-
-const COLOR_CODES = {
-  info: {
-    color: "green",
-  },
-  warning: {
-    color: "orange",
-    threshold: WARNING_THRESHOLD,
-  },
-  alert: {
-    color: "red",
-    threshold: ALERT_THRESHOLD,
-  },
-};
-
 const TIME_LIMIT = 60;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
-let remainingPathColor = COLOR_CODES.info.color;
 
 if (document.getElementById("countdown")) {
   document.getElementById("countdown").innerHTML = `
@@ -53,6 +37,7 @@ if (document.getElementById("countdown")) {
 
   startTimer();
 }
+
 function onTimesUp() {
   clearInterval(timerInterval);
 }
@@ -64,7 +49,6 @@ function startTimer() {
     document.getElementById("base-timer-label").innerHTML =
       formatTime(timeLeft);
     setCircleDasharray();
-    // setRemainingPathColor(timeLeft);
 
     if (timeLeft === 0) {
       onTimesUp();
@@ -73,7 +57,6 @@ function startTimer() {
 }
 
 function formatTime(time) {
-  // const minutes = Math.floor(time / 60);
   let seconds = time;
 
   if (seconds < 10) {
@@ -82,25 +65,6 @@ function formatTime(time) {
 
   return `${seconds}`;
 }
-
-// function setRemainingPathColor(timeLeft) {
-//   const { alert, warning, info } = COLOR_CODES;
-//   if (timeLeft <= alert.threshold) {
-//     document
-//       .getElementById("base-timer-path-remaining")
-//       .classList.remove(warning.color);
-//     document
-//       .getElementById("base-timer-path-remaining")
-//       .classList.add(alert.color);
-//   } else if (timeLeft <= warning.threshold) {
-//     document
-//       .getElementById("base-timer-path-remaining")
-//       .classList.remove(info.color);
-//     document
-//       .getElementById("base-timer-path-remaining")
-//       .classList.add(warning.color);
-//   }
-// }
 
 function calculateTimeFraction() {
   const rawTimeFraction = timeLeft / TIME_LIMIT;
@@ -117,7 +81,11 @@ function setCircleDasharray() {
     .setAttribute("stroke-dasharray", circleDasharray);
 }
 
-const swiper = new Swiper(".feature-slider", {
+////////////////////////////
+/// Swiper slides
+
+//---------- feature slides home page ----------//
+const featureSlider = new Swiper(".feature-slider", {
   speed: 400,
   spaceBetween: 20,
   slidesPerView: 4,
@@ -125,4 +93,406 @@ const swiper = new Swiper(".feature-slider", {
     nextEl: ".features-slider-controls .btn-secondary-black",
     prevEl: ".features-slider-controls .btn-secondary",
   },
+  breakpoints: {
+    // when window width is >= 320px
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    // when window width is >= 480px
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    // when window width is >= 640px
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  },
 });
+
+//---------- Stats slides home page ----------//
+const statsSlider = new Swiper(".stats-slider", {
+  speed: 400,
+  spaceBetween: 20,
+  slidesPerView: 4,
+  breakpoints: {
+    // when window width is >= 320px
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    // when window width is >= 480px
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    // when window width is >= 640px
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  },
+});
+
+//---------- brands slides home page ----------//
+const partnersSlider = new Swiper(".partners-slider", {
+  speed: 400,
+  spaceBetween: 20,
+  grid: {
+    rows: 2,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+      grid: {
+        rows: 1,
+      },
+    },
+    // when window width is >= 480px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 15,
+      grid: {
+        rows: 2,
+      },
+    },
+    // when window width is >= 640px
+    1024: {
+      slidesPerView: 6,
+      spaceBetween: 20,
+      grid: {
+        rows: 2,
+      },
+    },
+  },
+});
+
+//---------- Related posts postwiew page ----------//
+var postSlider = new Swiper(".post-slider", {
+  // Optional parameters
+  loop: true,
+  slidesPerView: 1,
+  hashNavigation: {
+    watchState: true,
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".post-slider__pagination",
+    clickable: true,
+    bulletClass: "post-slider__blt",
+    bulletActiveClass: "post-slider__blt--active",
+    currentClass: "post-slider__blt--current",
+    hiddenClass: "hidden",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".post-slider__button.next",
+    prevEl: ".post-slider__button.prev",
+  },
+});
+
+//---------- Instagram stories slides ----------//
+let instaStoryOptions = {
+  loop: true,
+  watchSlidesProgress: true,
+  allowTouchMove: 0,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  speed: 1,
+  navigation: {
+    nextEl: ".slide-button-next",
+    prevEl: ".slide-button-prev",
+  },
+  pagination: {
+    el: ".slidee-pagination",
+    renderBullet: function (index, className) {
+      return (
+        '<div class="' +
+        className +
+        '"> <div class="swiper-pagination-progress"></div> </div>'
+      );
+    },
+  },
+  on: {
+    autoplayTimeLeft(swiper, time, progress) {
+      let currentSlide = document.querySelectorAll(".slide.swiper-slide")[
+        swiper.activeIndex
+      ];
+      let currentBullet = document.querySelectorAll(
+        ".slides-wrapper .swiper-pagination-progress"
+      )[swiper.realIndex];
+      let fullTime = currentSlide.dataset.swiperAutoplay
+        ? parseInt(currentSlide.dataset.swiperAutoplay)
+        : swiper.params.autoplay.delay;
+
+      let percentage =
+        Math.min(
+          Math.max(
+            parseFloat((((fullTime - time) * 100) / fullTime).toFixed(1)),
+            0
+          ),
+          100
+        ) + "%";
+
+      currentBullet.style.setProperty("--progress", percentage);
+    },
+    transitionEnd(swiper) {
+      let allBullets = [
+        ...document.querySelectorAll(
+          ".slides-wrapper .swiper-pagination-progress"
+        ),
+      ];
+      let bulletsBefore = allBullets.slice(0, swiper.realIndex);
+      let bulletsAfter = allBullets.slice(swiper.realIndex, allBullets.length);
+      if (bulletsBefore.length) {
+        bulletsBefore.forEach((element) => {
+          element.style.setProperty("--progress", 100 + "%");
+        });
+      }
+      if (bulletsAfter.length) {
+        bulletsAfter.forEach((element) => {
+          element.style.setProperty("--progress", 0 + "%");
+        });
+      }
+    },
+  },
+};
+
+var swiperStory = new Swiper(".home-hero-slider", instaStoryOptions);
+var aboutSwiperStory = new Swiper(".about-hero-slider", instaStoryOptions);
+
+aboutSwiperStory.on("transitionEnd", () => {
+  let animationEl = document.querySelector(".animating-cards");
+  if (![...animationEl.classList].includes("animate")) {
+    animationEl.classList.add("animate");
+    let timerStory = setTimeout(() => {
+      animationEl.classList.remove("animate");
+      clearThatTimer(timerStory);
+    }, 680);
+  }
+});
+
+////////////////////////////
+/// Photoswipe slides
+
+//---------- Postview lightbox ----------//
+const postLightbox = new PhotoSwipeLightbox({
+  gallery: "#post-gallery",
+  children: "a",
+  mainClass: "pswp--custom-bg",
+  padding: { top: 40, bottom: 60, left: 0, right: 0 },
+  bgOpacity: 0.4,
+  pswpModule: () => import("photoswipe"),
+});
+postLightbox.init();
+
+////////////////////////////
+/// Toasters
+let successToast = {
+  message: "Muvaffaqiyatli ro‘yxatdan o‘tdingiz!",
+  icon: "badge-verified",
+  state: "success",
+  timeout: 5000,
+};
+
+var autoincrement = 0;
+
+let toaster = (options, id) => {
+  var toast = document.createElement("div");
+  toast.id = "toast-" + id;
+  toast.className = "toast animate-slideIn";
+  let toastBody = toastContent(options);
+
+  toast.innerHTML = toastBody;
+
+  // click callback
+  if (typeof options.callback === "function") {
+    toast.addEventListener("click", options.callback);
+  }
+
+  return toast;
+};
+
+function toastHide(toast) {
+  toast.classList.add("animate-slideOut");
+  toast.addEventListener("animationend", removeToast(toast), false);
+}
+
+function removeToast(toast) {
+  document.getElementById("toast-container").removeChild(toast);
+  console.log("deleted");
+}
+
+function toast(options) {
+  const toastEl = toaster(options, ++autoincrement);
+
+  if (!document.getElementById("toast-container")) {
+    // Toast container
+    var container = document.createElement("div");
+    container.id = "toast-container";
+    container.className = "toast-container";
+    document.body.appendChild(container);
+
+    setTimeout(() => {
+      toastEl.classList.remove("animate-slideIn");
+    }, 2000);
+  }
+
+  toastEl
+    .querySelector(".timer-progress")
+    .style.setProperty("animation-duration", `${options.timeout}ms`);
+
+  document.getElementById("toast-container").appendChild(toastEl);
+
+  if (options.timeout) {
+    setTimeout(() => {
+      toastEl.classList.add("animate-slideOut");
+      toastEl.addEventListener(
+        "animationend",
+        () => {
+          document.getElementById("toast-container").removeChild(toastEl);
+        },
+        false
+      );
+    }, options.timeout);
+  }
+}
+
+let toasts = document.querySelectorAll(".toast");
+
+toasts.forEach((toast) => {
+  let timeout = toast.dataset.timeout;
+  timeout &&
+    toast
+      .querySelector(".timer-progress")
+      .style.setProperty("animation-duration", `${timeout}ms`);
+
+  toast
+    .querySelector(".timer-progress")
+    .addEventListener("animationend", () => {
+      toast.parentNode.removeChild(toast);
+    });
+});
+
+////////////////////////////
+/// Image Upload
+const inputFile = document.getElementById("uploadImage");
+const image = document.getElementById("profilePic");
+const deleteFile = document.getElementById("deleteImage");
+const fileLabel = document.getElementById("fileLabel");
+const iconUpload = fileLabel && fileLabel.querySelector(".upload");
+const iconDelete = fileLabel && fileLabel.querySelector(".delete");
+
+inputFile &&
+  inputFile.addEventListener("change", function () {
+    imageUpload(this.files[0], image, fileLabel);
+  });
+
+deleteFile &&
+  deleteFile.addEventListener("click", function () {
+    clearFileList(inputFile);
+    hideEl(image);
+    clearImageSrc(image);
+    changeIcon(iconDelete, iconUpload);
+    changeLabelFor(fileLabel, "uploadImage");
+  });
+
+////////////////////////////
+/// UTILITIES
+
+//---------- Timeout clearance ----------//
+let clearThatTimer = (id) => {
+  clearTimeout(id);
+};
+
+//---------- Toaster example ----------//
+
+let toastContent = (options) => {
+  // icon
+  if (options.state) {
+    var state = options.state;
+  }
+  // message
+  if (options.message) {
+    var message = options.message;
+  }
+
+  // icon
+  if (options.icon) {
+    var icon = options.icon;
+  }
+
+  let output = `
+  <div class="toast__body">
+    <div class="response ${state ? "response--" + state : ""}">
+      <svg class="icon !w-6">
+        <use xlink:href="#icon-${icon ? icon : "badge-verified"}"></use>
+      </svg>
+      <span class="response__text"
+        >${message ? message : "Muvaffaqiyatli ro‘yxatdan o‘tdingiz!"}</span
+      >
+    </div>
+    <div class="timer-progress reverse"></div>
+  </div>`;
+
+  return output;
+};
+
+function show() {
+  console.log("works");
+  toast(successToast);
+}
+
+show();
+
+//---------- File uploaded ----------//
+const imageUpload = (inputFile, image, fileLabel) => {
+  let file = getFileInstance(inputFile);
+  file.addEventListener("load", () => imagePreview(event.target.result, image));
+  changeLabelFor(fileLabel, "deleteImage");
+  changeIcon(iconUpload, iconDelete);
+};
+
+const getFileInstance = (file) => {
+  if (file) {
+    var picture = new FileReader();
+    picture.readAsDataURL(file);
+  }
+  return picture;
+};
+
+const imagePreview = (file, img) => {
+  img.setAttribute("src", file);
+  [...img.classList].includes("hidden") && img.classList.remove("hidden");
+};
+
+const changeIcon = (toBeHidden, toBeShown) => {
+  ![...toBeHidden.classList].includes("hidden") &&
+    toBeHidden.classList.add("hidden");
+  [...toBeShown.classList].includes("hidden") &&
+    toBeShown.classList.remove("hidden");
+};
+
+const clearFileList = (inputFile) => {
+  inputFile.value = "";
+};
+
+const hideEl = (el) => {
+  ![...el.classList].includes("hidden") && el.classList.add("hidden");
+};
+
+const clearImageSrc = (img) => {
+  img.src = "#";
+};
+
+const changeLabelFor = (label, value) => {
+  label.setAttribute("for", value);
+};

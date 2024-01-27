@@ -9,13 +9,13 @@ import Button from "@components/shared/Button.astro";
   <h2 class="section-title">
     <span class="title-highlight">Qanday yo‘nalishlarda</span> o‘qitamiz?
   </h2>
-  <div class="grid grid-cols-2 directions gap-20">
-    <div class="directions__img w-full h-full">
+  <div class="row">
+    <div class="directions__img col-lg-6 col-md-4">
       <img src={directionsImg.src} class="w-full h-full object-cover" alt="" />
     </div>
-    <div class="directions__content">
+    <div class="directions__content col-lg-6 col-md-8">
       <div class="row">
-        <div class="col-2">
+        <div class="col-md-6">
           <CardPath>
             <Badge slot="direction">mAKTAB FANLARI</Badge>
             <Fragment slot="title">
@@ -23,7 +23,7 @@ import Button from "@components/shared/Button.astro";
             </Fragment>
           </CardPath>
         </div>
-        <div class="col-2">
+        <div class="col-md-6">
           <CardPath>
             <Badge slot="direction">it SOHASI</Badge>
             <Fragment slot="title">
@@ -31,13 +31,13 @@ import Button from "@components/shared/Button.astro";
             </Fragment>
           </CardPath>
         </div>
-        <div class="col-2">
+        <div class="col-md-6">
           <CardPath>
             <Badge slot="direction">dizayn</Badge>
             <Fragment slot="title">Dizayn sohasi uchun maxsus kurslar</Fragment>
           </CardPath>
         </div>
-        <div class="col-2">
+        <div class="col-md-6">
           <CardPath>
             <Badge slot="direction">Abiturientlar</Badge>
             <Fragment slot="title">

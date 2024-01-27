@@ -31,6 +31,20 @@ module.exports = {
         },
         yellow: "#F8D347",
       },
+      keyframes: {
+        slideOut: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(40rem)" },
+        },
+        slideIn: {
+          "0%": { transform: "translateX(40rem)" },
+          "100%": { transform: "translateX(0)" },
+        },
+      },
+      animation: {
+        slideOut: "slideOut .3s ease-out",
+        slideIn: "slideIn .3s ease-out",
+      },
       backgroundImage: () => ({
         "primary-linear": `linear-gradient(102deg, #8024FF 2.24%, #833BE7 44.52%, #924BF5 91.45%)`,
         "main-black-linear": `linear-gradient(180deg, rgba(14, 14, 14, 0.00) 34.74%, rgba(14, 14, 14, 0.35) 58.91%, #0E0E0E 110.3%)`,

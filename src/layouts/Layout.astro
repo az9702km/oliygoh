@@ -3,6 +3,7 @@ import Header from "@/layouts/Header.astro";
 import Footer from "./Footer.astro";
 import "./../styles/scss/index.scss";
 import Icons from "@components/blocks/Icons.astro";
+import Scripts from "@components/blocks/Scripts.astro";
 
 interface Props {
   title: string;
@@ -31,18 +32,6 @@ const { title } = Astro.props;
 
     <Footer />
     <Icons />
-    <script
-      is:inline
-      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"
-    ></script>
-    <script
-      is:inline
-      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/datepicker.min.js"
-    ></script>
-    <script
-      is:inline
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-    ></script>
-    <script src="@assets/js/main.js"></script>
+    <Scripts />
   </body>
 </html>

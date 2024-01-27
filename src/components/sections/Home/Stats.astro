@@ -20,38 +20,40 @@ import CardStat from "@components/shared/Cards/CardStat.astro";
       </Button>
     </div>
   </div>
-  <div class="row">
-    <div class="col-1">
-      <CardStat>
-        <Fragment slot="title">5000+</Fragment>
-        <Fragment slot="text">
-          Jami tahsil olayotgan o‘quvchilarimizning soni
-        </Fragment>
-      </CardStat>
-    </div>
-    <div class="col-1">
-      <CardStat>
-        <Fragment slot="title">15+</Fragment>
-        <Fragment slot="text">
-          Uzoq yillik tajribaga ega bo‘lgan o‘qtuvchilar jamoasi
-        </Fragment>
-      </CardStat>
-    </div>
-    <div class="col-1">
-      <CardStat>
-        <Fragment slot="title">50+</Fragment>
-        <Fragment slot="text">
-          Platformamizda mavjud bo‘lgan darslar soni
-        </Fragment>
-      </CardStat>
-    </div>
-    <div class="col-1">
-      <CardStat>
-        <Fragment slot="title">83%</Fragment>
-        <Fragment slot="text">
-          O‘quvchilarimiz imtihonlardan muffaqiyatli o‘tgan
-        </Fragment>
-      </CardStat>
+  <div class="stats-slider responsive-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <CardStat>
+          <Fragment slot="title">5000+</Fragment>
+          <Fragment slot="text">
+            Jami tahsil olayotgan o‘quvchilarimizning soni
+          </Fragment>
+        </CardStat>
+      </div>
+      <div class="swiper-slide">
+        <CardStat>
+          <Fragment slot="title">15+</Fragment>
+          <Fragment slot="text">
+            Uzoq yillik tajribaga ega bo‘lgan o‘qtuvchilar jamoasi
+          </Fragment>
+        </CardStat>
+      </div>
+      <div class="swiper-slide">
+        <CardStat>
+          <Fragment slot="title">50+</Fragment>
+          <Fragment slot="text">
+            Platformamizda mavjud bo‘lgan darslar soni
+          </Fragment>
+        </CardStat>
+      </div>
+      <div class="swiper-slide">
+        <CardStat>
+          <Fragment slot="title">83%</Fragment>
+          <Fragment slot="text">
+            O‘quvchilarimiz imtihonlardan muffaqiyatli o‘tgan
+          </Fragment>
+        </CardStat>
+      </div>
     </div>
   </div>
 </section>

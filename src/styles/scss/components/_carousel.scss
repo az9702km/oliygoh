@@ -1,0 +1,51 @@
+.post-slider {
+  &__pagination {
+    @apply flex items-center justify-center mt-20 gap-x-10;
+  }
+
+  &__blt {
+    @apply w-10 h-10 bg-line rounded-full;
+
+    &--active,
+    &--current {
+      @apply bg-primary;
+    }
+  }
+
+  &__slide {
+    @apply w-full aspect-video;
+
+    img {
+      @apply w-full h-full object-cover;
+    }
+  }
+
+  &__nav {
+    @apply flex items-center justify-between absolute top-0 bottom-0 left-0 right-0 z-10;
+  }
+
+  &__button {
+    @apply w-11 h-11 bg-background flex items-center justify-center rounded-full absolute top-1/2 -translate-y-1/2 z-10;
+    &.prev {
+      @apply left-20;
+    }
+    &.next {
+      @apply right-20;
+    }
+    .icon {
+      @apply w-6;
+    }
+  }
+}
+
+.pswp--custom-bg {
+  --pswp-bg: #1d1d1d;
+}
+
+.pswp__img {
+  @apply object-contain;
+}
+
+.swiper-slide:has(.card--post) {
+  height: unset;
+}

@@ -1,7 +1,5 @@
 ---
-import Footer from "@/layouts/Footer.astro";
 import Layout from "@/layouts/Layout.astro";
-import Navbar from "@/layouts/Header.astro";
 import CoursesBlock from "@components/blocks/Courses.astro";
 import CustomControl from "@components/shared/CustomControl.astro";
 import FAQ from "@components/sections/Home/FAQ.astro";
@@ -14,9 +12,11 @@ import ContactUs from "@components/sections/Home/ContactUs.astro";
   <main>
     <div class="container-wrapper">
       <section class="section">
-        <h1 class="section-title">Barcha kurslarimiz</h1>
+        <h1 class="section-title">
+          Barcha <span class="title-highlight">kurslarimiz</span>
+        </h1>
         <div class="row">
-          <div class="col-3">
+          <div class="col-lg-9">
             <div class="flex flex-wrap gap-2 mb-40">
               <CustomControl type="checkbox" id="some1" name="somename">
                 Dizayn

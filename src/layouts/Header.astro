@@ -24,6 +24,99 @@ const { profile } = Astro.props;
             )
           }
         </div>
+        <button
+          class="ml-auto md:hidden"
+          type="button"
+          data-drawer-target="mobile-nav-drawer"
+          data-drawer-show="mobile-nav-drawer"
+          data-drawer-placement="right"
+          aria-controls="mobile-nav-drawer">
+          <svg class="icon w-8">
+            <use xlink:href="#icon-menu"></use>
+          </svg>
+        </button>
+        <div
+          id="mobile-nav-drawer"
+          class="drawer"
+          tabindex="-1"
+          aria-labelledby="mobile-nav-label">
+          <div class="drawer__header">
+            <button
+              type="button"
+              data-drawer-hide="mobile-nav-drawer"
+              aria-controls="mobile-nav-drawer"
+              class="">
+              <svg class="icon w-8">
+                <use xlink:href="#icon-close"></use>
+              </svg>
+              <span class="sr-only">Menuni yopish</span>
+            </button>
+          </div>
+          <div class="drawer__body">
+            <div class="drawer__block">
+              <nav class="mobile-nav">
+                <a href="#!" class="mobile-nav__link">
+                  <svg class="icon">
+                    <use xlink:href="#icon-home"></use>
+                  </svg>Bosh sahifa
+                </a>
+                <a href="#!" class="mobile-nav__link">
+                  <svg class="icon">
+                    <use xlink:href="#icon-video-lesson"></use>
+                  </svg>Kurslar
+                </a>
+                <a href="#!" class="mobile-nav__link">
+                  <svg class="icon">
+                    <use xlink:href="#icon-cards"></use>
+                  </svg>Blog
+                </a>
+                <a href="#!" class="mobile-nav__link">
+                  <svg class="icon">
+                    <use xlink:href="#icon-users"></use>
+                  </svg>Biz haqimizda
+                </a>
+              </nav>
+              <a href="#!" class="btn btn-primary justify-center mt-30"
+                >Kirish</a
+              >
+            </div>
+            <div class="drawer__block">
+              <h3 class="text-body-2 mb-20 font-medium">Shaxsiy profilim</h3>
+              <nav class="mobile-nav">
+                <a href="#!" class="mobile-nav__link active flex items-center">
+                  <svg class="icon">
+                    <use xlink:href="#icon-notebook"></use>
+                  </svg>Mening kurslarim
+                </a>
+                <a href="#!" class="mobile-nav__link">
+                  <svg class="icon">
+                    <use xlink:href="#icon-doc-verified"></use>
+                  </svg>Sertifikatlarim
+                </a>
+                <a href="#!" class="mobile-nav__link">
+                  <svg class="icon">
+                    <use xlink:href="#icon-wallet"></use>
+                  </svg>To‘lovlar
+                </a>
+                <a href="#!" class="mobile-nav__link">
+                  <svg class="icon">
+                    <use xlink:href="#icon-device"></use>
+                  </svg>Qurilmalar
+                </a>
+                <a href="#!" class="mobile-nav__link">
+                  <svg class="icon">
+                    <use xlink:href="#icon-tune"></use>
+                  </svg>Sozlamalar
+                </a>
+              </nav>
+              <a href="#!" class="btn btn-secondary justify-center mt-30">
+                <svg class="icon w-6 mr-10">
+                  <use xlink:href="#icon-signout"></use>
+                </svg> Tizimdan chiqish</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </nav>

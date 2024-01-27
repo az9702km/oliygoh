@@ -14,3 +14,46 @@
     @apply w-6;
   }
 }
+
+[drawer-backdrop],
+[modal-backdrop] {
+  @apply bg-main-black bg-opacity-40;
+}
+
+.drawer {
+  @apply fixed z-40 h-screen max-w-md overflow-y-auto transition-transform translate-x-full bg-white;
+  &.drawer-left {
+    @apply -translate-x-full;
+  }
+  width: calc(100vw - 3.5rem);
+
+  &__block {
+    @apply p-30;
+  }
+
+  &__body {
+    &:has(.drawer__block) {
+      @apply divide-y divide-line;
+    }
+  }
+
+  &__header {
+    @apply border-b border-line p-20;
+  }
+}
+
+.drawer.transform-none {
+  transform: none;
+}
+
+.mobile-nav {
+  @apply space-y-4;
+
+  &__link {
+    @apply flex items-center;
+
+    .icon {
+      @apply w-6 mr-10;
+    }
+  }
+}

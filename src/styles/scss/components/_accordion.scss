@@ -14,11 +14,11 @@
   }
 
   &__control-button {
-    @apply flex items-center justify-between w-full p-20 gap-x-15;
+    @apply flex lg:items-center justify-between w-full p-20 gap-x-15;
   }
 
   &__icon {
-    @apply shrink-0 transition w-11 h-11 flex items-center justify-center rounded-full border border-line bg-white;
+    @apply shrink-0 transition w-9 h-9 md:w-11 md:h-11 flex items-center justify-center rounded-full border border-line bg-white;
 
     .icon {
       @apply w-6;
@@ -69,4 +69,14 @@
   .accordion__icon.rotate-180 {
     @apply bg-white text-main-black;
   }
+
+  .accordion__control-button {
+    @apply px-20 md:px-10 lg:px-20;
+  }
+}
+
+.accordion.accordion--lesson-sections:not(
+    .accordion.accordion--lesson-sections-mobile
+  ) {
+  @apply hidden md:flex;
 }

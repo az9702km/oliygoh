@@ -1,0 +1,31 @@
+.popup {
+  @apply overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50  w-full md:inset-0 h-[calc(100%-1rem)] max-h-full;
+
+  &__dialog {
+    @apply relative max-w-2xl max-h-full flex flex-col;
+  }
+
+  &__cls-btn {
+    @apply p-10 absolute;
+  }
+}
+
+.popup.popup--modal {
+  @apply justify-center items-center;
+
+  .popup__cls-btn {
+    @apply -top-16 right-0;
+  }
+}
+
+.popup.popup--drawer {
+  @apply justify-end items-start h-full;
+  .popup__dialog {
+    @apply w-[25rem] min-h-full bg-white p-40;
+  }
+
+  .popup__cls-btn {
+    @apply top-40 -left-16;
+  }
+}
+

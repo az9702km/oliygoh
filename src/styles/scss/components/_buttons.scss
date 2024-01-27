@@ -19,6 +19,9 @@
   &.btn-secondary-black {
     @apply bg-main-black text-white border border-line hover:bg-main-black-hover;
   }
+  &.btn-danger {
+    @apply bg-red text-white border border-line hover:bg-red-600;
+  }
   &.btn-circle {
     @apply flex items-center justify-center aspect-square rounded-full;
   }
@@ -32,7 +35,7 @@
 }
 
 .text-btn {
-  @apply inline-flex text-primary uppercase underline subtitle;
+  @apply inline-flex text-primary uppercase underline text-subtitle;
 }
 
 .btn-group {

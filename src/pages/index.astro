@@ -3,17 +3,30 @@ import Layout from "../layouts/Layout.astro";
 
 import Hero from "@components/sections/Home/Hero.astro";
 import Features from "@components/sections/Home/Features.astro";
-import Navbar from "@/layouts/Header.astro";
 import Stats from "@components/sections/Home/Stats.astro";
 import Courses from "@components/sections/Home/Courses.astro";
 import Blog from "@components/sections/Home/Blog.astro";
 import FAQ from "@components/sections/Home/FAQ.astro";
 import Partners from "@components/sections/Home/Partners.astro";
 import ContactUs from "@components/sections/Home/ContactUs.astro";
-import Footer from "@/layouts/Footer.astro";
 ---
 
 <Layout title="Welcome to Oliygoh.">
+  <div class="toast-container" id="toast-container">
+    <div class="toast" data-timeout="15000">
+      <div class="toast__body">
+        <div class="response response--error">
+          <svg class="icon !w-6">
+            <use xlink:href="#icon-badge-verified"></use>
+          </svg>
+          <span class="response__text"
+            >Muvaffaqiyatli ro‘yxatdan o‘tdingiz!</span
+          >
+        </div>
+        <div class="timer-progress reverse"></div>
+      </div>
+    </div>
+  </div>
   <main>
     <div class="container-wrapper">
       <Hero />

@@ -1,5 +1,5 @@
 .contact-form {
-  @apply p-30 w-[25rem] bg-white rounded border border-line;
+  @apply p-30 w-full md:w-[21.25rem] xl:w-[25rem]  bg-white rounded border border-line;
 
   &__form {
     @apply flex flex-col;
@@ -8,4 +8,8 @@
   &__title {
     @apply text-body-1 font-medium mb-30;
   }
+}
+
+.contact-us .bottom-action-card {
+  @apply -mx-40 md:mx-0;
 }

@@ -9,10 +9,32 @@ const {
   addonBefore,
   addonAfter,
   utils,
+  validated,
 } = Astro.props;
+
+let validation = {
+  state: "",
+  icon: "",
+};
+if (validated)
+  switch (validated.state) {
+    case "success":
+      validation = {
+        state: "validated validated--success",
+        icon: "check",
+      };
+      break;
+
+    case "error":
+      validation = {
+        state: "validated validated--error",
+        icon: "error",
+      };
+      break;
+  }
 ---
 
-<div class:list={["input-field", utils]}>
+<div class:list={["input-field", utils, validation.state]}>
   {
     addonBefore && (
       <div class="add-on add-on--before">
@@ -57,3 +79,13 @@ const {
     )
   }
 </div>
+{
+  validated && (
+    <div class="helper-text">
+      <svg class="icon !w-20">
+        <use xlink:href={`#icon-${validation.icon}`} />
+      </svg>
+      {validated.text}
+    </div>
+  )
+}

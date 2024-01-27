@@ -1,0 +1,24 @@
+---
+import Button from "./Button.astro";
+
+const { type, id } = Astro.props;
+---
+
+<div
+  id={id}
+  tabindex="-1"
+  aria-hidden="true"
+  class=`popup popup--${type} hidden`>
+  <div class="popup__dialog">
+    <Button
+      form="btn-circle"
+      style="secondary"
+      classes="popup__cls-btn"
+      attrs={{ "data-modal-hide": id }}>
+      <svg class="icon !w-6">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </Button>
+    <slot />
+  </div>
+</div>

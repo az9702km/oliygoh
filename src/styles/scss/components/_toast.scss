@@ -1,0 +1,53 @@
+.toast-container {
+  @apply flex flex-col items-start fixed top-30 right-20 z-50 gap-y-10;
+}
+
+.toast {
+  @apply relative;
+  box-shadow: 0 0.75rem 0.75rem -0.75rem rgba($color: #000000, $alpha: 0.35);
+}
+
+.toast:has(.response--success) {
+  box-shadow: 0 1.25rem 0.75rem -1rem rgba($color: #52c41a, $alpha: 0.75);
+}
+
+.toast:has(.response--error) {
+  box-shadow: 0 1.25rem 0.75rem -1rem rgba($color: #ff1717, $alpha: 0.75);
+}
+
+.response {
+  @apply px-20 py-[18px] flex gap-x-10 border border-text-gray-2 bg-white rounded-sm text-body-3;
+  &--success {
+    @apply border-green text-green-dark bg-green-light;
+
+    + .timer-progress {
+      @apply bg-green;
+    }
+  }
+  &--error {
+    @apply border-red-2 text-red bg-red-3;
+
+    + .timer-progress {
+      @apply bg-red-2;
+    }
+  }
+}
+
+.timer-progress {
+  @apply absolute bottom-0 left-0 w-full h-1 bg-text-gray;
+  animation: progressbar 3s linear;
+}
+
+.timer-progress.reverse {
+  @apply left-auto right-0;
+  animation-direction: reverse;
+}
+
+@keyframes progressbar {
+  0% {
+    @apply w-0;
+  }
+  100% {
+    @apply w-full;
+  }
+}

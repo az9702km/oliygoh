@@ -2,47 +2,65 @@
 import Button from "./Button.astro";
 ---
 
-<div class="slides-wrapper overflow-hidden">
-  
-  <div class="slide-stage swiper-wrapper h-full">
-    <div class="slide swiper-slide h-full relative">
+<div class="slides-wrapper home-hero-slider">
+  <div class="slide-stage swiper-wrapper">
+    <div class="slide swiper-slide">
       <img
-        src="https://images.unsplash.com/photo-1512485694743-9c9538b4e6e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80"
+        src="https://www.usnews.com/object/image/00000148-6c00-d45e-ad5e-ed50c48f0000/140912-stock.jpg?update-time=1410561385971&size=responsive640"
         alt=""
-        class="slide-img h-full"
+        class="slide-img"
       />
-      <div
-        class="slide-overlay absolute top-0 left-0 h-full w-full bg-main-black-linear p-20 pb-40 flex flex-col justify-between">
-        <Button form="btn-circle" classes="p-2.5 bg-white self-start">
-          <svg class="icon text-primary stroke-0 !w-6">
+      <div class="slide-overlay">
+        <Button form="btn-circle">
+          <svg class="icon">
             <use xlink:href="#icon-play-fill"></use>
           </svg>
         </Button>
-        <div class="slide-caption text-white">
-          <div class="slide-caption__title text-body-2">Akbar Yusupov</div>
-          <div class="slide-caption__content text-body-3">
+        <div class="slide-caption">
+          <div class="slide-caption__title">Akbar Yusupov</div>
+          <div class="slide-caption__content">
             Saytdagi darslar haqida o‘z fikrini va boshqalarga tavsiyasini
             qoldirdi
           </div>
         </div>
       </div>
     </div>
-    <div class="slide swiper-slide h-full relative">
+    <div class="slide swiper-slide">
       <img
-        src="https://images.unsplash.com/photo-1512485694743-9c9538b4e6e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80"
+        src="https://www.american.edu/sis/CommunityofScholars/images/students-CoS-mobile.jpg"
         alt=""
-        class="slide-img h-full"
+        class="slide-img"
       />
-      <div
-        class="slide-overlay absolute top-0 left-0 h-full w-full bg-main-black-linear p-20 pb-40 flex flex-col justify-between">
-        <Button form="btn-circle" classes="p-2.5 bg-white self-start">
-          <svg class="icon text-primary stroke-0 !w-6">
+      <div class="slide-overlay">
+        <Button form="btn-circle">
+          <svg class="icon">
             <use xlink:href="#icon-play-fill"></use>
           </svg>
         </Button>
-        <div class="slide-caption text-white">
-          <div class="slide-caption__title text-body-2">Akbar Yusupov</div>
-          <div class="slide-caption__content text-body-3">
+        <div class="slide-caption">
+          <div class="slide-caption__title">Akbar Yusupov</div>
+          <div class="slide-caption__content">
+            Saytdagi darslar haqida o‘z fikrini va boshqalarga tavsiyasini
+            qoldirdi
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide swiper-slide">
+      <img
+        src="https://www.timeshighereducation.com/sites/default/files/styles/the_breaking_news_image_style/public/kansas.jpg?itok=DcrQzRNl"
+        alt=""
+        class="slide-img"
+      />
+      <div class="slide-overlay">
+        <Button form="btn-circle">
+          <svg class="icon">
+            <use xlink:href="#icon-play-fill"></use>
+          </svg>
+        </Button>
+        <div class="slide-caption">
+          <div class="slide-caption__title">Akbar Yusupov</div>
+          <div class="slide-caption__content">
             Saytdagi darslar haqida o‘z fikrini va boshqalarga tavsiyasini
             qoldirdi
           </div>
@@ -50,17 +68,7 @@ import Button from "./Button.astro";
       </div>
     </div>
   </div>
-  <div class="slidee-pagination z-10 top-unset bottom-10 !left-20 !right-20 bg-white/40"></div>
+  <button class="slide-button-next"></button>
+  <button class="slide-button-prev"></button>
+  <div class="slidee-pagination"></div>
 </div>
-<script>
-  var swiper = new Swiper(".slides-wrapper", {
-    pagination: {
-      el: ".slidee-pagination",
-      type: "progressbar",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-</script>

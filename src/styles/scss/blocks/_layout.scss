@@ -15,7 +15,7 @@
 }
 
 .footer-text {
-  @apply text-text-gray subtitle;
+  @apply text-text-gray text-subtitle;
 }
 
 .navbar {
@@ -27,7 +27,7 @@
 }
 
 .nav .nav__menu {
-  @apply ml-auto flex gap-[2.5rem] items-center;
+  @apply ml-auto hidden md:flex gap-[2.5rem] items-center;
 }
 
 .nav .nav__link {

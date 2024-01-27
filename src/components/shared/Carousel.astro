@@ -1,5 +1,79 @@
 ---
-
+import "photoswipe/style.css";
+import course1 from "@assets/images/courses/course-1.png";
+import course2 from "@assets/images/courses/course-2.png";
+import course3 from "@assets/images/courses/course-3.png";
+import course4 from "@assets/images/courses/course-4.png";
+import course5 from "@assets/images/courses/course-5.png";
+import postImg from "@assets/images/blog/post/post-img.png";
 ---
 
-<div class="p-40 text-center bg-primary text-white">There will be Carousel</div>
+<!-- Slider main container -->
+<div class="swiper post-slider">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper" id="post-gallery">
+    <!-- Slides -->
+    <a
+      class="swiper-slide post-slider__slide"
+      href={postImg.src}
+      data-pswp-width="1600"
+      data-pswp-height="1200"
+      target="_blank">
+      <img src={postImg.src} alt="" />
+    </a>
+    <a
+      class="swiper-slide post-slider__slide"
+      href={course1.src}
+      data-pswp-width="1600"
+      data-pswp-height="1200"
+      target="_blank">
+      <img src={course1.src} alt="" />
+    </a>
+    <a
+      class="swiper-slide post-slider__slide"
+      href={course2.src}
+      data-pswp-width="1600"
+      data-pswp-height="1200"
+      target="_blank">
+      <img src={course2.src} alt="" />
+    </a>
+    <a
+      class="swiper-slide post-slider__slide"
+      href={course3.src}
+      data-pswp-width="1600"
+      data-pswp-height="1200"
+      target="_blank">
+      <img src={course3.src} alt="" />
+    </a>
+    <a
+      class="swiper-slide post-slider__slide"
+      href={course4.src}
+      data-pswp-width="1600"
+      data-pswp-height="1200"
+      target="_blank">
+      <img src={course4.src} alt="" />
+    </a>
+    <a
+      class="swiper-slide post-slider__slide"
+      href={course5.src}
+      data-pswp-width="1600"
+      data-pswp-height="1200"
+      target="_blank">
+      <img src={course5.src} alt="" />
+    </a>
+  </div>
+  <!-- If we need pagination -->
+  <div class="post-slider__pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="post-slider__button prev">
+    <svg class="icon">
+      <use xlink:href="#icon-arrow-left"></use>
+    </svg>
+  </div>
+  <div class="post-slider__button next">
+    <svg class="icon">
+      <use xlink:href="#icon-arrow-right"></use>
+    </svg>
+  </div>
+</div>

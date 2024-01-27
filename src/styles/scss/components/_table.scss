@@ -3,7 +3,7 @@
 
   &__head {
     tr th {
-      @apply text-primary subtitle uppercase font-medium text-start pl-15 pb-5;
+      @apply text-primary text-subtitle uppercase font-medium text-start pl-15 pb-5;
       &:first-child,
       &:last-child {
         @apply w-[4.75rem];
@@ -54,7 +54,7 @@
     @apply text-body-2;
   }
   .desc {
-    @apply subtitle text-text-gray;
+    @apply text-subtitle text-text-gray;
   }
 }
 
@@ -73,5 +73,15 @@
         @apply w-1/3;
       }
     }
+  }
+}
+
+.prices-table {
+  @apply w-full border-separate border-spacing-y-15 -my-15;
+  th {
+    @apply text-text-gray text-subtitle text-start font-normal;
+  }
+  td {
+    @apply text-end text-subtitle;
   }
 }

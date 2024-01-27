@@ -3,7 +3,7 @@
 }
 
 .section-title {
-  @apply h2 font-medium leading-tight mb-40;
+  @apply h2 font-medium leading-tight lg:mb-40 md:mb-30;
 
   .title-highlight {
     @apply text-primary;
@@ -11,10 +11,14 @@
 }
 
 .section {
-  @apply mb-120;
+  @apply mb-60 md:mb-80 lg:mb-120;
 
   &-header {
-    @apply flex mb-40 items-center justify-between;
+    @apply flex lg:mb-40 items-center justify-between md:mb-30;
+
+    .section-title {
+      @apply mb-0;
+    }
   }
 }
 
@@ -24,4 +28,20 @@ main {
   &.profile-content {
     @apply p-0;
   }
+}
+
+* {
+  ::-webkit-scrollbar {
+    @apply bg-black/10 m-2 w-1.5;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-secondary-gray/60;
+    // @apply opacity-100 bg-secondary-gray/20;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-secondary-gray/20 transition-colors rounded-xl;
+  }
+  // ::-webkit-scrollbar-thumb:hover {
+  //   @apply bg-secondary-gray/40 transition-colors rounded-xl;
+  // }
 }

@@ -10,11 +10,11 @@
   }
 
   &__subtitle {
-    @apply text-primary subtitle mb-10;
+    @apply text-primary text-subtitle mb-10;
   }
 
   &__title {
-    @apply text-body-1 mb-20;
+    @apply text-body-1 mb-10 xl:mb-20;
   }
 
   &__link::after {
@@ -80,6 +80,10 @@
 
   .card__body {
     @apply flex-grow;
+  }
+
+  .card__link {
+    @apply line-clamp-3 xl:line-clamp-none;
   }
 
   .card__subtitle {
@@ -202,6 +206,26 @@
   min-height: 65vh;
 }
 
-.card--lesson-nav {
+.card.card--lesson-nav {
   @apply p-20 bg-white;
+
+  .card__title {
+    @apply text-body-2;
+  }
+}
+
+@screen md {
+  .card.card--lesson-nav {
+    .card__title {
+      @apply text-body-3;
+    }
+  }
+}
+
+@screen lg {
+  .card.card--lesson-nav {
+    .card__title {
+      @apply text-body-1;
+    }
+  }
 }

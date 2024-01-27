@@ -1,5 +1,5 @@
 ---
-const { style, form, classes, disabled, justify } = Astro.props;
+const { style, form, classes, disabled, justify, id, attrs } = Astro.props;
 ---
 
 <button
@@ -10,6 +10,8 @@ const { style, form, classes, disabled, justify } = Astro.props;
     form ? form : "",
     classes,
   ]}
+  {...id && { id: id }}
+  {...attrs && attrs}
   disabled={disabled}>
   <slot />
 </button>
