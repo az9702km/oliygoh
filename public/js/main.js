@@ -1,4 +1,4 @@
-import PhotoSwipeLightbox from "photoswipe/lightbox";
+import PhotoSwipeLightbox from "https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js";
 /////////////////////////////////////
 // Circle countdown
 
