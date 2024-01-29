@@ -113,3 +113,7 @@
     @apply absolute top-0 left-full pl-20;
   }
 }
+
+.search-results-list {
+  @apply flex flex-col gap-y-10;
+}

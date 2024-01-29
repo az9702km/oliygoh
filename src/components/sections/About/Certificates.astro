@@ -1,32 +1,53 @@
 ---
 import BottomAction from "@components/shared/BottomAction.astro";
 import CardDoc from "@components/shared/Cards/CardDoc.astro";
+import certificateImg from "@assets/images/about/certificate.png";
+import licenseImg from "@assets/images/about/license.png";
+import Popup from "@components/shared/Popup.astro";
 ---
 
 <div class="our-sertificates-section section">
   <BottomAction>
-    <div class="flex flex-col pr-60" slot="left">
-      <h3 class="h3 mb-15">
+    <div class="bottom-action-card__content" slot="left">
+      <h2 class="title">
         Bizning <span class="text-primary"> sertifikat va litsenziya</span>
-      </h3>
-      <p class="text-body-2 text-text-gray">
+      </h2>
+      <p class="subtitle">
         Litsenziya O‘zbekiston respublikasi talim vazirligi tomonidan taqdim
         etilgan.
       </p>
     </div>
     <div class="flex gap-x-20" slot="right">
-      <CardDoc icon="doc" xClasses="w-[18rem]">
+      <CardDoc icon="doc" xClasses="lg:w-[18rem] md:w-[12.5rem]">
         <Fragment slot="title">
           Sertifikat — davlat tomonidan tasdiqlangan
         </Fragment>
-        <button slot="actions" class="text-btn">SERTIFIKATni ko‘rish</button>
+        <button
+          slot="actions"
+          class="text-btn"
+          data-modal-target="certificate"
+          data-modal-toggle="certificate">SERTIFIKATni ko‘rish</button
+        >
       </CardDoc>
-      <CardDoc icon="doc-verified-2" xClasses="w-[18rem]">
+      <CardDoc icon="doc-verified-2" xClasses="lg:w-[18rem] md:w-[12.5rem]">
         <Fragment slot="title">
           Litsenziya — davlat tomonidan tasdiqlangan
         </Fragment>
-        <button slot="actions" class="text-btn">Litsenziyani ko‘rish</button>
+        <button
+          slot="actions"
+          class="text-btn"
+          data-modal-target="license"
+          data-modal-toggle="license">Litsenziyani ko‘rish</button
+        >
       </CardDoc>
     </div>
   </BottomAction>
 </div>
+
+<Popup type="modal" id="certificate">
+  <img src={certificateImg.src} alt="" class="h-[80vh]" />
+</Popup>
+
+<Popup type="modal" id="license">
+  <img src={licenseImg.src} alt="" class="h-[80vh]" />
+</Popup>

@@ -1,4 +1,5 @@
 import PhotoSwipeLightbox from "photoswipe/lightbox";
+import IMask from "imask";
 /////////////////////////////////////
 // Circle countdown
 
@@ -496,3 +497,13 @@ const clearImageSrc = (img) => {
 const changeLabelFor = (label, value) => {
   label.setAttribute("for", value);
 };
+
+const phoneMask = document.getElementById("phone-mask");
+const maskOptions = {
+  mask: "+{998}000000000",
+  lazy: false,
+};
+
+if (phoneMask) {
+  const mask = new IMask(phoneMask, maskOptions);
+}

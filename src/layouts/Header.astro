@@ -20,7 +20,43 @@ const { profile } = Astro.props;
                 kirish
               </a>
             ) : (
-              <Button style="primary">Admin</Button>
+              <>
+                <Button
+                  attrs={{
+                    "data-dropdown-toggle": "dropdown",
+                  }}
+                  style="primary">
+                  Admin
+                </Button>
+                <div
+                  id="dropdown"
+                  class="z-10 hidden bg-background rounded w-max border border-line">
+                  <ul
+                    class="text-body-3 p-10"
+                    aria-labelledby="dropdownDefaultButton">
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center gap-2 p-2 hover:bg-gray rounded-sm">
+                        <svg class="icon !w-20">
+                          <use xlink:href="#icon-home" />
+                        </svg>
+                        Bosh sahifa
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center gap-2 p-2 hover:bg-gray rounded-sm">
+                        <svg class="icon !w-20">
+                          <use xlink:href="#icon-signout" />
+                        </svg>
+                        Tizimdan chiqish
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </>
             )
           }
         </div>

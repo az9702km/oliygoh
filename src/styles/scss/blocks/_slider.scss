@@ -17,3 +17,19 @@
     @apply h-9 w-120 object-contain;
   }
 }
+
+.features-slider-controls {
+  @apply flex gap-x-15;
+
+  .btn {
+    @apply p-3 md:p-15;
+
+    .icon {
+      @apply w-20 md:w-6;
+    }
+  }
+}
+
+.features-slider-controls.hidden {
+  display: none;
+}

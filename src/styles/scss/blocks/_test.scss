@@ -72,3 +72,27 @@
     @apply text-body-2;
   }
 }
+
+@screen md {
+  .test-score {
+    &__title {
+      @apply text-subtitle-sm;
+    }
+
+    &__amount {
+      @apply text-subtitle;
+    }
+  }
+}
+
+@screen lg {
+  .test-score {
+    &__title {
+      @apply text-subtitle;
+    }
+
+    &__amount {
+      @apply text-body-2;
+    }
+  }
+}

@@ -26,10 +26,10 @@
   }
 
   &__body {
-    @apply pl-40 py-15 pr-20 flex flex-grow items-center;
+    @apply lg:pl-40 px-15 py-15 lg:pr-20 flex flex-grow items-center;
 
     .title {
-      @apply flex-grow ml-20 text-body-2 font-medium;
+      @apply flex-grow lg:ml-20 text-body-2 font-medium;
     }
   }
 }
@@ -87,6 +87,40 @@
 
     &:last-child {
       @apply mb-0;
+    }
+  }
+}
+
+@screen md {
+  .lesson-icon-card {
+    &__body {
+      .title {
+        @apply text-subtitle;
+      }
+    }
+
+    &__icon {
+      .icon {
+        @apply w-9;
+      }
+    }
+  }
+}
+
+@screen lg {
+  .lesson-icon-card {
+    &__body {
+      .title {
+        @apply text-body-2;
+      }
+    }
+
+    &__icon {
+      @apply p-15;
+
+      .icon {
+        @apply w-11;
+      }
     }
   }
 }

@@ -9,6 +9,7 @@ const {
   addonBefore,
   addonAfter,
   utils,
+  value,
   validated,
 } = Astro.props;
 
@@ -59,6 +60,7 @@ if (validated)
     id={id}
     name={name}
     class="input-field__input"
+    value={value}
   />
   {
     trailingIcon && (

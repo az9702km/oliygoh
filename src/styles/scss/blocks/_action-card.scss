@@ -15,7 +15,7 @@
 }
 
 .bottom-action-card__content {
-  @apply flex lg:pr-120 flex-col mb-40 xl:mb-0;
+  @apply flex lg:pr-120 flex-col lg:mb-40 xl:mb-0;
 
   .title {
     @apply text-body-1 font-medium mb-15;

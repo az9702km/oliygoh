@@ -31,7 +31,7 @@
   }
 
   &__icon {
-    @apply mb-60 w-12 text-primary;
+    @apply mb-30 md:mb-40 lg:mb-60 w-12 text-primary;
   }
 
   &__path {
@@ -62,8 +62,8 @@
 .card.card--feature {
   @apply h-full;
 
-  .card__title {
-    @apply mb-15;
+  .card__icon {
+    @apply w-9 md:w-11;
   }
 }
 
@@ -71,7 +71,7 @@
   @apply h-full;
 
   .card__title {
-    @apply h2 mb-30;
+    @apply h2 mb-20 md:mb-30;
   }
 }
 
@@ -161,11 +161,23 @@
   }
 
   .card__title {
-    @apply mb-10;
+    @apply mb-0 flex items-center gap-x-20 items-start;
   }
 
   .card_subtitle {
     @apply mb-3;
+  }
+
+  .card__link {
+    @apply flex-grow;
+  }
+
+  .card__link:hover + .search-result-icon {
+    @apply bg-primary text-white transition-colors;
+  }
+
+  .search-result-icon {
+    @apply p-10 bg-white border border-line leading-none rounded-full transition-colors;
   }
 }
 
@@ -185,7 +197,7 @@
 }
 
 .card.card--profile {
-  @apply bg-white p-40;
+  @apply bg-white lg:p-40 p-20;
 }
 
 .card.card--course-online {
@@ -194,11 +206,14 @@
     @apply flex-grow;
   }
   .card__title {
-    @apply mb-30;
+    @apply lg:mb-30 md:mb-20 mb-10;
   }
 
   .card__info {
     @apply mt-auto;
+  }
+  .card__link {
+    @apply md:line-clamp-3;
   }
 }
 
@@ -215,17 +230,64 @@
 }
 
 @screen md {
-  .card.card--lesson-nav {
+  .card {
+    .card__title {
+      @apply text-body-2;
+    }
+    .card__text {
+      @apply text-subtitle;
+    }
+  }
+
+  .card.card--doc {
     .card__title {
       @apply text-body-3;
+    }
+    .card__icon {
+      @apply mb-30;
+    }
+
+    .card__action {
+      .text-btn {
+        @apply text-subtitle-sm;
+      }
     }
   }
 }
 
 @screen lg {
-  .card.card--lesson-nav {
+  .card {
     .card__title {
       @apply text-body-1;
     }
+    .card__text {
+      @apply text-body-2;
+    }
+  }
+
+  .card.card--doc {
+    .card__icon {
+      @apply mb-60;
+    }
+  }
+}
+
+.recap-card {
+  @apply p-15 bg-white rounded flex items-start;
+
+  .icon {
+    @apply w-6 mr-4;
+  }
+
+  .content {
+    @apply flex flex-col;
+  }
+
+  .param {
+    @apply text-subtitle-sm text-text-gray;
+  }
+
+  .value {
+    @apply text-subtitle;
   }
 }

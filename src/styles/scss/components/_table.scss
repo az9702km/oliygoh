@@ -6,10 +6,10 @@
       @apply text-primary text-subtitle uppercase font-medium text-start pl-15 pb-5;
       &:first-child,
       &:last-child {
-        @apply w-[4.75rem];
+        @apply lg:w-[4.75rem] md:w-11;
       }
       &:nth-child(2) {
-        @apply pl-40;
+        @apply lg:pl-40;
       }
     }
 
@@ -18,11 +18,15 @@
     }
   }
 
+  &__action-btn {
+    @apply lg:p-3 lg:ml-60 md:p-10 md:ml-1;
+  }
+
   &__body {
     tr td {
       @apply bg-background border-y border-line pl-15 last:rounded-e last:border-r last:pr-20;
       &:nth-child(2) {
-        @apply pl-40;
+        @apply lg:pl-40;
       }
 
       &:first-child {
@@ -35,7 +39,7 @@
     @apply flex w-min;
 
     .icon {
-      @apply w-[2.625rem];
+      @apply lg:w-[2.625rem] w-8;
     }
   }
 
@@ -45,6 +49,10 @@
 
   &__date {
     @apply text-end;
+
+    .time {
+      @apply text-text-gray;
+    }
   }
 }
 
@@ -83,5 +91,33 @@
   }
   td {
     @apply text-end text-subtitle;
+  }
+}
+
+@screen md {
+  .table-profile {
+    .text {
+      @apply text-subtitle-sm;
+    }
+
+    &__date {
+      @apply text-subtitle-sm;
+    }
+
+    .table-profile__head {
+      th,
+      td {
+        @apply text-xs;
+      }
+    }
+  }
+
+  .dt {
+    .term {
+      @apply text-subtitle-sm;
+    }
+    .desc {
+      @apply text-xs;
+    }
   }
 }

@@ -11,54 +11,16 @@ import PostRelated from "@components/sections/Post/PostRelated.astro";
   <main>
     <div class="container-wrapper">
       <section class="section">
-        <div class="row">
-          <div class="col-md-3">
+        <div class="row lg:px-0 md:px-120">
+          <div class="col-lg-3">
             <Button style="secondary">
               <svg class="icon !w-6 mr-2">
                 <use xlink:href="#icon-arrow-left"></use>
               </svg>Barcha maqolalar
             </Button>
           </div>
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <Post />
-          </div>
-          <div class="col-md-3">
-            <div class="post-share">
-              <div class="btn-group btn-group--v post-share__btns">
-                <Button
-                  style="secondary"
-                  form="btn-circle"
-                  classes="!p-10 !rounded">
-                  <svg class="icon !w-6">
-                    <use xlink:href="#icon-telegram"></use>
-                  </svg>
-                </Button>
-                <Button
-                  style="secondary"
-                  form="btn-circle"
-                  classes="!p-10 !rounded">
-                  <svg class="icon !w-6">
-                    <use xlink:href="#icon-facebook"></use>
-                  </svg>
-                </Button>
-                <Button
-                  style="secondary"
-                  form="btn-circle"
-                  classes="!p-10 !rounded">
-                  <svg class="icon !w-6">
-                    <use xlink:href="#icon-twitter"></use>
-                  </svg>
-                </Button>
-                <Button
-                  style="secondary"
-                  form="btn-circle"
-                  classes="!p-10 !rounded">
-                  <svg class="icon !w-6">
-                    <use xlink:href="#icon-link"></use>
-                  </svg>
-                </Button>
-              </div>
-            </div>
           </div>
         </div>
       </section>

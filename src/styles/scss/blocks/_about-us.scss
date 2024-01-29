@@ -3,6 +3,30 @@
 
   .info {
     @apply text-white mr-60 lg:mr-0;
+
+    &__title {
+      @apply lg:mb-10 md:mb-20 mb-30 h1;
+    }
+
+    &__text {
+      @apply text-body-2;
+    }
+  }
+}
+
+@screen md {
+  .info {
+    &__text {
+      @apply text-body-3;
+    }
+  }
+}
+
+@screen lg {
+  .info {
+    &__text {
+      @apply text-body-2;
+    }
   }
 }
 

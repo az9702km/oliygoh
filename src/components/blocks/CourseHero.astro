@@ -1,5 +1,11 @@
 ---
 import CardIcon from "@components/shared/Cards/CardIcon.astro";
+import CourseRecap from "./CourseRecap.astro";
+import Card from "@components/shared/Card.astro";
+import TermDesc from "@components/shared/TermDesc.astro";
+import IconList from "@components/shared/IconList/IconList.astro";
+import IconListItem from "@components/shared/IconList/IconListItem.astro";
+import img from "@assets/images/courses/course-2.png";
 ---
 
 <section class="course-hero section">
@@ -58,6 +64,81 @@ import CardIcon from "@components/shared/Cards/CardIcon.astro";
           <div class="flex">
             <div class="author__meta">UX/UI DIZAYNER</div>
             <div class="author__meta">KURS ustozi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden md:flex flex-col lg:hidden">
+      <button
+        class="block w-full mt-30 mb-15"
+        data-modal-target="course-video-dialog"
+        data-modal-toggle="course-video-dialog">
+        <div class="relative w-full h-[12rem]">
+          <div
+            class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+            <div class="btn !p-[.75rem] leading-none btn-circle bg-white">
+              <svg class="icon !w-20 text-primary fill-primary">
+                <use xlink:href="#icon-play-fill"></use>
+              </svg>
+            </div>
+          </div>
+          <img src={img.src} class="w-full h-full object-cover" alt="" />
+        </div>
+      </button>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="recap-card">
+            <svg class="icon">
+              <use xlink:href=`#icon-double-check`></use>
+            </svg>
+            <div class="content">
+              <div class="param">Davomiyligi</div>
+              <div class="value">14 soat 24 daqiqa</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="recap-card">
+            <svg class="icon">
+              <use xlink:href=`#icon-double-check`></use>
+            </svg>
+            <div class="content">
+              <div class="param">Murakkablik</div>
+              <div class="value">Boshlang‘ich</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="recap-card">
+            <svg class="icon">
+              <use xlink:href=`#icon-double-check`></use>
+            </svg>
+            <div class="content">
+              <div class="param">Darslar soni</div>
+              <div class="value">67 ta</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="recap-card">
+            <svg class="icon">
+              <use xlink:href=`#icon-double-check`></use>
+            </svg>
+            <div class="content">
+              <div class="param">Sertifikat</div>
+              <div class="value">Sertifikati mavjud</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="recap-card">
+            <svg class="icon">
+              <use xlink:href=`#icon-double-check`></use>
+            </svg>
+            <div class="content">
+              <div class="param">Foydalanish muddati</div>
+              <div class="value">1 yil foydalanish</div>
+            </div>
           </div>
         </div>
       </div>

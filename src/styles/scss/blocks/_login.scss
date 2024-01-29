@@ -50,7 +50,7 @@
   }
 
   &__subtitle {
-    @apply text-text-gray;
+    @apply text-text-gray text-body-3;
   }
 
   &__form {
@@ -62,7 +62,7 @@
   @apply flex-grow flex relative bg-background;
 
   &__container {
-    @apply py-40 flex-grow flex-shrink-0;
+    @apply py-40 w-full;
   }
 
   &__bg {
@@ -78,10 +78,30 @@
   @apply flex flex-col h-full;
 
   &__inner {
-    @apply flex-grow flex flex-col justify-center items-start;
+    @apply flex-grow flex flex-col justify-center items-start pr-0 md:pr-20 lg:pr-0;
   }
 
   &__block {
-    @apply mt-40 w-[25rem] flex flex-col gap-y-30;
+    @apply mt-40 lg:w-[25rem] flex flex-col gap-y-30;
+  }
+}
+
+@screen md {
+  .login-form {
+    &__title {
+      @apply text-body-2;
+    }
+
+    &__subtitle {
+      @apply text-subtitle;
+    }
+  }
+}
+
+@screen lg {
+  .login-form {
+    &__subtitle {
+      @apply text-body-3;
+    }
   }
 }

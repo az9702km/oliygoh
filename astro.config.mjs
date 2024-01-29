@@ -14,7 +14,7 @@ export default defineConfig({
     build: {
       rollupOptions: {
         output: {
-          entryFileNames: "[name][hash].mjs",
+          entryFileNames: "[name].mjs",
           chunkFileNames: "chunks/[name].mjs",
           assetFileNames: "assets/[name][extname]",
         },

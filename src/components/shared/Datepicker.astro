@@ -9,6 +9,7 @@ const {
   addonBefore,
   addonAfter,
   utils,
+  defaultDate,
 } = Astro.props;
 ---
 
@@ -38,6 +39,8 @@ const {
     name={name}
     class="input-field__input"
     datepicker
+    datepicker-format="dd-mm-yyyy"
+    value={defaultDate}
   />
   {
     trailingIcon && (

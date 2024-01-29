@@ -50,3 +50,53 @@
 .lesson-section-icon.lesson-section-icon--sm {
   @apply w-4;
 }
+
+.profile-main {
+  @apply flex flex-col md:flex-row lg:flex-col rounded border border-line divide-y divide-line h-full overflow-hidden;
+}
+
+.profile-update-btn {
+  @apply absolute p-10 bottom-15 right-15 cursor-pointer hover:bg-primary hover:text-white hover:border-transparent;
+}
+
+.profile-general-info {
+  @apply bg-white p-20 flex-grow;
+
+  .title {
+    @apply text-body-2 lg:mb-20 md:mb-10 font-medium;
+  }
+
+  &__card {
+    @apply flex flex-col;
+  }
+}
+
+.profile-pic {
+  @apply aspect-square relative lg:w-full md:w-36 shrink-0;
+}
+
+.profile-page-title {
+  @apply h2 mb-20;
+}
+
+@screen sm {
+  .profile-general-info {
+    .title {
+      @apply text-subtitle;
+    }
+
+    .profile-page-title {
+      @apply text-body-1;
+    }
+
+    .badge {
+      @apply text-xs leading-tight;
+    }
+  }
+}
+
+@screen lg {
+  .profile-page-title {
+    @apply h3;
+  }
+}
