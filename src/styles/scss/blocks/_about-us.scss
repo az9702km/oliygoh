@@ -2,7 +2,7 @@
   @apply bg-primary-linear p-40 flex rounded;
 
   .info {
-    @apply text-white mr-60 lg:mr-0;
+    @apply text-white;
 
     &__title {
       @apply lg:mb-10 md:mb-20 mb-30 h1;
@@ -12,6 +12,12 @@
       @apply text-body-2;
     }
   }
+
+  &__content {
+    @apply grid;
+    justify-items: center;
+    grid-row-gap: 1.875rem;
+  }
 }
 
 @screen md {
@@ -20,12 +26,44 @@
       @apply text-body-3;
     }
   }
+
+  .about-us-hero {
+    &__content {
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto auto;
+      grid-column-gap: 3.75rem;
+      grid-row-gap: 1.875rem;
+      grid-template-areas:
+        "a c"
+        "b b";
+    }
+
+    &__carousel {
+      grid-area: c;
+    }
+
+    &__title {
+      grid-area: a;
+    }
+
+    &__cards {
+      grid-area: b;
+    }
+  }
 }
 
 @screen lg {
   .info {
     &__text {
       @apply text-body-2;
+    }
+  }
+
+  .about-us-hero {
+    &__content {
+      grid-template-areas:
+        "a c"
+        "b c";
     }
   }
 }

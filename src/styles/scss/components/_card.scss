@@ -148,10 +148,18 @@
 }
 
 .card.card--doc {
-  @apply h-full bg-white;
+  @apply h-full bg-white w-full;
+
+  .card__title {
+    @apply h2;
+  }
 
   .card__icon {
-    @apply mb-60;
+    @apply mb-30;
+  }
+
+  .text-btn {
+    @apply text-body-3;
   }
 }
 
@@ -161,7 +169,7 @@
   }
 
   .card__title {
-    @apply mb-0 flex items-center gap-x-20 items-start;
+    @apply mb-0 flex items-center gap-x-20 text-base leading-tight;
   }
 
   .card_subtitle {
@@ -239,6 +247,12 @@
     }
   }
 
+  .card.card--course {
+    .card__link {
+      @apply text-xl leading-tight line-clamp-3;
+    }
+  }
+
   .card.card--doc {
     .card__title {
       @apply text-body-3;
@@ -253,6 +267,12 @@
       }
     }
   }
+
+  .feature-slider .card.card--feature {
+    .card__title {
+      @apply h-14 flex items-end;
+    }
+  }
 }
 
 @screen lg {
@@ -265,9 +285,19 @@
     }
   }
 
+  .feature-slider .card.card--feature {
+    .card__title {
+      @apply h-auto flex items-start;
+    }
+  }
+
   .card.card--doc {
     .card__icon {
       @apply mb-60;
+    }
+
+    .text-btn {
+      @apply text-body-3;
     }
   }
 }

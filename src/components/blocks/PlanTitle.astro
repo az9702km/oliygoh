@@ -1,0 +1,14 @@
+---
+import IconText from "../shared/IconText.astro";
+
+const { icon } = Astro.props;
+---
+
+<div class="price-plan__title">
+  <IconText icon={icon}>
+    <slot name="title" />
+  </IconText>
+  <div class="subtitle">
+    <slot name="subtitle" />
+  </div>
+</div>

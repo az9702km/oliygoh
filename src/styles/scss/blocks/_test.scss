@@ -9,11 +9,11 @@
     @apply text-body-2 font-medium;
   }
   &__table {
-    @apply bg-background border border-line border-collapse;
+    @apply bg-background border border-line border-collapse text-xs md:text-base;
 
     td,
     th {
-      @apply px-15 py-3 border border-line;
+      @apply md:px-15 md:py-3 p-10 border border-line;
     }
   }
 
@@ -36,7 +36,7 @@
   @apply flex flex-col;
 
   .variant-radio__circle {
-    @apply rounded-full w-[.875rem] h-[.875rem] m-[3px] ring-1 ring-primary;
+    @apply rounded-full w-[.875rem] h-[.875rem] m-[3px] ring-1 ring-primary flex-shrink-0;
   }
 
   .variant-radio__label {

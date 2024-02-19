@@ -4,10 +4,10 @@
 
 .section-title {
   @apply h2 font-medium leading-tight lg:mb-40 md:mb-30 mb-20;
+}
 
-  .title-highlight {
-    @apply text-primary;
-  }
+.title-highlight {
+  @apply text-primary;
 }
 
 .section {

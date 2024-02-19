@@ -6,7 +6,7 @@
 
 .course-plan-accordion {
   .h-list {
-    @apply text-text-gray ml-30;
+    @apply text-text-gray ml-0 md:ml-30;
   }
   .accordion__item:has(.accordion__icon.rotate-180) .h-list {
     @apply text-primary;
@@ -14,6 +14,10 @@
 
   .modules-expand-btn {
     @apply p-3 text-center bg-background border border-line uppercase flex items-center justify-center gap-10;
+  }
+
+  &__module {
+    @apply flex flex-col md:flex-row flex-grow;
   }
 }
 

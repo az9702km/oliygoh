@@ -199,6 +199,7 @@ var postSlider = new Swiper(".post-slider", {
 });
 
 //---------- Instagram stories slides ----------//
+
 let instaStoryOptions = {
   loop: true,
   watchSlidesProgress: true,
@@ -243,7 +244,8 @@ let instaStoryOptions = {
           100
         ) + "%";
 
-      currentBullet.style.setProperty("--progress", percentage);
+      if (currentBullet)
+        currentBullet.style.setProperty("--progress", percentage);
     },
     transitionEnd(swiper) {
       let allBullets = [
@@ -267,8 +269,11 @@ let instaStoryOptions = {
   },
 };
 
-var swiperStory = new Swiper(".home-hero-slider", instaStoryOptions);
-var aboutSwiperStory = new Swiper(".about-hero-slider", instaStoryOptions);
+let swiperStory = new Swiper(".home-hero-slider", instaStoryOptions);
+let aboutSwiperStory = new Swiper(".about-hero-slider", instaStoryOptions);
+
+console.log(swiperStory);
+console.log(aboutSwiperStory);
 
 aboutSwiperStory.on("transitionEnd", () => {
   let animationEl = document.querySelector(".animating-cards");

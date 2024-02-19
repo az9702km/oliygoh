@@ -2,19 +2,23 @@
   @apply flex bg-white border border-line rounded;
 
   &__icon {
-    @apply flex items-center justify-center px-8 border-r border-line;
+    @apply hidden lg:flex items-center justify-center px-8 border-r border-line;
   }
 
   &__actions {
-    @apply flex p-30 items-center flex-grow;
+    @apply flex p-30 md:items-center flex-grow flex-col md:flex-row gap-y-20;
   }
 
   &__net {
     @apply flex flex-col flex-grow;
+
+    .icon {
+      @apply lg:hidden w-11 h-11 text-primary mb-20;
+    }
   }
 
   &__title {
-    @apply text-primary text-body-2 mb-10 uppercase;
+    @apply text-primary text-subtitle mb-10 uppercase;
   }
 
   &__number {
@@ -23,5 +27,29 @@
 
   &__controls {
     @apply flex flex-col;
+  }
+}
+
+@screen md {
+  .balance {
+    &__number {
+      @apply text-body-1;
+    }
+
+    &__title {
+      @apply text-subtitle-sm;
+    }
+  }
+}
+
+@screen lg {
+  .balance {
+    &__number {
+      @apply h2;
+    }
+
+    &__title {
+      @apply text-body-1;
+    }
   }
 }

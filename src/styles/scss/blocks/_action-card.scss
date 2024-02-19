@@ -1,5 +1,5 @@
 .bottom-action-card {
-  @apply grid gap-30 border border-line bg-background rounded p-30 px-40;
+  @apply grid gap-30 border border-line bg-background rounded p-30 px-40 -mx-40 md:mx-0;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
 
@@ -18,11 +18,11 @@
   @apply flex lg:pr-120 flex-col lg:mb-40 xl:mb-0;
 
   .title {
-    @apply text-body-1 font-medium mb-15;
+    @apply h2 font-medium mb-15;
   }
 
   .subtitle {
-    @apply text-text-gray text-subtitle;
+    @apply text-text-gray text-body-2;
   }
 }
 
@@ -52,6 +52,17 @@
     .right {
       @apply lg:p-60 p-30 pl-0 pt-0 self-end;
       grid-area: 1 / 2 / 3 / 3;
+    }
+  }
+}
+
+@screen md {
+  .bottom-action-card__content {
+    .title {
+      @apply text-body-1;
+    }
+    .subtitle {
+      @apply text-subtitle;
     }
   }
 }

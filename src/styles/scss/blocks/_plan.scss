@@ -1,3 +1,50 @@
 .plan-module {
   @apply flex flex-col gap-20;
 }
+
+.price-plan {
+  @apply p-20 flex flex-col bg-background rounded border border-line h-full;
+
+  &__title {
+    .subtitle {
+      @apply text-base text-text-gray mt-5;
+    }
+  }
+
+  &__amount {
+    @apply text-xl font-medium;
+  }
+
+  &__body {
+    @apply flex-grow;
+  }
+}
+
+@screen md {
+  .price-plan {
+    &__amount {
+      @apply text-body-2;
+    }
+  }
+}
+
+@screen lg {
+  .price-plan {
+    &__amount {
+      @apply text-body-1;
+    }
+  }
+}
+
+.price-features {
+  .icon-list {
+    @apply space-y-15;
+
+    .icon {
+      @apply w-20 h-20 flex-shrink-0;
+    }
+  }
+  .desc {
+    @apply text-base md:text-sm lg:text-base;
+  }
+}

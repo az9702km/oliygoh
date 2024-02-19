@@ -9,7 +9,7 @@ import CoursesBlock from "@components/blocks/Courses.astro";
     <h2 class="section-title">
       <span class="title-highlight">Kurslarimiz</span><br />bilan tanishing
     </h2>
-    <div class="features-slider-controls md:flex hidden">
+    <div class="features-slider-controls">
       <a href="#!" class="btn btn-secondary font-medium">
         BARCHASI
         <svg class="icon w-6 ml-10">
@@ -19,13 +19,14 @@ import CoursesBlock from "@components/blocks/Courses.astro";
     </div>
   </div>
   <CoursesBlock />
-
-  <a
-    href="#!"
-    class="btn btn-secondary font-medium md:hidden mt-20 justify-center">
-    BARCHASI
-    <svg class="icon w-6 ml-10">
-      <use xlink:href="#icon-arrow-right"></use>
-    </svg>
-  </a>
+  <div class="lg:hidden flex">
+    <a
+      href="#!"
+      class="btn btn-secondary font-medium mt-20 justify-center flex-grow">
+      BARCHASI
+      <svg class="icon w-6 ml-10">
+        <use xlink:href="#icon-arrow-right"></use>
+      </svg>
+    </a>
+  </div>
 </section>

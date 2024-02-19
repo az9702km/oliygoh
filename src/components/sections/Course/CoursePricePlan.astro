@@ -1,0 +1,159 @@
+---
+import Icons from "@components/blocks/Icons.astro";
+import PricePlan from "@components/blocks/PricePlan.astro";
+import PriceAmount from "@components/blocks/PriceAmount.astro";
+import PlanTitle from "@components/blocks/PlanTitle.astro";
+import CardInfo from "@components/shared/Cards/CardInfo.astro";
+import IconList from "@components/shared/IconList/IconList.astro";
+import IconListItem from "@components/shared/IconList/IconListItem.astro";
+import TermDesc from "@components/shared/TermDesc.astro";
+---
+
+<section class="course-target course-section section">
+  <h2 class="section-title">
+    Kurs narxlari bilan <span class="title-highlight"> tanishing</span>
+  </h2>
+  <div class="row">
+    <div class="col-md-4">
+      <PricePlan>
+        <PlanTitle slot="header" icon="romantic-ticket">
+          <Fragment slot="title">Start</Fragment>
+          <Fragment slot="subtitle">Mustaqil o‘rganish</Fragment>
+        </PlanTitle>
+        <div class="price-features" slot="body">
+          <IconList>
+            <IconListItem icon="double-check">
+              <TermDesc>
+                <Fragment slot="desc">
+                  Kursdan 1 yil foydalanish huquqiga ega bo‘lish
+                </Fragment>
+              </TermDesc>
+            </IconListItem>
+            <IconListItem icon="double-check">
+              <TermDesc>
+                <Fragment slot="desc">
+                  Ish faoliyatingizda kerak bo'lgan Juda ham katta dizayn
+                  resurslari
+                </Fragment>
+              </TermDesc>
+            </IconListItem>
+            <IconListItem icon="double-check">
+              <TermDesc>
+                <Fragment slot="desc">Kurs sertifikatiga ega bo‘lish</Fragment>
+              </TermDesc>
+            </IconListItem>
+            <IconListItem icon="double-check">
+              <TermDesc>
+                <Fragment slot="desc">
+                  Maxsus telegram guruhda . vazifalarni tekshitirish
+                </Fragment>
+              </TermDesc>
+            </IconListItem>
+          </IconList>
+        </div>
+        <PriceAmount slot="footer">3 550 000 SO‘M</PriceAmount>
+      </PricePlan>
+    </div>
+    <div class="col-md-4">
+      <PricePlan>
+        <PlanTitle slot="header" icon="star-ticket">
+          <Fragment slot="title">Standard</Fragment>
+          <Fragment slot="subtitle">Nazoratchi bilan o‘rganish</Fragment>
+        </PlanTitle>
+        <div class="price-features" slot="body">
+          <IconList>
+            <IconListItem icon="double-check">
+              <TermDesc>
+                <Fragment slot="desc">
+                  Kursdan 1 yil foydalanish huquqiga ega bo‘lish
+                </Fragment>
+              </TermDesc>
+            </IconListItem>
+            <IconListItem icon="double-check">
+              <TermDesc>
+                <Fragment slot="desc">
+                  Ish faoliyatingizda kerak bo'lgan Juda ham katta dizayn
+                  resurslari
+                </Fragment>
+              </TermDesc>
+            </IconListItem>
+            <IconListItem icon="double-check">
+              <TermDesc>
+                <Fragment slot="desc">Kurs sertifikatiga ega bo‘lish</Fragment>
+              </TermDesc>
+            </IconListItem>
+            <IconListItem icon="double-check">
+              <TermDesc>
+                <Fragment slot="desc">
+                  Maxsus telegram guruhda . vazifalarni tekshitirish
+                </Fragment>
+              </TermDesc>
+            </IconListItem>
+            <IconListItem icon="double-check">
+              <TermDesc>
+                <Fragment slot="desc">
+                  Mentorga vazifalarni tekshirtirish va savol-javoblar
+                </Fragment>
+              </TermDesc>
+            </IconListItem>
+          </IconList>
+        </div>
+        <PriceAmount slot="footer">5 690 000 SO‘M</PriceAmount>
+      </PricePlan>
+    </div>
+    <div class="col-md-4">
+      <PricePlan>
+        <PlanTitle slot="header" icon="vip-ticket">
+          <Fragment slot="title">Premium</Fragment>
+          <Fragment slot="subtitle">Muallif bilan o‘rganish</Fragment>
+        </PlanTitle>
+        <div class="price-features" slot="body">
+          <IconList>
+            <IconListItem icon="double-check">
+              <TermDesc>
+                <Fragment slot="desc">
+                  Kursdan 1 yil foydalanish huquqiga ega bo‘lish
+                </Fragment>
+              </TermDesc>
+            </IconListItem>
+            <IconListItem icon="double-check">
+              <TermDesc>
+                <Fragment slot="desc">
+                  Ish faoliyatingizda kerak bo'lgan Juda ham katta dizayn
+                  resurslari
+                </Fragment>
+              </TermDesc>
+            </IconListItem>
+            <IconListItem icon="double-check">
+              <TermDesc>
+                <Fragment slot="desc">Kurs sertifikatiga ega bo‘lish</Fragment>
+              </TermDesc>
+            </IconListItem>
+            <IconListItem icon="double-check">
+              <TermDesc>
+                <Fragment slot="desc">
+                  Maxsus telegram guruhda . vazifalarni tekshitirish
+                </Fragment>
+              </TermDesc>
+            </IconListItem>
+            <IconListItem icon="double-check">
+              <TermDesc>
+                <Fragment slot="desc">
+                  Mentorga vazifalarni tekshirtirish va savol-javoblar
+                </Fragment>
+              </TermDesc>
+            </IconListItem>
+            <IconListItem icon="double-check">
+              <TermDesc>
+                <Fragment slot="desc">
+                  Kurs ustozi bilan 4 ta maxsus jonli masterklass
+                </Fragment>
+              </TermDesc>
+            </IconListItem>
+          </IconList>
+        </div>
+        <PriceAmount slot="footer">9 850 000 SO‘M</PriceAmount>
+      </PricePlan>
+    </div>
+  </div>
+</section>

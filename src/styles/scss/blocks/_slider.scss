@@ -19,7 +19,7 @@
 }
 
 .features-slider-controls {
-  @apply flex gap-x-15;
+  @apply lg:flex hidden gap-x-15;
 
   .btn {
     @apply p-3 md:p-15;
@@ -28,8 +28,4 @@
       @apply w-20 md:w-6;
     }
   }
-}
-
-.features-slider-controls.hidden {
-  display: none;
 }

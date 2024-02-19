@@ -1,5 +1,5 @@
 .btn {
-  @apply py-10 px-6 uppercase rounded flex items-center transition cursor-pointer gap-x-10;
+  @apply py-10 px-6 uppercase rounded flex items-center transition cursor-pointer gap-x-10 text-base;
 
   &.btn-center {
     @apply justify-center;

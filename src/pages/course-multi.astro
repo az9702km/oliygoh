@@ -1,19 +1,20 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import CourseHero from "@components/blocks/CourseHero.astro";
-import CourseTarget from "@components/sections/Course/CourseTarget.astro";
-import CourseFlow from "@components/sections/Course/CourseFlow.astro";
-import CourseCurriculum from "@components/sections/Course/CourseCurriculum.astro";
-import CourseOutcome from "@components/sections/Course/CourseOutcome.astro";
-import CourseCertificates from "@components/sections/Course/CourseCertificates.astro";
 import CourseRecap from "@components/blocks/CourseRecap.astro";
+import CourseCertificates from "@components/sections/Course/CourseCertificates.astro";
+import CoursePricePlan from "@components/sections/Course/CoursePricePlan.astro";
+import CourseCurriculum from "@components/sections/Course/CourseCurriculum.astro";
+import CourseFlow from "@components/sections/Course/CourseFlow.astro";
+import CourseOutcome from "@components/sections/Course/CourseOutcome.astro";
+import CourseTarget from "@components/sections/Course/CourseTarget.astro";
 import FAQ from "@components/sections/Course/FAQ.astro";
 import ContactUs from "@components/sections/Home/ContactUs.astro";
 import CoursePurchase from "@components/blocks/CoursePurchase.astro";
-import Button from "@components/shared/Button.astro";
-import CheckoutControl from "@components/shared/CheckoutControl.astro";
 import Popup from "@components/shared/Popup.astro";
+import CheckoutControl from "@components/shared/CheckoutControl.astro";
 import Input from "@components/shared/Input.astro";
+import Button from "@components/shared/Button.astro";
 ---
 
 <Layout title="Blog">
@@ -26,12 +27,13 @@ import Input from "@components/shared/Input.astro";
             <CourseRecap />
           </div>
           <div class="lg:hidden">
-            <CoursePurchase />
+            <CoursePurchase type="select" />
           </div>
           <CourseTarget />
           <CourseFlow />
           <CourseCurriculum />
           <CourseOutcome />
+          <CoursePricePlan />
           <CourseCertificates />
         </div>
         <div class="col-lg-3 hidden lg:block">
@@ -46,6 +48,16 @@ import Input from "@components/shared/Input.astro";
   <Popup type="drawer" id="purchase-dialog">
     <div class="checkout">
       <div class="checkout__header">
+        <Button
+          attrs={{ "data-modal-hide": "purchase-dialog" }}
+          style="secondary"
+          justify="center"
+          classes="md:hidden mb-15 w-full ">
+          <svg class="icon !w-6">
+            <use xlink:href="#icon-arrow-left"></use>
+          </svg>
+          Ortga qaytish
+        </Button>
         <h1 class="checkout__title">Kursni sotib olish</h1>
         <p class="checkout__subtitle">
           Quyidagi to‘lov turlarida bittasini tanlab, kurs uchun to‘lovni amalga

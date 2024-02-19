@@ -1,0 +1,55 @@
+---
+import Button from "@components/shared/Button.astro";
+import Select from "@components/shared/Select.astro";
+import VarianRadio from "@components/blocks/VarianRadio.astro";
+import CheckoutControl from "@components/shared/CheckoutControl.astro";
+import Popup from "@components/shared/Popup.astro";
+import Input from "@components/shared/Input.astro";
+
+const { type } = Astro.props;
+---
+
+<div class="course-purchase">
+  <div class="total-price ">
+    {
+      type === "radio" || "select" ? (
+        <div class="total-price__title">BIR MARTALIK TO‘LOV</div>
+      ) : (
+        <div class="total-price__title">KURS TARIFINI TANLANG</div>
+      )
+    }
+    {
+      type === "radio" ? (
+        <div class="variants">
+          <VarianRadio id="answer-1-1" name="answer-1" value="value-1">
+            Start
+          </VarianRadio>
+          <VarianRadio id="answer-1-2" name="answer-1" value="value-2">
+            Standart
+          </VarianRadio>
+          <VarianRadio id="answer-1-3" name="answer-1" value="value-3">
+            Premium
+          </VarianRadio>
+        </div>
+      ) : type === "select" ? (
+        <Select>
+          <option>Tarifni Tanlang</option>
+          <option>Start</option>
+          <option>Standart</option>
+          <option>Premium</option>
+        </Select>
+      ) : (
+        <div class="total-price__amount">9 850 000 SO‘M</div>
+      )
+    }
+  </div>
+  <Button
+    style="secondary-black"
+    justify="center"
+    attrs={{
+      "data-modal-target": "purchase-dialog",
+      "data-modal-toggle": "purchase-dialog",
+    }}>
+    kursni SOTIB OLISH
+  </Button>
+</div>

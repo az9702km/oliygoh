@@ -1,9 +1,25 @@
 .total-price {
+  @apply  lg:mb-20 md:mb-0 mb-20;
   &__title {
     @apply text-primary uppercase text-subtitle leading-tight mb-1;
   }
 
   &__amount {
-    @apply uppercase h3;
+    @apply uppercase h2 font-medium lg:font-normal;
+  }
+}
+
+@screen md {
+  .total-price {
+    &__amount {
+    }
+  }
+}
+
+@screen lg {
+  .total-price {
+    &__amount {
+      @apply h3;
+    }
   }
 }

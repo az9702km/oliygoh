@@ -52,7 +52,7 @@
 }
 
 .profile-main {
-  @apply flex flex-col md:flex-row lg:flex-col rounded border border-line divide-y divide-line h-full overflow-hidden;
+  @apply flex flex-col md:flex-row xl:flex-col rounded border border-line divide-y divide-line h-full overflow-hidden;
 }
 
 .profile-update-btn {
@@ -63,16 +63,16 @@
   @apply bg-white p-20 flex-grow;
 
   .title {
-    @apply text-body-2 lg:mb-20 md:mb-10 font-medium;
+    @apply text-body-2 font-medium;
   }
 
   &__card {
-    @apply flex flex-col;
+    @apply flex flex-col gap-y-20;
   }
 }
 
 .profile-pic {
-  @apply aspect-square relative lg:w-full md:w-36 shrink-0;
+  @apply aspect-square relative xl:w-full md:w-36 lg:w-56 shrink-0;
 }
 
 .profile-page-title {

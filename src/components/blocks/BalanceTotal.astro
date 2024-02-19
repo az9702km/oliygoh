@@ -6,13 +6,16 @@ import Popup from "@components/shared/Popup.astro";
 ---
 
 <div class="balance mb-20">
-  <div class="balance__icon">
+  <div class="balance__icon hidden lg:block">
     <svg class="icon !w-24">
       <use xlink:href="#icon-wallet"></use>
     </svg>
   </div>
   <div class="balance__actions">
     <h2 class="balance__net">
+      <svg class="icon">
+        <use xlink:href="#icon-wallet"></use>
+      </svg>
       <span class="balance__title">umumiy balans</span>
       <span class="balance__number"> <slot name="amount" /> SO‘M</span>
     </h2>
@@ -22,7 +25,8 @@ import Popup from "@components/shared/Popup.astro";
           "data-modal-target": "update-balance-dialog",
           "data-modal-toggle": "update-balance-dialog",
         }}
-        style="primary mb-15">
+        style="primary mb-15"
+        justify="center">
         balansni to‘ldirish
       </Button>
       <Button
@@ -30,7 +34,8 @@ import Popup from "@components/shared/Popup.astro";
           "data-modal-target": "voucher-dialog",
           "data-modal-toggle": "voucher-dialog",
         }}
-        style="secondary justify-center">
+        style="secondary"
+        justify="center">
         vaucher
       </Button>
     </div>

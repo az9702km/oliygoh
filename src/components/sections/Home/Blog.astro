@@ -8,7 +8,7 @@ import Button from "@components/shared/Button.astro";
     <h2 class="section-title">
       Qiziqarli yangilik va <br /><span class="text-primary">maqolalar</span>
     </h2>
-    <div class="features-slider-controls md:flex hidden">
+    <div class="features-slider-controls">
       <a href="#!" class="btn btn-secondary font-medium">
         BARCHASI
         <svg class="icon w-6 ml-10">
@@ -18,13 +18,14 @@ import Button from "@components/shared/Button.astro";
     </div>
   </div>
   <Posts />
-
-  <a
-    href="#!"
-    class="btn btn-secondary font-medium md:hidden mt-20 justify-center">
-    BARCHASI
-    <svg class="icon w-6 ml-10">
-      <use xlink:href="#icon-arrow-right"></use>
-    </svg>
-  </a>
+  <div class="lg:hidden flex">
+    <a
+      href="#!"
+      class="btn btn-secondary font-medium mt-20 justify-center flex-grow">
+      BARCHASI
+      <svg class="icon w-6 ml-10">
+        <use xlink:href="#icon-arrow-right"></use>
+      </svg>
+    </a>
+  </div>
 </section>

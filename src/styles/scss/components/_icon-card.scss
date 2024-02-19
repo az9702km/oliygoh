@@ -32,3 +32,21 @@
     @apply text-white;
   }
 }
+
+.icon-text {
+  @apply flex gap-x-10 items-center font-medium;
+  .icon {
+    @apply w-9 h-9 text-primary;
+  }
+  span {
+    @apply text-body-1;
+  }
+}
+
+@screen md {
+  .icon-text {
+    span {
+      @apply text-body-2;
+    }
+  }
+}

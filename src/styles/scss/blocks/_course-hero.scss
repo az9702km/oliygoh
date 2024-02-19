@@ -1,5 +1,5 @@
 .course-hero {
-  @apply bg-background rounded border border-line p-40;
+  @apply bg-background rounded border border-line p-40 -mx-40 md:mx-0;
 }
 
 .course-hero .info {

@@ -7,7 +7,7 @@ const { type, id, name } = Astro.props;
   <label
     for={id}
     class:list={[
-      "group text-base px-4 py-2 border border-secondary-gray rounded-full text-secondary-gray peer-checked:bg-main-black peer-checked:text-white peer-checked:border-main-black flex items-center cursor-pointer",
+      "group leading-none text-base px-4 py-2 border border-secondary-gray rounded-full text-secondary-gray peer-checked:bg-main-black peer-checked:text-white peer-checked:border-main-black flex items-center cursor-pointer",
       type === "radio" ? "peer-checked:pl-2" : "peer-checked:pr-2",
     ]}>
     <slot />

@@ -6,9 +6,9 @@ import IconCard from "@components/shared/IconCard.astro";
 ---
 
 <section class="about-us-hero section">
-  <div class="about-us-hero__text lg:mr-28 mr-0">
-    <div class="flex mb-30 lg:mb-0">
-      <div class="info mb-40">
+  <div class="about-us-hero__content">
+    <div class="about-us-hero__title">
+      <div class="info">
         <h1 class="info__title">
           Oliygoh — zamonaviy onlayn kurslar platformasi
         </h1>
@@ -18,13 +18,8 @@ import IconCard from "@components/shared/IconCard.astro";
           platformasi
         </p>
       </div>
-      <div class="about-us__carousel lg:hidden">
-        <div class="animating-cards">
-          <AboutHeroSlider />
-        </div>
-      </div>
     </div>
-    <div class="row">
+    <div class="about-us-hero__cards row">
       <div class="col-md-6">
         <CardIcon dark icon="graduate">
           <Fragment slot="title">
@@ -54,10 +49,10 @@ import IconCard from "@components/shared/IconCard.astro";
         </CardIcon>
       </div>
     </div>
-  </div>
-  <div class="about-us__carousel hidden lg:block">
-    <div class="animating-cards">
-      <AboutHeroSlider />
+    <div class="about-us-hero__carousel about-us__carousel">
+      <div class="animating-cards">
+        <AboutHeroSlider />
+      </div>
     </div>
   </div>
 </section>

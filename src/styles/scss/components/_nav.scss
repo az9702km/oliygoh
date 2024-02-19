@@ -21,7 +21,7 @@
 }
 
 .drawer {
-  @apply fixed z-40 h-screen max-w-md overflow-y-auto transition-transform translate-x-full bg-white;
+  @apply fixed z-40 h-screen max-w-md overflow-y-auto transition-transform translate-x-full bg-white md:hidden;
   &.drawer-left {
     @apply -translate-x-full;
   }
@@ -56,4 +56,8 @@
       @apply w-6 mr-10;
     }
   }
+}
+
+.logotype {
+  @apply h-30 w-120;
 }

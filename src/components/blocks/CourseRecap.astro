@@ -7,9 +7,13 @@ import img from "@assets/images/courses/course-2.png";
 import Popup from "@components/shared/Popup.astro";
 import CheckoutControl from "@components/shared/CheckoutControl.astro";
 import Input from "@components/shared/Input.astro";
+import CourseProgress from "./CourseProgress.astro";
+import CoursePurchase from "./CoursePurchase.astro";
+
+const { purchase } = Astro.props;
 ---
 
-<div class="course-recap sticky top-7 hidden lg:block">
+<div class="course-recap hidden lg:block">
   <button
     class="block"
     data-modal-target="course-video-dialog"
@@ -61,19 +65,7 @@ import Input from "@components/shared/Input.astro";
     </IconList>
   </div>
   <div class="course-recap__body">
-    <div class="total-price mb-20">
-      <div class="total-price__title">BIR MARTALIK TO‘LOV</div>
-      <div class="total-price__amount">9 850 000 SO‘M</div>
-    </div>
-    <Button
-      style="secondary-black"
-      justify="center"
-      attrs={{
-        "data-modal-target": "purchase-dialog",
-        "data-modal-toggle": "purchase-dialog",
-      }}>
-      kursni SOTIB OLISH
-    </Button>
+    {purchase && <CoursePurchase type="select" />}
   </div>
 </div>
 
@@ -86,109 +78,4 @@ import Input from "@components/shared/Input.astro";
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen></iframe>
-</Popup>
-<Popup type="drawer" id="purchase-dialog">
-  <div class="checkout">
-    <div class="checkout__header">
-      <h1 class="checkout__title">Kursni sotib olish</h1>
-      <p class="checkout__subtitle">
-        Quyidagi to‘lov turlarida bittasini tanlab, kurs uchun to‘lovni amalga
-        oshiring!
-      </p>
-    </div>
-    <hr class="checkout__divider" />
-    <div class="checkout__body">
-      <form class="course-checkout-form">
-        <fieldset>
-          <legend class="form-legend">To‘lov turini tanlang!</legend>
-          <div class="form-payment">
-            <CheckoutControl
-              type="radio"
-              name="payment"
-              id="payme"
-              icon="payme">
-              Payme orqali
-            </CheckoutControl>
-            <CheckoutControl
-              type="radio"
-              name="payment"
-              id="click"
-              icon="click">
-              Click orqali
-            </CheckoutControl>
-            <CheckoutControl type="radio" name="payment" id="uzum" icon="uzum">
-              Uzum orqali
-            </CheckoutControl>
-            <CheckoutControl
-              type="radio"
-              name="payment"
-              id="checkout-wallet"
-              icon="checkout-wallet">
-              Balansdan
-            </CheckoutControl>
-          </div>
-        </fieldset>
-      </form>
-
-      <hr class="checkout__divider" />
-      <div class="checkout-check">
-        <div class="checkout-check__balance lesson-icon-card">
-          <div class="lesson-icon-card__item">
-            <div class="lesson-icon-card__icon">
-              <svg class="icon">
-                <use xlink:href=`#icon-wallet`></use>
-              </svg>
-            </div>
-            <div class="lesson-icon-card__body">
-              <div class="test-results">
-                <div class="test-score">
-                  <div class="test-score__title">balansingiz</div>
-                  <div class="test-score__amount">10 000 000 SO‘M</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="checkout-check__receipt receipt">
-          <div class="receipt__block">
-            <svg class="icon !w-11">
-              <use xlink:href=`#icon-receipt`></use>
-            </svg>
-          </div>
-          <div class="receipt__block">
-            <table class="prices-table">
-              <tr>
-                <th scope="row">Asl narxi</th>
-                <td>9 850 000 SO‘M</td>
-              </tr>
-              <tr>
-                <th scope="row">Chegirma</th>
-                <td> 0 SO‘M</td>
-              </tr>
-            </table>
-          </div>
-          <div class="receipt__block balance">
-            <h2 class="balance__net">
-              <span class="balance__title">umumiy balans</span>
-              <span class="balance__number"> 9 850 000 SO‘M</span>
-            </h2>
-          </div>
-        </div>
-        <div class="checkout-check__promo">
-          <form class="flex gap-x-10">
-            <Input
-              type="text"
-              id="promo-code"
-              name="promo-code"
-              placeholder="Promo-kodim bor"
-            />
-            <Button disabled style="primary">Qollash</Button>
-          </form>
-        </div>
-      </div>
-      <Button style="primary" classes="w-full" justify="center">
-        kursni sotib olish
-      </Button>
-    </div>
-  </div>
 </Popup>

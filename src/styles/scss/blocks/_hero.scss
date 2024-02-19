@@ -16,6 +16,12 @@
 
 @screen md {
   .hero-chips {
+    @apply text-subtitle;
+  }
+}
+
+@screen lg {
+  .hero-chips {
     @apply text-body-2;
   }
 }
