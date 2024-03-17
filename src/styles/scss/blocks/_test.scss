@@ -83,6 +83,10 @@
   }
 }
 
+.test-nav.test-nav--desktop-only {
+  @apply hidden block;
+}
+
 .test-nav-header {
   @apply flex items-baseline gap-x-4;
 

@@ -1,8 +1,8 @@
 ---
-
+const { desktop } = Astro.props;
 ---
 
-<div class="test-nav">
+<div class:list={["test-nav", desktop && "test-nav--desktop-only"]}>
   <slot name="header" />
   <slot name="body" />
   <slot name="footer" />
