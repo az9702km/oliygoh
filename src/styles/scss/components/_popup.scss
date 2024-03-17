@@ -1,12 +1,72 @@
 .popup {
-  @apply overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50  w-full md:inset-0 h-[calc(100%-1rem)] max-h-full;
+  @apply overflow-y-auto overflow-x-hidden transition-transform fixed top-0 right-0 left-0 z-50  w-full md:inset-0 h-[calc(100%-1rem)] max-h-full px-6;
 
   &__dialog {
-    @apply relative max-w-2xl max-h-full flex flex-col;
+    @apply relative max-w-2xl max-h-full flex flex-col items-center;
   }
 
   &__cls-btn {
     @apply p-10 absolute;
+  }
+}
+.popup--modal .popup__dialog {
+  animation-name: showDialog;
+  animation-duration: 0.5s;
+}
+
+.popup--modal.hidden .popup__dialog {
+  animation-name: hideDialog;
+  animation-duration: 0.5s;
+}
+
+.popup.popup--modal.hidden {
+  animation-name: holdDialog;
+  animation-duration: 0.5s;
+}
+
+@keyframes showDialog {
+  from {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hideDialog {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+}
+
+@keyframes holdDialog {
+  from {
+    @apply bg-main-black/40 h-full;
+    display: flex;
+    opacity: 1;
+  }
+  to {
+    display: none;
+    opacity: 0;
+  }
+}
+
+[modal-backdrop] {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -20,6 +80,8 @@
 
 .popup.popup--drawer {
   @apply justify-end items-start h-full;
+  animation: slideIn 0.2s ease-in-out;
+
   .popup__dialog {
     @apply w-[25rem] min-h-full bg-white p-40;
   }
@@ -29,3 +91,27 @@
   }
 }
 
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}
+
+.preview-lesson {
+  @apply p-4 rounded-md bg-white border border-line;
+
+  &__title {
+    @apply text-2xl mb-4;
+  }
+
+  &__name {
+    @apply text-base font-semibold mt-2;
+  }
+}

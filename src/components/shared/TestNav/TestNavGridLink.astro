@@ -1,0 +1,7 @@
+---
+const { state, number } = Astro.props;
+---
+
+<a href=`#${number}` class:list={["test-nav-grid__link", state]}>
+  {number}
+</a>

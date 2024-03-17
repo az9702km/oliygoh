@@ -3,7 +3,9 @@ const { id, headerLabel } = Astro.props;
 ---
 
 <div id={id} class="hidden accordion__pane" aria-labelledby={headerLabel}>
-  <div class="accordion__pane-body">
-    <slot />
+  <div class="accordion__pane-collapser">
+    <div class="accordion__pane-body">
+      <slot />
+    </div>
   </div>
 </div>

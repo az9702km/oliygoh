@@ -7,8 +7,7 @@ const { type, id, name } = Astro.props;
   <label
     for={id}
     class:list={[
-      "group leading-none text-base px-4 py-2 border border-secondary-gray rounded-full text-secondary-gray peer-checked:bg-main-black peer-checked:text-white peer-checked:border-main-black flex items-center cursor-pointer",
-      type === "radio" ? "peer-checked:pl-2" : "peer-checked:pr-2",
+      "custom-control__label group peer-checked:bg-main-black peer-checked:text-white peer-checked:border-main-black peer-checked:pr-6 pr-4 text-secondary-gray border-secondary-gray",
     ]}>
     <slot />
     <span
@@ -17,8 +16,7 @@ const { type, id, name } = Astro.props;
         type === "radio" ? "order-first mr-1" : "ml-1",
       ]}>
       <svg class="icon !w-[1.125rem]">
-        <use
-          xlink:href={type === "radio" ? "#icon-check" : "#icon-remove-close"}
+        <use xlink:href={type === "radio" ? "#icon-check" : "#icon-close"}
         ></use>
       </svg>
     </span>

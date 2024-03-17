@@ -73,6 +73,47 @@
   }
 }
 
+.test-nav {
+  @apply bg-white rounded-md border border-line divide-y divide-line;
+
+  &__header,
+  &__body,
+  &__footer {
+    @apply px-20 py-4;
+  }
+}
+
+.test-nav-header {
+  @apply flex items-baseline gap-x-4;
+
+  &__title {
+    @apply text-xl flex-grow font-semibold;
+  }
+
+  &__countdown {
+    @apply text-primary;
+  }
+}
+.tests-wrapper {
+  @apply mt-20 mb-40 flex flex-col gap-y-20;
+}
+
+.test-nav-grid {
+  @apply grid grid-cols-4 lg:grid-cols-6 gap-2;
+
+  &__link {
+    @apply flex items-center justify-center border border-line font-semibold rounded-md aspect-square leading-none text-center;
+
+    &.active {
+      @apply border-primary text-primary;
+    }
+
+    &.done {
+      @apply text-white bg-primary;
+    }
+  }
+}
+
 @screen md {
   .test-score {
     &__title {

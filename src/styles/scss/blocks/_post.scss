@@ -117,3 +117,11 @@
 .search-results-list {
   @apply flex flex-col gap-y-10;
 }
+
+.search-results-list-v2 {
+  @apply grid grid-cols-1 gap-[1.25rem] md:grid-cols-2;
+
+  .card--search-v2 {
+    @apply h-full;
+  }
+}

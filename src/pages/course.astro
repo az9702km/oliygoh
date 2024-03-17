@@ -152,4 +152,35 @@ import Input from "@components/shared/Input.astro";
       </div>
     </div>
   </Popup>
+
+  <Popup type="modal" id="course-video-dialog">
+    <div class="course-preview">
+      <iframe
+        width="560"
+        class="course-preview-video"
+        src="https://www.youtube.com/embed/oUIkswy_sXo?si=TJvdPqUTIU_FaSIo"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </Popup>
+
+  <Popup type="modal" id="course-cirucullum">
+    <div class="preview-lesson">
+      <h1 class="preview-lesson__title">Preview lesson</h1>
+      <div class="course-preview">
+        <iframe
+          class="course-preview-video"
+          src="https://www.youtube.com/embed/KtlgYxa6BMU?si=remyLET427_PAQuV"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <h2 class="preview-lesson__name">
+        Lesson 1: Kurs haqida to'liq tanishuv
+      </h2>
+    </div>
+  </Popup>
 </Layout>

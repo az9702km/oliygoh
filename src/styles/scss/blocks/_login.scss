@@ -105,3 +105,25 @@
     }
   }
 }
+
+.terms {
+  @apply h-[80vh] flex flex-col bg-white divide-y divide-line rounded-md;
+
+  &__header,
+  &__body,
+  &__footer {
+    @apply p-4;
+  }
+
+  &__title {
+    @apply text-2xl font-semibold;
+  }
+
+  &__body {
+    @apply p-4 flex-grow overflow-y-auto;
+  }
+
+  &__actions {
+    @apply flex justify-end;
+  }
+}

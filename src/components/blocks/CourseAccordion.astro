@@ -26,7 +26,11 @@ import Collapse from "@components/shared/Collapse.astro";
     <AccordionPane slot="pane" id="plan-1-body" headerLabel="plan-1">
       <ol class="plan-module">
         <li class="plan-module__item">
-          <a href="#!" class="lesson lesson--available">
+          <a
+            href="#!"
+            class="lesson lesson--available"
+            data-modal-target="course-cirucullum"
+            data-modal-toggle="course-cirucullum">
             <svg class="icon !w-6">
               <use xlink:href=`#icon-play-circle`></use>
             </svg>
@@ -161,11 +165,12 @@ import Collapse from "@components/shared/Collapse.astro";
     <AccordionHeader slot="header" id="plan-4" bodyTarget="plan-4-body">
       <AccordionIcon />
       <div class="course-plan-accordion__module">
-      <AccordionTitle>04 — Loyihani dasturchiga topshirish</AccordionTitle>
-      <ul class="h-list shrink-0">
-        <li class="h-list__item">5 ta dars</li>
-        <li class="h-list__item">30 soat 20 minut</li>
-      </ul></div>
+        <AccordionTitle>04 — Loyihani dasturchiga topshirish</AccordionTitle>
+        <ul class="h-list shrink-0">
+          <li class="h-list__item">5 ta dars</li>
+          <li class="h-list__item">30 soat 20 minut</li>
+        </ul>
+      </div>
     </AccordionHeader>
     <AccordionPane slot="pane" id="plan-4-body" headerLabel="plan-4">
       <ol class="plan-module">
@@ -213,14 +218,15 @@ import Collapse from "@components/shared/Collapse.astro";
         <AccordionHeader slot="header" id="plan-5" bodyTarget="plan-5-body">
           <AccordionIcon />
           <div class="course-plan-accordion__module">
-          <AccordionTitle>
-            05 — Dizayner qanday muammolarni hal qiladi va qanday qilib qimmat
-            ishchiga aylanishi mumkin?
-          </AccordionTitle>
-          <ul class="h-list shrink-0">
-            <li class="h-list__item">4 ta dars</li>
-            <li class="h-list__item">2 soat 20 minut</li>
-          </ul></div>
+            <AccordionTitle>
+              05 — Dizayner qanday muammolarni hal qiladi va qanday qilib qimmat
+              ishchiga aylanishi mumkin?
+            </AccordionTitle>
+            <ul class="h-list shrink-0">
+              <li class="h-list__item">4 ta dars</li>
+              <li class="h-list__item">2 soat 20 minut</li>
+            </ul>
+          </div>
         </AccordionHeader>
         <AccordionPane slot="pane" id="plan-5-body" headerLabel="plan-5">
           <ol class="plan-module">
@@ -264,11 +270,14 @@ import Collapse from "@components/shared/Collapse.astro";
         <AccordionHeader slot="header" id="plan-6" bodyTarget="plan-6-body">
           <AccordionIcon />
           <div class="course-plan-accordion__module">
-          <AccordionTitle>06 — Loyihani dizayn qilish qoidalari</AccordionTitle>
-          <ul class="h-list shrink-0">
-            <li class="h-list__item">7 ta dars</li>
-            <li class="h-list__item">1 soat 40 minut</li>
-          </ul></div>
+            <AccordionTitle
+              >06 — Loyihani dizayn qilish qoidalari</AccordionTitle
+            >
+            <ul class="h-list shrink-0">
+              <li class="h-list__item">7 ta dars</li>
+              <li class="h-list__item">1 soat 40 minut</li>
+            </ul>
+          </div>
         </AccordionHeader>
         <AccordionPane slot="pane" id="plan-6-body" headerLabel="plan-6">
           <ol class="plan-module">
@@ -312,12 +321,13 @@ import Collapse from "@components/shared/Collapse.astro";
         <AccordionHeader slot="header" id="plan-7" bodyTarget="plan-7-body">
           <AccordionIcon />
           <div class="course-plan-accordion__module">
-          <AccordionTitle>07 — Loyihani dasturchiga topshirish</AccordionTitle>
-          <ul class="h-list shrink-0">
-            <li class="h-list__item">5 ta dars</li>
-            <li class="h-list__item">30 soat 20 minut</li>
-          </ul>
-        </div>
+            <AccordionTitle>07 — Loyihani dasturchiga topshirish</AccordionTitle
+            >
+            <ul class="h-list shrink-0">
+              <li class="h-list__item">5 ta dars</li>
+              <li class="h-list__item">30 soat 20 minut</li>
+            </ul>
+          </div>
         </AccordionHeader>
         <AccordionPane slot="pane" id="plan-7-body" headerLabel="plan-7">
           <ol class="plan-module">

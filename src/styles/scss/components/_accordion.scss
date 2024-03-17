@@ -25,6 +25,21 @@
     }
   }
 
+  &__pane {
+    @apply grid;
+    grid-template-rows: 1fr;
+    transition: all 0.3s ease-in-out;
+
+    &.hidden {
+      grid-template-rows: 0fr;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &__pane-collapser {
+    @apply overflow-hidden;
+  }
+
   &__icon.rotate-180 {
     @apply bg-primary text-white border-0;
   }

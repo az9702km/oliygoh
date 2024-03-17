@@ -9,6 +9,15 @@ import SectionLessons from "@components/shared/SectionLessons.astro";
 import SectionLessonsItem from "@components/shared/SectionLessonsItem.astro";
 import CourseProgress from "./CourseProgress.astro";
 import SectionLessonsExample from "./SectionLessonsExample.astro";
+import Button from "@components/shared/Button.astro";
+import TestNav from "@components/shared/TestNav/TestNav.astro";
+import TestNavBody from "@components/shared/TestNav/TestNavBody.astro";
+import TestNavGrid from "@components/shared/TestNav/TestNavGrid.astro";
+import TestNavGridLink from "@components/shared/TestNav/TestNavGridLink.astro";
+import TestNavHeader from "@components/shared/TestNav/TestNavHeader.astro";
+import TestNavFooter from "@components/shared/TestNav/TestNavFooter.astro";
+
+const { mode } = Astro.props;
 ---
 
 <aside class="lesson-nav">
@@ -16,7 +25,7 @@ import SectionLessonsExample from "./SectionLessonsExample.astro";
     <svg class="icon">
       <use xlink:href="#icon-arrow-left"></use>
     </svg>
-     mening kurslarim
+    mening kurslarim
   </a>
   <button
     class="lesson-nav__control sections-drawer"
@@ -27,7 +36,7 @@ import SectionLessonsExample from "./SectionLessonsExample.astro";
     <svg class="icon">
       <use xlink:href="#icon-menu"></use>
     </svg>
-     Darslar
+    Darslar
   </button>
 
   <div
@@ -41,7 +50,7 @@ import SectionLessonsExample from "./SectionLessonsExample.astro";
           <svg class="icon">
             <use xlink:href="#icon-arrow-left"></use>
           </svg>
-           mening kurslarim
+          mening kurslarim
         </a>
         <button
           type="button"
@@ -56,6 +65,37 @@ import SectionLessonsExample from "./SectionLessonsExample.astro";
       </div>
     </div>
     <div class="drawer__body">
+      { mode == "test" ? (
+      <TestNav>
+        <TestNavHeader slot="header">Test Navbar Header</TestNavHeader>
+        <TestNavBody slot="body">
+          <TestNavGrid>
+            <TestNavGridLink number="1" />
+            <TestNavGridLink number="2" />
+            <TestNavGridLink number="3" />
+            <TestNavGridLink number="4" />
+            <TestNavGridLink number="5" />
+            <TestNavGridLink number="6" />
+            <TestNavGridLink number="7" />
+            <TestNavGridLink number="8" />
+            <TestNavGridLink number="9" />
+            <TestNavGridLink number="10" />
+            <TestNavGridLink number="11" />
+            <TestNavGridLink number="12" />
+            <TestNavGridLink number="13" />
+            <TestNavGridLink number="14" />
+            <TestNavGridLink number="15" />
+            <TestNavGridLink number="16" />
+          </TestNavGrid>
+        </TestNavBody>
+        <TestNavFooter slot="footer">
+          <Button style="primary" justify="center" classes="w-full">
+            <svg class="icon !w-20">
+              <use xlink:href=`#icon-circle-check`></use>
+            </svg>Testni yakunlash
+          </Button>
+        </TestNavFooter>
+      </TestNav>) : (
       <Accordion
         id="lesson-sections-mobile"
         extraClass="accordion--lesson-sections accordion--lesson-sections-mobile"
@@ -67,7 +107,7 @@ import SectionLessonsExample from "./SectionLessonsExample.astro";
             bodyTarget="mobile-section-body-1">
             <span class="lesson-section-header">
               <LessonIcon />
-               01 - Figma tool’lari bilan ishlash
+              01 - Figma tool’lari bilan ishlash
             </span>
             <AccordionIcon />
           </AccordionHeader>
@@ -85,7 +125,7 @@ import SectionLessonsExample from "./SectionLessonsExample.astro";
             bodyTarget="mobile-section-body-2">
             <span class="lesson-section-header">
               <LessonIcon />
-               02 - Dizayn qanday muammolarni hal qiladi?
+              02 - Dizayn qanday muammolarni hal qiladi?
             </span>
             <AccordionIcon />
           </AccordionHeader>
@@ -103,7 +143,7 @@ import SectionLessonsExample from "./SectionLessonsExample.astro";
             bodyTarget="mobile-section-body-3">
             <span class="lesson-section-header">
               <LessonIcon />
-               03 -Loyihani dizayn qilish qoidalari
+              03 -Loyihani dizayn qilish qoidalari
             </span>
             <AccordionIcon />
           </AccordionHeader>
@@ -131,7 +171,7 @@ import SectionLessonsExample from "./SectionLessonsExample.astro";
             bodyTarget="mobile-section-body-4">
             <span class="lesson-section-header">
               <LessonIcon />
-               04 - Loyihani dasturchiga topshirish
+              04 - Loyihani dasturchiga topshirish
             </span>
             <AccordionIcon />
           </AccordionHeader>
@@ -159,7 +199,7 @@ import SectionLessonsExample from "./SectionLessonsExample.astro";
             bodyTarget="mobile-section-body-5">
             <span class="lesson-section-header">
               <LessonIcon />
-               05 - Kozimxon Turaev saytini ishlab chiqish
+              05 - Kozimxon Turaev saytini ishlab chiqish
             </span>
             <AccordionIcon />
           </AccordionHeader>
@@ -187,7 +227,7 @@ import SectionLessonsExample from "./SectionLessonsExample.astro";
             bodyTarget="mobile-section-body-6">
             <span class="lesson-section-header">
               <LessonIcon />
-               06 - Foydalanuvchi e’tiborini nazorat qilish
+              06 - Foydalanuvchi e’tiborini nazorat qilish
             </span>
             <AccordionIcon />
           </AccordionHeader>
@@ -215,7 +255,7 @@ import SectionLessonsExample from "./SectionLessonsExample.astro";
             bodyTarget="mobile-section-body-7">
             <span class="lesson-section-header">
               <LessonIcon />
-               07 - Assodiq loyihasi haqida videodarslik
+              07 - Assodiq loyihasi haqida videodarslik
             </span>
             <AccordionIcon />
           </AccordionHeader>
@@ -243,7 +283,7 @@ import SectionLessonsExample from "./SectionLessonsExample.astro";
             bodyTarget="mobile-section-body-8">
             <span class="lesson-section-header">
               <LessonIcon />
-               08 - Real loyihalar ustida ishlash amaliyoti
+              08 - Real loyihalar ustida ishlash amaliyoti
             </span>
             <AccordionIcon />
           </AccordionHeader>
@@ -271,7 +311,7 @@ import SectionLessonsExample from "./SectionLessonsExample.astro";
             bodyTarget="mobile-section-body-9">
             <span class="lesson-section-header">
               <LessonIcon />
-               09 - Ishni muvaffaqiyatli topshirish yo‘llari
+              09 - Ishni muvaffaqiyatli topshirish yo‘llari
             </span>
             <AccordionIcon />
           </AccordionHeader>
@@ -299,7 +339,7 @@ import SectionLessonsExample from "./SectionLessonsExample.astro";
             bodyTarget="mobile-section-body-10">
             <span class="lesson-section-header">
               <LessonIcon />
-               10 - Yakuniy dars va sinov vazifalar
+              10 - Yakuniy dars va sinov vazifalar
             </span>
             <AccordionIcon />
           </AccordionHeader>
@@ -321,8 +361,42 @@ import SectionLessonsExample from "./SectionLessonsExample.astro";
           </AccordionPane>
         </AccordionItem>
       </Accordion>
+
+      ) }
     </div>
   </div>
+      { mode == "test" ? (
+      <TestNav>
+        <TestNavHeader slot="header">Test Navbar Header</TestNavHeader>
+        <TestNavBody slot="body">
+          <TestNavGrid>
+            <TestNavGridLink number="1" />
+            <TestNavGridLink number="2" />
+            <TestNavGridLink number="3" />
+            <TestNavGridLink number="4" />
+            <TestNavGridLink number="5" />
+            <TestNavGridLink number="6" />
+            <TestNavGridLink number="7" />
+            <TestNavGridLink number="8" />
+            <TestNavGridLink number="9" />
+            <TestNavGridLink number="10" />
+            <TestNavGridLink number="11" />
+            <TestNavGridLink number="12" />
+            <TestNavGridLink number="13" />
+            <TestNavGridLink number="14" />
+            <TestNavGridLink number="15" />
+            <TestNavGridLink number="16" />
+          </TestNavGrid>
+        </TestNavBody>
+        <TestNavFooter slot="footer">
+          <Button style="primary" justify="center" classes="w-full">
+            <svg class="icon !w-20">
+              <use xlink:href=`#icon-circle-check`></use>
+            </svg>Testni yakunlash
+          </Button>
+        </TestNavFooter>
+      </TestNav>) : (
+        
   <div class="card card--lesson-nav">
     <div class="card__title">
       UX/UI dizayning boshalang‘ich ko‘nikmalari kursi
@@ -331,212 +405,271 @@ import SectionLessonsExample from "./SectionLessonsExample.astro";
       <CourseProgress value="0" />
     </div>
   </div>
-  <Accordion
-    id="lesson-sections"
-    extraClass="accordion--lesson-sections"
-    name="sections">
-    <AccordionItem>
-      <AccordionHeader slot="header" id="section-1" bodyTarget="section-body-1">
-        <span class="lesson-section-header">
-          <LessonIcon />
-           01 - Figma tool’lari bilan ishlash
-        </span>
-        <AccordionIcon />
-      </AccordionHeader>
-      <AccordionPane slot="pane" id="section-body-1" headerLabel="section-1">
-        <SectionLessonsExample />
-      </AccordionPane>
-    </AccordionItem>
-    <AccordionItem>
-      <AccordionHeader slot="header" id="section-2" bodyTarget="section-body-2">
-        <span class="lesson-section-header">
-          <LessonIcon />
-           02 - Dizayn qanday muammolarni hal qiladi?
-        </span>
-        <AccordionIcon />
-      </AccordionHeader>
-      <AccordionPane slot="pane" id="section-body-2" headerLabel="section-2">
-        <SectionLessonsExample />
-      </AccordionPane>
-    </AccordionItem>
-    <AccordionItem>
-      <AccordionHeader slot="header" id="section-3" bodyTarget="section-body-3">
-        <span class="lesson-section-header">
-          <LessonIcon />
-           03 -Loyihani dizayn qilish qoidalari
-        </span>
-        <AccordionIcon />
-      </AccordionHeader>
-      <AccordionPane slot="pane" id="section-body-3" headerLabel="section-3">
-        <SectionLessons>
-          <SectionLessonsItem>
-            1.1 - Kurs haqida to‘liq tanishtiruv
-          </SectionLessonsItem>
-          <SectionLessonsItem>
-            1.2 - UI dizaynda tipografik qoidalar
-          </SectionLessonsItem>
-          <SectionLessonsItem>
-            1.3 - UX/UI darsiga oid testlar
-          </SectionLessonsItem>
-        </SectionLessons>
-      </AccordionPane>
-    </AccordionItem>
-    <AccordionItem>
-      <AccordionHeader slot="header" id="section-4" bodyTarget="section-body-4">
-        <span class="lesson-section-header">
-          <LessonIcon />
-           04 - Loyihani dasturchiga topshirish
-        </span>
-        <AccordionIcon />
-      </AccordionHeader>
-      <AccordionPane slot="pane" id="section-body-4" headerLabel="section-4">
-        <SectionLessons>
-          <SectionLessonsItem>
-            1.1 - Kurs haqida to‘liq tanishtiruv
-          </SectionLessonsItem>
-          <SectionLessonsItem>
-            1.2 - UI dizaynda tipografik qoidalar
-          </SectionLessonsItem>
-          <SectionLessonsItem>
-            1.3 - UX/UI darsiga oid testlar
-          </SectionLessonsItem>
-        </SectionLessons>
-      </AccordionPane>
-    </AccordionItem>
-    <AccordionItem>
-      <AccordionHeader slot="header" id="section-5" bodyTarget="section-body-5">
-        <span class="lesson-section-header">
-          <LessonIcon />
-           05 - Kozimxon Turaev saytini ishlab chiqish
-        </span>
-        <AccordionIcon />
-      </AccordionHeader>
-      <AccordionPane slot="pane" id="section-body-5" headerLabel="section-5">
-        <SectionLessons>
-          <SectionLessonsItem>
-            1.1 - Kurs haqida to‘liq tanishtiruv
-          </SectionLessonsItem>
-          <SectionLessonsItem>
-            1.2 - UI dizaynda tipografik qoidalar
-          </SectionLessonsItem>
-          <SectionLessonsItem>
-            1.3 - UX/UI darsiga oid testlar
-          </SectionLessonsItem>
-        </SectionLessons>
-      </AccordionPane>
-    </AccordionItem>
-    <AccordionItem>
-      <AccordionHeader slot="header" id="section-6" bodyTarget="section-body-6">
-        <span class="lesson-section-header">
-          <LessonIcon />
-           06 - Foydalanuvchi e’tiborini nazorat qilish
-        </span>
-        <AccordionIcon />
-      </AccordionHeader>
-      <AccordionPane slot="pane" id="section-body-6" headerLabel="section-6">
-        <SectionLessons>
-          <SectionLessonsItem>
-            1.1 - Kurs haqida to‘liq tanishtiruv
-          </SectionLessonsItem>
-          <SectionLessonsItem>
-            1.2 - UI dizaynda tipografik qoidalar
-          </SectionLessonsItem>
-          <SectionLessonsItem>
-            1.3 - UX/UI darsiga oid testlar
-          </SectionLessonsItem>
-        </SectionLessons>
-      </AccordionPane>
-    </AccordionItem>
-    <AccordionItem>
-      <AccordionHeader slot="header" id="section-7" bodyTarget="section-body-7">
-        <span class="lesson-section-header">
-          <LessonIcon />
-           07 - Assodiq loyihasi haqida videodarslik
-        </span>
-        <AccordionIcon />
-      </AccordionHeader>
-      <AccordionPane slot="pane" id="section-body-7" headerLabel="section-7">
-        <SectionLessons>
-          <SectionLessonsItem>
-            1.1 - Kurs haqida to‘liq tanishtiruv
-          </SectionLessonsItem>
-          <SectionLessonsItem>
-            1.2 - UI dizaynda tipografik qoidalar
-          </SectionLessonsItem>
-          <SectionLessonsItem>
-            1.3 - UX/UI darsiga oid testlar
-          </SectionLessonsItem>
-        </SectionLessons>
-      </AccordionPane>
-    </AccordionItem>
-    <AccordionItem>
-      <AccordionHeader slot="header" id="section-8" bodyTarget="section-body-8">
-        <span class="lesson-section-header">
-          <LessonIcon />
-           08 - Real loyihalar ustida ishlash amaliyoti
-        </span>
-        <AccordionIcon />
-      </AccordionHeader>
-      <AccordionPane slot="pane" id="section-body-8" headerLabel="section-8">
-        <SectionLessons>
-          <SectionLessonsItem>
-            1.1 - Kurs haqida to‘liq tanishtiruv
-          </SectionLessonsItem>
-          <SectionLessonsItem>
-            1.2 - UI dizaynda tipografik qoidalar
-          </SectionLessonsItem>
-          <SectionLessonsItem>
-            1.3 - UX/UI darsiga oid testlar
-          </SectionLessonsItem>
-        </SectionLessons>
-      </AccordionPane>
-    </AccordionItem>
-    <AccordionItem>
-      <AccordionHeader slot="header" id="section-9" bodyTarget="section-body-9">
-        <span class="lesson-section-header">
-          <LessonIcon />
-           09 - Ishni muvaffaqiyatli topshirish yo‘llari
-        </span>
-        <AccordionIcon />
-      </AccordionHeader>
-      <AccordionPane slot="pane" id="section-body-9" headerLabel="section-9">
-        <SectionLessons>
-          <SectionLessonsItem>
-            1.1 - Kurs haqida to‘liq tanishtiruv
-          </SectionLessonsItem>
-          <SectionLessonsItem>
-            1.2 - UI dizaynda tipografik qoidalar
-          </SectionLessonsItem>
-          <SectionLessonsItem>
-            1.3 - UX/UI darsiga oid testlar
-          </SectionLessonsItem>
-        </SectionLessons>
-      </AccordionPane>
-    </AccordionItem>
-    <AccordionItem>
-      <AccordionHeader
-        slot="header"
-        id="section-10"
-        bodyTarget="section-body-10">
-        <span class="lesson-section-header">
-          <LessonIcon />
-           10 - Yakuniy dars va sinov vazifalar
-        </span>
-        <AccordionIcon />
-      </AccordionHeader>
-      <AccordionPane slot="pane" id="section-body-10" headerLabel="section-10">
-        <SectionLessons>
-          <SectionLessonsItem>
-            1.1 - Kurs haqida to‘liq tanishtiruv
-          </SectionLessonsItem>
-          <SectionLessonsItem>
-            1.2 - UI dizaynda tipografik qoidalar
-          </SectionLessonsItem>
-          <SectionLessonsItem>
-            1.3 - UX/UI darsiga oid testlar
-          </SectionLessonsItem>
-        </SectionLessons>
-      </AccordionPane>
-    </AccordionItem>
-  </Accordion>
+      <Accordion
+        id="lesson-sections-mobile"
+        extraClass="accordion--lesson-sections"
+        name="sections">
+        <AccordionItem>
+          <AccordionHeader
+            slot="header"
+            id="mobile-section-1"
+            bodyTarget="mobile-section-body-1">
+            <span class="lesson-section-header">
+              <LessonIcon />
+              01 - Figma tool’lari bilan ishlash
+            </span>
+            <AccordionIcon />
+          </AccordionHeader>
+          <AccordionPane
+            slot="pane"
+            id="mobile-section-body-1"
+            headerLabel="mobile-section-1">
+            <SectionLessonsExample />
+          </AccordionPane>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionHeader
+            slot="header"
+            id="mobile-section-2"
+            bodyTarget="mobile-section-body-2">
+            <span class="lesson-section-header">
+              <LessonIcon />
+              02 - Dizayn qanday muammolarni hal qiladi?
+            </span>
+            <AccordionIcon />
+          </AccordionHeader>
+          <AccordionPane
+            slot="pane"
+            id="mobile-section-body-2"
+            headerLabel="mobile-section-2">
+            <SectionLessonsExample />
+          </AccordionPane>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionHeader
+            slot="header"
+            id="mobile-section-3"
+            bodyTarget="mobile-section-body-3">
+            <span class="lesson-section-header">
+              <LessonIcon />
+              03 -Loyihani dizayn qilish qoidalari
+            </span>
+            <AccordionIcon />
+          </AccordionHeader>
+          <AccordionPane
+            slot="pane"
+            id="mobile-section-body-3"
+            headerLabel="mobile-section-3">
+            <SectionLessons>
+              <SectionLessonsItem>
+                1.1 - Kurs haqida to‘liq tanishtiruv
+              </SectionLessonsItem>
+              <SectionLessonsItem>
+                1.2 - UI dizaynda tipografik qoidalar
+              </SectionLessonsItem>
+              <SectionLessonsItem>
+                1.3 - UX/UI darsiga oid testlar
+              </SectionLessonsItem>
+            </SectionLessons>
+          </AccordionPane>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionHeader
+            slot="header"
+            id="mobile-section-4"
+            bodyTarget="mobile-section-body-4">
+            <span class="lesson-section-header">
+              <LessonIcon />
+              04 - Loyihani dasturchiga topshirish
+            </span>
+            <AccordionIcon />
+          </AccordionHeader>
+          <AccordionPane
+            slot="pane"
+            id="mobile-section-body-4"
+            headerLabel="mobile-section-4">
+            <SectionLessons>
+              <SectionLessonsItem>
+                1.1 - Kurs haqida to‘liq tanishtiruv
+              </SectionLessonsItem>
+              <SectionLessonsItem>
+                1.2 - UI dizaynda tipografik qoidalar
+              </SectionLessonsItem>
+              <SectionLessonsItem>
+                1.3 - UX/UI darsiga oid testlar
+              </SectionLessonsItem>
+            </SectionLessons>
+          </AccordionPane>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionHeader
+            slot="header"
+            id="mobile-section-5"
+            bodyTarget="mobile-section-body-5">
+            <span class="lesson-section-header">
+              <LessonIcon />
+              05 - Kozimxon Turaev saytini ishlab chiqish
+            </span>
+            <AccordionIcon />
+          </AccordionHeader>
+          <AccordionPane
+            slot="pane"
+            id="mobile-section-body-5"
+            headerLabel="mobile-section-5">
+            <SectionLessons>
+              <SectionLessonsItem>
+                1.1 - Kurs haqida to‘liq tanishtiruv
+              </SectionLessonsItem>
+              <SectionLessonsItem>
+                1.2 - UI dizaynda tipografik qoidalar
+              </SectionLessonsItem>
+              <SectionLessonsItem>
+                1.3 - UX/UI darsiga oid testlar
+              </SectionLessonsItem>
+            </SectionLessons>
+          </AccordionPane>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionHeader
+            slot="header"
+            id="mobile-section-6"
+            bodyTarget="mobile-section-body-6">
+            <span class="lesson-section-header">
+              <LessonIcon />
+              06 - Foydalanuvchi e’tiborini nazorat qilish
+            </span>
+            <AccordionIcon />
+          </AccordionHeader>
+          <AccordionPane
+            slot="pane"
+            id="mobile-section-body-6"
+            headerLabel="mobile-section-6">
+            <SectionLessons>
+              <SectionLessonsItem>
+                1.1 - Kurs haqida to‘liq tanishtiruv
+              </SectionLessonsItem>
+              <SectionLessonsItem>
+                1.2 - UI dizaynda tipografik qoidalar
+              </SectionLessonsItem>
+              <SectionLessonsItem>
+                1.3 - UX/UI darsiga oid testlar
+              </SectionLessonsItem>
+            </SectionLessons>
+          </AccordionPane>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionHeader
+            slot="header"
+            id="mobile-section-7"
+            bodyTarget="mobile-section-body-7">
+            <span class="lesson-section-header">
+              <LessonIcon />
+              07 - Assodiq loyihasi haqida videodarslik
+            </span>
+            <AccordionIcon />
+          </AccordionHeader>
+          <AccordionPane
+            slot="pane"
+            id="mobile-section-body-7"
+            headerLabel="mobile-section-7">
+            <SectionLessons>
+              <SectionLessonsItem>
+                1.1 - Kurs haqida to‘liq tanishtiruv
+              </SectionLessonsItem>
+              <SectionLessonsItem>
+                1.2 - UI dizaynda tipografik qoidalar
+              </SectionLessonsItem>
+              <SectionLessonsItem>
+                1.3 - UX/UI darsiga oid testlar
+              </SectionLessonsItem>
+            </SectionLessons>
+          </AccordionPane>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionHeader
+            slot="header"
+            id="mobile-section-8"
+            bodyTarget="mobile-section-body-8">
+            <span class="lesson-section-header">
+              <LessonIcon />
+              08 - Real loyihalar ustida ishlash amaliyoti
+            </span>
+            <AccordionIcon />
+          </AccordionHeader>
+          <AccordionPane
+            slot="pane"
+            id="mobile-section-body-8"
+            headerLabel="mobile-section-8">
+            <SectionLessons>
+              <SectionLessonsItem>
+                1.1 - Kurs haqida to‘liq tanishtiruv
+              </SectionLessonsItem>
+              <SectionLessonsItem>
+                1.2 - UI dizaynda tipografik qoidalar
+              </SectionLessonsItem>
+              <SectionLessonsItem>
+                1.3 - UX/UI darsiga oid testlar
+              </SectionLessonsItem>
+            </SectionLessons>
+          </AccordionPane>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionHeader
+            slot="header"
+            id="mobile-section-9"
+            bodyTarget="mobile-section-body-9">
+            <span class="lesson-section-header">
+              <LessonIcon />
+              09 - Ishni muvaffaqiyatli topshirish yo‘llari
+            </span>
+            <AccordionIcon />
+          </AccordionHeader>
+          <AccordionPane
+            slot="pane"
+            id="mobile-section-body-9"
+            headerLabel="mobile-section-9">
+            <SectionLessons>
+              <SectionLessonsItem>
+                1.1 - Kurs haqida to‘liq tanishtiruv
+              </SectionLessonsItem>
+              <SectionLessonsItem>
+                1.2 - UI dizaynda tipografik qoidalar
+              </SectionLessonsItem>
+              <SectionLessonsItem>
+                1.3 - UX/UI darsiga oid testlar
+              </SectionLessonsItem>
+            </SectionLessons>
+          </AccordionPane>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionHeader
+            slot="header"
+            id="mobile-section-10"
+            bodyTarget="mobile-section-body-10">
+            <span class="lesson-section-header">
+              <LessonIcon />
+              10 - Yakuniy dars va sinov vazifalar
+            </span>
+            <AccordionIcon />
+          </AccordionHeader>
+          <AccordionPane
+            slot="pane"
+            id="mobile-section-body-10"
+            headerLabel="mobile-section-10">
+            <SectionLessons>
+              <SectionLessonsItem>
+                1.1 - Kurs haqida to‘liq tanishtiruv
+              </SectionLessonsItem>
+              <SectionLessonsItem>
+                1.2 - UI dizaynda tipografik qoidalar
+              </SectionLessonsItem>
+              <SectionLessonsItem>
+                1.3 - UX/UI darsiga oid testlar
+              </SectionLessonsItem>
+            </SectionLessons>
+          </AccordionPane>
+        </AccordionItem>
+      </Accordion>
+
+      ) }
 </aside>

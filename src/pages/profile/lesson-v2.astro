@@ -30,43 +30,29 @@ import TabPane from "@components/shared/Tab/TabPane.astro";
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
-          <Tab>
-            <TabHeader
-              slot="header"
-              id="lesson-tab"
-              contentId="lessonTabContent">
-              <TabButton
-                id="lesson-tab-description"
-                target="lesson-description">
-                MA’LUMOTLAR
-              </TabButton>
-              <TabButton id="lesson-tab-resources" target="lesson-resources">
-                MANBA
-              </TabButton>
-            </TabHeader>
-            <TabContent slot="content" id="lessonTabContent">
-              <TabPane id="lesson-description" target="lesson-tab-description">
-                <div class="block text-body-2">
-                  <p class="mb-20">
-                    UX - bu mahsulot qanday his qilishiga bog'liq. UI - bu
-                    mahsulot qanday ko'rinishi bilan bog'liq. UI dizayni
-                    foydalanuvchi interfeysi dizaynini anglatadi, UX dizayni esa
-                    foydalanuvchi tajribasi dizaynini anglatadi. UI - bu
-                    qandaydir ko'rinish va u bilan qanday munosabatda
-                    bo'lishingiz.
-                  </p>
-                  <p>
-                    Foydalanuvchi tajribasi (UX) dizayni - bu dizayn guruhlari
-                    foydalanuvchilarga mazmunli va tegishli tajribalarni taqdim
-                    etadigan mahsulotlarni yaratish uchun foydalanadigan
-                    jarayondir. UX dizayni mahsulotni sotib olish va
-                    integratsiyalashning butun jarayonini loyihalashni o'z
-                    ichiga oladi, shu jumladan brending, dizayn, foydalanish
-                    qulayligi va funksiyasi.
-                  </p>
-                </div>
-              </TabPane>
-              <TabPane id="lesson-resources" target="lesson-tab-resources">
+          <div class="lesson__sections">
+            <div class="lesson-section">
+              <h3 class="lesson-section__title">Ma'lumotlar</h3>
+              <div class="lesson-section__content">
+                <p>
+                  UX - bu mahsulot qanday his qilishiga bog'liq. UI - bu
+                  mahsulot qanday ko'rinishi bilan bog'liq. UI dizayni
+                  foydalanuvchi interfeysi dizaynini anglatadi, UX dizayni esa
+                  foydalanuvchi tajribasi dizaynini anglatadi. UI - bu qandaydir
+                  ko'rinish va u bilan qanday munosabatda bo'lishingiz.
+                  Foydalanuvchi tajribasi (UX) dizayni - bu dizayn guruhlari
+                  foydalanuvchilarga mazmunli va tegishli tajribalarni taqdim
+                  etadigan mahsulotlarni yaratish uchun foydalanadigan
+                  jarayondir. UX dizayni mahsulotni sotib olish va
+                  integratsiyalashning butun jarayonini loyihalashni o'z ichiga
+                  oladi, shu jumladan brending, dizayn, foydalanish qulayligi va
+                  funksiyasi.
+                </p>
+              </div>
+            </div>
+            <div class="lesson-section">
+              <h3 class="lesson-section__title">MANBA</h3>
+              <div class="lesson-section__content">
                 <div class="lesson-icon-card">
                   <div class="lesson-icon-card__item">
                     <div class="lesson-icon-card__icon">
@@ -109,9 +95,9 @@ import TabPane from "@components/shared/Tab/TabPane.astro";
                     </div>
                   </div>
                 </div>
-              </TabPane>
-            </TabContent>
-          </Tab>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="lesson-bottom-nav">
           <div class="lesson-bottom-nav__controls">

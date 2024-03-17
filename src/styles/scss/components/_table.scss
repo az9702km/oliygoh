@@ -136,6 +136,16 @@
 
 @screen md {
   .table-profile {
+    &__body {
+      tr {
+        display: table-row;
+
+        td:first-child {
+          @apply border border-line;
+        }
+      }
+    }
+
     .text {
       @apply text-subtitle-sm;
     }
@@ -158,16 +168,6 @@
     }
     .desc {
       @apply text-xs;
-    }
-  }
-}
-
-@screen md {
-  .table-profile {
-    &__body {
-      tr {
-        display: table-row;
-      }
     }
   }
 }

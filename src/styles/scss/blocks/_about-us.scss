@@ -72,7 +72,8 @@
   @apply relative bg-center bg-no-repeat bg-cover rounded mb-15 lg:mb-20;
 
   &__button {
-    @apply flex justify-center py-16 lg:py-32;
+    @apply flex justify-center w-full;
+    aspect-ratio: 3 / 2;
   }
 }
 
@@ -169,5 +170,13 @@
   }
   100% {
     @apply top-20 left-20;
+  }
+}
+
+@screen md {
+  .company-stat {
+    &__button {
+      aspect-ratio: 3 / 1;
+    }
   }
 }

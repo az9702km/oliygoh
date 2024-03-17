@@ -1,6 +1,14 @@
+.custom-control.custom-control--checkbox {
+  @apply relative;
+
+  .custom-control__label {
+    @apply leading-none text-base pl-4 py-2 border rounded-full flex items-center cursor-pointer;
+  }
+}
+
 .custom-control.custom-control--checkbox:has(input:checked) {
   .check-icon {
-    display: flex !important;
+    @apply flex absolute right-1 top-1/2 -translate-x-1/2;
   }
 }
 

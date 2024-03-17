@@ -4,6 +4,7 @@ import Brand from "@components/shared/Brand.astro";
 import Button from "@components/shared/Button.astro";
 import Input from "@components/shared/Input.astro";
 import InputCheck from "@components/shared/InputCheck.astro";
+import Popup from "@components/shared/Popup.astro";
 ---
 
 <LayoutLogin title="Login">
@@ -49,8 +50,11 @@ import InputCheck from "@components/shared/InputCheck.astro";
               />
             </form>
             <InputCheck type="checkbox" id="terms" utils="mb-10">
-              Saytdan foydalanish <a href="#!" class="text-primary underline"
-                >shartlariga</a
+              Saytdan foydalanish <a
+                href="#!"
+                data-modal-target="terms-cons"
+                data-modal-toggle="terms-cons"
+                class="text-primary underline">shartlariga</a
               > roziman
             </InputCheck>
             <a
@@ -70,4 +74,141 @@ import InputCheck from "@components/shared/InputCheck.astro";
       </div>
     </div>
   </div>
+
+  <Popup type="modal" id="terms-cons">
+    <div class="terms">
+      <div class="terms__header">
+        <h4 class="terms__title">Saytdan foydalanish shartlari</h4>
+      </div>
+      <div class="terms__body standart-text-wrap">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
+          magnam doloremque molestiae libero ipsam tenetur pariatur numquam!
+          Nulla minus laboriosam temporibus, sunt praesentium est laborum
+          ratione voluptatum tenetur reiciendis! Perferendis.
+        </p>
+      </div>
+      <div class="terms__footer">
+        <div class="terms__actions">
+          <Button style="secondary" attrs={{ "data-modal-hide": "terms-cons" }}
+            >OK</Button
+          >
+        </div>
+      </div>
+    </div>
+  </Popup>
 </LayoutLogin>

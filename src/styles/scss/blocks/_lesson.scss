@@ -18,6 +18,35 @@
   }
 }
 
+.lesson-bottom-nav {
+  @apply flex flex-col md:flex-row gap-4 mt-30 justify-between items-center;
+
+  &__controls {
+    @apply flex gap-x-10;
+  }
+
+  &__complete {
+    @apply flex gap-x-10;
+  }
+}
+
+.lesson__sections {
+  @apply mb-30 grid gap-4;
+}
+
+.lesson-section {
+  &__title {
+    @apply mb-2 text-2xl font-semibold;
+  }
+
+  &__content {
+    @apply text-lg;
+    p {
+      @apply mb-20;
+    }
+  }
+}
+
 .section-lessons {
   @apply flex flex-col;
 

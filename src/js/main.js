@@ -83,8 +83,92 @@ function setCircleDasharray() {
 }
 
 ////////////////////////////
-/// Swiper slides
+/// Custom countdown
 
+const convertToSeconds = (hours, minutes, seconds) => {
+  try {
+    return +hours * 3600 + +minutes * 60 + +seconds;
+  } catch (e) {
+    console.error(e);
+  }
+};
+
+const countdown = (time, target) => {
+  if (!time) {
+    console.log("no data, sorry");
+    return;
+  }
+  let hours = 0;
+  let minutes = 0;
+  let seconds = 0;
+  let testTimerInterval = null;
+
+  testTimerInterval = setInterval(() => {
+    if (time === 0) {
+      clearInterval(testTimerInterval);
+    }
+    hours = time / 3600;
+    minutes = (time % 3600) / 60;
+    seconds = time % 60;
+
+    renderCountdown(target, hours, minutes, seconds);
+    time = time - 1;
+  }, 1000);
+};
+
+const renderCountdown = (target, hours, minutes, seconds) => {
+  let localeOpts = {
+    minimumIntegerDigits: 2,
+    useGrouping: false,
+  };
+  hours = Math.trunc(hours).toLocaleString("en-US", localeOpts);
+  minutes = Math.trunc(minutes).toLocaleString("en-US", localeOpts);
+  seconds = Math.trunc(seconds).toLocaleString("en-US", localeOpts);
+  target.innerText = `${hours}:${minutes}:${seconds}`;
+};
+
+const startCountdown = (target) => {
+  if (!target) {
+    console.log("no target element, sorry");
+    return;
+  }
+  const countdownEl = target;
+  const initHours = countdownEl.dataset.timeHours;
+  const initMinutes = countdownEl.dataset.timeMinutes;
+  const initSeconds = countdownEl.dataset.timeSeconds;
+
+  const time = convertToSeconds(initHours, initMinutes, initSeconds);
+  countdown(time, countdownEl);
+};
+
+document
+  .querySelectorAll(".test-countdown")
+  .forEach((item) => startCountdown(item));
+
+////////////////////////////
+/// Scroll navbar fixed
+// When the user scrolls the page, execute myFunction
+window.onscroll = function () {
+  fixNavbar();
+};
+
+// Get the header
+var header = document.querySelector(".navbar");
+
+// Get the offset position of the navbar
+var sticky = 240;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function fixNavbar() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("navbar--fixed");
+  } else {
+    header.classList.remove("navbar--fixed");
+  }
+}
+
+////////////////////////////
+/// Swiper slides
 //---------- feature slides home page ----------//
 const featureSlider = new Swiper(".feature-slider", {
   speed: 400,
@@ -272,9 +356,6 @@ let instaStoryOptions = {
 let swiperStory = new Swiper(".home-hero-slider", instaStoryOptions);
 let aboutSwiperStory = new Swiper(".about-hero-slider", instaStoryOptions);
 
-console.log(swiperStory);
-console.log(aboutSwiperStory);
-
 aboutSwiperStory.on("transitionEnd", () => {
   let animationEl = document.querySelector(".animating-cards");
   if (![...animationEl.classList].includes("animate")) {
@@ -334,7 +415,6 @@ function toastHide(toast) {
 
 function removeToast(toast) {
   document.getElementById("toast-container").removeChild(toast);
-  console.log("deleted");
 }
 
 function toast(options) {
@@ -453,7 +533,6 @@ let toastContent = (options) => {
 };
 
 function show() {
-  console.log("works");
   toast(successToast);
 }
 

@@ -17,7 +17,7 @@
 
 [drawer-backdrop],
 [modal-backdrop] {
-  @apply bg-main-black bg-opacity-40;
+  @apply bg-main-black/40;
 }
 
 .drawer {

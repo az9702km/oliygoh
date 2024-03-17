@@ -1,5 +1,5 @@
 .course-recap {
-  @apply bg-white rounded border border-line overflow-hidden flex flex-col;
+  @apply bg-white rounded border border-line overflow-hidden flex flex-col sticky top-8;
 
   & > *:not(:last-child) {
     @apply border-b border-line;
@@ -18,4 +18,12 @@
   .course-purchase {
     @apply static px-0 py-0 bg-transparent border-0 items-stretch;
   }
+}
+
+.course-preview-video {
+  @apply w-full h-full;
+}
+
+.course-preview {
+  @apply max-w-lg w-full md:w-[32rem] aspect-video;
 }

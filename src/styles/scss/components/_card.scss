@@ -254,6 +254,7 @@
   }
 
   .card.card--doc {
+    @apply w-[15rem];
     .card__title {
       @apply text-body-3;
     }
@@ -292,6 +293,9 @@
   }
 
   .card.card--doc {
+    .card__title {
+      @apply text-body-1;
+    }
     .card__icon {
       @apply mb-60;
     }
@@ -319,5 +323,25 @@
 
   .value {
     @apply text-subtitle;
+  }
+}
+
+.card-meta {
+  @apply text-primary text-sm;
+}
+
+.card.card--search-v2 {
+  @apply h-full;
+
+  .card-meta {
+    @apply mb-10;
+  }
+
+  .card__title {
+    @apply text-xl mb-10;
+  }
+
+  .card__text {
+    @apply text-base text-text-gray line-clamp-3;
   }
 }

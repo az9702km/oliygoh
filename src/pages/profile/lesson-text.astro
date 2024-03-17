@@ -21,19 +21,6 @@ import TabPane from "@components/shared/Tab/TabPane.astro";
           <h1 class="lesson-content__title">
             1.2 - UI dizaynda tipografik qoidalar
           </h1>
-          <div class="lesson-content__nav">
-            <Button style="secondary">
-              <svg class="icon">
-                <use xlink:href=`#icon-arrow-left`></use>
-              </svg>
-              AVVALGI
-            </Button>
-            <Button style="secondary">
-              KEYINGI<svg class="icon">
-                <use xlink:href=`#icon-arrow-right`></use>
-              </svg>
-            </Button>
-          </div>
           <Tab>
             <TabHeader
               slot="header"
@@ -221,12 +208,27 @@ import TabPane from "@components/shared/Tab/TabPane.astro";
             </TabContent>
           </Tab>
         </div>
-        <div class="lesson-content__complete">
-          <Button style="primary">
-            <svg class="icon !w-20">
-              <use xlink:href=`#icon-circle-check`></use>
-            </svg>mavzuni o‘zlashtirdim
-          </Button>
+        <div class="lesson-bottom-nav">
+          <div class="lesson-bottom-nav__controls">
+            <Button style="secondary">
+              <svg class="icon">
+                <use xlink:href=`#icon-arrow-left`></use>
+              </svg>
+              AVVALGI
+            </Button>
+            <Button style="secondary">
+              KEYINGI<svg class="icon">
+                <use xlink:href=`#icon-arrow-right`></use>
+              </svg>
+            </Button>
+          </div>
+          <div class="lesson-bottom-nav__complete">
+            <Button style="primary">
+              <svg class="icon !w-20">
+                <use xlink:href=`#icon-circle-check`></use>
+              </svg>mavzuni o‘zlashtirdim
+            </Button>
+          </div>
         </div>
       </CardAdmin>
     </div>
