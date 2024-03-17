@@ -1,0 +1,21 @@
+---
+import Button from "@components/shared/Button.astro";
+import Input from "@components/shared/Input.astro";
+---
+
+<div class="flex items-end h-full">
+  <div class="flex items-stretch w-full">
+    <Input
+      name="some"
+      id="someid"
+      type="text"
+      utils="w-full"
+      placeholder="1 321 maqolalar"
+    />
+    <Button style="primary" classes="shrink-0 !px-4">
+      <svg class="icon">
+        <use xlink:href="#icon-search"></use>
+      </svg>
+    </Button>
+  </div>
+</div>

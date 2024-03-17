@@ -2,7 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import EmptySearch from "@components/blocks/EmptySearch.astro";
 import CustomControl from "@components/shared/CustomControl.astro";
-import Input from "@components/shared/Input.astro";
+import SearchInput from "@components/blocks/SearchInput.astro";
 ---
 
 <Layout title="Blog search">
@@ -45,16 +45,7 @@ import Input from "@components/shared/Input.astro";
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="flex items-end h-full mt-5 lg:mt-0">
-              <Input
-                name="some"
-                id="someid"
-                type="text"
-                utils="w-full"
-                addonAfter="search"
-                placeholder="1 321 maqolalar"
-              />
-            </div>
+            <SearchInput />
           </div>
         </div>
         <div class="my-120 py-2">

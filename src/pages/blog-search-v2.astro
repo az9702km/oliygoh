@@ -3,7 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import SearchResultsV2 from "@components/sections/Search/SearchResultsV2.astro";
 import Button from "@components/shared/Button.astro";
 import CustomControl from "@components/shared/CustomControl.astro";
-import Input from "@components/shared/Input.astro";
+import SearchInput from "@components/blocks/SearchInput.astro";
 import Pagination from "@components/shared/Pagination.astro";
 import PaginationItem from "@components/shared/PaginationItem.astro";
 ---
@@ -48,22 +48,7 @@ import PaginationItem from "@components/shared/PaginationItem.astro";
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="flex items-end h-full">
-              <div class="flex items-stretch w-full">
-                <Input
-                  name="some"
-                  id="someid"
-                  type="text"
-                  utils="w-full"
-                  placeholder="1 321 maqolalar"
-                />
-                <Button style="primary" classes="shrink-0 !px-4">
-                  <svg class="icon">
-                    <use xlink:href="#icon-search"></use>
-                  </svg>
-                </Button>
-              </div>
-            </div>
+            <SearchInput />
           </div>
         </div>
         <div class="mb-120">
