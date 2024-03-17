@@ -8,7 +8,7 @@
 
 .custom-control.custom-control--checkbox:has(input:checked) {
   .check-icon {
-    @apply flex absolute right-1 top-1/2 -translate-x-1/2;
+    @apply flex absolute right-1 top-1/2 -translate-y-1/2;
   }
 }
 
