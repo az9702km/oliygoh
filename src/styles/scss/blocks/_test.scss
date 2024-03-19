@@ -84,7 +84,7 @@
 }
 
 .test-nav.test-nav--desktop-only {
-  @apply hidden block;
+  @apply hidden md:block;
 }
 
 .test-nav-header {

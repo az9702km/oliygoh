@@ -1,8 +1,8 @@
 .popup {
-  @apply overflow-y-auto overflow-x-hidden transition-transform fixed top-0 right-0 left-0 z-50  w-full md:inset-0 h-[calc(100%-1rem)] max-h-full px-6;
+  @apply overflow-y-auto overflow-x-hidden transition-transform fixed top-0 right-0 left-0 z-50  w-full md:inset-0 h-[calc(100%-1rem)] max-h-full;
 
   &__dialog {
-    @apply relative max-w-2xl max-h-full flex flex-col items-center;
+    @apply relative max-w-4xl max-h-full flex flex-col items-center;
   }
 
   &__cls-btn {
@@ -71,7 +71,7 @@
 }
 
 .popup.popup--modal {
-  @apply justify-center items-center;
+  @apply justify-center items-center px-6;
 
   .popup__cls-btn {
     @apply -top-16 right-0;

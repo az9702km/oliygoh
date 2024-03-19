@@ -1,5 +1,5 @@
 .course-recap {
-  @apply bg-white rounded border border-line overflow-hidden flex flex-col sticky top-8;
+  @apply bg-white rounded border border-line overflow-hidden flex flex-col sticky top-28;
 
   & > *:not(:last-child) {
     @apply border-b border-line;
@@ -25,5 +25,5 @@
 }
 
 .course-preview {
-  @apply max-w-lg w-full md:w-[32rem] aspect-video;
+  @apply max-w-5xl w-full md:w-[50rem] aspect-video;
 }

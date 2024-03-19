@@ -146,6 +146,55 @@ document
   .forEach((item) => startCountdown(item));
 
 ////////////////////////////
+/// Stop all youtube videos
+let yClsBtn;
+const videos = document.querySelectorAll(".youtube-video");
+const clsBtns = document.querySelectorAll("[data-modal-hide]");
+
+const stopVideos = (yvideos) => {
+  if (!videos) {
+    return;
+  }
+  yvideos.forEach((item) =>
+    item.contentWindow.postMessage(
+      '{"event":"command","func":"stopVideo","args":""}',
+      "*"
+    )
+  );
+
+  yClsBtn = null;
+};
+
+////////////////////////////
+/// Handling modal-close btn
+
+if (clsBtns) {
+  clsBtns.forEach((item) => {
+    item.addEventListener("click", () => {
+      stopVideos(videos);
+    });
+  });
+}
+
+const modalBtns = document.querySelectorAll("[data-modal-toggle]");
+const backDropHandle = (popup) => {
+  setTimeout(() => {
+    yClsBtn = document.querySelector(`#${popup}`);
+    yClsBtn.addEventListener("click", (e) => {
+      console.log(e.target);
+      stopVideos(videos);
+    });
+  }, 0);
+};
+if (modalBtns) {
+  modalBtns.forEach((item) => {
+    item.addEventListener("click", () => {
+      backDropHandle(item.dataset.modalTarget);
+    });
+  });
+}
+
+////////////////////////////
 /// Scroll navbar fixed
 // When the user scrolls the page, execute myFunction
 window.onscroll = function () {
