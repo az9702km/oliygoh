@@ -1,0 +1,39 @@
+---
+const { type, title, subtitle } = Astro.props;
+const getIconType = (type) => {
+  if (type === "404") {
+    return '<i class="ti ti-error-404"></i>';
+  } else if (type === "500") {
+    return '<i class="ti ti-server-off"></i>';
+  } else {
+    return '<i class="ti ti-error-404"></i>';
+  }
+};
+---
+
+<div class="error-block">
+  <div class="error-result">
+    <div class="error-result__icon">
+      {
+        type === "500" ? (
+          <i class="ti ti-server-off" />
+        ) : (
+          <i class="ti ti-error-404" />
+        )
+      }
+      <!-- <i class="ti ti-error-404"></i> -->
+    </div>
+    <h1 class="error-result__title">
+      {title ?? "Sahifa topilmadi"}
+    </h1>
+    <p class="error-result__text">
+      {
+        subtitle ??
+          "Kechirasiz, qidirgan sahifangizni topa olmadik. Balki linkni xato kiritgandirsiz?"
+      }
+    </p>
+    <div class="error-result__btn">
+      <a href="/" class="btn btn-primary">Bosh sahifaga qaytish</a>
+    </div>
+  </div>
+</div>

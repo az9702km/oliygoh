@@ -1,0 +1,15 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import LayoutError from "@/layouts/LayoutError.astro";
+import Errors from "@components/blocks/errors.astro";
+---
+
+<LayoutError title="Blog">
+  <main>
+    <div class="container-wrapper">
+      <div class="h-screen flex flex-col justify-center">
+        <Errors />
+      </div>
+    </div>
+  </main>
+</LayoutError>

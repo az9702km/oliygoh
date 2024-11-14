@@ -1,0 +1,19 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import LayoutError from "@/layouts/LayoutError.astro";
+import Errors from "@components/blocks/errors.astro";
+---
+
+<LayoutError title="Blog">
+  <main>
+    <div class="container-wrapper">
+      <div class="error-page">
+        <Errors
+          type="500"
+          title="Ichki server xatosi"
+          subtitle="Kechirasiz, serverda muammo yuz berdi. Iltimos, keyinroq yana urinib ko‘ring."
+        />
+      </div>
+    </div>
+  </main>
+</LayoutError>
