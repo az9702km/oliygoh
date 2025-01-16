@@ -1,0 +1,42 @@
+---
+import Header from "@/layouts/Header.astro";
+import Footer from "./Footer.astro";
+import "./../styles/scss/index.scss";
+import Icons from "@components/blocks/Icons.astro";
+import Scripts from "@components/blocks/Scripts.astro";
+
+// interface Props {
+//   title: string;
+//   header: Boolean;
+//   footer: Boolean;
+// }
+
+const { title, header = true, footer = true } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    {header && <Header />}
+    <slot />
+    {footer && <Footer />}
+    <!-- <Icons /> -->
+    <Scripts />
+  </body>
+</html>

@@ -1,7 +1,7 @@
 ---
-
+const { type } = Astro.props;
 ---
 
-<div class="pagination flex -space-x-[1px]">
+<div class="pagination" class:list={type == "wrap" && "pagination--wrap"}>
   <slot />
 </div>

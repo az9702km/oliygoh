@@ -141,3 +141,37 @@
     }
   }
 }
+
+.test-time {
+  @apply flex;
+
+  &__item {
+    @apply flex-grow;
+  }
+}
+
+.test-timer {
+  @apply h-2 bg-purple-light flex;
+
+  &__progress {
+    @apply bg-primary w-3/4;
+  }
+}
+
+.test-timer.test-timer--fixed {
+  @apply fixed top-0 left-0 right-0 z-50;
+}
+
+.test-result-table {
+  @apply flex;
+
+  &__content {
+    @apply mx-auto w-full;
+  }
+}
+
+@screen md {
+  .test-result-table__content {
+    max-width: 70%;
+  }
+}

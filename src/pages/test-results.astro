@@ -1,0 +1,140 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import LayoutU from "@/layouts/LayoutU.astro";
+import VarianRadio from "@components/blocks/VarianRadio.astro";
+import Button from "@components/shared/Button.astro";
+import Pagination from "@components/shared/Pagination.astro";
+import PaginationItem from "@components/shared/PaginationItem.astro";
+---
+
+<LayoutU title="Test">
+  <main>
+    <section class="section">
+      <div class="container mx-auto">
+        <div class="test-result-table">
+          <div class="test-result-table__content">
+            <div class="card card--profile">
+              <h1 class="h2 mb-40">
+                Natijalar: Prezident maktabi testlari 2024
+              </h1>
+              <table class="table table--test-results mb-20">
+                <thead class="thead">
+                  <tr>
+                    <th scope="col"> # </th>
+                    <th scope="col"> Ishtirokchi </th>
+                    <th scope="col"> Natija </th>
+                    <th scope="col"> Yakunladi </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row">1</td>
+                    <td>
+                      <div>97***2107</div>
+                      <div>Imomali</div>
+                    </td>
+                    <td> 30 / 100% </td>
+                    <td> 11-10-2023, 23:11:12 </td>
+                  </tr>
+                  <tr>
+                    <td scope="row"> 2 </td>
+                    <td>
+                      <div>97***2107</div>
+                      <div>Imomali</div>
+                    </td>
+                    <td> 30 / 100% </td>
+                    <td> 11-10-2023, 23:11:12 </td>
+                  </tr>
+                  <tr>
+                    <td scope="row"> 3 </td>
+                    <td>
+                      <div>97***2107</div>
+                      <div>Imomali</div>
+                    </td>
+                    <td> 30 / 100% </td>
+                    <td> 11-10-2023, 23:11:12 </td>
+                  </tr>
+                  <tr>
+                    <td scope="row"> 4 </td>
+                    <td>
+                      <div>97***2107</div>
+                      <div>Imomali</div>
+                    </td>
+                    <td> 30 / 100% </td>
+                    <td> 11-10-2023, 23:11:12 </td>
+                  </tr>
+                  <tr>
+                    <td scope="row"> 5 </td>
+                    <td>
+                      <div>97***2107</div>
+                      <div>Imomali</div>
+                    </td>
+                    <td> 30 / 100% </td>
+                    <td> 11-10-2023, 23:11:12 </td>
+                  </tr>
+                  <tr>
+                    <td scope="row"> 5 </td>
+                    <td>
+                      <div>97***2107</div>
+                      <div>Imomali</div>
+                    </td>
+                    <td> 30 / 100% </td>
+                    <td> 11-10-2023, 23:11:12 </td>
+                  </tr>
+                  <tr>
+                    <td scope="row"> 5 </td>
+                    <td>
+                      <div>97***2107</div>
+                      <div>Imomali</div>
+                    </td>
+                    <td> 30 / 100% </td>
+                    <td> 11-10-2023, 23:11:12 </td>
+                  </tr>
+                  <tr>
+                    <td scope="row"> 5 </td>
+                    <td>
+                      <div>97***2107</div>
+                      <div>Imomali</div>
+                    </td>
+                    <td> 30 / 100% </td>
+                    <td> 11-10-2023, 23:11:12 </td>
+                  </tr>
+                  <tr>
+                    <td scope="row"> 5 </td>
+                    <td>
+                      <div>97***2107</div>
+                      <div>Imomali</div>
+                    </td>
+                    <td> 30 / 100% </td>
+                    <td> 11-10-2023, 23:11:12 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="text-body-3 text-secondary-gray text-center mb-20">
+                Natijalar <b>1-20</b> / Jami <b>28 593</b> ta
+              </p>
+              <div class="d-flex justify-center">
+                <Pagination>
+                  <PaginationItem type="prev" />
+                  <PaginationItem>1</PaginationItem>
+                  <PaginationItem active>2</PaginationItem>
+                  <PaginationItem>3</PaginationItem>
+                  <PaginationItem>...</PaginationItem>
+                  <PaginationItem>15</PaginationItem>
+                  <PaginationItem type="next" />
+                </Pagination>
+              </div>
+            </div>
+            <div class="card card--profile">
+              <div class="d-flex justify-center">
+                <Button style="secondary"
+                  ><i class="ti ti-arrow-left"></i>Test haqida</Button
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</LayoutU>

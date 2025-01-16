@@ -5,13 +5,9 @@ const { type, active } = Astro.props;
 <a href="#!" class:list={["pagination__item", active && "active"]}>
   {
     type === "prev" ? (
-      <svg class="icon !w-6">
-        <use xlink:href="#icon-chevron-left" />
-      </svg>
+      <i class="ti ti-chevron-left" />
     ) : type === "next" ? (
-      <svg class="icon !w-6">
-        <use xlink:href="#icon-chevron-right" />
-      </svg>
+      <i class="ti ti-chevron-right" />
     ) : (
       <slot />
     )
